@@ -21,7 +21,10 @@ COPY --from=builder /app/target/release/academy-backend-rust /app/academy-backen
 COPY --from=builder /app/migrations /app/migrations
 COPY app/data/curriculum_catalog.json /app/app/data/curriculum_catalog.json
 
-ENV ACADEMY_RUST_ADDR=0.0.0.0:8000
+# Do not set ACADEMY_RUST_ADDR here: Render/Fly inject PORT; a fixed :8000 prevents the
+# process from listening on $PORT and triggers "No open ports detected".
+# docker-compose sets ACADEMY_RUST_ADDR (or pass -e PORT / -e ACADEMY_RUST_ADDR).
+
 EXPOSE 8000
 
 CMD ["/app/academy-backend-rust"]

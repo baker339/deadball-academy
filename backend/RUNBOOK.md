@@ -24,7 +24,7 @@ Copy `backend/.env.example` to `backend/.env` and set:
 
 Optional:
 
-- `ACADEMY_RUST_ADDR` (defaults to `127.0.0.1:8000`). If unset and **`PORT`** is set (for example on Render), the API binds to **`0.0.0.0:$PORT`** automatically.
+- `ACADEMY_RUST_ADDR` (defaults to `127.0.0.1:8000` when neither is set). If **`PORT`** is set (Render, Fly, Heroku), the API binds to **`0.0.0.0:$PORT`** and **ignores** `ACADEMY_RUST_ADDR` so a wrong baked-in address cannot break deploys.
 - `CMS_ENABLED=true`
 - `CORS_ALLOW_ORIGINS` — comma-separated browser origins (defaults to local Next.js URLs)
 
@@ -90,9 +90,9 @@ cargo test
 - `ACADEMY_RUST_DATABASE_URL` — Neon’s URL, usually with **`?sslmode=require`** (add it if TLS is required and missing).
 - Any other managed Postgres (Supabase, RDS, Render Postgres, etc.) works the same way: use the provider’s connection string and TLS parameters as documented.
 
-Also set:
+Also configure the process:
 
-- `ACADEMY_RUST_ADDR=0.0.0.0:$PORT` when the host injects `PORT` (for example Render/Fly), **or** rely on automatic binding to `0.0.0.0:$PORT` when `ACADEMY_RUST_ADDR` is unset and `PORT` is present.
+- **Listen port:** Render (and similar hosts) set **`PORT`**. The API binds **`0.0.0.0:$PORT`** when `PORT` is present. Do **not** set `ACADEMY_RUST_ADDR=0.0.0.0:8000` in the Render dashboard unless the service really listens on 8000 inside the container.
 - No SQLite file or persistent disk is required for the API at runtime.
 
 ## 10) Migrating data from legacy SQLite → Postgres (lessons / CMS)

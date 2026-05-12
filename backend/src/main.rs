@@ -493,9 +493,13 @@ async fn main() -> anyhow::Result<()> {
     let state = AppState { pool, cfg };
     let app = build_router(state);
 
-    let addr_str = env::var("ACADEMY_RUST_ADDR").or_else(|_| {
-        env::var("PORT").map(|port| format!("0.0.0.0:{port}"))
-    }).unwrap_or_else(|_| "127.0.0.1:8000".to_string());
+    // Prefer PORT (Render, Fly, Heroku) so a stale ACADEMY_RUST_ADDR in an image cannot
+    // force the wrong listen port and fail health checks.
+    let addr_str = env::var("PORT")
+        .ok()
+        .map(|port| format!("0.0.0.0:{port}"))
+        .or_else(|| env::var("ACADEMY_RUST_ADDR").ok())
+        .unwrap_or_else(|| "127.0.0.1:8000".to_string());
     let addr: SocketAddr = addr_str
         .parse()
         .context("parse bind addr (set ACADEMY_RUST_ADDR or PORT)")?;
