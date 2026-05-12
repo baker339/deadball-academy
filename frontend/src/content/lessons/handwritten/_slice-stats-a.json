@@ -1,0 +1,128 @@
+[
+  {
+    "key": "statistical-modeling-for-baseball::data-generating-processes-in-baseball::what-is-a-data-generating-process",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Data Generating Processes In Baseball",
+    "lessonTitle": "What Is A Data Generating Process?"
+  },
+  {
+    "key": "statistical-modeling-for-baseball::data-generating-processes-in-baseball::randomness-structure-and-measurement-error",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Data Generating Processes In Baseball",
+    "lessonTitle": "Randomness, Structure, And Measurement Error"
+  },
+  {
+    "key": "statistical-modeling-for-baseball::data-generating-processes-in-baseball::selection-effects-in-public-baseball-data",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Data Generating Processes In Baseball",
+    "lessonTitle": "Selection Effects In Public Baseball Data"
+  },
+  {
+    "key": "statistical-modeling-for-baseball::data-generating-processes-in-baseball::temporal-dependence-across-games-and-seasons",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Data Generating Processes In Baseball",
+    "lessonTitle": "Temporal Dependence Across Games And Seasons"
+  },
+  {
+    "key": "statistical-modeling-for-baseball::data-generating-processes-in-baseball::confounding-patterns-in-outcome-metrics",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Data Generating Processes In Baseball",
+    "lessonTitle": "Confounding Patterns In Outcome Metrics"
+  },
+  {
+    "key": "statistical-modeling-for-baseball::data-generating-processes-in-baseball::hierarchical-structure-player-team-park-era",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Data Generating Processes In Baseball",
+    "lessonTitle": "Hierarchical Structure: Player, Team, Park, Era"
+  },
+  {
+    "key": "statistical-modeling-for-baseball::data-generating-processes-in-baseball::dgp-case-study-home-run-rate-dynamics",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Data Generating Processes In Baseball",
+    "lessonTitle": "DGP Case Study: Home Run Rate Dynamics"
+  },
+  {
+    "key": "statistical-modeling-for-baseball::exploratory-data-analysis-and-sampling-pitfalls::eda-framing-questions-before-charts",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Exploratory Data Analysis And Sampling Pitfalls",
+    "lessonTitle": "EDA Framing: Questions Before Charts"
+  },
+  {
+    "key": "statistical-modeling-for-baseball::exploratory-data-analysis-and-sampling-pitfalls::distribution-shape-tail-behavior-and-robust-summaries",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Exploratory Data Analysis And Sampling Pitfalls",
+    "lessonTitle": "Distribution Shape, Tail Behavior, And Robust Summaries"
+  },
+  {
+    "key": "statistical-modeling-for-baseball::exploratory-data-analysis-and-sampling-pitfalls::stratification-and-simpson-s-paradox-in-baseball",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Exploratory Data Analysis And Sampling Pitfalls",
+    "lessonTitle": "Stratification And Simpson's Paradox In Baseball"
+  },
+  {
+    "key": "statistical-modeling-for-baseball::exploratory-data-analysis-and-sampling-pitfalls::missingness-mechanisms-and-practical-handling",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Exploratory Data Analysis And Sampling Pitfalls",
+    "lessonTitle": "Missingness Mechanisms And Practical Handling"
+  },
+  {
+    "key": "statistical-modeling-for-baseball::exploratory-data-analysis-and-sampling-pitfalls::leakage-risks-during-data-filtering",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Exploratory Data Analysis And Sampling Pitfalls",
+    "lessonTitle": "Leakage Risks During Data Filtering"
+  },
+  {
+    "key": "statistical-modeling-for-baseball::exploratory-data-analysis-and-sampling-pitfalls::sampling-windows-and-seasonality-bias",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Exploratory Data Analysis And Sampling Pitfalls",
+    "lessonTitle": "Sampling Windows And Seasonality Bias"
+  },
+  {
+    "key": "statistical-modeling-for-baseball::exploratory-data-analysis-and-sampling-pitfalls::outliers-signal-noise-or-data-issue",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Exploratory Data Analysis And Sampling Pitfalls",
+    "lessonTitle": "Outliers: Signal, Noise, Or Data Issue?"
+  },
+  {
+    "key": "statistical-modeling-for-baseball::exploratory-data-analysis-and-sampling-pitfalls::eda-notebook-practicum-with-review-rubric",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Exploratory Data Analysis And Sampling Pitfalls",
+    "lessonTitle": "EDA Notebook Practicum With Review Rubric"
+  },
+  {
+    "key": "statistical-modeling-for-baseball::regression-and-generalized-linear-models-for-hr-probability::linear-regression-baseline-for-interpretability",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Regression And Generalized Linear Models For HR Probability",
+    "lessonTitle": "Linear Regression Baseline For Interpretability"
+  },
+  {
+    "key": "statistical-modeling-for-baseball::regression-and-generalized-linear-models-for-hr-probability::feature-engineering-for-batted-ball-outcomes",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Regression And Generalized Linear Models For HR Probability",
+    "lessonTitle": "Feature Engineering For Batted-Ball Outcomes"
+  },
+  {
+    "key": "statistical-modeling-for-baseball::regression-and-generalized-linear-models-for-hr-probability::logistic-regression-for-home-run-probability",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Regression And Generalized Linear Models For HR Probability",
+    "lessonTitle": "Logistic Regression For Home Run Probability"
+  },
+  {
+    "key": "statistical-modeling-for-baseball::regression-and-generalized-linear-models-for-hr-probability::interaction-terms-launch-angle-exit-velocity",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Regression And Generalized Linear Models For HR Probability",
+    "lessonTitle": "Interaction Terms: Launch Angle × Exit Velocity"
+  },
+  {
+    "key": "statistical-modeling-for-baseball::regression-and-generalized-linear-models-for-hr-probability::regularization-l1-l2-for-stability",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Regression And Generalized Linear Models For HR Probability",
+    "lessonTitle": "Regularization (L1/L2) For Stability"
+  },
+  {
+    "key": "statistical-modeling-for-baseball::regression-and-generalized-linear-models-for-hr-probability::nonlinearity-handling-splines-and-basis-expansion",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Regression And Generalized Linear Models For HR Probability",
+    "lessonTitle": "Nonlinearity Handling: Splines And Basis Expansion"
+  }
+]

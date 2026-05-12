@@ -1,0 +1,92 @@
+[
+  {
+    "key": "environmental-science-for-baseball-systems::atmospheric-science-foundations::air-composition-pressure-and-density-basics",
+    "trackTitle": "Environmental Science For Baseball Systems",
+    "unitTitle": "Atmospheric Science Foundations",
+    "lessonTitle": "Air Composition, Pressure, And Density Basics"
+  },
+  {
+    "key": "environmental-science-for-baseball-systems::atmospheric-science-foundations::temperature-humidity-and-thermodynamic-effects",
+    "trackTitle": "Environmental Science For Baseball Systems",
+    "unitTitle": "Atmospheric Science Foundations",
+    "lessonTitle": "Temperature, Humidity, And Thermodynamic Effects"
+  },
+  {
+    "key": "environmental-science-for-baseball-systems::atmospheric-science-foundations::wind-formation-and-boundary-layer-behavior",
+    "trackTitle": "Environmental Science For Baseball Systems",
+    "unitTitle": "Atmospheric Science Foundations",
+    "lessonTitle": "Wind Formation And Boundary-Layer Behavior"
+  },
+  {
+    "key": "environmental-science-for-baseball-systems::atmospheric-science-foundations::microclimate-variation-across-ballparks",
+    "trackTitle": "Environmental Science For Baseball Systems",
+    "unitTitle": "Atmospheric Science Foundations",
+    "lessonTitle": "Microclimate Variation Across Ballparks"
+  },
+  {
+    "key": "environmental-science-for-baseball-systems::atmospheric-science-foundations::atmospheric-science-applied-exercise-set",
+    "trackTitle": "Environmental Science For Baseball Systems",
+    "unitTitle": "Atmospheric Science Foundations",
+    "lessonTitle": "Atmospheric Science Applied Exercise Set"
+  },
+  {
+    "key": "environmental-science-for-baseball-systems::climate-variability-and-baseball-impacts::weather-vs-climate-in-baseball-analysis",
+    "trackTitle": "Environmental Science For Baseball Systems",
+    "unitTitle": "Climate, Variability, And Baseball Impacts",
+    "lessonTitle": "Weather Vs Climate In Baseball Analysis"
+  },
+  {
+    "key": "environmental-science-for-baseball-systems::climate-variability-and-baseball-impacts::long-term-climate-trends-and-ball-flight-implications",
+    "trackTitle": "Environmental Science For Baseball Systems",
+    "unitTitle": "Climate, Variability, And Baseball Impacts",
+    "lessonTitle": "Long-Term Climate Trends And Ball-Flight Implications"
+  },
+  {
+    "key": "environmental-science-for-baseball-systems::climate-variability-and-baseball-impacts::extreme-events-scheduling-and-safety-decisions",
+    "trackTitle": "Environmental Science For Baseball Systems",
+    "unitTitle": "Climate, Variability, And Baseball Impacts",
+    "lessonTitle": "Extreme Events, Scheduling, And Safety Decisions"
+  },
+  {
+    "key": "environmental-science-for-baseball-systems::climate-variability-and-baseball-impacts::environmental-uncertainty-communication",
+    "trackTitle": "Environmental Science For Baseball Systems",
+    "unitTitle": "Climate, Variability, And Baseball Impacts",
+    "lessonTitle": "Environmental Uncertainty Communication"
+  },
+  {
+    "key": "environmental-science-for-baseball-systems::climate-variability-and-baseball-impacts::climate-impact-scenario-workshop",
+    "trackTitle": "Environmental Science For Baseball Systems",
+    "unitTitle": "Climate, Variability, And Baseball Impacts",
+    "lessonTitle": "Climate Impact Scenario Workshop"
+  },
+  {
+    "key": "environmental-science-for-baseball-systems::environmental-decision-making::mitigation-and-adaptation-in-stadium-operations",
+    "trackTitle": "Environmental Science For Baseball Systems",
+    "unitTitle": "Environmental Decision-Making",
+    "lessonTitle": "Mitigation And Adaptation In Stadium Operations"
+  },
+  {
+    "key": "environmental-science-for-baseball-systems::environmental-decision-making::sustainability-metrics-and-trade-off-analysis",
+    "trackTitle": "Environmental Science For Baseball Systems",
+    "unitTitle": "Environmental Decision-Making",
+    "lessonTitle": "Sustainability Metrics And Trade-Off Analysis"
+  },
+  {
+    "key": "environmental-science-for-baseball-systems::environmental-decision-making::policy-ethics-and-environmental-justice-context",
+    "trackTitle": "Environmental Science For Baseball Systems",
+    "unitTitle": "Environmental Decision-Making",
+    "lessonTitle": "Policy, Ethics, And Environmental Justice Context"
+  },
+  {
+    "key": "environmental-science-for-baseball-systems::environmental-decision-making::designing-environment-aware-baseball-studies",
+    "trackTitle": "Environmental Science For Baseball Systems",
+    "unitTitle": "Environmental Decision-Making",
+    "lessonTitle": "Designing Environment-Aware Baseball Studies"
+  },
+  {
+    "key": "environmental-science-for-baseball-systems::environmental-decision-making::environmental-science-capstone-brief",
+    "trackTitle": "Environmental Science For Baseball Systems",
+    "unitTitle": "Environmental Decision-Making",
+    "lessonTitle": "Environmental Science Capstone Brief"
+  }
+]

@@ -1,0 +1,17 @@
+name: API Docker image
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main, master]
+    paths:
+      - "backend/**"
+      - ".github/workflows/api-docker.yml"
+
+jobs:
+  docker-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build backend image
+        run: docker build -t deadball-academy-api:ci ./backend

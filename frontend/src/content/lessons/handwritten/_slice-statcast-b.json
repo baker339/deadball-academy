@@ -1,0 +1,116 @@
+[
+  {
+    "key": "data-analysis-with-statcast::visualization-design-for-baseball-questions::uncertainty-visualization-techniques",
+    "trackTitle": "Data Analysis With Statcast",
+    "unitTitle": "Visualization Design For Baseball Questions",
+    "lessonTitle": "Uncertainty Visualization Techniques"
+  },
+  {
+    "key": "data-analysis-with-statcast::visualization-design-for-baseball-questions::annotation-strategy-for-analytical-narratives",
+    "trackTitle": "Data Analysis With Statcast",
+    "unitTitle": "Visualization Design For Baseball Questions",
+    "lessonTitle": "Annotation Strategy For Analytical Narratives"
+  },
+  {
+    "key": "data-analysis-with-statcast::visualization-design-for-baseball-questions::accessibility-and-visual-clarity-standards",
+    "trackTitle": "Data Analysis With Statcast",
+    "unitTitle": "Visualization Design For Baseball Questions",
+    "lessonTitle": "Accessibility And Visual Clarity Standards"
+  },
+  {
+    "key": "data-analysis-with-statcast::visualization-design-for-baseball-questions::visualization-critique-studio",
+    "trackTitle": "Data Analysis With Statcast",
+    "unitTitle": "Visualization Design For Baseball Questions",
+    "lessonTitle": "Visualization Critique Studio"
+  },
+  {
+    "key": "data-analysis-with-statcast::reproducible-pipelines-and-notebooks::reproducibility-principles-in-applied-analytics",
+    "trackTitle": "Data Analysis With Statcast",
+    "unitTitle": "Reproducible Pipelines And Notebooks",
+    "lessonTitle": "Reproducibility Principles In Applied Analytics"
+  },
+  {
+    "key": "data-analysis-with-statcast::reproducible-pipelines-and-notebooks::notebook-structure-for-reviewability",
+    "trackTitle": "Data Analysis With Statcast",
+    "unitTitle": "Reproducible Pipelines And Notebooks",
+    "lessonTitle": "Notebook Structure For Reviewability"
+  },
+  {
+    "key": "data-analysis-with-statcast::reproducible-pipelines-and-notebooks::parameterized-analysis-workflows",
+    "trackTitle": "Data Analysis With Statcast",
+    "unitTitle": "Reproducible Pipelines And Notebooks",
+    "lessonTitle": "Parameterized Analysis Workflows"
+  },
+  {
+    "key": "data-analysis-with-statcast::reproducible-pipelines-and-notebooks::caching-determinism-and-performance",
+    "trackTitle": "Data Analysis With Statcast",
+    "unitTitle": "Reproducible Pipelines And Notebooks",
+    "lessonTitle": "Caching, Determinism, And Performance"
+  },
+  {
+    "key": "data-analysis-with-statcast::reproducible-pipelines-and-notebooks::testing-data-transformations",
+    "trackTitle": "Data Analysis With Statcast",
+    "unitTitle": "Reproducible Pipelines And Notebooks",
+    "lessonTitle": "Testing Data Transformations"
+  },
+  {
+    "key": "data-analysis-with-statcast::reproducible-pipelines-and-notebooks::packaging-results-for-reuse",
+    "trackTitle": "Data Analysis With Statcast",
+    "unitTitle": "Reproducible Pipelines And Notebooks",
+    "lessonTitle": "Packaging Results For Reuse"
+  },
+  {
+    "key": "data-analysis-with-statcast::reproducible-pipelines-and-notebooks::reproducibility-audit-practicum",
+    "trackTitle": "Data Analysis With Statcast",
+    "unitTitle": "Reproducible Pipelines And Notebooks",
+    "lessonTitle": "Reproducibility Audit Practicum"
+  },
+  {
+    "key": "data-analysis-with-statcast::applied-projects-recreating-deadball-tracker-figures::project-scoping-and-analytical-question-refinement",
+    "trackTitle": "Data Analysis With Statcast",
+    "unitTitle": "Applied Projects — Recreating Deadball Tracker Figures",
+    "lessonTitle": "Project Scoping And Analytical Question Refinement"
+  },
+  {
+    "key": "data-analysis-with-statcast::applied-projects-recreating-deadball-tracker-figures::rebuilding-drag-vs-hr-with-clear-assumptions",
+    "trackTitle": "Data Analysis With Statcast",
+    "unitTitle": "Applied Projects — Recreating Deadball Tracker Figures",
+    "lessonTitle": "Rebuilding Drag Vs HR With Clear Assumptions"
+  },
+  {
+    "key": "data-analysis-with-statcast::applied-projects-recreating-deadball-tracker-figures::rebuilding-expected-vs-actual-distance",
+    "trackTitle": "Data Analysis With Statcast",
+    "unitTitle": "Applied Projects — Recreating Deadball Tracker Figures",
+    "lessonTitle": "Rebuilding Expected Vs Actual Distance"
+  },
+  {
+    "key": "data-analysis-with-statcast::applied-projects-recreating-deadball-tracker-figures::rebuilding-exit-velocity-relationship-visuals",
+    "trackTitle": "Data Analysis With Statcast",
+    "unitTitle": "Applied Projects — Recreating Deadball Tracker Figures",
+    "lessonTitle": "Rebuilding Exit Velocity Relationship Visuals"
+  },
+  {
+    "key": "data-analysis-with-statcast::applied-projects-recreating-deadball-tracker-figures::extending-a-figure-with-uncertainty-overlays",
+    "trackTitle": "Data Analysis With Statcast",
+    "unitTitle": "Applied Projects — Recreating Deadball Tracker Figures",
+    "lessonTitle": "Extending A Figure With Uncertainty Overlays"
+  },
+  {
+    "key": "data-analysis-with-statcast::applied-projects-recreating-deadball-tracker-figures::error-analysis-against-prior-versions",
+    "trackTitle": "Data Analysis With Statcast",
+    "unitTitle": "Applied Projects — Recreating Deadball Tracker Figures",
+    "lessonTitle": "Error Analysis Against Prior Versions"
+  },
+  {
+    "key": "data-analysis-with-statcast::applied-projects-recreating-deadball-tracker-figures::publication-ready-figure-standards",
+    "trackTitle": "Data Analysis With Statcast",
+    "unitTitle": "Applied Projects — Recreating Deadball Tracker Figures",
+    "lessonTitle": "Publication-Ready Figure Standards"
+  },
+  {
+    "key": "data-analysis-with-statcast::applied-projects-recreating-deadball-tracker-figures::applied-project-review-and-revision-cycle",
+    "trackTitle": "Data Analysis With Statcast",
+    "unitTitle": "Applied Projects — Recreating Deadball Tracker Figures",
+    "lessonTitle": "Applied Project Review And Revision Cycle"
+  }
+]

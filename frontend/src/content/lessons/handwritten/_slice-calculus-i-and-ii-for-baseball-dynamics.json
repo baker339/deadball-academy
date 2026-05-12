@@ -1,0 +1,92 @@
+[
+  {
+    "key": "calculus-i-and-ii-for-baseball-dynamics::limits-continuity-and-derivatives::limits-as-trend-questions-in-baseball-motion",
+    "trackTitle": "Calculus I And II For Baseball Dynamics",
+    "unitTitle": "Limits, Continuity, And Derivatives",
+    "lessonTitle": "Limits As Trend Questions In Baseball Motion"
+  },
+  {
+    "key": "calculus-i-and-ii-for-baseball-dynamics::limits-continuity-and-derivatives::continuity-and-model-breakpoint-detection",
+    "trackTitle": "Calculus I And II For Baseball Dynamics",
+    "unitTitle": "Limits, Continuity, And Derivatives",
+    "lessonTitle": "Continuity And Model Breakpoint Detection"
+  },
+  {
+    "key": "calculus-i-and-ii-for-baseball-dynamics::limits-continuity-and-derivatives::derivative-as-instantaneous-rate-of-change",
+    "trackTitle": "Calculus I And II For Baseball Dynamics",
+    "unitTitle": "Limits, Continuity, And Derivatives",
+    "lessonTitle": "Derivative As Instantaneous Rate Of Change"
+  },
+  {
+    "key": "calculus-i-and-ii-for-baseball-dynamics::limits-continuity-and-derivatives::product-quotient-and-chain-rules-in-practice",
+    "trackTitle": "Calculus I And II For Baseball Dynamics",
+    "unitTitle": "Limits, Continuity, And Derivatives",
+    "lessonTitle": "Product, Quotient, And Chain Rules In Practice"
+  },
+  {
+    "key": "calculus-i-and-ii-for-baseball-dynamics::limits-continuity-and-derivatives::implicit-differentiation-for-coupled-baseball-quantities",
+    "trackTitle": "Calculus I And II For Baseball Dynamics",
+    "unitTitle": "Limits, Continuity, And Derivatives",
+    "lessonTitle": "Implicit Differentiation For Coupled Baseball Quantities"
+  },
+  {
+    "key": "calculus-i-and-ii-for-baseball-dynamics::derivative-applications::optimization-for-launch-decisions",
+    "trackTitle": "Calculus I And II For Baseball Dynamics",
+    "unitTitle": "Derivative Applications",
+    "lessonTitle": "Optimization For Launch Decisions"
+  },
+  {
+    "key": "calculus-i-and-ii-for-baseball-dynamics::derivative-applications::related-rates-in-tracking-and-orientation",
+    "trackTitle": "Calculus I And II For Baseball Dynamics",
+    "unitTitle": "Derivative Applications",
+    "lessonTitle": "Related Rates In Tracking And Orientation"
+  },
+  {
+    "key": "calculus-i-and-ii-for-baseball-dynamics::derivative-applications::second-derivative-and-curvature-interpretation",
+    "trackTitle": "Calculus I And II For Baseball Dynamics",
+    "unitTitle": "Derivative Applications",
+    "lessonTitle": "Second Derivative And Curvature Interpretation"
+  },
+  {
+    "key": "calculus-i-and-ii-for-baseball-dynamics::derivative-applications::linearization-for-fast-approximation",
+    "trackTitle": "Calculus I And II For Baseball Dynamics",
+    "unitTitle": "Derivative Applications",
+    "lessonTitle": "Linearization For Fast Approximation"
+  },
+  {
+    "key": "calculus-i-and-ii-for-baseball-dynamics::derivative-applications::derivative-application-synthesis-lab",
+    "trackTitle": "Calculus I And II For Baseball Dynamics",
+    "unitTitle": "Derivative Applications",
+    "lessonTitle": "Derivative Application Synthesis Lab"
+  },
+  {
+    "key": "calculus-i-and-ii-for-baseball-dynamics::integrals-and-accumulation::definite-integral-as-accumulated-change",
+    "trackTitle": "Calculus I And II For Baseball Dynamics",
+    "unitTitle": "Integrals And Accumulation",
+    "lessonTitle": "Definite Integral As Accumulated Change"
+  },
+  {
+    "key": "calculus-i-and-ii-for-baseball-dynamics::integrals-and-accumulation::fundamental-theorem-of-calculus-in-modeling-workflow",
+    "trackTitle": "Calculus I And II For Baseball Dynamics",
+    "unitTitle": "Integrals And Accumulation",
+    "lessonTitle": "Fundamental Theorem Of Calculus In Modeling Workflow"
+  },
+  {
+    "key": "calculus-i-and-ii-for-baseball-dynamics::integrals-and-accumulation::substitution-and-integration-by-parts",
+    "trackTitle": "Calculus I And II For Baseball Dynamics",
+    "unitTitle": "Integrals And Accumulation",
+    "lessonTitle": "Substitution And Integration By Parts"
+  },
+  {
+    "key": "calculus-i-and-ii-for-baseball-dynamics::integrals-and-accumulation::numerical-integration-for-real-data",
+    "trackTitle": "Calculus I And II For Baseball Dynamics",
+    "unitTitle": "Integrals And Accumulation",
+    "lessonTitle": "Numerical Integration For Real Data"
+  },
+  {
+    "key": "calculus-i-and-ii-for-baseball-dynamics::integrals-and-accumulation::integral-interpretation-in-baseball-context",
+    "trackTitle": "Calculus I And II For Baseball Dynamics",
+    "unitTitle": "Integrals And Accumulation",
+    "lessonTitle": "Integral Interpretation In Baseball Context"
+  }
+]

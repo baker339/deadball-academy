@@ -1,0 +1,137 @@
+{
+  "generatedAtIso": "2026-05-11T22:42:13.375Z",
+  "tracks": [
+    {
+      "slug": "algebra-foundations-for-baseball-analytics",
+      "title": "Algebra Foundations For Baseball Analytics",
+      "lessonCount": 15,
+      "overallSeverityTallies": {
+        "blocker": 0,
+        "major": 0,
+        "minor": 0,
+        "note": 15
+      },
+      "totalHeuristicFindings": 0
+    },
+    {
+      "slug": "geometry-foundations-for-baseball-context",
+      "title": "Geometry Foundations For Baseball Context",
+      "lessonCount": 15,
+      "overallSeverityTallies": {
+        "blocker": 0,
+        "major": 0,
+        "minor": 0,
+        "note": 15
+      },
+      "totalHeuristicFindings": 0
+    },
+    {
+      "slug": "trigonometry-and-precalculus-for-baseball-modeling",
+      "title": "Trigonometry And Precalculus For Baseball Modeling",
+      "lessonCount": 15,
+      "overallSeverityTallies": {
+        "blocker": 0,
+        "major": 0,
+        "minor": 0,
+        "note": 15
+      },
+      "totalHeuristicFindings": 0
+    },
+    {
+      "slug": "calculus-i-and-ii-for-baseball-dynamics",
+      "title": "Calculus I And II For Baseball Dynamics",
+      "lessonCount": 15,
+      "overallSeverityTallies": {
+        "blocker": 0,
+        "major": 0,
+        "minor": 0,
+        "note": 15
+      },
+      "totalHeuristicFindings": 0
+    },
+    {
+      "slug": "multivariable-calculus-and-differential-equations",
+      "title": "Multivariable Calculus And Differential Equations",
+      "lessonCount": 15,
+      "overallSeverityTallies": {
+        "blocker": 0,
+        "major": 0,
+        "minor": 0,
+        "note": 15
+      },
+      "totalHeuristicFindings": 0
+    },
+    {
+      "slug": "baseball-physics-foundations",
+      "title": "Baseball Physics Foundations",
+      "lessonCount": 60,
+      "overallSeverityTallies": {
+        "blocker": 0,
+        "major": 0,
+        "minor": 0,
+        "note": 60
+      },
+      "totalHeuristicFindings": 0
+    },
+    {
+      "slug": "statistical-modeling-for-baseball",
+      "title": "Statistical Modeling For Baseball",
+      "lessonCount": 42,
+      "overallSeverityTallies": {
+        "blocker": 0,
+        "major": 0,
+        "minor": 0,
+        "note": 42
+      },
+      "totalHeuristicFindings": 0
+    },
+    {
+      "slug": "data-analysis-with-statcast",
+      "title": "Data Analysis With Statcast",
+      "lessonCount": 45,
+      "overallSeverityTallies": {
+        "blocker": 0,
+        "major": 0,
+        "minor": 0,
+        "note": 45
+      },
+      "totalHeuristicFindings": 0
+    },
+    {
+      "slug": "environmental-science-for-baseball-systems",
+      "title": "Environmental Science For Baseball Systems",
+      "lessonCount": 15,
+      "overallSeverityTallies": {
+        "blocker": 0,
+        "major": 0,
+        "minor": 0,
+        "note": 15
+      },
+      "totalHeuristicFindings": 0
+    },
+    {
+      "slug": "biological-mechanics-of-baseball",
+      "title": "Biological Mechanics Of Baseball",
+      "lessonCount": 15,
+      "overallSeverityTallies": {
+        "blocker": 0,
+        "major": 0,
+        "minor": 0,
+        "note": 15
+      },
+      "totalHeuristicFindings": 0
+    },
+    {
+      "slug": "communicating-sports-analytics-insights",
+      "title": "Communicating Sports Analytics Insights",
+      "lessonCount": 41,
+      "overallSeverityTallies": {
+        "blocker": 0,
+        "major": 0,
+        "minor": 0,
+        "note": 41
+      },
+      "totalHeuristicFindings": 0
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" role="img" aria-labelledby="t">
+  <title id="t">Simplified infield sketch with two labeled points and a distance segment</title>
+  <rect width="320" height="200" fill="#f8fafc" stroke="#cbd5e1" />
+  <path d="M160 180 L60 90 L160 40 L260 90 Z" fill="none" stroke="#0f172a" stroke-width="2" />
+  <circle cx="120" cy="120" r="5" fill="#2563eb" />
+  <circle cx="200" cy="110" r="5" fill="#2563eb" />
+  <line x1="120" y1="120" x2="200" y2="110" stroke="#dc2626" stroke-width="2" />
+  <text x="118" y="138" font-size="10" font-family="system-ui,sans-serif" fill="#0f172a">P1</text>
+  <text x="198" y="128" font-size="10" font-family="system-ui,sans-serif" fill="#0f172a">P2</text>
+  <text x="140" y="100" font-size="10" font-family="system-ui,sans-serif" fill="#dc2626">d</text>
+</svg>

@@ -1,0 +1,92 @@
+[
+  {
+    "key": "trigonometry-and-precalculus-for-baseball-modeling::trigonometric-core-concepts::trigonometric-functions-refresher-for-modeling",
+    "trackTitle": "Trigonometry And Precalculus For Baseball Modeling",
+    "unitTitle": "Trigonometric Core Concepts",
+    "lessonTitle": "Trigonometric Functions Refresher For Modeling"
+  },
+  {
+    "key": "trigonometry-and-precalculus-for-baseball-modeling::trigonometric-core-concepts::unit-circle-radians-and-angular-velocity-in-context",
+    "trackTitle": "Trigonometry And Precalculus For Baseball Modeling",
+    "unitTitle": "Trigonometric Core Concepts",
+    "lessonTitle": "Unit Circle, Radians, And Angular Velocity In Context"
+  },
+  {
+    "key": "trigonometry-and-precalculus-for-baseball-modeling::trigonometric-core-concepts::sohcahtoa-to-vector-components-horizontal-vs-vertical-motion",
+    "trackTitle": "Trigonometry And Precalculus For Baseball Modeling",
+    "unitTitle": "Trigonometric Core Concepts",
+    "lessonTitle": "SOHCAHTOA To Vector Components: Horizontal Vs Vertical Motion"
+  },
+  {
+    "key": "trigonometry-and-precalculus-for-baseball-modeling::trigonometric-core-concepts::inverse-trig-for-reconstructing-launch-conditions",
+    "trackTitle": "Trigonometry And Precalculus For Baseball Modeling",
+    "unitTitle": "Trigonometric Core Concepts",
+    "lessonTitle": "Inverse Trig For Reconstructing Launch Conditions"
+  },
+  {
+    "key": "trigonometry-and-precalculus-for-baseball-modeling::trigonometric-core-concepts::trig-identities-for-simplifying-flight-equations",
+    "trackTitle": "Trigonometry And Precalculus For Baseball Modeling",
+    "unitTitle": "Trigonometric Core Concepts",
+    "lessonTitle": "Trig Identities For Simplifying Flight Equations"
+  },
+  {
+    "key": "trigonometry-and-precalculus-for-baseball-modeling::functions-transformations-and-signals::phase-shift-and-periodicity-in-baseball-motion-signals",
+    "trackTitle": "Trigonometry And Precalculus For Baseball Modeling",
+    "unitTitle": "Functions, Transformations, And Signals",
+    "lessonTitle": "Phase Shift And Periodicity In Baseball Motion Signals"
+  },
+  {
+    "key": "trigonometry-and-precalculus-for-baseball-modeling::functions-transformations-and-signals::amplitude-frequency-and-signal-interpretation",
+    "trackTitle": "Trigonometry And Precalculus For Baseball Modeling",
+    "unitTitle": "Functions, Transformations, And Signals",
+    "lessonTitle": "Amplitude, Frequency, And Signal Interpretation"
+  },
+  {
+    "key": "trigonometry-and-precalculus-for-baseball-modeling::functions-transformations-and-signals::polar-cartesian-and-spherical-coordinate-conversions",
+    "trackTitle": "Trigonometry And Precalculus For Baseball Modeling",
+    "unitTitle": "Functions, Transformations, And Signals",
+    "lessonTitle": "Polar, Cartesian, And Spherical Coordinate Conversions"
+  },
+  {
+    "key": "trigonometry-and-precalculus-for-baseball-modeling::functions-transformations-and-signals::function-transformations-and-model-calibration",
+    "trackTitle": "Trigonometry And Precalculus For Baseball Modeling",
+    "unitTitle": "Functions, Transformations, And Signals",
+    "lessonTitle": "Function Transformations And Model Calibration"
+  },
+  {
+    "key": "trigonometry-and-precalculus-for-baseball-modeling::functions-transformations-and-signals::precalculus-signal-synthesis-workshop",
+    "trackTitle": "Trigonometry And Precalculus For Baseball Modeling",
+    "unitTitle": "Functions, Transformations, And Signals",
+    "lessonTitle": "Precalculus Signal Synthesis Workshop"
+  },
+  {
+    "key": "trigonometry-and-precalculus-for-baseball-modeling::vectors-and-optimization-preparation::dot-product-projection-and-directional-influence",
+    "trackTitle": "Trigonometry And Precalculus For Baseball Modeling",
+    "unitTitle": "Vectors And Optimization Preparation",
+    "lessonTitle": "Dot Product, Projection, And Directional Influence"
+  },
+  {
+    "key": "trigonometry-and-precalculus-for-baseball-modeling::vectors-and-optimization-preparation::cross-product-intuition-for-spin-and-orientation",
+    "trackTitle": "Trigonometry And Precalculus For Baseball Modeling",
+    "unitTitle": "Vectors And Optimization Preparation",
+    "lessonTitle": "Cross Product Intuition For Spin And Orientation"
+  },
+  {
+    "key": "trigonometry-and-precalculus-for-baseball-modeling::vectors-and-optimization-preparation::angle-optimization-under-physical-constraints",
+    "trackTitle": "Trigonometry And Precalculus For Baseball Modeling",
+    "unitTitle": "Vectors And Optimization Preparation",
+    "lessonTitle": "Angle Optimization Under Physical Constraints"
+  },
+  {
+    "key": "trigonometry-and-precalculus-for-baseball-modeling::vectors-and-optimization-preparation::error-propagation-in-trig-based-calculations",
+    "trackTitle": "Trigonometry And Precalculus For Baseball Modeling",
+    "unitTitle": "Vectors And Optimization Preparation",
+    "lessonTitle": "Error Propagation In Trig-Based Calculations"
+  },
+  {
+    "key": "trigonometry-and-precalculus-for-baseball-modeling::vectors-and-optimization-preparation::precalculus-capstone-from-angle-to-decision",
+    "trackTitle": "Trigonometry And Precalculus For Baseball Modeling",
+    "unitTitle": "Vectors And Optimization Preparation",
+    "lessonTitle": "Precalculus Capstone: From Angle To Decision"
+  }
+]

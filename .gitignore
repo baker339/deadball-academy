@@ -1,0 +1,34 @@
+.DS_Store
+*.pyc
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+
+# Cursor / IDE
+.cursor/
+
+# Python virtual environments
+venv/
+backend/venv/
+
+# Environment files
+.env
+backend/.env
+frontend/.env
+
+# Node
+node_modules/
+backend/app/node_modules/
+frontend/node_modules/
+
+# Build output
+.next/
+dist/
+coverage/
+
+# Rust
+backend/target/
+
+# Local databases
+*.db
+backend/*.db

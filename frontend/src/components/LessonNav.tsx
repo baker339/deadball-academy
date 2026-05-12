@@ -11,12 +11,12 @@ export default function LessonNav({ nextHref, nextLabel, prevHref, prevLabel }: 
   return (
     <div className="flex justify-between mt-12">
       {prevHref ? (
-        <Link href={prevHref} className="bg-neutral-100 text-black px-6 py-2 rounded font-semibold border border-neutral-200 hover:bg-neutral-200 transition">
+        <Link href={prevHref} className="ui-focus ui-btn-secondary !px-6 !py-2 font-semibold transition">
           ← {prevLabel || "Previous"}
         </Link>
       ) : <div />}
       {nextHref ? (
-        <Link href={nextHref} className="bg-black text-white px-6 py-2 rounded font-semibold shadow hover:bg-neutral-800 transition">
+        <Link href={nextHref} className="ui-focus ui-btn-primary !px-6 !py-2 font-semibold shadow transition">
           {nextLabel || "Next"} →
         </Link>
       ) : <div />}

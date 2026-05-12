@@ -1,0 +1,182 @@
+[
+  {
+    "key": "baseball-physics-foundations::newtonian-mechanics-and-projectile-motion::lift-and-magnus-contributions-to-trajectory-shape",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Newtonian Mechanics And Projectile Motion",
+    "lessonTitle": "Lift And Magnus Contributions To Trajectory Shape"
+  },
+  {
+    "key": "baseball-physics-foundations::newtonian-mechanics-and-projectile-motion::comparing-vacuum-drag-only-and-drag-lift-models",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Newtonian Mechanics And Projectile Motion",
+    "lessonTitle": "Comparing Vacuum, Drag-Only, And Drag+Lift Models"
+  },
+  {
+    "key": "baseball-physics-foundations::newtonian-mechanics-and-projectile-motion::parameter-sensitivity-and-stability-in-trajectory-models",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Newtonian Mechanics And Projectile Motion",
+    "lessonTitle": "Parameter Sensitivity And Stability In Trajectory Models"
+  },
+  {
+    "key": "baseball-physics-foundations::newtonian-mechanics-and-projectile-motion::newtonian-synthesis-lab-build-a-full-forward-simulator",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Newtonian Mechanics And Projectile Motion",
+    "lessonTitle": "Newtonian Synthesis Lab: Build A Full Forward Simulator"
+  },
+  {
+    "key": "baseball-physics-foundations::drag-lift-and-aerodynamics-of-the-baseball::physical-meaning-of-drag-coefficient-in-baseball",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Drag, Lift, And Aerodynamics Of The Baseball",
+    "lessonTitle": "Physical Meaning Of Drag Coefficient In Baseball"
+  },
+  {
+    "key": "baseball-physics-foundations::drag-lift-and-aerodynamics-of-the-baseball::reynolds-number-regimes-and-seam-effects",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Drag, Lift, And Aerodynamics Of The Baseball",
+    "lessonTitle": "Reynolds Number Regimes And Seam Effects"
+  },
+  {
+    "key": "baseball-physics-foundations::drag-lift-and-aerodynamics-of-the-baseball::boundary-layers-turbulence-and-flight-consequences",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Drag, Lift, And Aerodynamics Of The Baseball",
+    "lessonTitle": "Boundary Layers, Turbulence, And Flight Consequences"
+  },
+  {
+    "key": "baseball-physics-foundations::drag-lift-and-aerodynamics-of-the-baseball::lift-coefficient-spin-rate-and-spin-axis",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Drag, Lift, And Aerodynamics Of The Baseball",
+    "lessonTitle": "Lift Coefficient, Spin Rate, And Spin Axis"
+  },
+  {
+    "key": "baseball-physics-foundations::drag-lift-and-aerodynamics-of-the-baseball::coupled-drag-lift-dynamics-in-flight",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Drag, Lift, And Aerodynamics Of The Baseball",
+    "lessonTitle": "Coupled Drag-Lift Dynamics In Flight"
+  },
+  {
+    "key": "baseball-physics-foundations::drag-lift-and-aerodynamics-of-the-baseball::estimating-aerodynamic-parameters-from-observational-data",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Drag, Lift, And Aerodynamics Of The Baseball",
+    "lessonTitle": "Estimating Aerodynamic Parameters From Observational Data"
+  },
+  {
+    "key": "baseball-physics-foundations::drag-lift-and-aerodynamics-of-the-baseball::identifiability-when-different-parameters-fit-similar-outcomes",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Drag, Lift, And Aerodynamics Of The Baseball",
+    "lessonTitle": "Identifiability: When Different Parameters Fit Similar Outcomes"
+  },
+  {
+    "key": "baseball-physics-foundations::drag-lift-and-aerodynamics-of-the-baseball::aerodynamics-and-home-run-probability-pathways",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Drag, Lift, And Aerodynamics Of The Baseball",
+    "lessonTitle": "Aerodynamics And Home Run Probability Pathways"
+  },
+  {
+    "key": "baseball-physics-foundations::drag-lift-and-aerodynamics-of-the-baseball::model-misspecification-in-aerodynamic-inference",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Drag, Lift, And Aerodynamics Of The Baseball",
+    "lessonTitle": "Model Misspecification In Aerodynamic Inference"
+  },
+  {
+    "key": "baseball-physics-foundations::drag-lift-and-aerodynamics-of-the-baseball::aerodynamics-practicum-inference-and-validation",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Drag, Lift, And Aerodynamics Of The Baseball",
+    "lessonTitle": "Aerodynamics Practicum: Inference And Validation"
+  },
+  {
+    "key": "baseball-physics-foundations::environmental-effects-and-ballpark-context::air-density-temperature-pressure-and-humidity",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Environmental Effects And Ballpark Context",
+    "lessonTitle": "Air Density, Temperature, Pressure, And Humidity"
+  },
+  {
+    "key": "baseball-physics-foundations::environmental-effects-and-ballpark-context::altitude-and-effective-resistance-landscapes",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Environmental Effects And Ballpark Context",
+    "lessonTitle": "Altitude And Effective Resistance Landscapes"
+  },
+  {
+    "key": "baseball-physics-foundations::environmental-effects-and-ballpark-context::wind-vector-decomposition-relative-to-ball-path",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Environmental Effects And Ballpark Context",
+    "lessonTitle": "Wind Vector Decomposition Relative To Ball Path"
+  },
+  {
+    "key": "baseball-physics-foundations::environmental-effects-and-ballpark-context::weather-variability-and-uncertainty-bands",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Environmental Effects And Ballpark Context",
+    "lessonTitle": "Weather Variability And Uncertainty Bands"
+  },
+  {
+    "key": "baseball-physics-foundations::environmental-effects-and-ballpark-context::stadium-orientation-and-microclimate-interaction",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Environmental Effects And Ballpark Context",
+    "lessonTitle": "Stadium Orientation And Microclimate Interaction"
+  },
+  {
+    "key": "baseball-physics-foundations::environmental-effects-and-ballpark-context::normalizing-outcomes-across-ballparks",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Environmental Effects And Ballpark Context",
+    "lessonTitle": "Normalizing Outcomes Across Ballparks"
+  },
+  {
+    "key": "baseball-physics-foundations::environmental-effects-and-ballpark-context::environmental-counterfactuals-what-if-conditions-changed",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Environmental Effects And Ballpark Context",
+    "lessonTitle": "Environmental Counterfactuals (What If Conditions Changed?)"
+  },
+  {
+    "key": "baseball-physics-foundations::environmental-effects-and-ballpark-context::environment-integration-lab-context-aware-distance-models",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Environmental Effects And Ballpark Context",
+    "lessonTitle": "Environment Integration Lab: Context-Aware Distance Models"
+  },
+  {
+    "key": "baseball-physics-foundations::synthesis-building-physics-based-ball-flight-models::end-to-end-model-architecture-for-ball-flight",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Synthesis — Building Physics-Based Ball-Flight Models",
+    "lessonTitle": "End-To-End Model Architecture For Ball Flight"
+  },
+  {
+    "key": "baseball-physics-foundations::synthesis-building-physics-based-ball-flight-models::choosing-state-variables-and-parameter-priors",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Synthesis — Building Physics-Based Ball-Flight Models",
+    "lessonTitle": "Choosing State Variables And Parameter Priors"
+  },
+  {
+    "key": "baseball-physics-foundations::synthesis-building-physics-based-ball-flight-models::numerical-solvers-step-size-and-convergence-tradeoffs",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Synthesis — Building Physics-Based Ball-Flight Models",
+    "lessonTitle": "Numerical Solvers, Step Size, And Convergence Tradeoffs"
+  },
+  {
+    "key": "baseball-physics-foundations::synthesis-building-physics-based-ball-flight-models::calibration-with-statcast-style-observations",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Synthesis — Building Physics-Based Ball-Flight Models",
+    "lessonTitle": "Calibration With Statcast-Style Observations"
+  },
+  {
+    "key": "baseball-physics-foundations::synthesis-building-physics-based-ball-flight-models::residual-analysis-and-diagnostic-workflows",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Synthesis — Building Physics-Based Ball-Flight Models",
+    "lessonTitle": "Residual Analysis And Diagnostic Workflows"
+  },
+  {
+    "key": "baseball-physics-foundations::synthesis-building-physics-based-ball-flight-models::scenario-analysis-and-simulation-design",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Synthesis — Building Physics-Based Ball-Flight Models",
+    "lessonTitle": "Scenario Analysis And Simulation Design"
+  },
+  {
+    "key": "baseball-physics-foundations::synthesis-building-physics-based-ball-flight-models::reproducible-reporting-for-physics-models",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Synthesis — Building Physics-Based Ball-Flight Models",
+    "lessonTitle": "Reproducible Reporting For Physics Models"
+  },
+  {
+    "key": "baseball-physics-foundations::synthesis-building-physics-based-ball-flight-models::physics-capstone-milestone-technical-memo-draft",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Synthesis — Building Physics-Based Ball-Flight Models",
+    "lessonTitle": "Physics Capstone Milestone: Technical Memo Draft"
+  }
+]

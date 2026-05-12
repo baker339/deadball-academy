@@ -1,6 +1,288 @@
 @import "katex/dist/katex.min.css";
 @import "tailwindcss";
 
+/* --- Semantic tokens — neutral learning-product shell (light), navy + barn-red accent --- */
+:root {
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --color-bg: #f4f5f7;
+  --color-fg: #1a2230;
+  --color-muted: #5c6570;
+  --color-border: #e1e4ea;
+  --color-surface: #ffffff;
+  --color-surface-subtle: #eef0f4;
+  --color-surface-elevated: #ffffff;
+  --color-primary: #24324a;
+  --color-primary-fg: #f8fafc;
+  --color-primary-hover: #31425d;
+  --color-accent: #9a3412;
+  --color-accent-hover: #b91c1c;
+  --color-accent-muted: color-mix(in srgb, #9a3412 10%, #ffffff);
+  --color-accent-border: color-mix(in srgb, #9a3412 28%, #e1e4ea);
+  --color-ring: #c2410c;
+  --color-danger: #b91c1c;
+  --color-callout-bg: color-mix(in srgb, #24324a 6%, #ffffff);
+  --color-callout-border: color-mix(in srgb, #24324a 14%, #e1e4ea);
+  --color-callout-title: #24324a;
+  --shadow-card: 0 1px 3px 0 rgb(24 32 48 / 0.08), 0 1px 2px -1px rgb(24 32 48 / 0.06);
+  /** Long-form lesson reading envelope (high contrast on near-white) */
+  --color-reading-bg: #faf9f7;
+  --color-reading-fg: #1a2433;
+  --color-reading-muted: #5c6570;
+  --color-reading-border: #e0dbd4;
+}
+
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-ring);
+  outline-offset: 2px;
+}
+
+@layer components {
+  .ui-container {
+    @apply mx-auto w-full px-4;
+  }
+
+  /** Lesson / CMS preview shell: steps up one notch on xl+ ultrawide without stretching prose */
+  .ui-lesson-max {
+    @apply max-w-6xl xl:max-w-7xl 2xl:max-w-[88rem];
+  }
+
+  .ui-surface {
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border);
+    background-color: var(--color-surface);
+  }
+
+  .ui-surface-subtle {
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border);
+    background-color: var(--color-surface-subtle);
+  }
+
+  .ui-card-major {
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+    background-color: var(--color-surface-elevated);
+    box-shadow: var(--shadow-card);
+  }
+
+  .ui-btn-primary {
+    @apply inline-flex items-center justify-center px-5 py-2 text-sm font-semibold transition;
+    border-radius: var(--radius-sm);
+    background-color: var(--color-primary);
+    color: var(--color-primary-fg);
+  }
+
+  .ui-btn-primary:hover {
+    background-color: var(--color-primary-hover);
+  }
+
+  .ui-btn-primary:disabled {
+    @apply cursor-not-allowed opacity-60;
+  }
+
+  .ui-btn-secondary {
+    @apply inline-flex items-center justify-center px-5 py-2 text-sm font-semibold transition;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--color-border);
+    background-color: var(--color-surface);
+    color: var(--color-fg);
+  }
+
+  .ui-btn-secondary:hover {
+    background-color: var(--color-surface-subtle);
+  }
+
+  .ui-btn-ghost {
+    @apply inline-flex items-center justify-center px-4 py-2 text-sm font-medium transition;
+    border-radius: var(--radius-sm);
+    color: var(--color-muted);
+  }
+
+  .ui-btn-ghost:hover {
+    background-color: var(--color-surface-subtle);
+    color: var(--color-fg);
+  }
+
+  .ui-link {
+    @apply underline underline-offset-2 transition;
+    color: var(--color-accent);
+    text-decoration-color: color-mix(in srgb, var(--color-accent) 35%, transparent);
+  }
+
+  .ui-link:hover {
+    color: var(--color-accent-hover);
+  }
+
+  .ui-link-muted {
+    @apply underline underline-offset-2 transition;
+    color: var(--color-muted);
+    text-decoration-color: color-mix(in srgb, var(--color-muted) 45%, transparent);
+  }
+
+  .ui-link-muted:hover {
+    color: var(--color-fg);
+  }
+
+  .ui-meta-label {
+    @apply text-xs font-semibold uppercase tracking-wide md:text-sm md:tracking-normal;
+    color: var(--color-muted);
+  }
+
+  .ui-focus {
+    @apply focus:outline-none;
+  }
+
+  .ui-focus:focus-visible {
+    box-shadow: 0 0 0 2px var(--color-bg), 0 0 0 4px var(--color-ring);
+  }
+
+  .ui-app-nav {
+    @apply sticky top-0 z-10 w-full border-b backdrop-blur-sm;
+    border-color: var(--color-border);
+    background-color: color-mix(in srgb, var(--color-surface) 92%, transparent);
+  }
+
+  .ui-app-footer {
+    @apply mt-8 w-full border-t py-8 text-center text-xs;
+    border-color: var(--color-border);
+    color: var(--color-muted);
+  }
+
+  .ui-skip-link {
+    @apply fixed left-4 top-0 z-50 -translate-y-full rounded-b px-3 py-2 text-sm font-semibold transition-transform focus:translate-y-0;
+    background-color: var(--color-primary);
+    color: var(--color-primary-fg);
+  }
+
+  /** CMS studio slide-over: reset native dialog chrome; backdrop dim */
+  .cms-studio-tools-dialog {
+    position: fixed;
+    inset: 0;
+    z-index: 50;
+    margin: 0;
+    display: flex;
+    width: 100%;
+    max-width: none;
+    height: 100%;
+    max-height: none;
+    border: 0;
+    padding: 0;
+    background: transparent;
+    align-items: stretch;
+    justify-content: flex-end;
+  }
+
+  .cms-studio-tools-dialog::backdrop {
+    background-color: rgb(0 0 0 / 0.4);
+  }
+
+  /** Long-form lesson column: near-white panel on heritage canvas */
+  .ui-lesson-reading {
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-reading-border);
+    background-color: var(--color-reading-bg);
+    color: var(--color-reading-fg);
+    padding: 1.25rem 1rem 2rem;
+  }
+
+  @media (min-width: 640px) {
+    .ui-lesson-reading {
+      padding: 1.75rem 1.75rem 2.25rem;
+    }
+  }
+
+  /**
+   * Hub / marketing hero: pair with `.ui-card-major` for border + shadow.
+   * Adds accent rail + subtle vertical wash only.
+   */
+  .ui-marketing-hero {
+    border-left: 3px solid var(--color-accent);
+    padding-left: 1.25rem;
+    background-color: var(--color-surface-elevated);
+    background-image: linear-gradient(180deg, var(--color-surface) 0%, var(--color-surface-subtle) 100%);
+  }
+
+  /** Archivo Narrow (--font-display on html); display headings + wordmark—see layout.tsx */
+  .ui-marketing-display {
+    font-family: var(--font-display), system-ui, sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    text-transform: none;
+  }
+}
+
+.lesson-prose {
+  font-size: 1.03rem;
+  line-height: 1.8;
+  color: var(--color-reading-fg);
+}
+
+.lesson-prose p + p {
+  margin-top: 0.9rem;
+}
+
+.lesson-prose ul,
+.lesson-prose ol {
+  margin-top: 0.65rem;
+  margin-bottom: 0.65rem;
+  padding-left: 1.25rem;
+}
+
+.lesson-prose li + li {
+  margin-top: 0.35rem;
+}
+
+.lesson-callout {
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-callout-border);
+  background: var(--color-callout-bg);
+  padding: 0.75rem 0.9rem;
+}
+
+.lesson-callout-title {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-callout-title);
+}
+
+.lesson-flow-progress-track {
+  border-radius: 9999px;
+  background-color: var(--color-reading-border);
+}
+
+.lesson-flow-progress-fill {
+  border-radius: 9999px;
+  background-color: var(--color-accent);
+}
+
+.lesson-flow-step-active {
+  border-color: var(--color-accent-border);
+  background-color: var(--color-accent-muted);
+  box-shadow: var(--shadow-card);
+}
+
+.lesson-flow-step-idle {
+  border-color: var(--color-reading-border);
+  background-color: color-mix(in srgb, var(--color-reading-bg) 92%, var(--color-reading-fg));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lesson-flow-progress-fill {
+    transition: none !important;
+  }
+
+  .cms-studio-tools-dialog-panel {
+    transition: none !important;
+  }
 }

@@ -1,84 +1,70 @@
 "use client";
 
-import React from 'react';
+import { BlockMath } from "react-katex";
+import Link from "next/link";
 
-interface EquationBlockProps {
-  title?: string;
+type RelatedLesson = {
+  label: string;
+  href: string;
+};
+
+type EquationBlockProps = {
+  title: string;
   equation: string;
-  explanation?: string;
-  variables?: { [key: string]: string };
-  assumptions?: string[];
-  usedIn?: string[];
-  relatedLessons?: string[];
-}
+  explanation: string;
+  variables: string[];
+  assumptions: string[];
+  usedIn?: string;
+  relatedLessons?: RelatedLesson[];
+};
 
-export function EquationBlock({ 
-  title, 
-  equation, 
-  explanation, 
-  variables, 
-  assumptions, 
-  usedIn, 
-  relatedLessons 
+export function EquationBlock({
+  title,
+  equation,
+  explanation,
+  variables,
+  assumptions,
+  usedIn,
+  relatedLessons,
 }: EquationBlockProps) {
   return (
-    <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 my-4">
-      {title && (
-        <h4 className="font-semibold text-gray-800 mb-2">{title}</h4>
-      )}
-      
-      <div className="bg-white border border-gray-300 rounded p-3 mb-3">
-        <div className="text-center font-mono text-lg">
-          {equation}
-        </div>
+    <section className="ui-card-major mb-10 p-6">
+      <h2 className="mb-2 text-2xl font-bold">{title}</h2>
+      <div className="mb-2 rounded-md border border-[color:var(--color-border)] bg-[color:var(--color-surface)] p-3">
+        <BlockMath math={equation} />
       </div>
-      
-      {explanation && (
-        <p className="text-sm text-gray-600 mb-3">{explanation}</p>
-      )}
-      
-      {variables && Object.keys(variables).length > 0 && (
-        <div className="mb-3">
-          <h5 className="font-medium text-gray-700 mb-1">Variables:</h5>
-          <div className="text-sm text-gray-600">
-            {Object.entries(variables).map(([symbol, description]) => (
-              <div key={symbol} className="flex">
-                <span className="font-mono mr-2">{symbol}:</span>
-                <span>{description}</span>
-              </div>
-            ))}
-          </div>
+      <p className="mb-2 text-[color:var(--color-muted)]">{explanation}</p>
+      <div className="mb-2">
+        <strong>Variables:</strong>
+        <ul className="ml-4 list-disc list-inside">
+          {variables.map((variable, index) => <li key={index}>{variable}</li>)}
+        </ul>
+      </div>
+      <div className="mb-2">
+        <strong>Assumptions & Limitations:</strong>
+        <ul className="ml-4 list-disc list-inside">
+          {assumptions.map((assumption, index) => <li key={index}>{assumption}</li>)}
+        </ul>
+      </div>
+      {usedIn ? (
+        <div className="mb-2">
+          <strong>Used In:</strong> {usedIn}
         </div>
-      )}
-      
-      {assumptions && assumptions.length > 0 && (
-        <div className="mb-3">
-          <h5 className="font-medium text-gray-700 mb-1">Assumptions:</h5>
-          <ul className="text-sm text-gray-600 list-disc list-inside">
-            {assumptions.map((assumption, index) => (
-              <li key={index}>{assumption}</li>
+      ) : null}
+      {relatedLessons && relatedLessons.length > 0 ? (
+        <div>
+          <strong>Related Lessons:</strong>
+          <ul className="ml-4 list-disc list-inside">
+            {relatedLessons.map((lesson, index) => (
+              <li key={index}>
+                <Link href={lesson.href} className="ui-link">
+                  {lesson.label}
+                </Link>
+              </li>
             ))}
           </ul>
         </div>
-      )}
-      
-      {usedIn && usedIn.length > 0 && (
-        <div className="mb-3">
-          <h5 className="font-medium text-gray-700 mb-1">Used in:</h5>
-          <div className="text-sm text-gray-600">
-            {usedIn.join(', ')}
-          </div>
-        </div>
-      )}
-      
-      {relatedLessons && relatedLessons.length > 0 && (
-        <div>
-          <h5 className="font-medium text-gray-700 mb-1">Related lessons:</h5>
-          <div className="text-sm text-gray-600">
-            {relatedLessons.join(', ')}
-          </div>
-        </div>
-      )}
-    </div>
+      ) : null}
+    </section>
   );
 } 

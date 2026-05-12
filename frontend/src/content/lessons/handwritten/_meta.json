@@ -1,0 +1,1598 @@
+[
+  {
+    "key": "algebra-foundations-for-baseball-analytics::linear-expressions-equations-and-constraints::variables-units-and-baseball-quantities",
+    "trackTitle": "Algebra Foundations For Baseball Analytics",
+    "unitTitle": "Linear Expressions, Equations, And Constraints",
+    "lessonTitle": "Variables, Units, And Baseball Quantities"
+  },
+  {
+    "key": "algebra-foundations-for-baseball-analytics::linear-expressions-equations-and-constraints::solving-one-step-and-multi-step-equations-reliably",
+    "trackTitle": "Algebra Foundations For Baseball Analytics",
+    "unitTitle": "Linear Expressions, Equations, And Constraints",
+    "lessonTitle": "Solving One-Step And Multi-Step Equations Reliably"
+  },
+  {
+    "key": "algebra-foundations-for-baseball-analytics::linear-expressions-equations-and-constraints::inequalities-for-performance-threshold-questions",
+    "trackTitle": "Algebra Foundations For Baseball Analytics",
+    "unitTitle": "Linear Expressions, Equations, And Constraints",
+    "lessonTitle": "Inequalities For Performance Threshold Questions"
+  },
+  {
+    "key": "algebra-foundations-for-baseball-analytics::linear-expressions-equations-and-constraints::rearranging-formulas-used-in-baseball-metrics",
+    "trackTitle": "Algebra Foundations For Baseball Analytics",
+    "unitTitle": "Linear Expressions, Equations, And Constraints",
+    "lessonTitle": "Rearranging Formulas Used In Baseball Metrics"
+  },
+  {
+    "key": "algebra-foundations-for-baseball-analytics::linear-expressions-equations-and-constraints::algebra-error-checking-and-sanity-bounds",
+    "trackTitle": "Algebra Foundations For Baseball Analytics",
+    "unitTitle": "Linear Expressions, Equations, And Constraints",
+    "lessonTitle": "Algebra Error Checking And Sanity Bounds"
+  },
+  {
+    "key": "algebra-foundations-for-baseball-analytics::functions-and-representations::function-notation-through-baseball-input-output-stories",
+    "trackTitle": "Algebra Foundations For Baseball Analytics",
+    "unitTitle": "Functions And Representations",
+    "lessonTitle": "Function Notation Through Baseball Input-Output Stories"
+  },
+  {
+    "key": "algebra-foundations-for-baseball-analytics::functions-and-representations::domain-range-and-physical-plausibility",
+    "trackTitle": "Algebra Foundations For Baseball Analytics",
+    "unitTitle": "Functions And Representations",
+    "lessonTitle": "Domain, Range, And Physical Plausibility"
+  },
+  {
+    "key": "algebra-foundations-for-baseball-analytics::functions-and-representations::linear-functions-and-rate-interpretations",
+    "trackTitle": "Algebra Foundations For Baseball Analytics",
+    "unitTitle": "Functions And Representations",
+    "lessonTitle": "Linear Functions And Rate Interpretations"
+  },
+  {
+    "key": "algebra-foundations-for-baseball-analytics::functions-and-representations::piecewise-models-for-regime-based-baseball-behavior",
+    "trackTitle": "Algebra Foundations For Baseball Analytics",
+    "unitTitle": "Functions And Representations",
+    "lessonTitle": "Piecewise Models For Regime-Based Baseball Behavior"
+  },
+  {
+    "key": "algebra-foundations-for-baseball-analytics::functions-and-representations::composing-functions-in-modeling-pipelines",
+    "trackTitle": "Algebra Foundations For Baseball Analytics",
+    "unitTitle": "Functions And Representations",
+    "lessonTitle": "Composing Functions In Modeling Pipelines"
+  },
+  {
+    "key": "algebra-foundations-for-baseball-analytics::systems-and-modeling-structure::two-equation-systems-from-baseball-scenario-constraints",
+    "trackTitle": "Algebra Foundations For Baseball Analytics",
+    "unitTitle": "Systems And Modeling Structure",
+    "lessonTitle": "Two-Equation Systems From Baseball Scenario Constraints"
+  },
+  {
+    "key": "algebra-foundations-for-baseball-analytics::systems-and-modeling-structure::substitution-vs-elimination-strategy-selection",
+    "trackTitle": "Algebra Foundations For Baseball Analytics",
+    "unitTitle": "Systems And Modeling Structure",
+    "lessonTitle": "Substitution Vs Elimination Strategy Selection"
+  },
+  {
+    "key": "algebra-foundations-for-baseball-analytics::systems-and-modeling-structure::interpreting-intersections-as-feasible-states",
+    "trackTitle": "Algebra Foundations For Baseball Analytics",
+    "unitTitle": "Systems And Modeling Structure",
+    "lessonTitle": "Interpreting Intersections As Feasible States"
+  },
+  {
+    "key": "algebra-foundations-for-baseball-analytics::systems-and-modeling-structure::matrix-form-for-small-linear-systems",
+    "trackTitle": "Algebra Foundations For Baseball Analytics",
+    "unitTitle": "Systems And Modeling Structure",
+    "lessonTitle": "Matrix Form For Small Linear Systems"
+  },
+  {
+    "key": "algebra-foundations-for-baseball-analytics::systems-and-modeling-structure::algebra-foundations-synthesis-workshop",
+    "trackTitle": "Algebra Foundations For Baseball Analytics",
+    "unitTitle": "Systems And Modeling Structure",
+    "lessonTitle": "Algebra Foundations Synthesis Workshop"
+  },
+  {
+    "key": "geometry-foundations-for-baseball-context::coordinate-geometry-essentials::coordinate-systems-for-baseball-fields",
+    "trackTitle": "Geometry Foundations For Baseball Context",
+    "unitTitle": "Coordinate Geometry Essentials",
+    "lessonTitle": "Coordinate Systems For Baseball Fields"
+  },
+  {
+    "key": "geometry-foundations-for-baseball-context::coordinate-geometry-essentials::distance-formula-and-baseline-measurement",
+    "trackTitle": "Geometry Foundations For Baseball Context",
+    "unitTitle": "Coordinate Geometry Essentials",
+    "lessonTitle": "Distance Formula And Baseline Measurement"
+  },
+  {
+    "key": "geometry-foundations-for-baseball-context::coordinate-geometry-essentials::midpoints-segments-and-position-landmarks",
+    "trackTitle": "Geometry Foundations For Baseball Context",
+    "unitTitle": "Coordinate Geometry Essentials",
+    "lessonTitle": "Midpoints, Segments, And Position Landmarks"
+  },
+  {
+    "key": "geometry-foundations-for-baseball-context::coordinate-geometry-essentials::slope-as-directional-change-in-field-context",
+    "trackTitle": "Geometry Foundations For Baseball Context",
+    "unitTitle": "Coordinate Geometry Essentials",
+    "lessonTitle": "Slope As Directional Change In Field Context"
+  },
+  {
+    "key": "geometry-foundations-for-baseball-context::coordinate-geometry-essentials::line-equations-for-defensive-alignment-paths",
+    "trackTitle": "Geometry Foundations For Baseball Context",
+    "unitTitle": "Coordinate Geometry Essentials",
+    "lessonTitle": "Line Equations For Defensive Alignment Paths"
+  },
+  {
+    "key": "geometry-foundations-for-baseball-context::angles-triangles-and-measurement::angle-measure-conventions-for-motion-analysis",
+    "trackTitle": "Geometry Foundations For Baseball Context",
+    "unitTitle": "Angles, Triangles, And Measurement",
+    "lessonTitle": "Angle Measure Conventions For Motion Analysis"
+  },
+  {
+    "key": "geometry-foundations-for-baseball-context::angles-triangles-and-measurement::triangle-similarity-in-camera-and-field-scaling",
+    "trackTitle": "Geometry Foundations For Baseball Context",
+    "unitTitle": "Angles, Triangles, And Measurement",
+    "lessonTitle": "Triangle Similarity In Camera And Field Scaling"
+  },
+  {
+    "key": "geometry-foundations-for-baseball-context::angles-triangles-and-measurement::right-triangle-geometry-for-component-thinking",
+    "trackTitle": "Geometry Foundations For Baseball Context",
+    "unitTitle": "Angles, Triangles, And Measurement",
+    "lessonTitle": "Right Triangle Geometry For Component Thinking"
+  },
+  {
+    "key": "geometry-foundations-for-baseball-context::angles-triangles-and-measurement::law-of-sines-and-law-of-cosines-in-stadium-problems",
+    "trackTitle": "Geometry Foundations For Baseball Context",
+    "unitTitle": "Angles, Triangles, And Measurement",
+    "lessonTitle": "Law Of Sines And Law Of Cosines In Stadium Problems"
+  },
+  {
+    "key": "geometry-foundations-for-baseball-context::angles-triangles-and-measurement::geometric-proof-mindset-for-model-trust",
+    "trackTitle": "Geometry Foundations For Baseball Context",
+    "unitTitle": "Angles, Triangles, And Measurement",
+    "lessonTitle": "Geometric Proof Mindset For Model Trust"
+  },
+  {
+    "key": "geometry-foundations-for-baseball-context::circles-arcs-and-curvature::circle-equations-and-radial-interpretations",
+    "trackTitle": "Geometry Foundations For Baseball Context",
+    "unitTitle": "Circles, Arcs, And Curvature",
+    "lessonTitle": "Circle Equations And Radial Interpretations"
+  },
+  {
+    "key": "geometry-foundations-for-baseball-context::circles-arcs-and-curvature::arc-length-curvature-and-outfield-wall-geometry",
+    "trackTitle": "Geometry Foundations For Baseball Context",
+    "unitTitle": "Circles, Arcs, And Curvature",
+    "lessonTitle": "Arc Length, Curvature, And Outfield Wall Geometry"
+  },
+  {
+    "key": "geometry-foundations-for-baseball-context::circles-arcs-and-curvature::sector-area-and-angular-coverage",
+    "trackTitle": "Geometry Foundations For Baseball Context",
+    "unitTitle": "Circles, Arcs, And Curvature",
+    "lessonTitle": "Sector Area And Angular Coverage"
+  },
+  {
+    "key": "geometry-foundations-for-baseball-context::circles-arcs-and-curvature::chord-vs-arc-interpretation-pitfalls",
+    "trackTitle": "Geometry Foundations For Baseball Context",
+    "unitTitle": "Circles, Arcs, And Curvature",
+    "lessonTitle": "Chord Vs Arc Interpretation Pitfalls"
+  },
+  {
+    "key": "geometry-foundations-for-baseball-context::circles-arcs-and-curvature::geometry-foundations-synthesis-lab",
+    "trackTitle": "Geometry Foundations For Baseball Context",
+    "unitTitle": "Circles, Arcs, And Curvature",
+    "lessonTitle": "Geometry Foundations Synthesis Lab"
+  },
+  {
+    "key": "trigonometry-and-precalculus-for-baseball-modeling::trigonometric-core-concepts::trigonometric-functions-refresher-for-modeling",
+    "trackTitle": "Trigonometry And Precalculus For Baseball Modeling",
+    "unitTitle": "Trigonometric Core Concepts",
+    "lessonTitle": "Trigonometric Functions Refresher For Modeling"
+  },
+  {
+    "key": "trigonometry-and-precalculus-for-baseball-modeling::trigonometric-core-concepts::unit-circle-radians-and-angular-velocity-in-context",
+    "trackTitle": "Trigonometry And Precalculus For Baseball Modeling",
+    "unitTitle": "Trigonometric Core Concepts",
+    "lessonTitle": "Unit Circle, Radians, And Angular Velocity In Context"
+  },
+  {
+    "key": "trigonometry-and-precalculus-for-baseball-modeling::trigonometric-core-concepts::sohcahtoa-to-vector-components-horizontal-vs-vertical-motion",
+    "trackTitle": "Trigonometry And Precalculus For Baseball Modeling",
+    "unitTitle": "Trigonometric Core Concepts",
+    "lessonTitle": "SOHCAHTOA To Vector Components: Horizontal Vs Vertical Motion"
+  },
+  {
+    "key": "trigonometry-and-precalculus-for-baseball-modeling::trigonometric-core-concepts::inverse-trig-for-reconstructing-launch-conditions",
+    "trackTitle": "Trigonometry And Precalculus For Baseball Modeling",
+    "unitTitle": "Trigonometric Core Concepts",
+    "lessonTitle": "Inverse Trig For Reconstructing Launch Conditions"
+  },
+  {
+    "key": "trigonometry-and-precalculus-for-baseball-modeling::trigonometric-core-concepts::trig-identities-for-simplifying-flight-equations",
+    "trackTitle": "Trigonometry And Precalculus For Baseball Modeling",
+    "unitTitle": "Trigonometric Core Concepts",
+    "lessonTitle": "Trig Identities For Simplifying Flight Equations"
+  },
+  {
+    "key": "trigonometry-and-precalculus-for-baseball-modeling::functions-transformations-and-signals::phase-shift-and-periodicity-in-baseball-motion-signals",
+    "trackTitle": "Trigonometry And Precalculus For Baseball Modeling",
+    "unitTitle": "Functions, Transformations, And Signals",
+    "lessonTitle": "Phase Shift And Periodicity In Baseball Motion Signals"
+  },
+  {
+    "key": "trigonometry-and-precalculus-for-baseball-modeling::functions-transformations-and-signals::amplitude-frequency-and-signal-interpretation",
+    "trackTitle": "Trigonometry And Precalculus For Baseball Modeling",
+    "unitTitle": "Functions, Transformations, And Signals",
+    "lessonTitle": "Amplitude, Frequency, And Signal Interpretation"
+  },
+  {
+    "key": "trigonometry-and-precalculus-for-baseball-modeling::functions-transformations-and-signals::polar-cartesian-and-spherical-coordinate-conversions",
+    "trackTitle": "Trigonometry And Precalculus For Baseball Modeling",
+    "unitTitle": "Functions, Transformations, And Signals",
+    "lessonTitle": "Polar, Cartesian, And Spherical Coordinate Conversions"
+  },
+  {
+    "key": "trigonometry-and-precalculus-for-baseball-modeling::functions-transformations-and-signals::function-transformations-and-model-calibration",
+    "trackTitle": "Trigonometry And Precalculus For Baseball Modeling",
+    "unitTitle": "Functions, Transformations, And Signals",
+    "lessonTitle": "Function Transformations And Model Calibration"
+  },
+  {
+    "key": "trigonometry-and-precalculus-for-baseball-modeling::functions-transformations-and-signals::precalculus-signal-synthesis-workshop",
+    "trackTitle": "Trigonometry And Precalculus For Baseball Modeling",
+    "unitTitle": "Functions, Transformations, And Signals",
+    "lessonTitle": "Precalculus Signal Synthesis Workshop"
+  },
+  {
+    "key": "trigonometry-and-precalculus-for-baseball-modeling::vectors-and-optimization-preparation::dot-product-projection-and-directional-influence",
+    "trackTitle": "Trigonometry And Precalculus For Baseball Modeling",
+    "unitTitle": "Vectors And Optimization Preparation",
+    "lessonTitle": "Dot Product, Projection, And Directional Influence"
+  },
+  {
+    "key": "trigonometry-and-precalculus-for-baseball-modeling::vectors-and-optimization-preparation::cross-product-intuition-for-spin-and-orientation",
+    "trackTitle": "Trigonometry And Precalculus For Baseball Modeling",
+    "unitTitle": "Vectors And Optimization Preparation",
+    "lessonTitle": "Cross Product Intuition For Spin And Orientation"
+  },
+  {
+    "key": "trigonometry-and-precalculus-for-baseball-modeling::vectors-and-optimization-preparation::angle-optimization-under-physical-constraints",
+    "trackTitle": "Trigonometry And Precalculus For Baseball Modeling",
+    "unitTitle": "Vectors And Optimization Preparation",
+    "lessonTitle": "Angle Optimization Under Physical Constraints"
+  },
+  {
+    "key": "trigonometry-and-precalculus-for-baseball-modeling::vectors-and-optimization-preparation::error-propagation-in-trig-based-calculations",
+    "trackTitle": "Trigonometry And Precalculus For Baseball Modeling",
+    "unitTitle": "Vectors And Optimization Preparation",
+    "lessonTitle": "Error Propagation In Trig-Based Calculations"
+  },
+  {
+    "key": "trigonometry-and-precalculus-for-baseball-modeling::vectors-and-optimization-preparation::precalculus-capstone-from-angle-to-decision",
+    "trackTitle": "Trigonometry And Precalculus For Baseball Modeling",
+    "unitTitle": "Vectors And Optimization Preparation",
+    "lessonTitle": "Precalculus Capstone: From Angle To Decision"
+  },
+  {
+    "key": "calculus-i-and-ii-for-baseball-dynamics::limits-continuity-and-derivatives::limits-as-trend-questions-in-baseball-motion",
+    "trackTitle": "Calculus I And II For Baseball Dynamics",
+    "unitTitle": "Limits, Continuity, And Derivatives",
+    "lessonTitle": "Limits As Trend Questions In Baseball Motion"
+  },
+  {
+    "key": "calculus-i-and-ii-for-baseball-dynamics::limits-continuity-and-derivatives::continuity-and-model-breakpoint-detection",
+    "trackTitle": "Calculus I And II For Baseball Dynamics",
+    "unitTitle": "Limits, Continuity, And Derivatives",
+    "lessonTitle": "Continuity And Model Breakpoint Detection"
+  },
+  {
+    "key": "calculus-i-and-ii-for-baseball-dynamics::limits-continuity-and-derivatives::derivative-as-instantaneous-rate-of-change",
+    "trackTitle": "Calculus I And II For Baseball Dynamics",
+    "unitTitle": "Limits, Continuity, And Derivatives",
+    "lessonTitle": "Derivative As Instantaneous Rate Of Change"
+  },
+  {
+    "key": "calculus-i-and-ii-for-baseball-dynamics::limits-continuity-and-derivatives::product-quotient-and-chain-rules-in-practice",
+    "trackTitle": "Calculus I And II For Baseball Dynamics",
+    "unitTitle": "Limits, Continuity, And Derivatives",
+    "lessonTitle": "Product, Quotient, And Chain Rules In Practice"
+  },
+  {
+    "key": "calculus-i-and-ii-for-baseball-dynamics::limits-continuity-and-derivatives::implicit-differentiation-for-coupled-baseball-quantities",
+    "trackTitle": "Calculus I And II For Baseball Dynamics",
+    "unitTitle": "Limits, Continuity, And Derivatives",
+    "lessonTitle": "Implicit Differentiation For Coupled Baseball Quantities"
+  },
+  {
+    "key": "calculus-i-and-ii-for-baseball-dynamics::derivative-applications::optimization-for-launch-decisions",
+    "trackTitle": "Calculus I And II For Baseball Dynamics",
+    "unitTitle": "Derivative Applications",
+    "lessonTitle": "Optimization For Launch Decisions"
+  },
+  {
+    "key": "calculus-i-and-ii-for-baseball-dynamics::derivative-applications::related-rates-in-tracking-and-orientation",
+    "trackTitle": "Calculus I And II For Baseball Dynamics",
+    "unitTitle": "Derivative Applications",
+    "lessonTitle": "Related Rates In Tracking And Orientation"
+  },
+  {
+    "key": "calculus-i-and-ii-for-baseball-dynamics::derivative-applications::second-derivative-and-curvature-interpretation",
+    "trackTitle": "Calculus I And II For Baseball Dynamics",
+    "unitTitle": "Derivative Applications",
+    "lessonTitle": "Second Derivative And Curvature Interpretation"
+  },
+  {
+    "key": "calculus-i-and-ii-for-baseball-dynamics::derivative-applications::linearization-for-fast-approximation",
+    "trackTitle": "Calculus I And II For Baseball Dynamics",
+    "unitTitle": "Derivative Applications",
+    "lessonTitle": "Linearization For Fast Approximation"
+  },
+  {
+    "key": "calculus-i-and-ii-for-baseball-dynamics::derivative-applications::derivative-application-synthesis-lab",
+    "trackTitle": "Calculus I And II For Baseball Dynamics",
+    "unitTitle": "Derivative Applications",
+    "lessonTitle": "Derivative Application Synthesis Lab"
+  },
+  {
+    "key": "calculus-i-and-ii-for-baseball-dynamics::integrals-and-accumulation::definite-integral-as-accumulated-change",
+    "trackTitle": "Calculus I And II For Baseball Dynamics",
+    "unitTitle": "Integrals And Accumulation",
+    "lessonTitle": "Definite Integral As Accumulated Change"
+  },
+  {
+    "key": "calculus-i-and-ii-for-baseball-dynamics::integrals-and-accumulation::fundamental-theorem-of-calculus-in-modeling-workflow",
+    "trackTitle": "Calculus I And II For Baseball Dynamics",
+    "unitTitle": "Integrals And Accumulation",
+    "lessonTitle": "Fundamental Theorem Of Calculus In Modeling Workflow"
+  },
+  {
+    "key": "calculus-i-and-ii-for-baseball-dynamics::integrals-and-accumulation::substitution-and-integration-by-parts",
+    "trackTitle": "Calculus I And II For Baseball Dynamics",
+    "unitTitle": "Integrals And Accumulation",
+    "lessonTitle": "Substitution And Integration By Parts"
+  },
+  {
+    "key": "calculus-i-and-ii-for-baseball-dynamics::integrals-and-accumulation::numerical-integration-for-real-data",
+    "trackTitle": "Calculus I And II For Baseball Dynamics",
+    "unitTitle": "Integrals And Accumulation",
+    "lessonTitle": "Numerical Integration For Real Data"
+  },
+  {
+    "key": "calculus-i-and-ii-for-baseball-dynamics::integrals-and-accumulation::integral-interpretation-in-baseball-context",
+    "trackTitle": "Calculus I And II For Baseball Dynamics",
+    "unitTitle": "Integrals And Accumulation",
+    "lessonTitle": "Integral Interpretation In Baseball Context"
+  },
+  {
+    "key": "multivariable-calculus-and-differential-equations::multivariable-function-geometry::functions-of-several-variables-in-baseball-systems",
+    "trackTitle": "Multivariable Calculus And Differential Equations",
+    "unitTitle": "Multivariable Function Geometry",
+    "lessonTitle": "Functions Of Several Variables In Baseball Systems"
+  },
+  {
+    "key": "multivariable-calculus-and-differential-equations::multivariable-function-geometry::partial-derivatives-and-marginal-effects",
+    "trackTitle": "Multivariable Calculus And Differential Equations",
+    "unitTitle": "Multivariable Function Geometry",
+    "lessonTitle": "Partial Derivatives And Marginal Effects"
+  },
+  {
+    "key": "multivariable-calculus-and-differential-equations::multivariable-function-geometry::gradient-directional-derivative-and-sensitivity",
+    "trackTitle": "Multivariable Calculus And Differential Equations",
+    "unitTitle": "Multivariable Function Geometry",
+    "lessonTitle": "Gradient, Directional Derivative, And Sensitivity"
+  },
+  {
+    "key": "multivariable-calculus-and-differential-equations::multivariable-function-geometry::tangent-planes-and-local-linear-models",
+    "trackTitle": "Multivariable Calculus And Differential Equations",
+    "unitTitle": "Multivariable Function Geometry",
+    "lessonTitle": "Tangent Planes And Local Linear Models"
+  },
+  {
+    "key": "multivariable-calculus-and-differential-equations::multivariable-function-geometry::multivariable-optimization-under-constraints",
+    "trackTitle": "Multivariable Calculus And Differential Equations",
+    "unitTitle": "Multivariable Function Geometry",
+    "lessonTitle": "Multivariable Optimization Under Constraints"
+  },
+  {
+    "key": "multivariable-calculus-and-differential-equations::multiple-integration-and-vector-fields::double-integrals-over-physical-regions",
+    "trackTitle": "Multivariable Calculus And Differential Equations",
+    "unitTitle": "Multiple Integration And Vector Fields",
+    "lessonTitle": "Double Integrals Over Physical Regions"
+  },
+  {
+    "key": "multivariable-calculus-and-differential-equations::multiple-integration-and-vector-fields::coordinate-changes-in-multivariable-integrals",
+    "trackTitle": "Multivariable Calculus And Differential Equations",
+    "unitTitle": "Multiple Integration And Vector Fields",
+    "lessonTitle": "Coordinate Changes In Multivariable Integrals"
+  },
+  {
+    "key": "multivariable-calculus-and-differential-equations::multiple-integration-and-vector-fields::vector-fields-and-flow-interpretation",
+    "trackTitle": "Multivariable Calculus And Differential Equations",
+    "unitTitle": "Multiple Integration And Vector Fields",
+    "lessonTitle": "Vector Fields And Flow Interpretation"
+  },
+  {
+    "key": "multivariable-calculus-and-differential-equations::multiple-integration-and-vector-fields::line-integrals-for-work-like-quantities",
+    "trackTitle": "Multivariable Calculus And Differential Equations",
+    "unitTitle": "Multiple Integration And Vector Fields",
+    "lessonTitle": "Line Integrals For Work-Like Quantities"
+  },
+  {
+    "key": "multivariable-calculus-and-differential-equations::multiple-integration-and-vector-fields::multivariable-integration-synthesis-workshop",
+    "trackTitle": "Multivariable Calculus And Differential Equations",
+    "unitTitle": "Multiple Integration And Vector Fields",
+    "lessonTitle": "Multivariable Integration Synthesis Workshop"
+  },
+  {
+    "key": "multivariable-calculus-and-differential-equations::differential-equations-for-dynamic-systems::first-order-odes-for-baseball-change-models",
+    "trackTitle": "Multivariable Calculus And Differential Equations",
+    "unitTitle": "Differential Equations For Dynamic Systems",
+    "lessonTitle": "First-Order ODEs For Baseball Change Models"
+  },
+  {
+    "key": "multivariable-calculus-and-differential-equations::differential-equations-for-dynamic-systems::second-order-odes-for-motion-dynamics",
+    "trackTitle": "Multivariable Calculus And Differential Equations",
+    "unitTitle": "Differential Equations For Dynamic Systems",
+    "lessonTitle": "Second-Order ODEs For Motion Dynamics"
+  },
+  {
+    "key": "multivariable-calculus-and-differential-equations::differential-equations-for-dynamic-systems::linear-systems-and-stability-intuition",
+    "trackTitle": "Multivariable Calculus And Differential Equations",
+    "unitTitle": "Differential Equations For Dynamic Systems",
+    "lessonTitle": "Linear Systems And Stability Intuition"
+  },
+  {
+    "key": "multivariable-calculus-and-differential-equations::differential-equations-for-dynamic-systems::numerical-ode-solvers-and-step-control",
+    "trackTitle": "Multivariable Calculus And Differential Equations",
+    "unitTitle": "Differential Equations For Dynamic Systems",
+    "lessonTitle": "Numerical ODE Solvers And Step Control"
+  },
+  {
+    "key": "multivariable-calculus-and-differential-equations::differential-equations-for-dynamic-systems::differential-equations-capstone-integration",
+    "trackTitle": "Multivariable Calculus And Differential Equations",
+    "unitTitle": "Differential Equations For Dynamic Systems",
+    "lessonTitle": "Differential Equations Capstone Integration"
+  },
+  {
+    "key": "baseball-physics-foundations::geometry-of-the-field-and-ball-flight::coordinate-systems-for-baseball-fields",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Geometry Of The Field And Ball Flight",
+    "lessonTitle": "Coordinate Systems For Baseball Fields"
+  },
+  {
+    "key": "baseball-physics-foundations::geometry-of-the-field-and-ball-flight::field-dimensions-symmetry-and-constraint-boundaries",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Geometry Of The Field And Ball Flight",
+    "lessonTitle": "Field Dimensions, Symmetry, And Constraint Boundaries"
+  },
+  {
+    "key": "baseball-physics-foundations::geometry-of-the-field-and-ball-flight::arc-length-curvature-and-outfield-wall-geometry",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Geometry Of The Field And Ball Flight",
+    "lessonTitle": "Arc Length, Curvature, And Outfield Wall Geometry"
+  },
+  {
+    "key": "baseball-physics-foundations::geometry-of-the-field-and-ball-flight::launch-angle-as-a-geometric-object",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Geometry Of The Field And Ball Flight",
+    "lessonTitle": "Launch Angle As A Geometric Object"
+  },
+  {
+    "key": "baseball-physics-foundations::geometry-of-the-field-and-ball-flight::2d-to-3d-flight-geometry-transitions",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Geometry Of The Field And Ball Flight",
+    "lessonTitle": "2D To 3D Flight Geometry Transitions"
+  },
+  {
+    "key": "baseball-physics-foundations::geometry-of-the-field-and-ball-flight::ballpark-topology-and-home-run-boundary-surfaces",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Geometry Of The Field And Ball Flight",
+    "lessonTitle": "Ballpark Topology And Home Run Boundary Surfaces"
+  },
+  {
+    "key": "baseball-physics-foundations::geometry-of-the-field-and-ball-flight::geometric-sensitivity-small-angle-changes-large-outcome-swings",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Geometry Of The Field And Ball Flight",
+    "lessonTitle": "Geometric Sensitivity: Small Angle Changes, Large Outcome Swings"
+  },
+  {
+    "key": "baseball-physics-foundations::geometry-of-the-field-and-ball-flight::geometry-synthesis-lab-mapping-ball-flight-regions",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Geometry Of The Field And Ball Flight",
+    "lessonTitle": "Geometry Synthesis Lab: Mapping Ball Flight Regions"
+  },
+  {
+    "key": "baseball-physics-foundations::trigonometry-and-vector-decomposition::trigonometric-functions-refresher-for-modeling",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Trigonometry And Vector Decomposition",
+    "lessonTitle": "Trigonometric Functions Refresher For Modeling"
+  },
+  {
+    "key": "baseball-physics-foundations::trigonometry-and-vector-decomposition::unit-circle-radians-and-angular-velocity-in-context",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Trigonometry And Vector Decomposition",
+    "lessonTitle": "Unit Circle, Radians, And Angular Velocity In Context"
+  },
+  {
+    "key": "baseball-physics-foundations::trigonometry-and-vector-decomposition::sohcahtoa-to-vector-components-horizontal-vs-vertical-motion",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Trigonometry And Vector Decomposition",
+    "lessonTitle": "SOHCAHTOA To Vector Components: Horizontal Vs Vertical Motion"
+  },
+  {
+    "key": "baseball-physics-foundations::trigonometry-and-vector-decomposition::inverse-trig-for-reconstructing-launch-conditions",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Trigonometry And Vector Decomposition",
+    "lessonTitle": "Inverse Trig For Reconstructing Launch Conditions"
+  },
+  {
+    "key": "baseball-physics-foundations::trigonometry-and-vector-decomposition::dot-product-projection-and-directional-influence",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Trigonometry And Vector Decomposition",
+    "lessonTitle": "Dot Product, Projection, And Directional Influence"
+  },
+  {
+    "key": "baseball-physics-foundations::trigonometry-and-vector-decomposition::cross-product-intuition-for-spin-and-orientation",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Trigonometry And Vector Decomposition",
+    "lessonTitle": "Cross Product Intuition For Spin And Orientation"
+  },
+  {
+    "key": "baseball-physics-foundations::trigonometry-and-vector-decomposition::polar-cartesian-and-spherical-coordinate-conversions",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Trigonometry And Vector Decomposition",
+    "lessonTitle": "Polar, Cartesian, And Spherical Coordinate Conversions"
+  },
+  {
+    "key": "baseball-physics-foundations::trigonometry-and-vector-decomposition::phase-shift-and-periodicity-in-baseball-motion-signals",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Trigonometry And Vector Decomposition",
+    "lessonTitle": "Phase Shift And Periodicity In Baseball Motion Signals"
+  },
+  {
+    "key": "baseball-physics-foundations::trigonometry-and-vector-decomposition::trig-identities-for-simplifying-flight-equations",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Trigonometry And Vector Decomposition",
+    "lessonTitle": "Trig Identities For Simplifying Flight Equations"
+  },
+  {
+    "key": "baseball-physics-foundations::trigonometry-and-vector-decomposition::angle-optimization-under-physical-constraints",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Trigonometry And Vector Decomposition",
+    "lessonTitle": "Angle Optimization Under Physical Constraints"
+  },
+  {
+    "key": "baseball-physics-foundations::trigonometry-and-vector-decomposition::error-propagation-in-trig-based-calculations",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Trigonometry And Vector Decomposition",
+    "lessonTitle": "Error Propagation In Trig-Based Calculations"
+  },
+  {
+    "key": "baseball-physics-foundations::trigonometry-and-vector-decomposition::trigonometry-mastery-workshop-multi-step-applied-problems",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Trigonometry And Vector Decomposition",
+    "lessonTitle": "Trigonometry Mastery Workshop: Multi-Step Applied Problems"
+  },
+  {
+    "key": "baseball-physics-foundations::newtonian-mechanics-and-projectile-motion::newton-s-laws-revisited-for-ball-bat-and-ball-air-systems",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Newtonian Mechanics And Projectile Motion",
+    "lessonTitle": "Newton's Laws Revisited For Ball-Bat And Ball-Air Systems"
+  },
+  {
+    "key": "baseball-physics-foundations::newtonian-mechanics-and-projectile-motion::kinematics-in-one-and-two-dimensions",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Newtonian Mechanics And Projectile Motion",
+    "lessonTitle": "Kinematics In One And Two Dimensions"
+  },
+  {
+    "key": "baseball-physics-foundations::newtonian-mechanics-and-projectile-motion::free-body-diagrams-for-batted-ball-motion",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Newtonian Mechanics And Projectile Motion",
+    "lessonTitle": "Free-Body Diagrams For Batted Ball Motion"
+  },
+  {
+    "key": "baseball-physics-foundations::newtonian-mechanics-and-projectile-motion::initial-conditions-exit-velocity-launch-angle-spin-inputs",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Newtonian Mechanics And Projectile Motion",
+    "lessonTitle": "Initial Conditions: Exit Velocity, Launch Angle, Spin Inputs"
+  },
+  {
+    "key": "baseball-physics-foundations::newtonian-mechanics-and-projectile-motion::no-drag-projectile-derivation-from-first-principles",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Newtonian Mechanics And Projectile Motion",
+    "lessonTitle": "No-Drag Projectile Derivation From First Principles"
+  },
+  {
+    "key": "baseball-physics-foundations::newtonian-mechanics-and-projectile-motion::time-of-flight-apex-and-range-relationships",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Newtonian Mechanics And Projectile Motion",
+    "lessonTitle": "Time Of Flight, Apex, And Range Relationships"
+  },
+  {
+    "key": "baseball-physics-foundations::newtonian-mechanics-and-projectile-motion::energy-methods-vs-force-methods-in-ball-flight",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Newtonian Mechanics And Projectile Motion",
+    "lessonTitle": "Energy Methods Vs Force Methods In Ball Flight"
+  },
+  {
+    "key": "baseball-physics-foundations::newtonian-mechanics-and-projectile-motion::momentum-transfer-in-contact-events",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Newtonian Mechanics And Projectile Motion",
+    "lessonTitle": "Momentum Transfer In Contact Events"
+  },
+  {
+    "key": "baseball-physics-foundations::newtonian-mechanics-and-projectile-motion::introducing-drag-into-newton-s-second-law",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Newtonian Mechanics And Projectile Motion",
+    "lessonTitle": "Introducing Drag Into Newton's Second Law"
+  },
+  {
+    "key": "baseball-physics-foundations::newtonian-mechanics-and-projectile-motion::solving-drag-inclusive-odes-numerically",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Newtonian Mechanics And Projectile Motion",
+    "lessonTitle": "Solving Drag-Inclusive ODEs Numerically"
+  },
+  {
+    "key": "baseball-physics-foundations::newtonian-mechanics-and-projectile-motion::lift-and-magnus-contributions-to-trajectory-shape",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Newtonian Mechanics And Projectile Motion",
+    "lessonTitle": "Lift And Magnus Contributions To Trajectory Shape"
+  },
+  {
+    "key": "baseball-physics-foundations::newtonian-mechanics-and-projectile-motion::comparing-vacuum-drag-only-and-drag-lift-models",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Newtonian Mechanics And Projectile Motion",
+    "lessonTitle": "Comparing Vacuum, Drag-Only, And Drag+Lift Models"
+  },
+  {
+    "key": "baseball-physics-foundations::newtonian-mechanics-and-projectile-motion::parameter-sensitivity-and-stability-in-trajectory-models",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Newtonian Mechanics And Projectile Motion",
+    "lessonTitle": "Parameter Sensitivity And Stability In Trajectory Models"
+  },
+  {
+    "key": "baseball-physics-foundations::newtonian-mechanics-and-projectile-motion::newtonian-synthesis-lab-build-a-full-forward-simulator",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Newtonian Mechanics And Projectile Motion",
+    "lessonTitle": "Newtonian Synthesis Lab: Build A Full Forward Simulator"
+  },
+  {
+    "key": "baseball-physics-foundations::drag-lift-and-aerodynamics-of-the-baseball::physical-meaning-of-drag-coefficient-in-baseball",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Drag, Lift, And Aerodynamics Of The Baseball",
+    "lessonTitle": "Physical Meaning Of Drag Coefficient In Baseball"
+  },
+  {
+    "key": "baseball-physics-foundations::drag-lift-and-aerodynamics-of-the-baseball::reynolds-number-regimes-and-seam-effects",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Drag, Lift, And Aerodynamics Of The Baseball",
+    "lessonTitle": "Reynolds Number Regimes And Seam Effects"
+  },
+  {
+    "key": "baseball-physics-foundations::drag-lift-and-aerodynamics-of-the-baseball::boundary-layers-turbulence-and-flight-consequences",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Drag, Lift, And Aerodynamics Of The Baseball",
+    "lessonTitle": "Boundary Layers, Turbulence, And Flight Consequences"
+  },
+  {
+    "key": "baseball-physics-foundations::drag-lift-and-aerodynamics-of-the-baseball::lift-coefficient-spin-rate-and-spin-axis",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Drag, Lift, And Aerodynamics Of The Baseball",
+    "lessonTitle": "Lift Coefficient, Spin Rate, And Spin Axis"
+  },
+  {
+    "key": "baseball-physics-foundations::drag-lift-and-aerodynamics-of-the-baseball::coupled-drag-lift-dynamics-in-flight",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Drag, Lift, And Aerodynamics Of The Baseball",
+    "lessonTitle": "Coupled Drag-Lift Dynamics In Flight"
+  },
+  {
+    "key": "baseball-physics-foundations::drag-lift-and-aerodynamics-of-the-baseball::estimating-aerodynamic-parameters-from-observational-data",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Drag, Lift, And Aerodynamics Of The Baseball",
+    "lessonTitle": "Estimating Aerodynamic Parameters From Observational Data"
+  },
+  {
+    "key": "baseball-physics-foundations::drag-lift-and-aerodynamics-of-the-baseball::identifiability-when-different-parameters-fit-similar-outcomes",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Drag, Lift, And Aerodynamics Of The Baseball",
+    "lessonTitle": "Identifiability: When Different Parameters Fit Similar Outcomes"
+  },
+  {
+    "key": "baseball-physics-foundations::drag-lift-and-aerodynamics-of-the-baseball::aerodynamics-and-home-run-probability-pathways",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Drag, Lift, And Aerodynamics Of The Baseball",
+    "lessonTitle": "Aerodynamics And Home Run Probability Pathways"
+  },
+  {
+    "key": "baseball-physics-foundations::drag-lift-and-aerodynamics-of-the-baseball::model-misspecification-in-aerodynamic-inference",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Drag, Lift, And Aerodynamics Of The Baseball",
+    "lessonTitle": "Model Misspecification In Aerodynamic Inference"
+  },
+  {
+    "key": "baseball-physics-foundations::drag-lift-and-aerodynamics-of-the-baseball::aerodynamics-practicum-inference-and-validation",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Drag, Lift, And Aerodynamics Of The Baseball",
+    "lessonTitle": "Aerodynamics Practicum: Inference And Validation"
+  },
+  {
+    "key": "baseball-physics-foundations::environmental-effects-and-ballpark-context::air-density-temperature-pressure-and-humidity",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Environmental Effects And Ballpark Context",
+    "lessonTitle": "Air Density, Temperature, Pressure, And Humidity"
+  },
+  {
+    "key": "baseball-physics-foundations::environmental-effects-and-ballpark-context::altitude-and-effective-resistance-landscapes",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Environmental Effects And Ballpark Context",
+    "lessonTitle": "Altitude And Effective Resistance Landscapes"
+  },
+  {
+    "key": "baseball-physics-foundations::environmental-effects-and-ballpark-context::wind-vector-decomposition-relative-to-ball-path",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Environmental Effects And Ballpark Context",
+    "lessonTitle": "Wind Vector Decomposition Relative To Ball Path"
+  },
+  {
+    "key": "baseball-physics-foundations::environmental-effects-and-ballpark-context::weather-variability-and-uncertainty-bands",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Environmental Effects And Ballpark Context",
+    "lessonTitle": "Weather Variability And Uncertainty Bands"
+  },
+  {
+    "key": "baseball-physics-foundations::environmental-effects-and-ballpark-context::stadium-orientation-and-microclimate-interaction",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Environmental Effects And Ballpark Context",
+    "lessonTitle": "Stadium Orientation And Microclimate Interaction"
+  },
+  {
+    "key": "baseball-physics-foundations::environmental-effects-and-ballpark-context::normalizing-outcomes-across-ballparks",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Environmental Effects And Ballpark Context",
+    "lessonTitle": "Normalizing Outcomes Across Ballparks"
+  },
+  {
+    "key": "baseball-physics-foundations::environmental-effects-and-ballpark-context::environmental-counterfactuals-what-if-conditions-changed",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Environmental Effects And Ballpark Context",
+    "lessonTitle": "Environmental Counterfactuals (What If Conditions Changed?)"
+  },
+  {
+    "key": "baseball-physics-foundations::environmental-effects-and-ballpark-context::environment-integration-lab-context-aware-distance-models",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Environmental Effects And Ballpark Context",
+    "lessonTitle": "Environment Integration Lab: Context-Aware Distance Models"
+  },
+  {
+    "key": "baseball-physics-foundations::synthesis-building-physics-based-ball-flight-models::end-to-end-model-architecture-for-ball-flight",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Synthesis — Building Physics-Based Ball-Flight Models",
+    "lessonTitle": "End-To-End Model Architecture For Ball Flight"
+  },
+  {
+    "key": "baseball-physics-foundations::synthesis-building-physics-based-ball-flight-models::choosing-state-variables-and-parameter-priors",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Synthesis — Building Physics-Based Ball-Flight Models",
+    "lessonTitle": "Choosing State Variables And Parameter Priors"
+  },
+  {
+    "key": "baseball-physics-foundations::synthesis-building-physics-based-ball-flight-models::numerical-solvers-step-size-and-convergence-tradeoffs",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Synthesis — Building Physics-Based Ball-Flight Models",
+    "lessonTitle": "Numerical Solvers, Step Size, And Convergence Tradeoffs"
+  },
+  {
+    "key": "baseball-physics-foundations::synthesis-building-physics-based-ball-flight-models::calibration-with-statcast-style-observations",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Synthesis — Building Physics-Based Ball-Flight Models",
+    "lessonTitle": "Calibration With Statcast-Style Observations"
+  },
+  {
+    "key": "baseball-physics-foundations::synthesis-building-physics-based-ball-flight-models::residual-analysis-and-diagnostic-workflows",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Synthesis — Building Physics-Based Ball-Flight Models",
+    "lessonTitle": "Residual Analysis And Diagnostic Workflows"
+  },
+  {
+    "key": "baseball-physics-foundations::synthesis-building-physics-based-ball-flight-models::scenario-analysis-and-simulation-design",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Synthesis — Building Physics-Based Ball-Flight Models",
+    "lessonTitle": "Scenario Analysis And Simulation Design"
+  },
+  {
+    "key": "baseball-physics-foundations::synthesis-building-physics-based-ball-flight-models::reproducible-reporting-for-physics-models",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Synthesis — Building Physics-Based Ball-Flight Models",
+    "lessonTitle": "Reproducible Reporting For Physics Models"
+  },
+  {
+    "key": "baseball-physics-foundations::synthesis-building-physics-based-ball-flight-models::physics-capstone-milestone-technical-memo-draft",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Synthesis — Building Physics-Based Ball-Flight Models",
+    "lessonTitle": "Physics Capstone Milestone: Technical Memo Draft"
+  },
+  {
+    "key": "statistical-modeling-for-baseball::data-generating-processes-in-baseball::what-is-a-data-generating-process",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Data Generating Processes In Baseball",
+    "lessonTitle": "What Is A Data Generating Process?"
+  },
+  {
+    "key": "statistical-modeling-for-baseball::data-generating-processes-in-baseball::randomness-structure-and-measurement-error",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Data Generating Processes In Baseball",
+    "lessonTitle": "Randomness, Structure, And Measurement Error"
+  },
+  {
+    "key": "statistical-modeling-for-baseball::data-generating-processes-in-baseball::selection-effects-in-public-baseball-data",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Data Generating Processes In Baseball",
+    "lessonTitle": "Selection Effects In Public Baseball Data"
+  },
+  {
+    "key": "statistical-modeling-for-baseball::data-generating-processes-in-baseball::temporal-dependence-across-games-and-seasons",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Data Generating Processes In Baseball",
+    "lessonTitle": "Temporal Dependence Across Games And Seasons"
+  },
+  {
+    "key": "statistical-modeling-for-baseball::data-generating-processes-in-baseball::confounding-patterns-in-outcome-metrics",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Data Generating Processes In Baseball",
+    "lessonTitle": "Confounding Patterns In Outcome Metrics"
+  },
+  {
+    "key": "statistical-modeling-for-baseball::data-generating-processes-in-baseball::hierarchical-structure-player-team-park-era",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Data Generating Processes In Baseball",
+    "lessonTitle": "Hierarchical Structure: Player, Team, Park, Era"
+  },
+  {
+    "key": "statistical-modeling-for-baseball::data-generating-processes-in-baseball::dgp-case-study-home-run-rate-dynamics",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Data Generating Processes In Baseball",
+    "lessonTitle": "DGP Case Study: Home Run Rate Dynamics"
+  },
+  {
+    "key": "statistical-modeling-for-baseball::exploratory-data-analysis-and-sampling-pitfalls::eda-framing-questions-before-charts",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Exploratory Data Analysis And Sampling Pitfalls",
+    "lessonTitle": "EDA Framing: Questions Before Charts"
+  },
+  {
+    "key": "statistical-modeling-for-baseball::exploratory-data-analysis-and-sampling-pitfalls::distribution-shape-tail-behavior-and-robust-summaries",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Exploratory Data Analysis And Sampling Pitfalls",
+    "lessonTitle": "Distribution Shape, Tail Behavior, And Robust Summaries"
+  },
+  {
+    "key": "statistical-modeling-for-baseball::exploratory-data-analysis-and-sampling-pitfalls::stratification-and-simpson-s-paradox-in-baseball",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Exploratory Data Analysis And Sampling Pitfalls",
+    "lessonTitle": "Stratification And Simpson's Paradox In Baseball"
+  },
+  {
+    "key": "statistical-modeling-for-baseball::exploratory-data-analysis-and-sampling-pitfalls::missingness-mechanisms-and-practical-handling",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Exploratory Data Analysis And Sampling Pitfalls",
+    "lessonTitle": "Missingness Mechanisms And Practical Handling"
+  },
+  {
+    "key": "statistical-modeling-for-baseball::exploratory-data-analysis-and-sampling-pitfalls::leakage-risks-during-data-filtering",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Exploratory Data Analysis And Sampling Pitfalls",
+    "lessonTitle": "Leakage Risks During Data Filtering"
+  },
+  {
+    "key": "statistical-modeling-for-baseball::exploratory-data-analysis-and-sampling-pitfalls::sampling-windows-and-seasonality-bias",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Exploratory Data Analysis And Sampling Pitfalls",
+    "lessonTitle": "Sampling Windows And Seasonality Bias"
+  },
+  {
+    "key": "statistical-modeling-for-baseball::exploratory-data-analysis-and-sampling-pitfalls::outliers-signal-noise-or-data-issue",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Exploratory Data Analysis And Sampling Pitfalls",
+    "lessonTitle": "Outliers: Signal, Noise, Or Data Issue?"
+  },
+  {
+    "key": "statistical-modeling-for-baseball::exploratory-data-analysis-and-sampling-pitfalls::eda-notebook-practicum-with-review-rubric",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Exploratory Data Analysis And Sampling Pitfalls",
+    "lessonTitle": "EDA Notebook Practicum With Review Rubric"
+  },
+  {
+    "key": "statistical-modeling-for-baseball::regression-and-generalized-linear-models-for-hr-probability::linear-regression-baseline-for-interpretability",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Regression And Generalized Linear Models For HR Probability",
+    "lessonTitle": "Linear Regression Baseline For Interpretability"
+  },
+  {
+    "key": "statistical-modeling-for-baseball::regression-and-generalized-linear-models-for-hr-probability::feature-engineering-for-batted-ball-outcomes",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Regression And Generalized Linear Models For HR Probability",
+    "lessonTitle": "Feature Engineering For Batted-Ball Outcomes"
+  },
+  {
+    "key": "statistical-modeling-for-baseball::regression-and-generalized-linear-models-for-hr-probability::logistic-regression-for-home-run-probability",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Regression And Generalized Linear Models For HR Probability",
+    "lessonTitle": "Logistic Regression For Home Run Probability"
+  },
+  {
+    "key": "statistical-modeling-for-baseball::regression-and-generalized-linear-models-for-hr-probability::interaction-terms-launch-angle-exit-velocity",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Regression And Generalized Linear Models For HR Probability",
+    "lessonTitle": "Interaction Terms: Launch Angle × Exit Velocity"
+  },
+  {
+    "key": "statistical-modeling-for-baseball::regression-and-generalized-linear-models-for-hr-probability::regularization-l1-l2-for-stability",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Regression And Generalized Linear Models For HR Probability",
+    "lessonTitle": "Regularization (L1/L2) For Stability"
+  },
+  {
+    "key": "statistical-modeling-for-baseball::regression-and-generalized-linear-models-for-hr-probability::nonlinearity-handling-splines-and-basis-expansion",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Regression And Generalized Linear Models For HR Probability",
+    "lessonTitle": "Nonlinearity Handling: Splines And Basis Expansion"
+  },
+  {
+    "key": "statistical-modeling-for-baseball::regression-and-generalized-linear-models-for-hr-probability::model-comparison-aic-bic-and-cross-validation",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Regression And Generalized Linear Models For HR Probability",
+    "lessonTitle": "Model Comparison: AIC, BIC, And Cross-Validation"
+  },
+  {
+    "key": "statistical-modeling-for-baseball::regression-and-generalized-linear-models-for-hr-probability::calibration-curves-and-probability-reliability",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Regression And Generalized Linear Models For HR Probability",
+    "lessonTitle": "Calibration Curves And Probability Reliability"
+  },
+  {
+    "key": "statistical-modeling-for-baseball::regression-and-generalized-linear-models-for-hr-probability::thresholding-and-decision-utility",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Regression And Generalized Linear Models For HR Probability",
+    "lessonTitle": "Thresholding And Decision Utility"
+  },
+  {
+    "key": "statistical-modeling-for-baseball::regression-and-generalized-linear-models-for-hr-probability::regression-lab-build-compare-defend",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Regression And Generalized Linear Models For HR Probability",
+    "lessonTitle": "Regression Lab: Build, Compare, Defend"
+  },
+  {
+    "key": "statistical-modeling-for-baseball::uncertainty-confidence-intervals-and-model-validation::sampling-distributions-in-practice",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Uncertainty, Confidence Intervals, And Model Validation",
+    "lessonTitle": "Sampling Distributions In Practice"
+  },
+  {
+    "key": "statistical-modeling-for-baseball::uncertainty-confidence-intervals-and-model-validation::confidence-intervals-for-means-effects-and-probabilities",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Uncertainty, Confidence Intervals, And Model Validation",
+    "lessonTitle": "Confidence Intervals For Means, Effects, And Probabilities"
+  },
+  {
+    "key": "statistical-modeling-for-baseball::uncertainty-confidence-intervals-and-model-validation::bootstrap-methods-for-complex-metrics",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Uncertainty, Confidence Intervals, And Model Validation",
+    "lessonTitle": "Bootstrap Methods For Complex Metrics"
+  },
+  {
+    "key": "statistical-modeling-for-baseball::uncertainty-confidence-intervals-and-model-validation::hypothesis-testing-and-practical-significance",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Uncertainty, Confidence Intervals, And Model Validation",
+    "lessonTitle": "Hypothesis Testing And Practical Significance"
+  },
+  {
+    "key": "statistical-modeling-for-baseball::uncertainty-confidence-intervals-and-model-validation::validation-splits-cross-validation-and-drift",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Uncertainty, Confidence Intervals, And Model Validation",
+    "lessonTitle": "Validation Splits, Cross-Validation, And Drift"
+  },
+  {
+    "key": "statistical-modeling-for-baseball::uncertainty-confidence-intervals-and-model-validation::error-decomposition-bias-variance-noise",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Uncertainty, Confidence Intervals, And Model Validation",
+    "lessonTitle": "Error Decomposition: Bias, Variance, Noise"
+  },
+  {
+    "key": "statistical-modeling-for-baseball::uncertainty-confidence-intervals-and-model-validation::robustness-checks-and-sensitivity-analysis",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Uncertainty, Confidence Intervals, And Model Validation",
+    "lessonTitle": "Robustness Checks And Sensitivity Analysis"
+  },
+  {
+    "key": "statistical-modeling-for-baseball::uncertainty-confidence-intervals-and-model-validation::communicating-uncertainty-without-overclaiming",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Uncertainty, Confidence Intervals, And Model Validation",
+    "lessonTitle": "Communicating Uncertainty Without Overclaiming"
+  },
+  {
+    "key": "statistical-modeling-for-baseball::uncertainty-confidence-intervals-and-model-validation::validation-dossier-workshop",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Uncertainty, Confidence Intervals, And Model Validation",
+    "lessonTitle": "Validation Dossier Workshop"
+  },
+  {
+    "key": "statistical-modeling-for-baseball::causality-vs-correlation-in-baseball-narratives::association-is-not-causation-formal-definitions",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Causality Vs Correlation In Baseball Narratives",
+    "lessonTitle": "Association Is Not Causation: Formal Definitions"
+  },
+  {
+    "key": "statistical-modeling-for-baseball::causality-vs-correlation-in-baseball-narratives::dags-for-baseball-questions",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Causality Vs Correlation In Baseball Narratives",
+    "lessonTitle": "DAGs For Baseball Questions"
+  },
+  {
+    "key": "statistical-modeling-for-baseball::causality-vs-correlation-in-baseball-narratives::confounders-mediators-and-colliders",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Causality Vs Correlation In Baseball Narratives",
+    "lessonTitle": "Confounders, Mediators, And Colliders"
+  },
+  {
+    "key": "statistical-modeling-for-baseball::causality-vs-correlation-in-baseball-narratives::counterfactual-reasoning-for-policy-rule-changes",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Causality Vs Correlation In Baseball Narratives",
+    "lessonTitle": "Counterfactual Reasoning For Policy/Rule Changes"
+  },
+  {
+    "key": "statistical-modeling-for-baseball::causality-vs-correlation-in-baseball-narratives::natural-experiments-and-quasi-experimental-design",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Causality Vs Correlation In Baseball Narratives",
+    "lessonTitle": "Natural Experiments And Quasi-Experimental Design"
+  },
+  {
+    "key": "statistical-modeling-for-baseball::causality-vs-correlation-in-baseball-narratives::causal-claims-in-public-baseball-media-critical-audit",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Causality Vs Correlation In Baseball Narratives",
+    "lessonTitle": "Causal Claims In Public Baseball Media: Critical Audit"
+  },
+  {
+    "key": "statistical-modeling-for-baseball::causality-vs-correlation-in-baseball-narratives::translating-causal-limits-into-honest-language",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Causality Vs Correlation In Baseball Narratives",
+    "lessonTitle": "Translating Causal Limits Into Honest Language"
+  },
+  {
+    "key": "statistical-modeling-for-baseball::causality-vs-correlation-in-baseball-narratives::causality-debate-seminar-and-position-paper",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Causality Vs Correlation In Baseball Narratives",
+    "lessonTitle": "Causality Debate Seminar And Position Paper"
+  },
+  {
+    "key": "data-analysis-with-statcast::statcast-schema-and-data-cleaning::statcast-table-structure-and-core-fields",
+    "trackTitle": "Data Analysis With Statcast",
+    "unitTitle": "Statcast Schema And Data Cleaning",
+    "lessonTitle": "Statcast Table Structure And Core Fields"
+  },
+  {
+    "key": "data-analysis-with-statcast::statcast-schema-and-data-cleaning::type-systems-units-and-semantic-consistency",
+    "trackTitle": "Data Analysis With Statcast",
+    "unitTitle": "Statcast Schema And Data Cleaning",
+    "lessonTitle": "Type Systems, Units, And Semantic Consistency"
+  },
+  {
+    "key": "data-analysis-with-statcast::statcast-schema-and-data-cleaning::data-quality-audits-and-rule-checks",
+    "trackTitle": "Data Analysis With Statcast",
+    "unitTitle": "Statcast Schema And Data Cleaning",
+    "lessonTitle": "Data Quality Audits And Rule Checks"
+  },
+  {
+    "key": "data-analysis-with-statcast::statcast-schema-and-data-cleaning::join-strategies-for-context-enrichment",
+    "trackTitle": "Data Analysis With Statcast",
+    "unitTitle": "Statcast Schema And Data Cleaning",
+    "lessonTitle": "Join Strategies For Context Enrichment"
+  },
+  {
+    "key": "data-analysis-with-statcast::statcast-schema-and-data-cleaning::time-alignment-across-events-and-metadata",
+    "trackTitle": "Data Analysis With Statcast",
+    "unitTitle": "Statcast Schema And Data Cleaning",
+    "lessonTitle": "Time Alignment Across Events And Metadata"
+  },
+  {
+    "key": "data-analysis-with-statcast::statcast-schema-and-data-cleaning::cleaning-pipelines-and-reproducible-transforms",
+    "trackTitle": "Data Analysis With Statcast",
+    "unitTitle": "Statcast Schema And Data Cleaning",
+    "lessonTitle": "Cleaning Pipelines And Reproducible Transforms"
+  },
+  {
+    "key": "data-analysis-with-statcast::statcast-schema-and-data-cleaning::versioning-datasets-for-repeatability",
+    "trackTitle": "Data Analysis With Statcast",
+    "unitTitle": "Statcast Schema And Data Cleaning",
+    "lessonTitle": "Versioning Datasets For Repeatability"
+  },
+  {
+    "key": "data-analysis-with-statcast::statcast-schema-and-data-cleaning::data-cleaning-practicum-with-qa-checklist",
+    "trackTitle": "Data Analysis With Statcast",
+    "unitTitle": "Statcast Schema And Data Cleaning",
+    "lessonTitle": "Data Cleaning Practicum With QA Checklist"
+  },
+  {
+    "key": "data-analysis-with-statcast::feature-engineering-for-ball-flight-and-hr-outcomes::feature-engineering-principles-for-baseball-models",
+    "trackTitle": "Data Analysis With Statcast",
+    "unitTitle": "Feature Engineering For Ball Flight And HR Outcomes",
+    "lessonTitle": "Feature Engineering Principles For Baseball Models"
+  },
+  {
+    "key": "data-analysis-with-statcast::feature-engineering-for-ball-flight-and-hr-outcomes::derived-kinematic-features-from-raw-inputs",
+    "trackTitle": "Data Analysis With Statcast",
+    "unitTitle": "Feature Engineering For Ball Flight And HR Outcomes",
+    "lessonTitle": "Derived Kinematic Features From Raw Inputs"
+  },
+  {
+    "key": "data-analysis-with-statcast::feature-engineering-for-ball-flight-and-hr-outcomes::context-features-park-weather-matchup",
+    "trackTitle": "Data Analysis With Statcast",
+    "unitTitle": "Feature Engineering For Ball Flight And HR Outcomes",
+    "lessonTitle": "Context Features: Park, Weather, Matchup"
+  },
+  {
+    "key": "data-analysis-with-statcast::feature-engineering-for-ball-flight-and-hr-outcomes::temporal-features-form-fatigue-and-sequence-effects",
+    "trackTitle": "Data Analysis With Statcast",
+    "unitTitle": "Feature Engineering For Ball Flight And HR Outcomes",
+    "lessonTitle": "Temporal Features: Form, Fatigue, And Sequence Effects"
+  },
+  {
+    "key": "data-analysis-with-statcast::feature-engineering-for-ball-flight-and-hr-outcomes::encoding-categorical-variables-at-scale",
+    "trackTitle": "Data Analysis With Statcast",
+    "unitTitle": "Feature Engineering For Ball Flight And HR Outcomes",
+    "lessonTitle": "Encoding Categorical Variables At Scale"
+  },
+  {
+    "key": "data-analysis-with-statcast::feature-engineering-for-ball-flight-and-hr-outcomes::feature-leakage-detection-and-mitigation",
+    "trackTitle": "Data Analysis With Statcast",
+    "unitTitle": "Feature Engineering For Ball Flight And HR Outcomes",
+    "lessonTitle": "Feature Leakage Detection And Mitigation"
+  },
+  {
+    "key": "data-analysis-with-statcast::feature-engineering-for-ball-flight-and-hr-outcomes::interpretable-vs-high-capacity-feature-sets",
+    "trackTitle": "Data Analysis With Statcast",
+    "unitTitle": "Feature Engineering For Ball Flight And HR Outcomes",
+    "lessonTitle": "Interpretable Vs High-Capacity Feature Sets"
+  },
+  {
+    "key": "data-analysis-with-statcast::feature-engineering-for-ball-flight-and-hr-outcomes::feature-store-mini-project",
+    "trackTitle": "Data Analysis With Statcast",
+    "unitTitle": "Feature Engineering For Ball Flight And HR Outcomes",
+    "lessonTitle": "Feature Store Mini-Project"
+  },
+  {
+    "key": "data-analysis-with-statcast::visualization-design-for-baseball-questions::chart-selection-by-statistical-question-type",
+    "trackTitle": "Data Analysis With Statcast",
+    "unitTitle": "Visualization Design For Baseball Questions",
+    "lessonTitle": "Chart Selection By Statistical Question Type"
+  },
+  {
+    "key": "data-analysis-with-statcast::visualization-design-for-baseball-questions::designing-honest-axes-scales-and-encodings",
+    "trackTitle": "Data Analysis With Statcast",
+    "unitTitle": "Visualization Design For Baseball Questions",
+    "lessonTitle": "Designing Honest Axes, Scales, And Encodings"
+  },
+  {
+    "key": "data-analysis-with-statcast::visualization-design-for-baseball-questions::dense-scatter-hexbin-and-heatmap-tradeoffs",
+    "trackTitle": "Data Analysis With Statcast",
+    "unitTitle": "Visualization Design For Baseball Questions",
+    "lessonTitle": "Dense Scatter, Hexbin, And Heatmap Tradeoffs"
+  },
+  {
+    "key": "data-analysis-with-statcast::visualization-design-for-baseball-questions::time-series-decomposition-visual-patterns",
+    "trackTitle": "Data Analysis With Statcast",
+    "unitTitle": "Visualization Design For Baseball Questions",
+    "lessonTitle": "Time-Series Decomposition Visual Patterns"
+  },
+  {
+    "key": "data-analysis-with-statcast::visualization-design-for-baseball-questions::uncertainty-visualization-techniques",
+    "trackTitle": "Data Analysis With Statcast",
+    "unitTitle": "Visualization Design For Baseball Questions",
+    "lessonTitle": "Uncertainty Visualization Techniques"
+  },
+  {
+    "key": "data-analysis-with-statcast::visualization-design-for-baseball-questions::annotation-strategy-for-analytical-narratives",
+    "trackTitle": "Data Analysis With Statcast",
+    "unitTitle": "Visualization Design For Baseball Questions",
+    "lessonTitle": "Annotation Strategy For Analytical Narratives"
+  },
+  {
+    "key": "data-analysis-with-statcast::visualization-design-for-baseball-questions::accessibility-and-visual-clarity-standards",
+    "trackTitle": "Data Analysis With Statcast",
+    "unitTitle": "Visualization Design For Baseball Questions",
+    "lessonTitle": "Accessibility And Visual Clarity Standards"
+  },
+  {
+    "key": "data-analysis-with-statcast::visualization-design-for-baseball-questions::visualization-critique-studio",
+    "trackTitle": "Data Analysis With Statcast",
+    "unitTitle": "Visualization Design For Baseball Questions",
+    "lessonTitle": "Visualization Critique Studio"
+  },
+  {
+    "key": "data-analysis-with-statcast::reproducible-pipelines-and-notebooks::reproducibility-principles-in-applied-analytics",
+    "trackTitle": "Data Analysis With Statcast",
+    "unitTitle": "Reproducible Pipelines And Notebooks",
+    "lessonTitle": "Reproducibility Principles In Applied Analytics"
+  },
+  {
+    "key": "data-analysis-with-statcast::reproducible-pipelines-and-notebooks::notebook-structure-for-reviewability",
+    "trackTitle": "Data Analysis With Statcast",
+    "unitTitle": "Reproducible Pipelines And Notebooks",
+    "lessonTitle": "Notebook Structure For Reviewability"
+  },
+  {
+    "key": "data-analysis-with-statcast::reproducible-pipelines-and-notebooks::parameterized-analysis-workflows",
+    "trackTitle": "Data Analysis With Statcast",
+    "unitTitle": "Reproducible Pipelines And Notebooks",
+    "lessonTitle": "Parameterized Analysis Workflows"
+  },
+  {
+    "key": "data-analysis-with-statcast::reproducible-pipelines-and-notebooks::caching-determinism-and-performance",
+    "trackTitle": "Data Analysis With Statcast",
+    "unitTitle": "Reproducible Pipelines And Notebooks",
+    "lessonTitle": "Caching, Determinism, And Performance"
+  },
+  {
+    "key": "data-analysis-with-statcast::reproducible-pipelines-and-notebooks::testing-data-transformations",
+    "trackTitle": "Data Analysis With Statcast",
+    "unitTitle": "Reproducible Pipelines And Notebooks",
+    "lessonTitle": "Testing Data Transformations"
+  },
+  {
+    "key": "data-analysis-with-statcast::reproducible-pipelines-and-notebooks::packaging-results-for-reuse",
+    "trackTitle": "Data Analysis With Statcast",
+    "unitTitle": "Reproducible Pipelines And Notebooks",
+    "lessonTitle": "Packaging Results For Reuse"
+  },
+  {
+    "key": "data-analysis-with-statcast::reproducible-pipelines-and-notebooks::reproducibility-audit-practicum",
+    "trackTitle": "Data Analysis With Statcast",
+    "unitTitle": "Reproducible Pipelines And Notebooks",
+    "lessonTitle": "Reproducibility Audit Practicum"
+  },
+  {
+    "key": "data-analysis-with-statcast::applied-projects-recreating-deadball-tracker-figures::project-scoping-and-analytical-question-refinement",
+    "trackTitle": "Data Analysis With Statcast",
+    "unitTitle": "Applied Projects — Recreating Deadball Tracker Figures",
+    "lessonTitle": "Project Scoping And Analytical Question Refinement"
+  },
+  {
+    "key": "data-analysis-with-statcast::applied-projects-recreating-deadball-tracker-figures::rebuilding-drag-vs-hr-with-clear-assumptions",
+    "trackTitle": "Data Analysis With Statcast",
+    "unitTitle": "Applied Projects — Recreating Deadball Tracker Figures",
+    "lessonTitle": "Rebuilding Drag Vs HR With Clear Assumptions"
+  },
+  {
+    "key": "data-analysis-with-statcast::applied-projects-recreating-deadball-tracker-figures::rebuilding-expected-vs-actual-distance",
+    "trackTitle": "Data Analysis With Statcast",
+    "unitTitle": "Applied Projects — Recreating Deadball Tracker Figures",
+    "lessonTitle": "Rebuilding Expected Vs Actual Distance"
+  },
+  {
+    "key": "data-analysis-with-statcast::applied-projects-recreating-deadball-tracker-figures::rebuilding-exit-velocity-relationship-visuals",
+    "trackTitle": "Data Analysis With Statcast",
+    "unitTitle": "Applied Projects — Recreating Deadball Tracker Figures",
+    "lessonTitle": "Rebuilding Exit Velocity Relationship Visuals"
+  },
+  {
+    "key": "data-analysis-with-statcast::applied-projects-recreating-deadball-tracker-figures::extending-a-figure-with-uncertainty-overlays",
+    "trackTitle": "Data Analysis With Statcast",
+    "unitTitle": "Applied Projects — Recreating Deadball Tracker Figures",
+    "lessonTitle": "Extending A Figure With Uncertainty Overlays"
+  },
+  {
+    "key": "data-analysis-with-statcast::applied-projects-recreating-deadball-tracker-figures::error-analysis-against-prior-versions",
+    "trackTitle": "Data Analysis With Statcast",
+    "unitTitle": "Applied Projects — Recreating Deadball Tracker Figures",
+    "lessonTitle": "Error Analysis Against Prior Versions"
+  },
+  {
+    "key": "data-analysis-with-statcast::applied-projects-recreating-deadball-tracker-figures::publication-ready-figure-standards",
+    "trackTitle": "Data Analysis With Statcast",
+    "unitTitle": "Applied Projects — Recreating Deadball Tracker Figures",
+    "lessonTitle": "Publication-Ready Figure Standards"
+  },
+  {
+    "key": "data-analysis-with-statcast::applied-projects-recreating-deadball-tracker-figures::applied-project-review-and-revision-cycle",
+    "trackTitle": "Data Analysis With Statcast",
+    "unitTitle": "Applied Projects — Recreating Deadball Tracker Figures",
+    "lessonTitle": "Applied Project Review And Revision Cycle"
+  },
+  {
+    "key": "environmental-science-for-baseball-systems::atmospheric-science-foundations::air-composition-pressure-and-density-basics",
+    "trackTitle": "Environmental Science For Baseball Systems",
+    "unitTitle": "Atmospheric Science Foundations",
+    "lessonTitle": "Air Composition, Pressure, And Density Basics"
+  },
+  {
+    "key": "environmental-science-for-baseball-systems::atmospheric-science-foundations::temperature-humidity-and-thermodynamic-effects",
+    "trackTitle": "Environmental Science For Baseball Systems",
+    "unitTitle": "Atmospheric Science Foundations",
+    "lessonTitle": "Temperature, Humidity, And Thermodynamic Effects"
+  },
+  {
+    "key": "environmental-science-for-baseball-systems::atmospheric-science-foundations::wind-formation-and-boundary-layer-behavior",
+    "trackTitle": "Environmental Science For Baseball Systems",
+    "unitTitle": "Atmospheric Science Foundations",
+    "lessonTitle": "Wind Formation And Boundary-Layer Behavior"
+  },
+  {
+    "key": "environmental-science-for-baseball-systems::atmospheric-science-foundations::microclimate-variation-across-ballparks",
+    "trackTitle": "Environmental Science For Baseball Systems",
+    "unitTitle": "Atmospheric Science Foundations",
+    "lessonTitle": "Microclimate Variation Across Ballparks"
+  },
+  {
+    "key": "environmental-science-for-baseball-systems::atmospheric-science-foundations::atmospheric-science-applied-exercise-set",
+    "trackTitle": "Environmental Science For Baseball Systems",
+    "unitTitle": "Atmospheric Science Foundations",
+    "lessonTitle": "Atmospheric Science Applied Exercise Set"
+  },
+  {
+    "key": "environmental-science-for-baseball-systems::climate-variability-and-baseball-impacts::weather-vs-climate-in-baseball-analysis",
+    "trackTitle": "Environmental Science For Baseball Systems",
+    "unitTitle": "Climate, Variability, And Baseball Impacts",
+    "lessonTitle": "Weather Vs Climate In Baseball Analysis"
+  },
+  {
+    "key": "environmental-science-for-baseball-systems::climate-variability-and-baseball-impacts::long-term-climate-trends-and-ball-flight-implications",
+    "trackTitle": "Environmental Science For Baseball Systems",
+    "unitTitle": "Climate, Variability, And Baseball Impacts",
+    "lessonTitle": "Long-Term Climate Trends And Ball-Flight Implications"
+  },
+  {
+    "key": "environmental-science-for-baseball-systems::climate-variability-and-baseball-impacts::extreme-events-scheduling-and-safety-decisions",
+    "trackTitle": "Environmental Science For Baseball Systems",
+    "unitTitle": "Climate, Variability, And Baseball Impacts",
+    "lessonTitle": "Extreme Events, Scheduling, And Safety Decisions"
+  },
+  {
+    "key": "environmental-science-for-baseball-systems::climate-variability-and-baseball-impacts::environmental-uncertainty-communication",
+    "trackTitle": "Environmental Science For Baseball Systems",
+    "unitTitle": "Climate, Variability, And Baseball Impacts",
+    "lessonTitle": "Environmental Uncertainty Communication"
+  },
+  {
+    "key": "environmental-science-for-baseball-systems::climate-variability-and-baseball-impacts::climate-impact-scenario-workshop",
+    "trackTitle": "Environmental Science For Baseball Systems",
+    "unitTitle": "Climate, Variability, And Baseball Impacts",
+    "lessonTitle": "Climate Impact Scenario Workshop"
+  },
+  {
+    "key": "environmental-science-for-baseball-systems::environmental-decision-making::mitigation-and-adaptation-in-stadium-operations",
+    "trackTitle": "Environmental Science For Baseball Systems",
+    "unitTitle": "Environmental Decision-Making",
+    "lessonTitle": "Mitigation And Adaptation In Stadium Operations"
+  },
+  {
+    "key": "environmental-science-for-baseball-systems::environmental-decision-making::sustainability-metrics-and-trade-off-analysis",
+    "trackTitle": "Environmental Science For Baseball Systems",
+    "unitTitle": "Environmental Decision-Making",
+    "lessonTitle": "Sustainability Metrics And Trade-Off Analysis"
+  },
+  {
+    "key": "environmental-science-for-baseball-systems::environmental-decision-making::policy-ethics-and-environmental-justice-context",
+    "trackTitle": "Environmental Science For Baseball Systems",
+    "unitTitle": "Environmental Decision-Making",
+    "lessonTitle": "Policy, Ethics, And Environmental Justice Context"
+  },
+  {
+    "key": "environmental-science-for-baseball-systems::environmental-decision-making::designing-environment-aware-baseball-studies",
+    "trackTitle": "Environmental Science For Baseball Systems",
+    "unitTitle": "Environmental Decision-Making",
+    "lessonTitle": "Designing Environment-Aware Baseball Studies"
+  },
+  {
+    "key": "environmental-science-for-baseball-systems::environmental-decision-making::environmental-science-capstone-brief",
+    "trackTitle": "Environmental Science For Baseball Systems",
+    "unitTitle": "Environmental Decision-Making",
+    "lessonTitle": "Environmental Science Capstone Brief"
+  },
+  {
+    "key": "communicating-sports-analytics-insights::framing-questions-and-stakeholders::audience-analysis-students-coaches-analysts-public",
+    "trackTitle": "Communicating Sports Analytics Insights",
+    "unitTitle": "Framing Questions And Stakeholders",
+    "lessonTitle": "Audience Analysis: Students, Coaches, Analysts, Public"
+  },
+  {
+    "key": "communicating-sports-analytics-insights::framing-questions-and-stakeholders::defining-decision-relevant-questions",
+    "trackTitle": "Communicating Sports Analytics Insights",
+    "unitTitle": "Framing Questions And Stakeholders",
+    "lessonTitle": "Defining Decision-Relevant Questions"
+  },
+  {
+    "key": "communicating-sports-analytics-insights::framing-questions-and-stakeholders::scoping-claims-to-available-evidence",
+    "trackTitle": "Communicating Sports Analytics Insights",
+    "unitTitle": "Framing Questions And Stakeholders",
+    "lessonTitle": "Scoping Claims To Available Evidence"
+  },
+  {
+    "key": "communicating-sports-analytics-insights::framing-questions-and-stakeholders::narrative-arcs-for-technical-findings",
+    "trackTitle": "Communicating Sports Analytics Insights",
+    "unitTitle": "Framing Questions And Stakeholders",
+    "lessonTitle": "Narrative Arcs For Technical Findings"
+  },
+  {
+    "key": "communicating-sports-analytics-insights::framing-questions-and-stakeholders::risk-communication-for-high-variance-results",
+    "trackTitle": "Communicating Sports Analytics Insights",
+    "unitTitle": "Framing Questions And Stakeholders",
+    "lessonTitle": "Risk Communication For High-Variance Results"
+  },
+  {
+    "key": "communicating-sports-analytics-insights::framing-questions-and-stakeholders::framing-workshop-one-dataset-three-audiences",
+    "trackTitle": "Communicating Sports Analytics Insights",
+    "unitTitle": "Framing Questions And Stakeholders",
+    "lessonTitle": "Framing Workshop: One Dataset, Three Audiences"
+  },
+  {
+    "key": "communicating-sports-analytics-insights::visual-rhetoric-and-chart-storytelling::story-structure-through-sequential-visuals",
+    "trackTitle": "Communicating Sports Analytics Insights",
+    "unitTitle": "Visual Rhetoric And Chart Storytelling",
+    "lessonTitle": "Story Structure Through Sequential Visuals"
+  },
+  {
+    "key": "communicating-sports-analytics-insights::visual-rhetoric-and-chart-storytelling::emphasis-without-distortion",
+    "trackTitle": "Communicating Sports Analytics Insights",
+    "unitTitle": "Visual Rhetoric And Chart Storytelling",
+    "lessonTitle": "Emphasis Without Distortion"
+  },
+  {
+    "key": "communicating-sports-analytics-insights::visual-rhetoric-and-chart-storytelling::comparative-framing-and-baseline-selection",
+    "trackTitle": "Communicating Sports Analytics Insights",
+    "unitTitle": "Visual Rhetoric And Chart Storytelling",
+    "lessonTitle": "Comparative Framing And Baseline Selection"
+  },
+  {
+    "key": "communicating-sports-analytics-insights::visual-rhetoric-and-chart-storytelling::annotation-as-argument",
+    "trackTitle": "Communicating Sports Analytics Insights",
+    "unitTitle": "Visual Rhetoric And Chart Storytelling",
+    "lessonTitle": "Annotation As Argument"
+  },
+  {
+    "key": "communicating-sports-analytics-insights::visual-rhetoric-and-chart-storytelling::multi-panel-narrative-construction",
+    "trackTitle": "Communicating Sports Analytics Insights",
+    "unitTitle": "Visual Rhetoric And Chart Storytelling",
+    "lessonTitle": "Multi-Panel Narrative Construction"
+  },
+  {
+    "key": "communicating-sports-analytics-insights::visual-rhetoric-and-chart-storytelling::common-misleading-patterns-and-how-to-avoid-them",
+    "trackTitle": "Communicating Sports Analytics Insights",
+    "unitTitle": "Visual Rhetoric And Chart Storytelling",
+    "lessonTitle": "Common Misleading Patterns And How To Avoid Them"
+  },
+  {
+    "key": "communicating-sports-analytics-insights::visual-rhetoric-and-chart-storytelling::storytelling-critique-lab",
+    "trackTitle": "Communicating Sports Analytics Insights",
+    "unitTitle": "Visual Rhetoric And Chart Storytelling",
+    "lessonTitle": "Storytelling Critique Lab"
+  },
+  {
+    "key": "communicating-sports-analytics-insights::writing-methodology-and-caveats::methods-sections-readers-can-audit",
+    "trackTitle": "Communicating Sports Analytics Insights",
+    "unitTitle": "Writing Methodology And Caveats",
+    "lessonTitle": "Methods Sections Readers Can Audit"
+  },
+  {
+    "key": "communicating-sports-analytics-insights::writing-methodology-and-caveats::assumption-registers-and-limitation-statements",
+    "trackTitle": "Communicating Sports Analytics Insights",
+    "unitTitle": "Writing Methodology And Caveats",
+    "lessonTitle": "Assumption Registers And Limitation Statements"
+  },
+  {
+    "key": "communicating-sports-analytics-insights::writing-methodology-and-caveats::reporting-model-choices-transparently",
+    "trackTitle": "Communicating Sports Analytics Insights",
+    "unitTitle": "Writing Methodology And Caveats",
+    "lessonTitle": "Reporting Model Choices Transparently"
+  },
+  {
+    "key": "communicating-sports-analytics-insights::writing-methodology-and-caveats::uncertainty-language-templates",
+    "trackTitle": "Communicating Sports Analytics Insights",
+    "unitTitle": "Writing Methodology And Caveats",
+    "lessonTitle": "Uncertainty Language Templates"
+  },
+  {
+    "key": "communicating-sports-analytics-insights::writing-methodology-and-caveats::reproducibility-statements-and-artifact-links",
+    "trackTitle": "Communicating Sports Analytics Insights",
+    "unitTitle": "Writing Methodology And Caveats",
+    "lessonTitle": "Reproducibility Statements And Artifact Links"
+  },
+  {
+    "key": "communicating-sports-analytics-insights::writing-methodology-and-caveats::writing-for-technical-vs-non-technical-readers",
+    "trackTitle": "Communicating Sports Analytics Insights",
+    "unitTitle": "Writing Methodology And Caveats",
+    "lessonTitle": "Writing For Technical Vs Non-Technical Readers"
+  },
+  {
+    "key": "communicating-sports-analytics-insights::writing-methodology-and-caveats::methodology-rewrite-workshop",
+    "trackTitle": "Communicating Sports Analytics Insights",
+    "unitTitle": "Writing Methodology And Caveats",
+    "lessonTitle": "Methodology Rewrite Workshop"
+  },
+  {
+    "key": "communicating-sports-analytics-insights::presentations-debates-and-peer-review::slide-architecture-for-analytical-arguments",
+    "trackTitle": "Communicating Sports Analytics Insights",
+    "unitTitle": "Presentations, Debates, And Peer Review",
+    "lessonTitle": "Slide Architecture For Analytical Arguments"
+  },
+  {
+    "key": "communicating-sports-analytics-insights::presentations-debates-and-peer-review::oral-defense-of-modeling-choices",
+    "trackTitle": "Communicating Sports Analytics Insights",
+    "unitTitle": "Presentations, Debates, And Peer Review",
+    "lessonTitle": "Oral Defense Of Modeling Choices"
+  },
+  {
+    "key": "communicating-sports-analytics-insights::presentations-debates-and-peer-review::handling-cross-examination-and-objections",
+    "trackTitle": "Communicating Sports Analytics Insights",
+    "unitTitle": "Presentations, Debates, And Peer Review",
+    "lessonTitle": "Handling Cross-Examination And Objections"
+  },
+  {
+    "key": "communicating-sports-analytics-insights::presentations-debates-and-peer-review::constructive-peer-review-rubrics",
+    "trackTitle": "Communicating Sports Analytics Insights",
+    "unitTitle": "Presentations, Debates, And Peer Review",
+    "lessonTitle": "Constructive Peer Review Rubrics"
+  },
+  {
+    "key": "communicating-sports-analytics-insights::presentations-debates-and-peer-review::debate-formats-for-causal-claims",
+    "trackTitle": "Communicating Sports Analytics Insights",
+    "unitTitle": "Presentations, Debates, And Peer Review",
+    "lessonTitle": "Debate Formats For Causal Claims"
+  },
+  {
+    "key": "communicating-sports-analytics-insights::presentations-debates-and-peer-review::revision-cycles-from-feedback",
+    "trackTitle": "Communicating Sports Analytics Insights",
+    "unitTitle": "Presentations, Debates, And Peer Review",
+    "lessonTitle": "Revision Cycles From Feedback"
+  },
+  {
+    "key": "communicating-sports-analytics-insights::presentations-debates-and-peer-review::live-seminar-simulation",
+    "trackTitle": "Communicating Sports Analytics Insights",
+    "unitTitle": "Presentations, Debates, And Peer Review",
+    "lessonTitle": "Live Seminar Simulation"
+  },
+  {
+    "key": "communicating-sports-analytics-insights::capstone-composition-and-defense::capstone-topic-selection-and-proposal",
+    "trackTitle": "Communicating Sports Analytics Insights",
+    "unitTitle": "Capstone Composition And Defense",
+    "lessonTitle": "Capstone Topic Selection And Proposal"
+  },
+  {
+    "key": "communicating-sports-analytics-insights::capstone-composition-and-defense::literature-positioning-and-prior-work-context",
+    "trackTitle": "Communicating Sports Analytics Insights",
+    "unitTitle": "Capstone Composition And Defense",
+    "lessonTitle": "Literature Positioning And Prior Work Context"
+  },
+  {
+    "key": "communicating-sports-analytics-insights::capstone-composition-and-defense::data-model-narrative-integration",
+    "trackTitle": "Communicating Sports Analytics Insights",
+    "unitTitle": "Capstone Composition And Defense",
+    "lessonTitle": "Data + Model + Narrative Integration"
+  },
+  {
+    "key": "communicating-sports-analytics-insights::capstone-composition-and-defense::drafting-the-technical-report",
+    "trackTitle": "Communicating Sports Analytics Insights",
+    "unitTitle": "Capstone Composition And Defense",
+    "lessonTitle": "Drafting The Technical Report"
+  },
+  {
+    "key": "communicating-sports-analytics-insights::capstone-composition-and-defense::building-the-executive-summary",
+    "trackTitle": "Communicating Sports Analytics Insights",
+    "unitTitle": "Capstone Composition And Defense",
+    "lessonTitle": "Building The Executive Summary"
+  },
+  {
+    "key": "communicating-sports-analytics-insights::capstone-composition-and-defense::visual-appendix-and-reproducibility-bundle",
+    "trackTitle": "Communicating Sports Analytics Insights",
+    "unitTitle": "Capstone Composition And Defense",
+    "lessonTitle": "Visual Appendix And Reproducibility Bundle"
+  },
+  {
+    "key": "communicating-sports-analytics-insights::capstone-composition-and-defense::mock-defense-and-rubric-scoring",
+    "trackTitle": "Communicating Sports Analytics Insights",
+    "unitTitle": "Capstone Composition And Defense",
+    "lessonTitle": "Mock Defense And Rubric Scoring"
+  },
+  {
+    "key": "communicating-sports-analytics-insights::capstone-composition-and-defense::final-capstone-submission-and-reflection",
+    "trackTitle": "Communicating Sports Analytics Insights",
+    "unitTitle": "Capstone Composition And Defense",
+    "lessonTitle": "Final Capstone Submission And Reflection"
+  }
+]

@@ -1,0 +1,92 @@
+[
+  {
+    "key": "algebra-foundations-for-baseball-analytics::linear-expressions-equations-and-constraints::variables-units-and-baseball-quantities",
+    "trackTitle": "Algebra Foundations For Baseball Analytics",
+    "unitTitle": "Linear Expressions, Equations, And Constraints",
+    "lessonTitle": "Variables, Units, And Baseball Quantities"
+  },
+  {
+    "key": "algebra-foundations-for-baseball-analytics::linear-expressions-equations-and-constraints::solving-one-step-and-multi-step-equations-reliably",
+    "trackTitle": "Algebra Foundations For Baseball Analytics",
+    "unitTitle": "Linear Expressions, Equations, And Constraints",
+    "lessonTitle": "Solving One-Step And Multi-Step Equations Reliably"
+  },
+  {
+    "key": "algebra-foundations-for-baseball-analytics::linear-expressions-equations-and-constraints::inequalities-for-performance-threshold-questions",
+    "trackTitle": "Algebra Foundations For Baseball Analytics",
+    "unitTitle": "Linear Expressions, Equations, And Constraints",
+    "lessonTitle": "Inequalities For Performance Threshold Questions"
+  },
+  {
+    "key": "algebra-foundations-for-baseball-analytics::linear-expressions-equations-and-constraints::rearranging-formulas-used-in-baseball-metrics",
+    "trackTitle": "Algebra Foundations For Baseball Analytics",
+    "unitTitle": "Linear Expressions, Equations, And Constraints",
+    "lessonTitle": "Rearranging Formulas Used In Baseball Metrics"
+  },
+  {
+    "key": "algebra-foundations-for-baseball-analytics::linear-expressions-equations-and-constraints::algebra-error-checking-and-sanity-bounds",
+    "trackTitle": "Algebra Foundations For Baseball Analytics",
+    "unitTitle": "Linear Expressions, Equations, And Constraints",
+    "lessonTitle": "Algebra Error Checking And Sanity Bounds"
+  },
+  {
+    "key": "algebra-foundations-for-baseball-analytics::functions-and-representations::function-notation-through-baseball-input-output-stories",
+    "trackTitle": "Algebra Foundations For Baseball Analytics",
+    "unitTitle": "Functions And Representations",
+    "lessonTitle": "Function Notation Through Baseball Input-Output Stories"
+  },
+  {
+    "key": "algebra-foundations-for-baseball-analytics::functions-and-representations::domain-range-and-physical-plausibility",
+    "trackTitle": "Algebra Foundations For Baseball Analytics",
+    "unitTitle": "Functions And Representations",
+    "lessonTitle": "Domain, Range, And Physical Plausibility"
+  },
+  {
+    "key": "algebra-foundations-for-baseball-analytics::functions-and-representations::linear-functions-and-rate-interpretations",
+    "trackTitle": "Algebra Foundations For Baseball Analytics",
+    "unitTitle": "Functions And Representations",
+    "lessonTitle": "Linear Functions And Rate Interpretations"
+  },
+  {
+    "key": "algebra-foundations-for-baseball-analytics::functions-and-representations::piecewise-models-for-regime-based-baseball-behavior",
+    "trackTitle": "Algebra Foundations For Baseball Analytics",
+    "unitTitle": "Functions And Representations",
+    "lessonTitle": "Piecewise Models For Regime-Based Baseball Behavior"
+  },
+  {
+    "key": "algebra-foundations-for-baseball-analytics::functions-and-representations::composing-functions-in-modeling-pipelines",
+    "trackTitle": "Algebra Foundations For Baseball Analytics",
+    "unitTitle": "Functions And Representations",
+    "lessonTitle": "Composing Functions In Modeling Pipelines"
+  },
+  {
+    "key": "algebra-foundations-for-baseball-analytics::systems-and-modeling-structure::two-equation-systems-from-baseball-scenario-constraints",
+    "trackTitle": "Algebra Foundations For Baseball Analytics",
+    "unitTitle": "Systems And Modeling Structure",
+    "lessonTitle": "Two-Equation Systems From Baseball Scenario Constraints"
+  },
+  {
+    "key": "algebra-foundations-for-baseball-analytics::systems-and-modeling-structure::substitution-vs-elimination-strategy-selection",
+    "trackTitle": "Algebra Foundations For Baseball Analytics",
+    "unitTitle": "Systems And Modeling Structure",
+    "lessonTitle": "Substitution Vs Elimination Strategy Selection"
+  },
+  {
+    "key": "algebra-foundations-for-baseball-analytics::systems-and-modeling-structure::interpreting-intersections-as-feasible-states",
+    "trackTitle": "Algebra Foundations For Baseball Analytics",
+    "unitTitle": "Systems And Modeling Structure",
+    "lessonTitle": "Interpreting Intersections As Feasible States"
+  },
+  {
+    "key": "algebra-foundations-for-baseball-analytics::systems-and-modeling-structure::matrix-form-for-small-linear-systems",
+    "trackTitle": "Algebra Foundations For Baseball Analytics",
+    "unitTitle": "Systems And Modeling Structure",
+    "lessonTitle": "Matrix Form For Small Linear Systems"
+  },
+  {
+    "key": "algebra-foundations-for-baseball-analytics::systems-and-modeling-structure::algebra-foundations-synthesis-workshop",
+    "trackTitle": "Algebra Foundations For Baseball Analytics",
+    "unitTitle": "Systems And Modeling Structure",
+    "lessonTitle": "Algebra Foundations Synthesis Workshop"
+  }
+]

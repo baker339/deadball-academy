@@ -1,0 +1,122 @@
+[
+  {
+    "key": "data-analysis-with-statcast::statcast-schema-and-data-cleaning::statcast-table-structure-and-core-fields",
+    "trackTitle": "Data Analysis With Statcast",
+    "unitTitle": "Statcast Schema And Data Cleaning",
+    "lessonTitle": "Statcast Table Structure And Core Fields"
+  },
+  {
+    "key": "data-analysis-with-statcast::statcast-schema-and-data-cleaning::type-systems-units-and-semantic-consistency",
+    "trackTitle": "Data Analysis With Statcast",
+    "unitTitle": "Statcast Schema And Data Cleaning",
+    "lessonTitle": "Type Systems, Units, And Semantic Consistency"
+  },
+  {
+    "key": "data-analysis-with-statcast::statcast-schema-and-data-cleaning::data-quality-audits-and-rule-checks",
+    "trackTitle": "Data Analysis With Statcast",
+    "unitTitle": "Statcast Schema And Data Cleaning",
+    "lessonTitle": "Data Quality Audits And Rule Checks"
+  },
+  {
+    "key": "data-analysis-with-statcast::statcast-schema-and-data-cleaning::join-strategies-for-context-enrichment",
+    "trackTitle": "Data Analysis With Statcast",
+    "unitTitle": "Statcast Schema And Data Cleaning",
+    "lessonTitle": "Join Strategies For Context Enrichment"
+  },
+  {
+    "key": "data-analysis-with-statcast::statcast-schema-and-data-cleaning::time-alignment-across-events-and-metadata",
+    "trackTitle": "Data Analysis With Statcast",
+    "unitTitle": "Statcast Schema And Data Cleaning",
+    "lessonTitle": "Time Alignment Across Events And Metadata"
+  },
+  {
+    "key": "data-analysis-with-statcast::statcast-schema-and-data-cleaning::cleaning-pipelines-and-reproducible-transforms",
+    "trackTitle": "Data Analysis With Statcast",
+    "unitTitle": "Statcast Schema And Data Cleaning",
+    "lessonTitle": "Cleaning Pipelines And Reproducible Transforms"
+  },
+  {
+    "key": "data-analysis-with-statcast::statcast-schema-and-data-cleaning::versioning-datasets-for-repeatability",
+    "trackTitle": "Data Analysis With Statcast",
+    "unitTitle": "Statcast Schema And Data Cleaning",
+    "lessonTitle": "Versioning Datasets For Repeatability"
+  },
+  {
+    "key": "data-analysis-with-statcast::statcast-schema-and-data-cleaning::data-cleaning-practicum-with-qa-checklist",
+    "trackTitle": "Data Analysis With Statcast",
+    "unitTitle": "Statcast Schema And Data Cleaning",
+    "lessonTitle": "Data Cleaning Practicum With QA Checklist"
+  },
+  {
+    "key": "data-analysis-with-statcast::feature-engineering-for-ball-flight-and-hr-outcomes::feature-engineering-principles-for-baseball-models",
+    "trackTitle": "Data Analysis With Statcast",
+    "unitTitle": "Feature Engineering For Ball Flight And HR Outcomes",
+    "lessonTitle": "Feature Engineering Principles For Baseball Models"
+  },
+  {
+    "key": "data-analysis-with-statcast::feature-engineering-for-ball-flight-and-hr-outcomes::derived-kinematic-features-from-raw-inputs",
+    "trackTitle": "Data Analysis With Statcast",
+    "unitTitle": "Feature Engineering For Ball Flight And HR Outcomes",
+    "lessonTitle": "Derived Kinematic Features From Raw Inputs"
+  },
+  {
+    "key": "data-analysis-with-statcast::feature-engineering-for-ball-flight-and-hr-outcomes::context-features-park-weather-matchup",
+    "trackTitle": "Data Analysis With Statcast",
+    "unitTitle": "Feature Engineering For Ball Flight And HR Outcomes",
+    "lessonTitle": "Context Features: Park, Weather, Matchup"
+  },
+  {
+    "key": "data-analysis-with-statcast::feature-engineering-for-ball-flight-and-hr-outcomes::temporal-features-form-fatigue-and-sequence-effects",
+    "trackTitle": "Data Analysis With Statcast",
+    "unitTitle": "Feature Engineering For Ball Flight And HR Outcomes",
+    "lessonTitle": "Temporal Features: Form, Fatigue, And Sequence Effects"
+  },
+  {
+    "key": "data-analysis-with-statcast::feature-engineering-for-ball-flight-and-hr-outcomes::encoding-categorical-variables-at-scale",
+    "trackTitle": "Data Analysis With Statcast",
+    "unitTitle": "Feature Engineering For Ball Flight And HR Outcomes",
+    "lessonTitle": "Encoding Categorical Variables At Scale"
+  },
+  {
+    "key": "data-analysis-with-statcast::feature-engineering-for-ball-flight-and-hr-outcomes::feature-leakage-detection-and-mitigation",
+    "trackTitle": "Data Analysis With Statcast",
+    "unitTitle": "Feature Engineering For Ball Flight And HR Outcomes",
+    "lessonTitle": "Feature Leakage Detection And Mitigation"
+  },
+  {
+    "key": "data-analysis-with-statcast::feature-engineering-for-ball-flight-and-hr-outcomes::interpretable-vs-high-capacity-feature-sets",
+    "trackTitle": "Data Analysis With Statcast",
+    "unitTitle": "Feature Engineering For Ball Flight And HR Outcomes",
+    "lessonTitle": "Interpretable Vs High-Capacity Feature Sets"
+  },
+  {
+    "key": "data-analysis-with-statcast::feature-engineering-for-ball-flight-and-hr-outcomes::feature-store-mini-project",
+    "trackTitle": "Data Analysis With Statcast",
+    "unitTitle": "Feature Engineering For Ball Flight And HR Outcomes",
+    "lessonTitle": "Feature Store Mini-Project"
+  },
+  {
+    "key": "data-analysis-with-statcast::visualization-design-for-baseball-questions::chart-selection-by-statistical-question-type",
+    "trackTitle": "Data Analysis With Statcast",
+    "unitTitle": "Visualization Design For Baseball Questions",
+    "lessonTitle": "Chart Selection By Statistical Question Type"
+  },
+  {
+    "key": "data-analysis-with-statcast::visualization-design-for-baseball-questions::designing-honest-axes-scales-and-encodings",
+    "trackTitle": "Data Analysis With Statcast",
+    "unitTitle": "Visualization Design For Baseball Questions",
+    "lessonTitle": "Designing Honest Axes, Scales, And Encodings"
+  },
+  {
+    "key": "data-analysis-with-statcast::visualization-design-for-baseball-questions::dense-scatter-hexbin-and-heatmap-tradeoffs",
+    "trackTitle": "Data Analysis With Statcast",
+    "unitTitle": "Visualization Design For Baseball Questions",
+    "lessonTitle": "Dense Scatter, Hexbin, And Heatmap Tradeoffs"
+  },
+  {
+    "key": "data-analysis-with-statcast::visualization-design-for-baseball-questions::time-series-decomposition-visual-patterns",
+    "trackTitle": "Data Analysis With Statcast",
+    "unitTitle": "Visualization Design For Baseball Questions",
+    "lessonTitle": "Time-Series Decomposition Visual Patterns"
+  }
+]

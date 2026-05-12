@@ -1,0 +1,2491 @@
+{
+  "version": 1,
+  "generated_by": "frontend/scripts/export-curriculum.ts",
+  "track_count": 11,
+  "lesson_count": 293,
+  "tracks": [
+    {
+      "slug": "algebra-foundations-for-baseball-analytics",
+      "title": "Algebra Foundations For Baseball Analytics",
+      "description": "Open learning path: Algebra Foundations For Baseball Analytics. Quantitative baseball analytics and decision-making.",
+      "is_premium": false,
+      "modules": [
+        {
+          "slug": "linear-expressions-equations-and-constraints",
+          "title": "Linear Expressions, Equations, And Constraints",
+          "description": "Unit: Linear Expressions, Equations, And Constraints. Part of Algebra Foundations For Baseball Analytics.",
+          "estimated_minutes": 205,
+          "lessons": [
+            {
+              "slug": "variables-units-and-baseball-quantities",
+              "title": "Variables, Units, And Baseball Quantities",
+              "route_path": "/learn/library/algebra-foundations-for-baseball-analytics/linear-expressions-equations-and-constraints/variables-units-and-baseball-quantities",
+              "lesson_order": 1,
+              "estimated_minutes": 28
+            },
+            {
+              "slug": "solving-one-step-and-multi-step-equations-reliably",
+              "title": "Solving One-Step And Multi-Step Equations Reliably",
+              "route_path": "/learn/library/algebra-foundations-for-baseball-analytics/linear-expressions-equations-and-constraints/solving-one-step-and-multi-step-equations-reliably",
+              "lesson_order": 2,
+              "estimated_minutes": 32
+            },
+            {
+              "slug": "inequalities-for-performance-threshold-questions",
+              "title": "Inequalities For Performance Threshold Questions",
+              "route_path": "/learn/library/algebra-foundations-for-baseball-analytics/linear-expressions-equations-and-constraints/inequalities-for-performance-threshold-questions",
+              "lesson_order": 3,
+              "estimated_minutes": 36
+            },
+            {
+              "slug": "rearranging-formulas-used-in-baseball-metrics",
+              "title": "Rearranging Formulas Used In Baseball Metrics",
+              "route_path": "/learn/library/algebra-foundations-for-baseball-analytics/linear-expressions-equations-and-constraints/rearranging-formulas-used-in-baseball-metrics",
+              "lesson_order": 4,
+              "estimated_minutes": 40
+            },
+            {
+              "slug": "algebra-error-checking-and-sanity-bounds",
+              "title": "Algebra Error Checking And Sanity Bounds",
+              "route_path": "/learn/library/algebra-foundations-for-baseball-analytics/linear-expressions-equations-and-constraints/algebra-error-checking-and-sanity-bounds",
+              "lesson_order": 5,
+              "estimated_minutes": 44
+            }
+          ]
+        },
+        {
+          "slug": "functions-and-representations",
+          "title": "Functions And Representations",
+          "description": "Unit: Functions And Representations. Part of Algebra Foundations For Baseball Analytics.",
+          "estimated_minutes": 205,
+          "lessons": [
+            {
+              "slug": "function-notation-through-baseball-input-output-stories",
+              "title": "Function Notation Through Baseball Input-Output Stories",
+              "route_path": "/learn/library/algebra-foundations-for-baseball-analytics/functions-and-representations/function-notation-through-baseball-input-output-stories",
+              "lesson_order": 1,
+              "estimated_minutes": 28
+            },
+            {
+              "slug": "domain-range-and-physical-plausibility",
+              "title": "Domain, Range, And Physical Plausibility",
+              "route_path": "/learn/library/algebra-foundations-for-baseball-analytics/functions-and-representations/domain-range-and-physical-plausibility",
+              "lesson_order": 2,
+              "estimated_minutes": 32
+            },
+            {
+              "slug": "linear-functions-and-rate-interpretations",
+              "title": "Linear Functions And Rate Interpretations",
+              "route_path": "/learn/library/algebra-foundations-for-baseball-analytics/functions-and-representations/linear-functions-and-rate-interpretations",
+              "lesson_order": 3,
+              "estimated_minutes": 36
+            },
+            {
+              "slug": "piecewise-models-for-regime-based-baseball-behavior",
+              "title": "Piecewise Models For Regime-Based Baseball Behavior",
+              "route_path": "/learn/library/algebra-foundations-for-baseball-analytics/functions-and-representations/piecewise-models-for-regime-based-baseball-behavior",
+              "lesson_order": 4,
+              "estimated_minutes": 40
+            },
+            {
+              "slug": "composing-functions-in-modeling-pipelines",
+              "title": "Composing Functions In Modeling Pipelines",
+              "route_path": "/learn/library/algebra-foundations-for-baseball-analytics/functions-and-representations/composing-functions-in-modeling-pipelines",
+              "lesson_order": 5,
+              "estimated_minutes": 44
+            }
+          ]
+        },
+        {
+          "slug": "systems-and-modeling-structure",
+          "title": "Systems And Modeling Structure",
+          "description": "Unit: Systems And Modeling Structure. Part of Algebra Foundations For Baseball Analytics.",
+          "estimated_minutes": 205,
+          "lessons": [
+            {
+              "slug": "two-equation-systems-from-baseball-scenario-constraints",
+              "title": "Two-Equation Systems From Baseball Scenario Constraints",
+              "route_path": "/learn/library/algebra-foundations-for-baseball-analytics/systems-and-modeling-structure/two-equation-systems-from-baseball-scenario-constraints",
+              "lesson_order": 1,
+              "estimated_minutes": 28
+            },
+            {
+              "slug": "substitution-vs-elimination-strategy-selection",
+              "title": "Substitution Vs Elimination Strategy Selection",
+              "route_path": "/learn/library/algebra-foundations-for-baseball-analytics/systems-and-modeling-structure/substitution-vs-elimination-strategy-selection",
+              "lesson_order": 2,
+              "estimated_minutes": 32
+            },
+            {
+              "slug": "interpreting-intersections-as-feasible-states",
+              "title": "Interpreting Intersections As Feasible States",
+              "route_path": "/learn/library/algebra-foundations-for-baseball-analytics/systems-and-modeling-structure/interpreting-intersections-as-feasible-states",
+              "lesson_order": 3,
+              "estimated_minutes": 36
+            },
+            {
+              "slug": "matrix-form-for-small-linear-systems",
+              "title": "Matrix Form For Small Linear Systems",
+              "route_path": "/learn/library/algebra-foundations-for-baseball-analytics/systems-and-modeling-structure/matrix-form-for-small-linear-systems",
+              "lesson_order": 4,
+              "estimated_minutes": 40
+            },
+            {
+              "slug": "algebra-foundations-synthesis-workshop",
+              "title": "Algebra Foundations Synthesis Workshop",
+              "route_path": "/learn/library/algebra-foundations-for-baseball-analytics/systems-and-modeling-structure/algebra-foundations-synthesis-workshop",
+              "lesson_order": 5,
+              "estimated_minutes": 44
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "geometry-foundations-for-baseball-context",
+      "title": "Geometry Foundations For Baseball Context",
+      "description": "Open learning path: Geometry Foundations For Baseball Context. Quantitative baseball analytics and decision-making.",
+      "is_premium": false,
+      "modules": [
+        {
+          "slug": "coordinate-geometry-essentials",
+          "title": "Coordinate Geometry Essentials",
+          "description": "Unit: Coordinate Geometry Essentials. Part of Geometry Foundations For Baseball Context.",
+          "estimated_minutes": 205,
+          "lessons": [
+            {
+              "slug": "coordinate-systems-for-baseball-fields",
+              "title": "Coordinate Systems For Baseball Fields",
+              "route_path": "/learn/library/geometry-foundations-for-baseball-context/coordinate-geometry-essentials/coordinate-systems-for-baseball-fields",
+              "lesson_order": 1,
+              "estimated_minutes": 28
+            },
+            {
+              "slug": "distance-formula-and-baseline-measurement",
+              "title": "Distance Formula And Baseline Measurement",
+              "route_path": "/learn/library/geometry-foundations-for-baseball-context/coordinate-geometry-essentials/distance-formula-and-baseline-measurement",
+              "lesson_order": 2,
+              "estimated_minutes": 32
+            },
+            {
+              "slug": "midpoints-segments-and-position-landmarks",
+              "title": "Midpoints, Segments, And Position Landmarks",
+              "route_path": "/learn/library/geometry-foundations-for-baseball-context/coordinate-geometry-essentials/midpoints-segments-and-position-landmarks",
+              "lesson_order": 3,
+              "estimated_minutes": 36
+            },
+            {
+              "slug": "slope-as-directional-change-in-field-context",
+              "title": "Slope As Directional Change In Field Context",
+              "route_path": "/learn/library/geometry-foundations-for-baseball-context/coordinate-geometry-essentials/slope-as-directional-change-in-field-context",
+              "lesson_order": 4,
+              "estimated_minutes": 40
+            },
+            {
+              "slug": "line-equations-for-defensive-alignment-paths",
+              "title": "Line Equations For Defensive Alignment Paths",
+              "route_path": "/learn/library/geometry-foundations-for-baseball-context/coordinate-geometry-essentials/line-equations-for-defensive-alignment-paths",
+              "lesson_order": 5,
+              "estimated_minutes": 44
+            }
+          ]
+        },
+        {
+          "slug": "angles-triangles-and-measurement",
+          "title": "Angles, Triangles, And Measurement",
+          "description": "Unit: Angles, Triangles, And Measurement. Part of Geometry Foundations For Baseball Context.",
+          "estimated_minutes": 205,
+          "lessons": [
+            {
+              "slug": "angle-measure-conventions-for-motion-analysis",
+              "title": "Angle Measure Conventions For Motion Analysis",
+              "route_path": "/learn/library/geometry-foundations-for-baseball-context/angles-triangles-and-measurement/angle-measure-conventions-for-motion-analysis",
+              "lesson_order": 1,
+              "estimated_minutes": 28
+            },
+            {
+              "slug": "triangle-similarity-in-camera-and-field-scaling",
+              "title": "Triangle Similarity In Camera And Field Scaling",
+              "route_path": "/learn/library/geometry-foundations-for-baseball-context/angles-triangles-and-measurement/triangle-similarity-in-camera-and-field-scaling",
+              "lesson_order": 2,
+              "estimated_minutes": 32
+            },
+            {
+              "slug": "right-triangle-geometry-for-component-thinking",
+              "title": "Right Triangle Geometry For Component Thinking",
+              "route_path": "/learn/library/geometry-foundations-for-baseball-context/angles-triangles-and-measurement/right-triangle-geometry-for-component-thinking",
+              "lesson_order": 3,
+              "estimated_minutes": 36
+            },
+            {
+              "slug": "law-of-sines-and-law-of-cosines-in-stadium-problems",
+              "title": "Law Of Sines And Law Of Cosines In Stadium Problems",
+              "route_path": "/learn/library/geometry-foundations-for-baseball-context/angles-triangles-and-measurement/law-of-sines-and-law-of-cosines-in-stadium-problems",
+              "lesson_order": 4,
+              "estimated_minutes": 40
+            },
+            {
+              "slug": "geometric-proof-mindset-for-model-trust",
+              "title": "Geometric Proof Mindset For Model Trust",
+              "route_path": "/learn/library/geometry-foundations-for-baseball-context/angles-triangles-and-measurement/geometric-proof-mindset-for-model-trust",
+              "lesson_order": 5,
+              "estimated_minutes": 44
+            }
+          ]
+        },
+        {
+          "slug": "circles-arcs-and-curvature",
+          "title": "Circles, Arcs, And Curvature",
+          "description": "Unit: Circles, Arcs, And Curvature. Part of Geometry Foundations For Baseball Context.",
+          "estimated_minutes": 205,
+          "lessons": [
+            {
+              "slug": "circle-equations-and-radial-interpretations",
+              "title": "Circle Equations And Radial Interpretations",
+              "route_path": "/learn/library/geometry-foundations-for-baseball-context/circles-arcs-and-curvature/circle-equations-and-radial-interpretations",
+              "lesson_order": 1,
+              "estimated_minutes": 28
+            },
+            {
+              "slug": "arc-length-curvature-and-outfield-wall-geometry",
+              "title": "Arc Length, Curvature, And Outfield Wall Geometry",
+              "route_path": "/learn/library/geometry-foundations-for-baseball-context/circles-arcs-and-curvature/arc-length-curvature-and-outfield-wall-geometry",
+              "lesson_order": 2,
+              "estimated_minutes": 32
+            },
+            {
+              "slug": "sector-area-and-angular-coverage",
+              "title": "Sector Area And Angular Coverage",
+              "route_path": "/learn/library/geometry-foundations-for-baseball-context/circles-arcs-and-curvature/sector-area-and-angular-coverage",
+              "lesson_order": 3,
+              "estimated_minutes": 36
+            },
+            {
+              "slug": "chord-vs-arc-interpretation-pitfalls",
+              "title": "Chord Vs Arc Interpretation Pitfalls",
+              "route_path": "/learn/library/geometry-foundations-for-baseball-context/circles-arcs-and-curvature/chord-vs-arc-interpretation-pitfalls",
+              "lesson_order": 4,
+              "estimated_minutes": 40
+            },
+            {
+              "slug": "geometry-foundations-synthesis-lab",
+              "title": "Geometry Foundations Synthesis Lab",
+              "route_path": "/learn/library/geometry-foundations-for-baseball-context/circles-arcs-and-curvature/geometry-foundations-synthesis-lab",
+              "lesson_order": 5,
+              "estimated_minutes": 44
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "trigonometry-and-precalculus-for-baseball-modeling",
+      "title": "Trigonometry And Precalculus For Baseball Modeling",
+      "description": "Open learning path: Trigonometry And Precalculus For Baseball Modeling. Quantitative baseball analytics and decision-making.",
+      "is_premium": false,
+      "modules": [
+        {
+          "slug": "trigonometric-core-concepts",
+          "title": "Trigonometric Core Concepts",
+          "description": "Unit: Trigonometric Core Concepts. Part of Trigonometry And Precalculus For Baseball Modeling.",
+          "estimated_minutes": 205,
+          "lessons": [
+            {
+              "slug": "trigonometric-functions-refresher-for-modeling",
+              "title": "Trigonometric Functions Refresher For Modeling",
+              "route_path": "/learn/library/trigonometry-and-precalculus-for-baseball-modeling/trigonometric-core-concepts/trigonometric-functions-refresher-for-modeling",
+              "lesson_order": 1,
+              "estimated_minutes": 28
+            },
+            {
+              "slug": "unit-circle-radians-and-angular-velocity-in-context",
+              "title": "Unit Circle, Radians, And Angular Velocity In Context",
+              "route_path": "/learn/library/trigonometry-and-precalculus-for-baseball-modeling/trigonometric-core-concepts/unit-circle-radians-and-angular-velocity-in-context",
+              "lesson_order": 2,
+              "estimated_minutes": 32
+            },
+            {
+              "slug": "sohcahtoa-to-vector-components-horizontal-vs-vertical-motion",
+              "title": "SOHCAHTOA To Vector Components: Horizontal Vs Vertical Motion",
+              "route_path": "/learn/library/trigonometry-and-precalculus-for-baseball-modeling/trigonometric-core-concepts/sohcahtoa-to-vector-components-horizontal-vs-vertical-motion",
+              "lesson_order": 3,
+              "estimated_minutes": 36
+            },
+            {
+              "slug": "inverse-trig-for-reconstructing-launch-conditions",
+              "title": "Inverse Trig For Reconstructing Launch Conditions",
+              "route_path": "/learn/library/trigonometry-and-precalculus-for-baseball-modeling/trigonometric-core-concepts/inverse-trig-for-reconstructing-launch-conditions",
+              "lesson_order": 4,
+              "estimated_minutes": 40
+            },
+            {
+              "slug": "trig-identities-for-simplifying-flight-equations",
+              "title": "Trig Identities For Simplifying Flight Equations",
+              "route_path": "/learn/library/trigonometry-and-precalculus-for-baseball-modeling/trigonometric-core-concepts/trig-identities-for-simplifying-flight-equations",
+              "lesson_order": 5,
+              "estimated_minutes": 44
+            }
+          ]
+        },
+        {
+          "slug": "functions-transformations-and-signals",
+          "title": "Functions, Transformations, And Signals",
+          "description": "Unit: Functions, Transformations, And Signals. Part of Trigonometry And Precalculus For Baseball Modeling.",
+          "estimated_minutes": 205,
+          "lessons": [
+            {
+              "slug": "phase-shift-and-periodicity-in-baseball-motion-signals",
+              "title": "Phase Shift And Periodicity In Baseball Motion Signals",
+              "route_path": "/learn/library/trigonometry-and-precalculus-for-baseball-modeling/functions-transformations-and-signals/phase-shift-and-periodicity-in-baseball-motion-signals",
+              "lesson_order": 1,
+              "estimated_minutes": 28
+            },
+            {
+              "slug": "amplitude-frequency-and-signal-interpretation",
+              "title": "Amplitude, Frequency, And Signal Interpretation",
+              "route_path": "/learn/library/trigonometry-and-precalculus-for-baseball-modeling/functions-transformations-and-signals/amplitude-frequency-and-signal-interpretation",
+              "lesson_order": 2,
+              "estimated_minutes": 32
+            },
+            {
+              "slug": "polar-cartesian-and-spherical-coordinate-conversions",
+              "title": "Polar, Cartesian, And Spherical Coordinate Conversions",
+              "route_path": "/learn/library/trigonometry-and-precalculus-for-baseball-modeling/functions-transformations-and-signals/polar-cartesian-and-spherical-coordinate-conversions",
+              "lesson_order": 3,
+              "estimated_minutes": 36
+            },
+            {
+              "slug": "function-transformations-and-model-calibration",
+              "title": "Function Transformations And Model Calibration",
+              "route_path": "/learn/library/trigonometry-and-precalculus-for-baseball-modeling/functions-transformations-and-signals/function-transformations-and-model-calibration",
+              "lesson_order": 4,
+              "estimated_minutes": 40
+            },
+            {
+              "slug": "precalculus-signal-synthesis-workshop",
+              "title": "Precalculus Signal Synthesis Workshop",
+              "route_path": "/learn/library/trigonometry-and-precalculus-for-baseball-modeling/functions-transformations-and-signals/precalculus-signal-synthesis-workshop",
+              "lesson_order": 5,
+              "estimated_minutes": 44
+            }
+          ]
+        },
+        {
+          "slug": "vectors-and-optimization-preparation",
+          "title": "Vectors And Optimization Preparation",
+          "description": "Unit: Vectors And Optimization Preparation. Part of Trigonometry And Precalculus For Baseball Modeling.",
+          "estimated_minutes": 205,
+          "lessons": [
+            {
+              "slug": "dot-product-projection-and-directional-influence",
+              "title": "Dot Product, Projection, And Directional Influence",
+              "route_path": "/learn/library/trigonometry-and-precalculus-for-baseball-modeling/vectors-and-optimization-preparation/dot-product-projection-and-directional-influence",
+              "lesson_order": 1,
+              "estimated_minutes": 28
+            },
+            {
+              "slug": "cross-product-intuition-for-spin-and-orientation",
+              "title": "Cross Product Intuition For Spin And Orientation",
+              "route_path": "/learn/library/trigonometry-and-precalculus-for-baseball-modeling/vectors-and-optimization-preparation/cross-product-intuition-for-spin-and-orientation",
+              "lesson_order": 2,
+              "estimated_minutes": 32
+            },
+            {
+              "slug": "angle-optimization-under-physical-constraints",
+              "title": "Angle Optimization Under Physical Constraints",
+              "route_path": "/learn/library/trigonometry-and-precalculus-for-baseball-modeling/vectors-and-optimization-preparation/angle-optimization-under-physical-constraints",
+              "lesson_order": 3,
+              "estimated_minutes": 36
+            },
+            {
+              "slug": "error-propagation-in-trig-based-calculations",
+              "title": "Error Propagation In Trig-Based Calculations",
+              "route_path": "/learn/library/trigonometry-and-precalculus-for-baseball-modeling/vectors-and-optimization-preparation/error-propagation-in-trig-based-calculations",
+              "lesson_order": 4,
+              "estimated_minutes": 40
+            },
+            {
+              "slug": "precalculus-capstone-from-angle-to-decision",
+              "title": "Precalculus Capstone: From Angle To Decision",
+              "route_path": "/learn/library/trigonometry-and-precalculus-for-baseball-modeling/vectors-and-optimization-preparation/precalculus-capstone-from-angle-to-decision",
+              "lesson_order": 5,
+              "estimated_minutes": 44
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "calculus-i-and-ii-for-baseball-dynamics",
+      "title": "Calculus I And II For Baseball Dynamics",
+      "description": "Open learning path: Calculus I And II For Baseball Dynamics. Quantitative baseball analytics and decision-making.",
+      "is_premium": false,
+      "modules": [
+        {
+          "slug": "limits-continuity-and-derivatives",
+          "title": "Limits, Continuity, And Derivatives",
+          "description": "Unit: Limits, Continuity, And Derivatives. Part of Calculus I And II For Baseball Dynamics.",
+          "estimated_minutes": 205,
+          "lessons": [
+            {
+              "slug": "limits-as-trend-questions-in-baseball-motion",
+              "title": "Limits As Trend Questions In Baseball Motion",
+              "route_path": "/learn/library/calculus-i-and-ii-for-baseball-dynamics/limits-continuity-and-derivatives/limits-as-trend-questions-in-baseball-motion",
+              "lesson_order": 1,
+              "estimated_minutes": 28
+            },
+            {
+              "slug": "continuity-and-model-breakpoint-detection",
+              "title": "Continuity And Model Breakpoint Detection",
+              "route_path": "/learn/library/calculus-i-and-ii-for-baseball-dynamics/limits-continuity-and-derivatives/continuity-and-model-breakpoint-detection",
+              "lesson_order": 2,
+              "estimated_minutes": 32
+            },
+            {
+              "slug": "derivative-as-instantaneous-rate-of-change",
+              "title": "Derivative As Instantaneous Rate Of Change",
+              "route_path": "/learn/library/calculus-i-and-ii-for-baseball-dynamics/limits-continuity-and-derivatives/derivative-as-instantaneous-rate-of-change",
+              "lesson_order": 3,
+              "estimated_minutes": 36
+            },
+            {
+              "slug": "product-quotient-and-chain-rules-in-practice",
+              "title": "Product, Quotient, And Chain Rules In Practice",
+              "route_path": "/learn/library/calculus-i-and-ii-for-baseball-dynamics/limits-continuity-and-derivatives/product-quotient-and-chain-rules-in-practice",
+              "lesson_order": 4,
+              "estimated_minutes": 40
+            },
+            {
+              "slug": "implicit-differentiation-for-coupled-baseball-quantities",
+              "title": "Implicit Differentiation For Coupled Baseball Quantities",
+              "route_path": "/learn/library/calculus-i-and-ii-for-baseball-dynamics/limits-continuity-and-derivatives/implicit-differentiation-for-coupled-baseball-quantities",
+              "lesson_order": 5,
+              "estimated_minutes": 44
+            }
+          ]
+        },
+        {
+          "slug": "derivative-applications",
+          "title": "Derivative Applications",
+          "description": "Unit: Derivative Applications. Part of Calculus I And II For Baseball Dynamics.",
+          "estimated_minutes": 205,
+          "lessons": [
+            {
+              "slug": "optimization-for-launch-decisions",
+              "title": "Optimization For Launch Decisions",
+              "route_path": "/learn/library/calculus-i-and-ii-for-baseball-dynamics/derivative-applications/optimization-for-launch-decisions",
+              "lesson_order": 1,
+              "estimated_minutes": 28
+            },
+            {
+              "slug": "related-rates-in-tracking-and-orientation",
+              "title": "Related Rates In Tracking And Orientation",
+              "route_path": "/learn/library/calculus-i-and-ii-for-baseball-dynamics/derivative-applications/related-rates-in-tracking-and-orientation",
+              "lesson_order": 2,
+              "estimated_minutes": 32
+            },
+            {
+              "slug": "second-derivative-and-curvature-interpretation",
+              "title": "Second Derivative And Curvature Interpretation",
+              "route_path": "/learn/library/calculus-i-and-ii-for-baseball-dynamics/derivative-applications/second-derivative-and-curvature-interpretation",
+              "lesson_order": 3,
+              "estimated_minutes": 36
+            },
+            {
+              "slug": "linearization-for-fast-approximation",
+              "title": "Linearization For Fast Approximation",
+              "route_path": "/learn/library/calculus-i-and-ii-for-baseball-dynamics/derivative-applications/linearization-for-fast-approximation",
+              "lesson_order": 4,
+              "estimated_minutes": 40
+            },
+            {
+              "slug": "derivative-application-synthesis-lab",
+              "title": "Derivative Application Synthesis Lab",
+              "route_path": "/learn/library/calculus-i-and-ii-for-baseball-dynamics/derivative-applications/derivative-application-synthesis-lab",
+              "lesson_order": 5,
+              "estimated_minutes": 44
+            }
+          ]
+        },
+        {
+          "slug": "integrals-and-accumulation",
+          "title": "Integrals And Accumulation",
+          "description": "Unit: Integrals And Accumulation. Part of Calculus I And II For Baseball Dynamics.",
+          "estimated_minutes": 205,
+          "lessons": [
+            {
+              "slug": "definite-integral-as-accumulated-change",
+              "title": "Definite Integral As Accumulated Change",
+              "route_path": "/learn/library/calculus-i-and-ii-for-baseball-dynamics/integrals-and-accumulation/definite-integral-as-accumulated-change",
+              "lesson_order": 1,
+              "estimated_minutes": 28
+            },
+            {
+              "slug": "fundamental-theorem-of-calculus-in-modeling-workflow",
+              "title": "Fundamental Theorem Of Calculus In Modeling Workflow",
+              "route_path": "/learn/library/calculus-i-and-ii-for-baseball-dynamics/integrals-and-accumulation/fundamental-theorem-of-calculus-in-modeling-workflow",
+              "lesson_order": 2,
+              "estimated_minutes": 32
+            },
+            {
+              "slug": "substitution-and-integration-by-parts",
+              "title": "Substitution And Integration By Parts",
+              "route_path": "/learn/library/calculus-i-and-ii-for-baseball-dynamics/integrals-and-accumulation/substitution-and-integration-by-parts",
+              "lesson_order": 3,
+              "estimated_minutes": 36
+            },
+            {
+              "slug": "numerical-integration-for-real-data",
+              "title": "Numerical Integration For Real Data",
+              "route_path": "/learn/library/calculus-i-and-ii-for-baseball-dynamics/integrals-and-accumulation/numerical-integration-for-real-data",
+              "lesson_order": 4,
+              "estimated_minutes": 40
+            },
+            {
+              "slug": "integral-interpretation-in-baseball-context",
+              "title": "Integral Interpretation In Baseball Context",
+              "route_path": "/learn/library/calculus-i-and-ii-for-baseball-dynamics/integrals-and-accumulation/integral-interpretation-in-baseball-context",
+              "lesson_order": 5,
+              "estimated_minutes": 44
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "multivariable-calculus-and-differential-equations",
+      "title": "Multivariable Calculus And Differential Equations",
+      "description": "Open learning path: Multivariable Calculus And Differential Equations. Quantitative baseball analytics and decision-making.",
+      "is_premium": false,
+      "modules": [
+        {
+          "slug": "multivariable-function-geometry",
+          "title": "Multivariable Function Geometry",
+          "description": "Unit: Multivariable Function Geometry. Part of Multivariable Calculus And Differential Equations.",
+          "estimated_minutes": 205,
+          "lessons": [
+            {
+              "slug": "functions-of-several-variables-in-baseball-systems",
+              "title": "Functions Of Several Variables In Baseball Systems",
+              "route_path": "/learn/library/multivariable-calculus-and-differential-equations/multivariable-function-geometry/functions-of-several-variables-in-baseball-systems",
+              "lesson_order": 1,
+              "estimated_minutes": 28
+            },
+            {
+              "slug": "partial-derivatives-and-marginal-effects",
+              "title": "Partial Derivatives And Marginal Effects",
+              "route_path": "/learn/library/multivariable-calculus-and-differential-equations/multivariable-function-geometry/partial-derivatives-and-marginal-effects",
+              "lesson_order": 2,
+              "estimated_minutes": 32
+            },
+            {
+              "slug": "gradient-directional-derivative-and-sensitivity",
+              "title": "Gradient, Directional Derivative, And Sensitivity",
+              "route_path": "/learn/library/multivariable-calculus-and-differential-equations/multivariable-function-geometry/gradient-directional-derivative-and-sensitivity",
+              "lesson_order": 3,
+              "estimated_minutes": 36
+            },
+            {
+              "slug": "tangent-planes-and-local-linear-models",
+              "title": "Tangent Planes And Local Linear Models",
+              "route_path": "/learn/library/multivariable-calculus-and-differential-equations/multivariable-function-geometry/tangent-planes-and-local-linear-models",
+              "lesson_order": 4,
+              "estimated_minutes": 40
+            },
+            {
+              "slug": "multivariable-optimization-under-constraints",
+              "title": "Multivariable Optimization Under Constraints",
+              "route_path": "/learn/library/multivariable-calculus-and-differential-equations/multivariable-function-geometry/multivariable-optimization-under-constraints",
+              "lesson_order": 5,
+              "estimated_minutes": 44
+            }
+          ]
+        },
+        {
+          "slug": "multiple-integration-and-vector-fields",
+          "title": "Multiple Integration And Vector Fields",
+          "description": "Unit: Multiple Integration And Vector Fields. Part of Multivariable Calculus And Differential Equations.",
+          "estimated_minutes": 205,
+          "lessons": [
+            {
+              "slug": "double-integrals-over-physical-regions",
+              "title": "Double Integrals Over Physical Regions",
+              "route_path": "/learn/library/multivariable-calculus-and-differential-equations/multiple-integration-and-vector-fields/double-integrals-over-physical-regions",
+              "lesson_order": 1,
+              "estimated_minutes": 28
+            },
+            {
+              "slug": "coordinate-changes-in-multivariable-integrals",
+              "title": "Coordinate Changes In Multivariable Integrals",
+              "route_path": "/learn/library/multivariable-calculus-and-differential-equations/multiple-integration-and-vector-fields/coordinate-changes-in-multivariable-integrals",
+              "lesson_order": 2,
+              "estimated_minutes": 32
+            },
+            {
+              "slug": "vector-fields-and-flow-interpretation",
+              "title": "Vector Fields And Flow Interpretation",
+              "route_path": "/learn/library/multivariable-calculus-and-differential-equations/multiple-integration-and-vector-fields/vector-fields-and-flow-interpretation",
+              "lesson_order": 3,
+              "estimated_minutes": 36
+            },
+            {
+              "slug": "line-integrals-for-work-like-quantities",
+              "title": "Line Integrals For Work-Like Quantities",
+              "route_path": "/learn/library/multivariable-calculus-and-differential-equations/multiple-integration-and-vector-fields/line-integrals-for-work-like-quantities",
+              "lesson_order": 4,
+              "estimated_minutes": 40
+            },
+            {
+              "slug": "multivariable-integration-synthesis-workshop",
+              "title": "Multivariable Integration Synthesis Workshop",
+              "route_path": "/learn/library/multivariable-calculus-and-differential-equations/multiple-integration-and-vector-fields/multivariable-integration-synthesis-workshop",
+              "lesson_order": 5,
+              "estimated_minutes": 44
+            }
+          ]
+        },
+        {
+          "slug": "differential-equations-for-dynamic-systems",
+          "title": "Differential Equations For Dynamic Systems",
+          "description": "Unit: Differential Equations For Dynamic Systems. Part of Multivariable Calculus And Differential Equations.",
+          "estimated_minutes": 205,
+          "lessons": [
+            {
+              "slug": "first-order-odes-for-baseball-change-models",
+              "title": "First-Order ODEs For Baseball Change Models",
+              "route_path": "/learn/library/multivariable-calculus-and-differential-equations/differential-equations-for-dynamic-systems/first-order-odes-for-baseball-change-models",
+              "lesson_order": 1,
+              "estimated_minutes": 28
+            },
+            {
+              "slug": "second-order-odes-for-motion-dynamics",
+              "title": "Second-Order ODEs For Motion Dynamics",
+              "route_path": "/learn/library/multivariable-calculus-and-differential-equations/differential-equations-for-dynamic-systems/second-order-odes-for-motion-dynamics",
+              "lesson_order": 2,
+              "estimated_minutes": 32
+            },
+            {
+              "slug": "linear-systems-and-stability-intuition",
+              "title": "Linear Systems And Stability Intuition",
+              "route_path": "/learn/library/multivariable-calculus-and-differential-equations/differential-equations-for-dynamic-systems/linear-systems-and-stability-intuition",
+              "lesson_order": 3,
+              "estimated_minutes": 36
+            },
+            {
+              "slug": "numerical-ode-solvers-and-step-control",
+              "title": "Numerical ODE Solvers And Step Control",
+              "route_path": "/learn/library/multivariable-calculus-and-differential-equations/differential-equations-for-dynamic-systems/numerical-ode-solvers-and-step-control",
+              "lesson_order": 4,
+              "estimated_minutes": 40
+            },
+            {
+              "slug": "differential-equations-capstone-integration",
+              "title": "Differential Equations Capstone Integration",
+              "route_path": "/learn/library/multivariable-calculus-and-differential-equations/differential-equations-for-dynamic-systems/differential-equations-capstone-integration",
+              "lesson_order": 5,
+              "estimated_minutes": 44
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "baseball-physics-foundations",
+      "title": "Baseball Physics Foundations",
+      "description": "Open learning path: Baseball Physics Foundations. Quantitative baseball analytics and decision-making.",
+      "is_premium": false,
+      "modules": [
+        {
+          "slug": "geometry-of-the-field-and-ball-flight",
+          "title": "Geometry Of The Field And Ball Flight",
+          "description": "Unit: Geometry Of The Field And Ball Flight. Part of Baseball Physics Foundations.",
+          "estimated_minutes": 376,
+          "lessons": [
+            {
+              "slug": "coordinate-systems-for-baseball-fields",
+              "title": "Coordinate Systems For Baseball Fields",
+              "route_path": "/learn/library/baseball-physics-foundations/geometry-of-the-field-and-ball-flight/coordinate-systems-for-baseball-fields",
+              "lesson_order": 1,
+              "estimated_minutes": 28
+            },
+            {
+              "slug": "field-dimensions-symmetry-and-constraint-boundaries",
+              "title": "Field Dimensions, Symmetry, And Constraint Boundaries",
+              "route_path": "/learn/library/baseball-physics-foundations/geometry-of-the-field-and-ball-flight/field-dimensions-symmetry-and-constraint-boundaries",
+              "lesson_order": 2,
+              "estimated_minutes": 32
+            },
+            {
+              "slug": "arc-length-curvature-and-outfield-wall-geometry",
+              "title": "Arc Length, Curvature, And Outfield Wall Geometry",
+              "route_path": "/learn/library/baseball-physics-foundations/geometry-of-the-field-and-ball-flight/arc-length-curvature-and-outfield-wall-geometry",
+              "lesson_order": 3,
+              "estimated_minutes": 36
+            },
+            {
+              "slug": "launch-angle-as-a-geometric-object",
+              "title": "Launch Angle As A Geometric Object",
+              "route_path": "/learn/library/baseball-physics-foundations/geometry-of-the-field-and-ball-flight/launch-angle-as-a-geometric-object",
+              "lesson_order": 4,
+              "estimated_minutes": 40
+            },
+            {
+              "slug": "2d-to-3d-flight-geometry-transitions",
+              "title": "2D To 3D Flight Geometry Transitions",
+              "route_path": "/learn/library/baseball-physics-foundations/geometry-of-the-field-and-ball-flight/2d-to-3d-flight-geometry-transitions",
+              "lesson_order": 5,
+              "estimated_minutes": 44
+            },
+            {
+              "slug": "ballpark-topology-and-home-run-boundary-surfaces",
+              "title": "Ballpark Topology And Home Run Boundary Surfaces",
+              "route_path": "/learn/library/baseball-physics-foundations/geometry-of-the-field-and-ball-flight/ballpark-topology-and-home-run-boundary-surfaces",
+              "lesson_order": 6,
+              "estimated_minutes": 48
+            },
+            {
+              "slug": "geometric-sensitivity-small-angle-changes-large-outcome-swings",
+              "title": "Geometric Sensitivity: Small Angle Changes, Large Outcome Swings",
+              "route_path": "/learn/library/baseball-physics-foundations/geometry-of-the-field-and-ball-flight/geometric-sensitivity-small-angle-changes-large-outcome-swings",
+              "lesson_order": 7,
+              "estimated_minutes": 52
+            },
+            {
+              "slug": "geometry-synthesis-lab-mapping-ball-flight-regions",
+              "title": "Geometry Synthesis Lab: Mapping Ball Flight Regions",
+              "route_path": "/learn/library/baseball-physics-foundations/geometry-of-the-field-and-ball-flight/geometry-synthesis-lab-mapping-ball-flight-regions",
+              "lesson_order": 8,
+              "estimated_minutes": 56
+            }
+          ]
+        },
+        {
+          "slug": "trigonometry-and-vector-decomposition",
+          "title": "Trigonometry And Vector Decomposition",
+          "description": "Unit: Trigonometry And Vector Decomposition. Part of Baseball Physics Foundations.",
+          "estimated_minutes": 645,
+          "lessons": [
+            {
+              "slug": "trigonometric-functions-refresher-for-modeling",
+              "title": "Trigonometric Functions Refresher For Modeling",
+              "route_path": "/learn/library/baseball-physics-foundations/trigonometry-and-vector-decomposition/trigonometric-functions-refresher-for-modeling",
+              "lesson_order": 1,
+              "estimated_minutes": 28
+            },
+            {
+              "slug": "unit-circle-radians-and-angular-velocity-in-context",
+              "title": "Unit Circle, Radians, And Angular Velocity In Context",
+              "route_path": "/learn/library/baseball-physics-foundations/trigonometry-and-vector-decomposition/unit-circle-radians-and-angular-velocity-in-context",
+              "lesson_order": 2,
+              "estimated_minutes": 32
+            },
+            {
+              "slug": "sohcahtoa-to-vector-components-horizontal-vs-vertical-motion",
+              "title": "SOHCAHTOA To Vector Components: Horizontal Vs Vertical Motion",
+              "route_path": "/learn/library/baseball-physics-foundations/trigonometry-and-vector-decomposition/sohcahtoa-to-vector-components-horizontal-vs-vertical-motion",
+              "lesson_order": 3,
+              "estimated_minutes": 36
+            },
+            {
+              "slug": "inverse-trig-for-reconstructing-launch-conditions",
+              "title": "Inverse Trig For Reconstructing Launch Conditions",
+              "route_path": "/learn/library/baseball-physics-foundations/trigonometry-and-vector-decomposition/inverse-trig-for-reconstructing-launch-conditions",
+              "lesson_order": 4,
+              "estimated_minutes": 40
+            },
+            {
+              "slug": "dot-product-projection-and-directional-influence",
+              "title": "Dot Product, Projection, And Directional Influence",
+              "route_path": "/learn/library/baseball-physics-foundations/trigonometry-and-vector-decomposition/dot-product-projection-and-directional-influence",
+              "lesson_order": 5,
+              "estimated_minutes": 44
+            },
+            {
+              "slug": "cross-product-intuition-for-spin-and-orientation",
+              "title": "Cross Product Intuition For Spin And Orientation",
+              "route_path": "/learn/library/baseball-physics-foundations/trigonometry-and-vector-decomposition/cross-product-intuition-for-spin-and-orientation",
+              "lesson_order": 6,
+              "estimated_minutes": 48
+            },
+            {
+              "slug": "polar-cartesian-and-spherical-coordinate-conversions",
+              "title": "Polar, Cartesian, And Spherical Coordinate Conversions",
+              "route_path": "/learn/library/baseball-physics-foundations/trigonometry-and-vector-decomposition/polar-cartesian-and-spherical-coordinate-conversions",
+              "lesson_order": 7,
+              "estimated_minutes": 52
+            },
+            {
+              "slug": "phase-shift-and-periodicity-in-baseball-motion-signals",
+              "title": "Phase Shift And Periodicity In Baseball Motion Signals",
+              "route_path": "/learn/library/baseball-physics-foundations/trigonometry-and-vector-decomposition/phase-shift-and-periodicity-in-baseball-motion-signals",
+              "lesson_order": 8,
+              "estimated_minutes": 56
+            },
+            {
+              "slug": "trig-identities-for-simplifying-flight-equations",
+              "title": "Trig Identities For Simplifying Flight Equations",
+              "route_path": "/learn/library/baseball-physics-foundations/trigonometry-and-vector-decomposition/trig-identities-for-simplifying-flight-equations",
+              "lesson_order": 9,
+              "estimated_minutes": 60
+            },
+            {
+              "slug": "angle-optimization-under-physical-constraints",
+              "title": "Angle Optimization Under Physical Constraints",
+              "route_path": "/learn/library/baseball-physics-foundations/trigonometry-and-vector-decomposition/angle-optimization-under-physical-constraints",
+              "lesson_order": 10,
+              "estimated_minutes": 64
+            },
+            {
+              "slug": "error-propagation-in-trig-based-calculations",
+              "title": "Error Propagation In Trig-Based Calculations",
+              "route_path": "/learn/library/baseball-physics-foundations/trigonometry-and-vector-decomposition/error-propagation-in-trig-based-calculations",
+              "lesson_order": 11,
+              "estimated_minutes": 68
+            },
+            {
+              "slug": "trigonometry-mastery-workshop-multi-step-applied-problems",
+              "title": "Trigonometry Mastery Workshop: Multi-Step Applied Problems",
+              "route_path": "/learn/library/baseball-physics-foundations/trigonometry-and-vector-decomposition/trigonometry-mastery-workshop-multi-step-applied-problems",
+              "lesson_order": 12,
+              "estimated_minutes": 72
+            }
+          ]
+        },
+        {
+          "slug": "newtonian-mechanics-and-projectile-motion",
+          "title": "Newtonian Mechanics And Projectile Motion",
+          "description": "Unit: Newtonian Mechanics And Projectile Motion. Part of Baseball Physics Foundations.",
+          "estimated_minutes": 801,
+          "lessons": [
+            {
+              "slug": "newton-s-laws-revisited-for-ball-bat-and-ball-air-systems",
+              "title": "Newton's Laws Revisited For Ball-Bat And Ball-Air Systems",
+              "route_path": "/learn/library/baseball-physics-foundations/newtonian-mechanics-and-projectile-motion/newton-s-laws-revisited-for-ball-bat-and-ball-air-systems",
+              "lesson_order": 1,
+              "estimated_minutes": 28
+            },
+            {
+              "slug": "kinematics-in-one-and-two-dimensions",
+              "title": "Kinematics In One And Two Dimensions",
+              "route_path": "/learn/library/baseball-physics-foundations/newtonian-mechanics-and-projectile-motion/kinematics-in-one-and-two-dimensions",
+              "lesson_order": 2,
+              "estimated_minutes": 32
+            },
+            {
+              "slug": "free-body-diagrams-for-batted-ball-motion",
+              "title": "Free-Body Diagrams For Batted Ball Motion",
+              "route_path": "/learn/library/baseball-physics-foundations/newtonian-mechanics-and-projectile-motion/free-body-diagrams-for-batted-ball-motion",
+              "lesson_order": 3,
+              "estimated_minutes": 36
+            },
+            {
+              "slug": "initial-conditions-exit-velocity-launch-angle-spin-inputs",
+              "title": "Initial Conditions: Exit Velocity, Launch Angle, Spin Inputs",
+              "route_path": "/learn/library/baseball-physics-foundations/newtonian-mechanics-and-projectile-motion/initial-conditions-exit-velocity-launch-angle-spin-inputs",
+              "lesson_order": 4,
+              "estimated_minutes": 40
+            },
+            {
+              "slug": "no-drag-projectile-derivation-from-first-principles",
+              "title": "No-Drag Projectile Derivation From First Principles",
+              "route_path": "/learn/library/baseball-physics-foundations/newtonian-mechanics-and-projectile-motion/no-drag-projectile-derivation-from-first-principles",
+              "lesson_order": 5,
+              "estimated_minutes": 44
+            },
+            {
+              "slug": "time-of-flight-apex-and-range-relationships",
+              "title": "Time Of Flight, Apex, And Range Relationships",
+              "route_path": "/learn/library/baseball-physics-foundations/newtonian-mechanics-and-projectile-motion/time-of-flight-apex-and-range-relationships",
+              "lesson_order": 6,
+              "estimated_minutes": 48
+            },
+            {
+              "slug": "energy-methods-vs-force-methods-in-ball-flight",
+              "title": "Energy Methods Vs Force Methods In Ball Flight",
+              "route_path": "/learn/library/baseball-physics-foundations/newtonian-mechanics-and-projectile-motion/energy-methods-vs-force-methods-in-ball-flight",
+              "lesson_order": 7,
+              "estimated_minutes": 52
+            },
+            {
+              "slug": "momentum-transfer-in-contact-events",
+              "title": "Momentum Transfer In Contact Events",
+              "route_path": "/learn/library/baseball-physics-foundations/newtonian-mechanics-and-projectile-motion/momentum-transfer-in-contact-events",
+              "lesson_order": 8,
+              "estimated_minutes": 56
+            },
+            {
+              "slug": "introducing-drag-into-newton-s-second-law",
+              "title": "Introducing Drag Into Newton's Second Law",
+              "route_path": "/learn/library/baseball-physics-foundations/newtonian-mechanics-and-projectile-motion/introducing-drag-into-newton-s-second-law",
+              "lesson_order": 9,
+              "estimated_minutes": 60
+            },
+            {
+              "slug": "solving-drag-inclusive-odes-numerically",
+              "title": "Solving Drag-Inclusive ODEs Numerically",
+              "route_path": "/learn/library/baseball-physics-foundations/newtonian-mechanics-and-projectile-motion/solving-drag-inclusive-odes-numerically",
+              "lesson_order": 10,
+              "estimated_minutes": 64
+            },
+            {
+              "slug": "lift-and-magnus-contributions-to-trajectory-shape",
+              "title": "Lift And Magnus Contributions To Trajectory Shape",
+              "route_path": "/learn/library/baseball-physics-foundations/newtonian-mechanics-and-projectile-motion/lift-and-magnus-contributions-to-trajectory-shape",
+              "lesson_order": 11,
+              "estimated_minutes": 68
+            },
+            {
+              "slug": "comparing-vacuum-drag-only-and-drag-lift-models",
+              "title": "Comparing Vacuum, Drag-Only, And Drag+Lift Models",
+              "route_path": "/learn/library/baseball-physics-foundations/newtonian-mechanics-and-projectile-motion/comparing-vacuum-drag-only-and-drag-lift-models",
+              "lesson_order": 12,
+              "estimated_minutes": 72
+            },
+            {
+              "slug": "parameter-sensitivity-and-stability-in-trajectory-models",
+              "title": "Parameter Sensitivity And Stability In Trajectory Models",
+              "route_path": "/learn/library/baseball-physics-foundations/newtonian-mechanics-and-projectile-motion/parameter-sensitivity-and-stability-in-trajectory-models",
+              "lesson_order": 13,
+              "estimated_minutes": 76
+            },
+            {
+              "slug": "newtonian-synthesis-lab-build-a-full-forward-simulator",
+              "title": "Newtonian Synthesis Lab: Build A Full Forward Simulator",
+              "route_path": "/learn/library/baseball-physics-foundations/newtonian-mechanics-and-projectile-motion/newtonian-synthesis-lab-build-a-full-forward-simulator",
+              "lesson_order": 14,
+              "estimated_minutes": 80
+            }
+          ]
+        },
+        {
+          "slug": "drag-lift-and-aerodynamics-of-the-baseball",
+          "title": "Drag, Lift, And Aerodynamics Of The Baseball",
+          "description": "Unit: Drag, Lift, And Aerodynamics Of The Baseball. Part of Baseball Physics Foundations.",
+          "estimated_minutes": 505,
+          "lessons": [
+            {
+              "slug": "physical-meaning-of-drag-coefficient-in-baseball",
+              "title": "Physical Meaning Of Drag Coefficient In Baseball",
+              "route_path": "/learn/library/baseball-physics-foundations/drag-lift-and-aerodynamics-of-the-baseball/physical-meaning-of-drag-coefficient-in-baseball",
+              "lesson_order": 1,
+              "estimated_minutes": 28
+            },
+            {
+              "slug": "reynolds-number-regimes-and-seam-effects",
+              "title": "Reynolds Number Regimes And Seam Effects",
+              "route_path": "/learn/library/baseball-physics-foundations/drag-lift-and-aerodynamics-of-the-baseball/reynolds-number-regimes-and-seam-effects",
+              "lesson_order": 2,
+              "estimated_minutes": 32
+            },
+            {
+              "slug": "boundary-layers-turbulence-and-flight-consequences",
+              "title": "Boundary Layers, Turbulence, And Flight Consequences",
+              "route_path": "/learn/library/baseball-physics-foundations/drag-lift-and-aerodynamics-of-the-baseball/boundary-layers-turbulence-and-flight-consequences",
+              "lesson_order": 3,
+              "estimated_minutes": 36
+            },
+            {
+              "slug": "lift-coefficient-spin-rate-and-spin-axis",
+              "title": "Lift Coefficient, Spin Rate, And Spin Axis",
+              "route_path": "/learn/library/baseball-physics-foundations/drag-lift-and-aerodynamics-of-the-baseball/lift-coefficient-spin-rate-and-spin-axis",
+              "lesson_order": 4,
+              "estimated_minutes": 40
+            },
+            {
+              "slug": "coupled-drag-lift-dynamics-in-flight",
+              "title": "Coupled Drag-Lift Dynamics In Flight",
+              "route_path": "/learn/library/baseball-physics-foundations/drag-lift-and-aerodynamics-of-the-baseball/coupled-drag-lift-dynamics-in-flight",
+              "lesson_order": 5,
+              "estimated_minutes": 44
+            },
+            {
+              "slug": "estimating-aerodynamic-parameters-from-observational-data",
+              "title": "Estimating Aerodynamic Parameters From Observational Data",
+              "route_path": "/learn/library/baseball-physics-foundations/drag-lift-and-aerodynamics-of-the-baseball/estimating-aerodynamic-parameters-from-observational-data",
+              "lesson_order": 6,
+              "estimated_minutes": 48
+            },
+            {
+              "slug": "identifiability-when-different-parameters-fit-similar-outcomes",
+              "title": "Identifiability: When Different Parameters Fit Similar Outcomes",
+              "route_path": "/learn/library/baseball-physics-foundations/drag-lift-and-aerodynamics-of-the-baseball/identifiability-when-different-parameters-fit-similar-outcomes",
+              "lesson_order": 7,
+              "estimated_minutes": 52
+            },
+            {
+              "slug": "aerodynamics-and-home-run-probability-pathways",
+              "title": "Aerodynamics And Home Run Probability Pathways",
+              "route_path": "/learn/library/baseball-physics-foundations/drag-lift-and-aerodynamics-of-the-baseball/aerodynamics-and-home-run-probability-pathways",
+              "lesson_order": 8,
+              "estimated_minutes": 56
+            },
+            {
+              "slug": "model-misspecification-in-aerodynamic-inference",
+              "title": "Model Misspecification In Aerodynamic Inference",
+              "route_path": "/learn/library/baseball-physics-foundations/drag-lift-and-aerodynamics-of-the-baseball/model-misspecification-in-aerodynamic-inference",
+              "lesson_order": 9,
+              "estimated_minutes": 60
+            },
+            {
+              "slug": "aerodynamics-practicum-inference-and-validation",
+              "title": "Aerodynamics Practicum: Inference And Validation",
+              "route_path": "/learn/library/baseball-physics-foundations/drag-lift-and-aerodynamics-of-the-baseball/aerodynamics-practicum-inference-and-validation",
+              "lesson_order": 10,
+              "estimated_minutes": 64
+            }
+          ]
+        },
+        {
+          "slug": "environmental-effects-and-ballpark-context",
+          "title": "Environmental Effects And Ballpark Context",
+          "description": "Unit: Environmental Effects And Ballpark Context. Part of Baseball Physics Foundations.",
+          "estimated_minutes": 376,
+          "lessons": [
+            {
+              "slug": "air-density-temperature-pressure-and-humidity",
+              "title": "Air Density, Temperature, Pressure, And Humidity",
+              "route_path": "/learn/library/baseball-physics-foundations/environmental-effects-and-ballpark-context/air-density-temperature-pressure-and-humidity",
+              "lesson_order": 1,
+              "estimated_minutes": 28
+            },
+            {
+              "slug": "altitude-and-effective-resistance-landscapes",
+              "title": "Altitude And Effective Resistance Landscapes",
+              "route_path": "/learn/library/baseball-physics-foundations/environmental-effects-and-ballpark-context/altitude-and-effective-resistance-landscapes",
+              "lesson_order": 2,
+              "estimated_minutes": 32
+            },
+            {
+              "slug": "wind-vector-decomposition-relative-to-ball-path",
+              "title": "Wind Vector Decomposition Relative To Ball Path",
+              "route_path": "/learn/library/baseball-physics-foundations/environmental-effects-and-ballpark-context/wind-vector-decomposition-relative-to-ball-path",
+              "lesson_order": 3,
+              "estimated_minutes": 36
+            },
+            {
+              "slug": "weather-variability-and-uncertainty-bands",
+              "title": "Weather Variability And Uncertainty Bands",
+              "route_path": "/learn/library/baseball-physics-foundations/environmental-effects-and-ballpark-context/weather-variability-and-uncertainty-bands",
+              "lesson_order": 4,
+              "estimated_minutes": 40
+            },
+            {
+              "slug": "stadium-orientation-and-microclimate-interaction",
+              "title": "Stadium Orientation And Microclimate Interaction",
+              "route_path": "/learn/library/baseball-physics-foundations/environmental-effects-and-ballpark-context/stadium-orientation-and-microclimate-interaction",
+              "lesson_order": 5,
+              "estimated_minutes": 44
+            },
+            {
+              "slug": "normalizing-outcomes-across-ballparks",
+              "title": "Normalizing Outcomes Across Ballparks",
+              "route_path": "/learn/library/baseball-physics-foundations/environmental-effects-and-ballpark-context/normalizing-outcomes-across-ballparks",
+              "lesson_order": 6,
+              "estimated_minutes": 48
+            },
+            {
+              "slug": "environmental-counterfactuals-what-if-conditions-changed",
+              "title": "Environmental Counterfactuals (What If Conditions Changed?)",
+              "route_path": "/learn/library/baseball-physics-foundations/environmental-effects-and-ballpark-context/environmental-counterfactuals-what-if-conditions-changed",
+              "lesson_order": 7,
+              "estimated_minutes": 52
+            },
+            {
+              "slug": "environment-integration-lab-context-aware-distance-models",
+              "title": "Environment Integration Lab: Context-Aware Distance Models",
+              "route_path": "/learn/library/baseball-physics-foundations/environmental-effects-and-ballpark-context/environment-integration-lab-context-aware-distance-models",
+              "lesson_order": 8,
+              "estimated_minutes": 56
+            }
+          ]
+        },
+        {
+          "slug": "synthesis-building-physics-based-ball-flight-models",
+          "title": "Synthesis — Building Physics-Based Ball-Flight Models",
+          "description": "Unit: Synthesis — Building Physics-Based Ball-Flight Models. Part of Baseball Physics Foundations.",
+          "estimated_minutes": 376,
+          "lessons": [
+            {
+              "slug": "end-to-end-model-architecture-for-ball-flight",
+              "title": "End-To-End Model Architecture For Ball Flight",
+              "route_path": "/learn/library/baseball-physics-foundations/synthesis-building-physics-based-ball-flight-models/end-to-end-model-architecture-for-ball-flight",
+              "lesson_order": 1,
+              "estimated_minutes": 28
+            },
+            {
+              "slug": "choosing-state-variables-and-parameter-priors",
+              "title": "Choosing State Variables And Parameter Priors",
+              "route_path": "/learn/library/baseball-physics-foundations/synthesis-building-physics-based-ball-flight-models/choosing-state-variables-and-parameter-priors",
+              "lesson_order": 2,
+              "estimated_minutes": 32
+            },
+            {
+              "slug": "numerical-solvers-step-size-and-convergence-tradeoffs",
+              "title": "Numerical Solvers, Step Size, And Convergence Tradeoffs",
+              "route_path": "/learn/library/baseball-physics-foundations/synthesis-building-physics-based-ball-flight-models/numerical-solvers-step-size-and-convergence-tradeoffs",
+              "lesson_order": 3,
+              "estimated_minutes": 36
+            },
+            {
+              "slug": "calibration-with-statcast-style-observations",
+              "title": "Calibration With Statcast-Style Observations",
+              "route_path": "/learn/library/baseball-physics-foundations/synthesis-building-physics-based-ball-flight-models/calibration-with-statcast-style-observations",
+              "lesson_order": 4,
+              "estimated_minutes": 40
+            },
+            {
+              "slug": "residual-analysis-and-diagnostic-workflows",
+              "title": "Residual Analysis And Diagnostic Workflows",
+              "route_path": "/learn/library/baseball-physics-foundations/synthesis-building-physics-based-ball-flight-models/residual-analysis-and-diagnostic-workflows",
+              "lesson_order": 5,
+              "estimated_minutes": 44
+            },
+            {
+              "slug": "scenario-analysis-and-simulation-design",
+              "title": "Scenario Analysis And Simulation Design",
+              "route_path": "/learn/library/baseball-physics-foundations/synthesis-building-physics-based-ball-flight-models/scenario-analysis-and-simulation-design",
+              "lesson_order": 6,
+              "estimated_minutes": 48
+            },
+            {
+              "slug": "reproducible-reporting-for-physics-models",
+              "title": "Reproducible Reporting For Physics Models",
+              "route_path": "/learn/library/baseball-physics-foundations/synthesis-building-physics-based-ball-flight-models/reproducible-reporting-for-physics-models",
+              "lesson_order": 7,
+              "estimated_minutes": 52
+            },
+            {
+              "slug": "physics-capstone-milestone-technical-memo-draft",
+              "title": "Physics Capstone Milestone: Technical Memo Draft",
+              "route_path": "/learn/library/baseball-physics-foundations/synthesis-building-physics-based-ball-flight-models/physics-capstone-milestone-technical-memo-draft",
+              "lesson_order": 8,
+              "estimated_minutes": 56
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "statistical-modeling-for-baseball",
+      "title": "Statistical Modeling For Baseball",
+      "description": "Open learning path: Statistical Modeling For Baseball. Quantitative baseball analytics and decision-making.",
+      "is_premium": false,
+      "modules": [
+        {
+          "slug": "data-generating-processes-in-baseball",
+          "title": "Data Generating Processes In Baseball",
+          "description": "Unit: Data Generating Processes In Baseball. Part of Statistical Modeling For Baseball.",
+          "estimated_minutes": 315,
+          "lessons": [
+            {
+              "slug": "what-is-a-data-generating-process",
+              "title": "What Is A Data Generating Process?",
+              "route_path": "/learn/library/statistical-modeling-for-baseball/data-generating-processes-in-baseball/what-is-a-data-generating-process",
+              "lesson_order": 1,
+              "estimated_minutes": 28
+            },
+            {
+              "slug": "randomness-structure-and-measurement-error",
+              "title": "Randomness, Structure, And Measurement Error",
+              "route_path": "/learn/library/statistical-modeling-for-baseball/data-generating-processes-in-baseball/randomness-structure-and-measurement-error",
+              "lesson_order": 2,
+              "estimated_minutes": 32
+            },
+            {
+              "slug": "selection-effects-in-public-baseball-data",
+              "title": "Selection Effects In Public Baseball Data",
+              "route_path": "/learn/library/statistical-modeling-for-baseball/data-generating-processes-in-baseball/selection-effects-in-public-baseball-data",
+              "lesson_order": 3,
+              "estimated_minutes": 36
+            },
+            {
+              "slug": "temporal-dependence-across-games-and-seasons",
+              "title": "Temporal Dependence Across Games And Seasons",
+              "route_path": "/learn/library/statistical-modeling-for-baseball/data-generating-processes-in-baseball/temporal-dependence-across-games-and-seasons",
+              "lesson_order": 4,
+              "estimated_minutes": 40
+            },
+            {
+              "slug": "confounding-patterns-in-outcome-metrics",
+              "title": "Confounding Patterns In Outcome Metrics",
+              "route_path": "/learn/library/statistical-modeling-for-baseball/data-generating-processes-in-baseball/confounding-patterns-in-outcome-metrics",
+              "lesson_order": 5,
+              "estimated_minutes": 44
+            },
+            {
+              "slug": "hierarchical-structure-player-team-park-era",
+              "title": "Hierarchical Structure: Player, Team, Park, Era",
+              "route_path": "/learn/library/statistical-modeling-for-baseball/data-generating-processes-in-baseball/hierarchical-structure-player-team-park-era",
+              "lesson_order": 6,
+              "estimated_minutes": 48
+            },
+            {
+              "slug": "dgp-case-study-home-run-rate-dynamics",
+              "title": "DGP Case Study: Home Run Rate Dynamics",
+              "route_path": "/learn/library/statistical-modeling-for-baseball/data-generating-processes-in-baseball/dgp-case-study-home-run-rate-dynamics",
+              "lesson_order": 7,
+              "estimated_minutes": 52
+            }
+          ]
+        },
+        {
+          "slug": "exploratory-data-analysis-and-sampling-pitfalls",
+          "title": "Exploratory Data Analysis And Sampling Pitfalls",
+          "description": "Unit: Exploratory Data Analysis And Sampling Pitfalls. Part of Statistical Modeling For Baseball.",
+          "estimated_minutes": 376,
+          "lessons": [
+            {
+              "slug": "eda-framing-questions-before-charts",
+              "title": "EDA Framing: Questions Before Charts",
+              "route_path": "/learn/library/statistical-modeling-for-baseball/exploratory-data-analysis-and-sampling-pitfalls/eda-framing-questions-before-charts",
+              "lesson_order": 1,
+              "estimated_minutes": 28
+            },
+            {
+              "slug": "distribution-shape-tail-behavior-and-robust-summaries",
+              "title": "Distribution Shape, Tail Behavior, And Robust Summaries",
+              "route_path": "/learn/library/statistical-modeling-for-baseball/exploratory-data-analysis-and-sampling-pitfalls/distribution-shape-tail-behavior-and-robust-summaries",
+              "lesson_order": 2,
+              "estimated_minutes": 32
+            },
+            {
+              "slug": "stratification-and-simpson-s-paradox-in-baseball",
+              "title": "Stratification And Simpson's Paradox In Baseball",
+              "route_path": "/learn/library/statistical-modeling-for-baseball/exploratory-data-analysis-and-sampling-pitfalls/stratification-and-simpson-s-paradox-in-baseball",
+              "lesson_order": 3,
+              "estimated_minutes": 36
+            },
+            {
+              "slug": "missingness-mechanisms-and-practical-handling",
+              "title": "Missingness Mechanisms And Practical Handling",
+              "route_path": "/learn/library/statistical-modeling-for-baseball/exploratory-data-analysis-and-sampling-pitfalls/missingness-mechanisms-and-practical-handling",
+              "lesson_order": 4,
+              "estimated_minutes": 40
+            },
+            {
+              "slug": "leakage-risks-during-data-filtering",
+              "title": "Leakage Risks During Data Filtering",
+              "route_path": "/learn/library/statistical-modeling-for-baseball/exploratory-data-analysis-and-sampling-pitfalls/leakage-risks-during-data-filtering",
+              "lesson_order": 5,
+              "estimated_minutes": 44
+            },
+            {
+              "slug": "sampling-windows-and-seasonality-bias",
+              "title": "Sampling Windows And Seasonality Bias",
+              "route_path": "/learn/library/statistical-modeling-for-baseball/exploratory-data-analysis-and-sampling-pitfalls/sampling-windows-and-seasonality-bias",
+              "lesson_order": 6,
+              "estimated_minutes": 48
+            },
+            {
+              "slug": "outliers-signal-noise-or-data-issue",
+              "title": "Outliers: Signal, Noise, Or Data Issue?",
+              "route_path": "/learn/library/statistical-modeling-for-baseball/exploratory-data-analysis-and-sampling-pitfalls/outliers-signal-noise-or-data-issue",
+              "lesson_order": 7,
+              "estimated_minutes": 52
+            },
+            {
+              "slug": "eda-notebook-practicum-with-review-rubric",
+              "title": "EDA Notebook Practicum With Review Rubric",
+              "route_path": "/learn/library/statistical-modeling-for-baseball/exploratory-data-analysis-and-sampling-pitfalls/eda-notebook-practicum-with-review-rubric",
+              "lesson_order": 8,
+              "estimated_minutes": 56
+            }
+          ]
+        },
+        {
+          "slug": "regression-and-generalized-linear-models-for-hr-probability",
+          "title": "Regression And Generalized Linear Models For HR Probability",
+          "description": "Unit: Regression And Generalized Linear Models For HR Probability. Part of Statistical Modeling For Baseball.",
+          "estimated_minutes": 505,
+          "lessons": [
+            {
+              "slug": "linear-regression-baseline-for-interpretability",
+              "title": "Linear Regression Baseline For Interpretability",
+              "route_path": "/learn/library/statistical-modeling-for-baseball/regression-and-generalized-linear-models-for-hr-probability/linear-regression-baseline-for-interpretability",
+              "lesson_order": 1,
+              "estimated_minutes": 28
+            },
+            {
+              "slug": "feature-engineering-for-batted-ball-outcomes",
+              "title": "Feature Engineering For Batted-Ball Outcomes",
+              "route_path": "/learn/library/statistical-modeling-for-baseball/regression-and-generalized-linear-models-for-hr-probability/feature-engineering-for-batted-ball-outcomes",
+              "lesson_order": 2,
+              "estimated_minutes": 32
+            },
+            {
+              "slug": "logistic-regression-for-home-run-probability",
+              "title": "Logistic Regression For Home Run Probability",
+              "route_path": "/learn/library/statistical-modeling-for-baseball/regression-and-generalized-linear-models-for-hr-probability/logistic-regression-for-home-run-probability",
+              "lesson_order": 3,
+              "estimated_minutes": 36
+            },
+            {
+              "slug": "interaction-terms-launch-angle-exit-velocity",
+              "title": "Interaction Terms: Launch Angle × Exit Velocity",
+              "route_path": "/learn/library/statistical-modeling-for-baseball/regression-and-generalized-linear-models-for-hr-probability/interaction-terms-launch-angle-exit-velocity",
+              "lesson_order": 4,
+              "estimated_minutes": 40
+            },
+            {
+              "slug": "regularization-l1-l2-for-stability",
+              "title": "Regularization (L1/L2) For Stability",
+              "route_path": "/learn/library/statistical-modeling-for-baseball/regression-and-generalized-linear-models-for-hr-probability/regularization-l1-l2-for-stability",
+              "lesson_order": 5,
+              "estimated_minutes": 44
+            },
+            {
+              "slug": "nonlinearity-handling-splines-and-basis-expansion",
+              "title": "Nonlinearity Handling: Splines And Basis Expansion",
+              "route_path": "/learn/library/statistical-modeling-for-baseball/regression-and-generalized-linear-models-for-hr-probability/nonlinearity-handling-splines-and-basis-expansion",
+              "lesson_order": 6,
+              "estimated_minutes": 48
+            },
+            {
+              "slug": "model-comparison-aic-bic-and-cross-validation",
+              "title": "Model Comparison: AIC, BIC, And Cross-Validation",
+              "route_path": "/learn/library/statistical-modeling-for-baseball/regression-and-generalized-linear-models-for-hr-probability/model-comparison-aic-bic-and-cross-validation",
+              "lesson_order": 7,
+              "estimated_minutes": 52
+            },
+            {
+              "slug": "calibration-curves-and-probability-reliability",
+              "title": "Calibration Curves And Probability Reliability",
+              "route_path": "/learn/library/statistical-modeling-for-baseball/regression-and-generalized-linear-models-for-hr-probability/calibration-curves-and-probability-reliability",
+              "lesson_order": 8,
+              "estimated_minutes": 56
+            },
+            {
+              "slug": "thresholding-and-decision-utility",
+              "title": "Thresholding And Decision Utility",
+              "route_path": "/learn/library/statistical-modeling-for-baseball/regression-and-generalized-linear-models-for-hr-probability/thresholding-and-decision-utility",
+              "lesson_order": 9,
+              "estimated_minutes": 60
+            },
+            {
+              "slug": "regression-lab-build-compare-defend",
+              "title": "Regression Lab: Build, Compare, Defend",
+              "route_path": "/learn/library/statistical-modeling-for-baseball/regression-and-generalized-linear-models-for-hr-probability/regression-lab-build-compare-defend",
+              "lesson_order": 10,
+              "estimated_minutes": 64
+            }
+          ]
+        },
+        {
+          "slug": "uncertainty-confidence-intervals-and-model-validation",
+          "title": "Uncertainty, Confidence Intervals, And Model Validation",
+          "description": "Unit: Uncertainty, Confidence Intervals, And Model Validation. Part of Statistical Modeling For Baseball.",
+          "estimated_minutes": 441,
+          "lessons": [
+            {
+              "slug": "sampling-distributions-in-practice",
+              "title": "Sampling Distributions In Practice",
+              "route_path": "/learn/library/statistical-modeling-for-baseball/uncertainty-confidence-intervals-and-model-validation/sampling-distributions-in-practice",
+              "lesson_order": 1,
+              "estimated_minutes": 28
+            },
+            {
+              "slug": "confidence-intervals-for-means-effects-and-probabilities",
+              "title": "Confidence Intervals For Means, Effects, And Probabilities",
+              "route_path": "/learn/library/statistical-modeling-for-baseball/uncertainty-confidence-intervals-and-model-validation/confidence-intervals-for-means-effects-and-probabilities",
+              "lesson_order": 2,
+              "estimated_minutes": 32
+            },
+            {
+              "slug": "bootstrap-methods-for-complex-metrics",
+              "title": "Bootstrap Methods For Complex Metrics",
+              "route_path": "/learn/library/statistical-modeling-for-baseball/uncertainty-confidence-intervals-and-model-validation/bootstrap-methods-for-complex-metrics",
+              "lesson_order": 3,
+              "estimated_minutes": 36
+            },
+            {
+              "slug": "hypothesis-testing-and-practical-significance",
+              "title": "Hypothesis Testing And Practical Significance",
+              "route_path": "/learn/library/statistical-modeling-for-baseball/uncertainty-confidence-intervals-and-model-validation/hypothesis-testing-and-practical-significance",
+              "lesson_order": 4,
+              "estimated_minutes": 40
+            },
+            {
+              "slug": "validation-splits-cross-validation-and-drift",
+              "title": "Validation Splits, Cross-Validation, And Drift",
+              "route_path": "/learn/library/statistical-modeling-for-baseball/uncertainty-confidence-intervals-and-model-validation/validation-splits-cross-validation-and-drift",
+              "lesson_order": 5,
+              "estimated_minutes": 44
+            },
+            {
+              "slug": "error-decomposition-bias-variance-noise",
+              "title": "Error Decomposition: Bias, Variance, Noise",
+              "route_path": "/learn/library/statistical-modeling-for-baseball/uncertainty-confidence-intervals-and-model-validation/error-decomposition-bias-variance-noise",
+              "lesson_order": 6,
+              "estimated_minutes": 48
+            },
+            {
+              "slug": "robustness-checks-and-sensitivity-analysis",
+              "title": "Robustness Checks And Sensitivity Analysis",
+              "route_path": "/learn/library/statistical-modeling-for-baseball/uncertainty-confidence-intervals-and-model-validation/robustness-checks-and-sensitivity-analysis",
+              "lesson_order": 7,
+              "estimated_minutes": 52
+            },
+            {
+              "slug": "communicating-uncertainty-without-overclaiming",
+              "title": "Communicating Uncertainty Without Overclaiming",
+              "route_path": "/learn/library/statistical-modeling-for-baseball/uncertainty-confidence-intervals-and-model-validation/communicating-uncertainty-without-overclaiming",
+              "lesson_order": 8,
+              "estimated_minutes": 56
+            },
+            {
+              "slug": "validation-dossier-workshop",
+              "title": "Validation Dossier Workshop",
+              "route_path": "/learn/library/statistical-modeling-for-baseball/uncertainty-confidence-intervals-and-model-validation/validation-dossier-workshop",
+              "lesson_order": 9,
+              "estimated_minutes": 60
+            }
+          ]
+        },
+        {
+          "slug": "causality-vs-correlation-in-baseball-narratives",
+          "title": "Causality Vs Correlation In Baseball Narratives",
+          "description": "Unit: Causality Vs Correlation In Baseball Narratives. Part of Statistical Modeling For Baseball.",
+          "estimated_minutes": 376,
+          "lessons": [
+            {
+              "slug": "association-is-not-causation-formal-definitions",
+              "title": "Association Is Not Causation: Formal Definitions",
+              "route_path": "/learn/library/statistical-modeling-for-baseball/causality-vs-correlation-in-baseball-narratives/association-is-not-causation-formal-definitions",
+              "lesson_order": 1,
+              "estimated_minutes": 28
+            },
+            {
+              "slug": "dags-for-baseball-questions",
+              "title": "DAGs For Baseball Questions",
+              "route_path": "/learn/library/statistical-modeling-for-baseball/causality-vs-correlation-in-baseball-narratives/dags-for-baseball-questions",
+              "lesson_order": 2,
+              "estimated_minutes": 32
+            },
+            {
+              "slug": "confounders-mediators-and-colliders",
+              "title": "Confounders, Mediators, And Colliders",
+              "route_path": "/learn/library/statistical-modeling-for-baseball/causality-vs-correlation-in-baseball-narratives/confounders-mediators-and-colliders",
+              "lesson_order": 3,
+              "estimated_minutes": 36
+            },
+            {
+              "slug": "counterfactual-reasoning-for-policy-rule-changes",
+              "title": "Counterfactual Reasoning For Policy/Rule Changes",
+              "route_path": "/learn/library/statistical-modeling-for-baseball/causality-vs-correlation-in-baseball-narratives/counterfactual-reasoning-for-policy-rule-changes",
+              "lesson_order": 4,
+              "estimated_minutes": 40
+            },
+            {
+              "slug": "natural-experiments-and-quasi-experimental-design",
+              "title": "Natural Experiments And Quasi-Experimental Design",
+              "route_path": "/learn/library/statistical-modeling-for-baseball/causality-vs-correlation-in-baseball-narratives/natural-experiments-and-quasi-experimental-design",
+              "lesson_order": 5,
+              "estimated_minutes": 44
+            },
+            {
+              "slug": "causal-claims-in-public-baseball-media-critical-audit",
+              "title": "Causal Claims In Public Baseball Media: Critical Audit",
+              "route_path": "/learn/library/statistical-modeling-for-baseball/causality-vs-correlation-in-baseball-narratives/causal-claims-in-public-baseball-media-critical-audit",
+              "lesson_order": 6,
+              "estimated_minutes": 48
+            },
+            {
+              "slug": "translating-causal-limits-into-honest-language",
+              "title": "Translating Causal Limits Into Honest Language",
+              "route_path": "/learn/library/statistical-modeling-for-baseball/causality-vs-correlation-in-baseball-narratives/translating-causal-limits-into-honest-language",
+              "lesson_order": 7,
+              "estimated_minutes": 52
+            },
+            {
+              "slug": "causality-debate-seminar-and-position-paper",
+              "title": "Causality Debate Seminar And Position Paper",
+              "route_path": "/learn/library/statistical-modeling-for-baseball/causality-vs-correlation-in-baseball-narratives/causality-debate-seminar-and-position-paper",
+              "lesson_order": 8,
+              "estimated_minutes": 56
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "data-analysis-with-statcast",
+      "title": "Data Analysis With Statcast",
+      "description": "Open learning path: Data Analysis With Statcast. Quantitative baseball analytics and decision-making.",
+      "is_premium": false,
+      "modules": [
+        {
+          "slug": "statcast-schema-and-data-cleaning",
+          "title": "Statcast Schema And Data Cleaning",
+          "description": "Unit: Statcast Schema And Data Cleaning. Part of Data Analysis With Statcast.",
+          "estimated_minutes": 505,
+          "lessons": [
+            {
+              "slug": "statcast-table-structure-and-core-fields",
+              "title": "Statcast Table Structure And Core Fields",
+              "route_path": "/learn/library/data-analysis-with-statcast/statcast-schema-and-data-cleaning/statcast-table-structure-and-core-fields",
+              "lesson_order": 1,
+              "estimated_minutes": 28
+            },
+            {
+              "slug": "type-systems-units-and-semantic-consistency",
+              "title": "Type Systems, Units, And Semantic Consistency",
+              "route_path": "/learn/library/data-analysis-with-statcast/statcast-schema-and-data-cleaning/type-systems-units-and-semantic-consistency",
+              "lesson_order": 2,
+              "estimated_minutes": 32
+            },
+            {
+              "slug": "event-level-data-sources-and-measurement-pipelines",
+              "title": "Event-Level Data Sources And Measurement Pipelines",
+              "route_path": "/learn/library/data-analysis-with-statcast/statcast-schema-and-data-cleaning/event-level-data-sources-and-measurement-pipelines",
+              "lesson_order": 3,
+              "estimated_minutes": 36
+            },
+            {
+              "slug": "data-quality-audits-and-rule-checks",
+              "title": "Data Quality Audits And Rule Checks",
+              "route_path": "/learn/library/data-analysis-with-statcast/statcast-schema-and-data-cleaning/data-quality-audits-and-rule-checks",
+              "lesson_order": 4,
+              "estimated_minutes": 40
+            },
+            {
+              "slug": "join-strategies-for-context-enrichment",
+              "title": "Join Strategies For Context Enrichment",
+              "route_path": "/learn/library/data-analysis-with-statcast/statcast-schema-and-data-cleaning/join-strategies-for-context-enrichment",
+              "lesson_order": 5,
+              "estimated_minutes": 44
+            },
+            {
+              "slug": "metric-reliability-across-parks-eras-and-sensors",
+              "title": "Metric Reliability Across Parks Eras And Sensors",
+              "route_path": "/learn/library/data-analysis-with-statcast/statcast-schema-and-data-cleaning/metric-reliability-across-parks-eras-and-sensors",
+              "lesson_order": 6,
+              "estimated_minutes": 48
+            },
+            {
+              "slug": "time-alignment-across-events-and-metadata",
+              "title": "Time Alignment Across Events And Metadata",
+              "route_path": "/learn/library/data-analysis-with-statcast/statcast-schema-and-data-cleaning/time-alignment-across-events-and-metadata",
+              "lesson_order": 7,
+              "estimated_minutes": 52
+            },
+            {
+              "slug": "cleaning-pipelines-and-reproducible-transforms",
+              "title": "Cleaning Pipelines And Reproducible Transforms",
+              "route_path": "/learn/library/data-analysis-with-statcast/statcast-schema-and-data-cleaning/cleaning-pipelines-and-reproducible-transforms",
+              "lesson_order": 8,
+              "estimated_minutes": 56
+            },
+            {
+              "slug": "versioning-datasets-for-repeatability",
+              "title": "Versioning Datasets For Repeatability",
+              "route_path": "/learn/library/data-analysis-with-statcast/statcast-schema-and-data-cleaning/versioning-datasets-for-repeatability",
+              "lesson_order": 9,
+              "estimated_minutes": 60
+            },
+            {
+              "slug": "data-cleaning-practicum-with-qa-checklist",
+              "title": "Data Cleaning Practicum With QA Checklist",
+              "route_path": "/learn/library/data-analysis-with-statcast/statcast-schema-and-data-cleaning/data-cleaning-practicum-with-qa-checklist",
+              "lesson_order": 10,
+              "estimated_minutes": 64
+            }
+          ]
+        },
+        {
+          "slug": "feature-engineering-for-ball-flight-and-hr-outcomes",
+          "title": "Feature Engineering For Ball Flight And HR Outcomes",
+          "description": "Unit: Feature Engineering For Ball Flight And HR Outcomes. Part of Data Analysis With Statcast.",
+          "estimated_minutes": 505,
+          "lessons": [
+            {
+              "slug": "feature-engineering-principles-for-baseball-models",
+              "title": "Feature Engineering Principles For Baseball Models",
+              "route_path": "/learn/library/data-analysis-with-statcast/feature-engineering-for-ball-flight-and-hr-outcomes/feature-engineering-principles-for-baseball-models",
+              "lesson_order": 1,
+              "estimated_minutes": 28
+            },
+            {
+              "slug": "derived-kinematic-features-from-raw-inputs",
+              "title": "Derived Kinematic Features From Raw Inputs",
+              "route_path": "/learn/library/data-analysis-with-statcast/feature-engineering-for-ball-flight-and-hr-outcomes/derived-kinematic-features-from-raw-inputs",
+              "lesson_order": 2,
+              "estimated_minutes": 32
+            },
+            {
+              "slug": "expected-statistics-construction-and-assumptions",
+              "title": "Expected Statistics Construction And Assumptions",
+              "route_path": "/learn/library/data-analysis-with-statcast/feature-engineering-for-ball-flight-and-hr-outcomes/expected-statistics-construction-and-assumptions",
+              "lesson_order": 3,
+              "estimated_minutes": 36
+            },
+            {
+              "slug": "scaling-normalization-and-cross-player-comparison",
+              "title": "Scaling Normalization And Cross-Player Comparison",
+              "route_path": "/learn/library/data-analysis-with-statcast/feature-engineering-for-ball-flight-and-hr-outcomes/scaling-normalization-and-cross-player-comparison",
+              "lesson_order": 4,
+              "estimated_minutes": 40
+            },
+            {
+              "slug": "context-features-park-weather-matchup",
+              "title": "Context Features: Park, Weather, Matchup",
+              "route_path": "/learn/library/data-analysis-with-statcast/feature-engineering-for-ball-flight-and-hr-outcomes/context-features-park-weather-matchup",
+              "lesson_order": 5,
+              "estimated_minutes": 44
+            },
+            {
+              "slug": "temporal-features-form-fatigue-and-sequence-effects",
+              "title": "Temporal Features: Form, Fatigue, And Sequence Effects",
+              "route_path": "/learn/library/data-analysis-with-statcast/feature-engineering-for-ball-flight-and-hr-outcomes/temporal-features-form-fatigue-and-sequence-effects",
+              "lesson_order": 6,
+              "estimated_minutes": 48
+            },
+            {
+              "slug": "encoding-categorical-variables-at-scale",
+              "title": "Encoding Categorical Variables At Scale",
+              "route_path": "/learn/library/data-analysis-with-statcast/feature-engineering-for-ball-flight-and-hr-outcomes/encoding-categorical-variables-at-scale",
+              "lesson_order": 7,
+              "estimated_minutes": 52
+            },
+            {
+              "slug": "feature-leakage-detection-and-mitigation",
+              "title": "Feature Leakage Detection And Mitigation",
+              "route_path": "/learn/library/data-analysis-with-statcast/feature-engineering-for-ball-flight-and-hr-outcomes/feature-leakage-detection-and-mitigation",
+              "lesson_order": 8,
+              "estimated_minutes": 56
+            },
+            {
+              "slug": "interpretable-vs-high-capacity-feature-sets",
+              "title": "Interpretable Vs High-Capacity Feature Sets",
+              "route_path": "/learn/library/data-analysis-with-statcast/feature-engineering-for-ball-flight-and-hr-outcomes/interpretable-vs-high-capacity-feature-sets",
+              "lesson_order": 9,
+              "estimated_minutes": 60
+            },
+            {
+              "slug": "feature-store-mini-project",
+              "title": "Feature Store Mini-Project",
+              "route_path": "/learn/library/data-analysis-with-statcast/feature-engineering-for-ball-flight-and-hr-outcomes/feature-store-mini-project",
+              "lesson_order": 10,
+              "estimated_minutes": 64
+            }
+          ]
+        },
+        {
+          "slug": "visualization-design-for-baseball-questions",
+          "title": "Visualization Design For Baseball Questions",
+          "description": "Unit: Visualization Design For Baseball Questions. Part of Data Analysis With Statcast.",
+          "estimated_minutes": 376,
+          "lessons": [
+            {
+              "slug": "chart-selection-by-statistical-question-type",
+              "title": "Chart Selection By Statistical Question Type",
+              "route_path": "/learn/library/data-analysis-with-statcast/visualization-design-for-baseball-questions/chart-selection-by-statistical-question-type",
+              "lesson_order": 1,
+              "estimated_minutes": 28
+            },
+            {
+              "slug": "designing-honest-axes-scales-and-encodings",
+              "title": "Designing Honest Axes, Scales, And Encodings",
+              "route_path": "/learn/library/data-analysis-with-statcast/visualization-design-for-baseball-questions/designing-honest-axes-scales-and-encodings",
+              "lesson_order": 2,
+              "estimated_minutes": 32
+            },
+            {
+              "slug": "dense-scatter-hexbin-and-heatmap-tradeoffs",
+              "title": "Dense Scatter, Hexbin, And Heatmap Tradeoffs",
+              "route_path": "/learn/library/data-analysis-with-statcast/visualization-design-for-baseball-questions/dense-scatter-hexbin-and-heatmap-tradeoffs",
+              "lesson_order": 3,
+              "estimated_minutes": 36
+            },
+            {
+              "slug": "time-series-decomposition-visual-patterns",
+              "title": "Time-Series Decomposition Visual Patterns",
+              "route_path": "/learn/library/data-analysis-with-statcast/visualization-design-for-baseball-questions/time-series-decomposition-visual-patterns",
+              "lesson_order": 4,
+              "estimated_minutes": 40
+            },
+            {
+              "slug": "uncertainty-visualization-techniques",
+              "title": "Uncertainty Visualization Techniques",
+              "route_path": "/learn/library/data-analysis-with-statcast/visualization-design-for-baseball-questions/uncertainty-visualization-techniques",
+              "lesson_order": 5,
+              "estimated_minutes": 44
+            },
+            {
+              "slug": "annotation-strategy-for-analytical-narratives",
+              "title": "Annotation Strategy For Analytical Narratives",
+              "route_path": "/learn/library/data-analysis-with-statcast/visualization-design-for-baseball-questions/annotation-strategy-for-analytical-narratives",
+              "lesson_order": 6,
+              "estimated_minutes": 48
+            },
+            {
+              "slug": "accessibility-and-visual-clarity-standards",
+              "title": "Accessibility And Visual Clarity Standards",
+              "route_path": "/learn/library/data-analysis-with-statcast/visualization-design-for-baseball-questions/accessibility-and-visual-clarity-standards",
+              "lesson_order": 7,
+              "estimated_minutes": 52
+            },
+            {
+              "slug": "visualization-critique-studio",
+              "title": "Visualization Critique Studio",
+              "route_path": "/learn/library/data-analysis-with-statcast/visualization-design-for-baseball-questions/visualization-critique-studio",
+              "lesson_order": 8,
+              "estimated_minutes": 56
+            }
+          ]
+        },
+        {
+          "slug": "reproducible-pipelines-and-notebooks",
+          "title": "Reproducible Pipelines And Notebooks",
+          "description": "Unit: Reproducible Pipelines And Notebooks. Part of Data Analysis With Statcast.",
+          "estimated_minutes": 441,
+          "lessons": [
+            {
+              "slug": "reproducibility-principles-in-applied-analytics",
+              "title": "Reproducibility Principles In Applied Analytics",
+              "route_path": "/learn/library/data-analysis-with-statcast/reproducible-pipelines-and-notebooks/reproducibility-principles-in-applied-analytics",
+              "lesson_order": 1,
+              "estimated_minutes": 28
+            },
+            {
+              "slug": "notebook-structure-for-reviewability",
+              "title": "Notebook Structure For Reviewability",
+              "route_path": "/learn/library/data-analysis-with-statcast/reproducible-pipelines-and-notebooks/notebook-structure-for-reviewability",
+              "lesson_order": 2,
+              "estimated_minutes": 32
+            },
+            {
+              "slug": "parameterized-analysis-workflows",
+              "title": "Parameterized Analysis Workflows",
+              "route_path": "/learn/library/data-analysis-with-statcast/reproducible-pipelines-and-notebooks/parameterized-analysis-workflows",
+              "lesson_order": 3,
+              "estimated_minutes": 36
+            },
+            {
+              "slug": "caching-determinism-and-performance",
+              "title": "Caching, Determinism, And Performance",
+              "route_path": "/learn/library/data-analysis-with-statcast/reproducible-pipelines-and-notebooks/caching-determinism-and-performance",
+              "lesson_order": 4,
+              "estimated_minutes": 40
+            },
+            {
+              "slug": "testing-data-transformations",
+              "title": "Testing Data Transformations",
+              "route_path": "/learn/library/data-analysis-with-statcast/reproducible-pipelines-and-notebooks/testing-data-transformations",
+              "lesson_order": 5,
+              "estimated_minutes": 44
+            },
+            {
+              "slug": "diagnostics-for-drift-noise-and-confounding",
+              "title": "Diagnostics For Drift Noise And Confounding",
+              "route_path": "/learn/library/data-analysis-with-statcast/reproducible-pipelines-and-notebooks/diagnostics-for-drift-noise-and-confounding",
+              "lesson_order": 6,
+              "estimated_minutes": 48
+            },
+            {
+              "slug": "packaging-results-for-reuse",
+              "title": "Packaging Results For Reuse",
+              "route_path": "/learn/library/data-analysis-with-statcast/reproducible-pipelines-and-notebooks/packaging-results-for-reuse",
+              "lesson_order": 7,
+              "estimated_minutes": 52
+            },
+            {
+              "slug": "communicating-metric-limits-to-non-technical-audiences",
+              "title": "Communicating Metric Limits To Non-Technical Audiences",
+              "route_path": "/learn/library/data-analysis-with-statcast/reproducible-pipelines-and-notebooks/communicating-metric-limits-to-non-technical-audiences",
+              "lesson_order": 8,
+              "estimated_minutes": 56
+            },
+            {
+              "slug": "reproducibility-audit-practicum",
+              "title": "Reproducibility Audit Practicum",
+              "route_path": "/learn/library/data-analysis-with-statcast/reproducible-pipelines-and-notebooks/reproducibility-audit-practicum",
+              "lesson_order": 9,
+              "estimated_minutes": 60
+            }
+          ]
+        },
+        {
+          "slug": "applied-projects-recreating-deadball-tracker-figures",
+          "title": "Applied Projects — Recreating Deadball Tracker Figures",
+          "description": "Unit: Applied Projects — Recreating Deadball Tracker Figures. Part of Data Analysis With Statcast.",
+          "estimated_minutes": 376,
+          "lessons": [
+            {
+              "slug": "project-scoping-and-analytical-question-refinement",
+              "title": "Project Scoping And Analytical Question Refinement",
+              "route_path": "/learn/library/data-analysis-with-statcast/applied-projects-recreating-deadball-tracker-figures/project-scoping-and-analytical-question-refinement",
+              "lesson_order": 1,
+              "estimated_minutes": 28
+            },
+            {
+              "slug": "rebuilding-drag-vs-hr-with-clear-assumptions",
+              "title": "Rebuilding Drag Vs HR With Clear Assumptions",
+              "route_path": "/learn/library/data-analysis-with-statcast/applied-projects-recreating-deadball-tracker-figures/rebuilding-drag-vs-hr-with-clear-assumptions",
+              "lesson_order": 2,
+              "estimated_minutes": 32
+            },
+            {
+              "slug": "rebuilding-expected-vs-actual-distance",
+              "title": "Rebuilding Expected Vs Actual Distance",
+              "route_path": "/learn/library/data-analysis-with-statcast/applied-projects-recreating-deadball-tracker-figures/rebuilding-expected-vs-actual-distance",
+              "lesson_order": 3,
+              "estimated_minutes": 36
+            },
+            {
+              "slug": "rebuilding-exit-velocity-relationship-visuals",
+              "title": "Rebuilding Exit Velocity Relationship Visuals",
+              "route_path": "/learn/library/data-analysis-with-statcast/applied-projects-recreating-deadball-tracker-figures/rebuilding-exit-velocity-relationship-visuals",
+              "lesson_order": 4,
+              "estimated_minutes": 40
+            },
+            {
+              "slug": "extending-a-figure-with-uncertainty-overlays",
+              "title": "Extending A Figure With Uncertainty Overlays",
+              "route_path": "/learn/library/data-analysis-with-statcast/applied-projects-recreating-deadball-tracker-figures/extending-a-figure-with-uncertainty-overlays",
+              "lesson_order": 5,
+              "estimated_minutes": 44
+            },
+            {
+              "slug": "error-analysis-against-prior-versions",
+              "title": "Error Analysis Against Prior Versions",
+              "route_path": "/learn/library/data-analysis-with-statcast/applied-projects-recreating-deadball-tracker-figures/error-analysis-against-prior-versions",
+              "lesson_order": 6,
+              "estimated_minutes": 48
+            },
+            {
+              "slug": "publication-ready-figure-standards",
+              "title": "Publication-Ready Figure Standards",
+              "route_path": "/learn/library/data-analysis-with-statcast/applied-projects-recreating-deadball-tracker-figures/publication-ready-figure-standards",
+              "lesson_order": 7,
+              "estimated_minutes": 52
+            },
+            {
+              "slug": "applied-project-review-and-revision-cycle",
+              "title": "Applied Project Review And Revision Cycle",
+              "route_path": "/learn/library/data-analysis-with-statcast/applied-projects-recreating-deadball-tracker-figures/applied-project-review-and-revision-cycle",
+              "lesson_order": 8,
+              "estimated_minutes": 56
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "environmental-science-for-baseball-systems",
+      "title": "Environmental Science For Baseball Systems",
+      "description": "Open learning path: Environmental Science For Baseball Systems. Quantitative baseball analytics and decision-making.",
+      "is_premium": false,
+      "modules": [
+        {
+          "slug": "atmospheric-science-foundations",
+          "title": "Atmospheric Science Foundations",
+          "description": "Unit: Atmospheric Science Foundations. Part of Environmental Science For Baseball Systems.",
+          "estimated_minutes": 205,
+          "lessons": [
+            {
+              "slug": "air-composition-pressure-and-density-basics",
+              "title": "Air Composition, Pressure, And Density Basics",
+              "route_path": "/learn/library/environmental-science-for-baseball-systems/atmospheric-science-foundations/air-composition-pressure-and-density-basics",
+              "lesson_order": 1,
+              "estimated_minutes": 28
+            },
+            {
+              "slug": "temperature-humidity-and-thermodynamic-effects",
+              "title": "Temperature, Humidity, And Thermodynamic Effects",
+              "route_path": "/learn/library/environmental-science-for-baseball-systems/atmospheric-science-foundations/temperature-humidity-and-thermodynamic-effects",
+              "lesson_order": 2,
+              "estimated_minutes": 32
+            },
+            {
+              "slug": "wind-formation-and-boundary-layer-behavior",
+              "title": "Wind Formation And Boundary-Layer Behavior",
+              "route_path": "/learn/library/environmental-science-for-baseball-systems/atmospheric-science-foundations/wind-formation-and-boundary-layer-behavior",
+              "lesson_order": 3,
+              "estimated_minutes": 36
+            },
+            {
+              "slug": "microclimate-variation-across-ballparks",
+              "title": "Microclimate Variation Across Ballparks",
+              "route_path": "/learn/library/environmental-science-for-baseball-systems/atmospheric-science-foundations/microclimate-variation-across-ballparks",
+              "lesson_order": 4,
+              "estimated_minutes": 40
+            },
+            {
+              "slug": "atmospheric-science-applied-exercise-set",
+              "title": "Atmospheric Science Applied Exercise Set",
+              "route_path": "/learn/library/environmental-science-for-baseball-systems/atmospheric-science-foundations/atmospheric-science-applied-exercise-set",
+              "lesson_order": 5,
+              "estimated_minutes": 44
+            }
+          ]
+        },
+        {
+          "slug": "climate-variability-and-baseball-impacts",
+          "title": "Climate, Variability, And Baseball Impacts",
+          "description": "Unit: Climate, Variability, And Baseball Impacts. Part of Environmental Science For Baseball Systems.",
+          "estimated_minutes": 205,
+          "lessons": [
+            {
+              "slug": "weather-vs-climate-in-baseball-analysis",
+              "title": "Weather Vs Climate In Baseball Analysis",
+              "route_path": "/learn/library/environmental-science-for-baseball-systems/climate-variability-and-baseball-impacts/weather-vs-climate-in-baseball-analysis",
+              "lesson_order": 1,
+              "estimated_minutes": 28
+            },
+            {
+              "slug": "long-term-climate-trends-and-ball-flight-implications",
+              "title": "Long-Term Climate Trends And Ball-Flight Implications",
+              "route_path": "/learn/library/environmental-science-for-baseball-systems/climate-variability-and-baseball-impacts/long-term-climate-trends-and-ball-flight-implications",
+              "lesson_order": 2,
+              "estimated_minutes": 32
+            },
+            {
+              "slug": "extreme-events-scheduling-and-safety-decisions",
+              "title": "Extreme Events, Scheduling, And Safety Decisions",
+              "route_path": "/learn/library/environmental-science-for-baseball-systems/climate-variability-and-baseball-impacts/extreme-events-scheduling-and-safety-decisions",
+              "lesson_order": 3,
+              "estimated_minutes": 36
+            },
+            {
+              "slug": "environmental-uncertainty-communication",
+              "title": "Environmental Uncertainty Communication",
+              "route_path": "/learn/library/environmental-science-for-baseball-systems/climate-variability-and-baseball-impacts/environmental-uncertainty-communication",
+              "lesson_order": 4,
+              "estimated_minutes": 40
+            },
+            {
+              "slug": "climate-impact-scenario-workshop",
+              "title": "Climate Impact Scenario Workshop",
+              "route_path": "/learn/library/environmental-science-for-baseball-systems/climate-variability-and-baseball-impacts/climate-impact-scenario-workshop",
+              "lesson_order": 5,
+              "estimated_minutes": 44
+            }
+          ]
+        },
+        {
+          "slug": "environmental-decision-making",
+          "title": "Environmental Decision-Making",
+          "description": "Unit: Environmental Decision-Making. Part of Environmental Science For Baseball Systems.",
+          "estimated_minutes": 205,
+          "lessons": [
+            {
+              "slug": "mitigation-and-adaptation-in-stadium-operations",
+              "title": "Mitigation And Adaptation In Stadium Operations",
+              "route_path": "/learn/library/environmental-science-for-baseball-systems/environmental-decision-making/mitigation-and-adaptation-in-stadium-operations",
+              "lesson_order": 1,
+              "estimated_minutes": 28
+            },
+            {
+              "slug": "sustainability-metrics-and-trade-off-analysis",
+              "title": "Sustainability Metrics And Trade-Off Analysis",
+              "route_path": "/learn/library/environmental-science-for-baseball-systems/environmental-decision-making/sustainability-metrics-and-trade-off-analysis",
+              "lesson_order": 2,
+              "estimated_minutes": 32
+            },
+            {
+              "slug": "policy-ethics-and-environmental-justice-context",
+              "title": "Policy, Ethics, And Environmental Justice Context",
+              "route_path": "/learn/library/environmental-science-for-baseball-systems/environmental-decision-making/policy-ethics-and-environmental-justice-context",
+              "lesson_order": 3,
+              "estimated_minutes": 36
+            },
+            {
+              "slug": "designing-environment-aware-baseball-studies",
+              "title": "Designing Environment-Aware Baseball Studies",
+              "route_path": "/learn/library/environmental-science-for-baseball-systems/environmental-decision-making/designing-environment-aware-baseball-studies",
+              "lesson_order": 4,
+              "estimated_minutes": 40
+            },
+            {
+              "slug": "environmental-science-capstone-brief",
+              "title": "Environmental Science Capstone Brief",
+              "route_path": "/learn/library/environmental-science-for-baseball-systems/environmental-decision-making/environmental-science-capstone-brief",
+              "lesson_order": 5,
+              "estimated_minutes": 44
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "biological-mechanics-of-baseball",
+      "title": "Biological Mechanics Of Baseball",
+      "description": "Open learning path: Biological Mechanics Of Baseball. Quantitative baseball analytics and decision-making.",
+      "is_premium": false,
+      "modules": [
+        {
+          "slug": "body-systems-and-muscle-fundamentals",
+          "title": "Body Systems And Muscle Fundamentals",
+          "description": "Unit: Body Systems And Muscle Fundamentals. Part of Biological Mechanics Of Baseball.",
+          "estimated_minutes": 205,
+          "lessons": [
+            {
+              "slug": "cells-tissues-and-baseball-demand-basics",
+              "title": "Cells Tissues And Baseball Demand Basics",
+              "route_path": "/learn/library/biological-mechanics-of-baseball/body-systems-and-muscle-fundamentals/cells-tissues-and-baseball-demand-basics",
+              "lesson_order": 1,
+              "estimated_minutes": 28
+            },
+            {
+              "slug": "muscle-contraction-types-in-throwing-and-hitting",
+              "title": "Muscle Contraction Types In Throwing And Hitting",
+              "route_path": "/learn/library/biological-mechanics-of-baseball/body-systems-and-muscle-fundamentals/muscle-contraction-types-in-throwing-and-hitting",
+              "lesson_order": 2,
+              "estimated_minutes": 32
+            },
+            {
+              "slug": "motor-units-fatigue-and-pitching-loads",
+              "title": "Motor Units Fatigue And Pitching Loads",
+              "route_path": "/learn/library/biological-mechanics-of-baseball/body-systems-and-muscle-fundamentals/motor-units-fatigue-and-pitching-loads",
+              "lesson_order": 3,
+              "estimated_minutes": 36
+            },
+            {
+              "slug": "warmup-progressions-and-game-day-readiness",
+              "title": "Warmup Progressions And Game Day Readiness",
+              "route_path": "/learn/library/biological-mechanics-of-baseball/body-systems-and-muscle-fundamentals/warmup-progressions-and-game-day-readiness",
+              "lesson_order": 4,
+              "estimated_minutes": 40
+            },
+            {
+              "slug": "body-systems-synthesis-workshop",
+              "title": "Body Systems Synthesis Workshop",
+              "route_path": "/learn/library/biological-mechanics-of-baseball/body-systems-and-muscle-fundamentals/body-systems-synthesis-workshop",
+              "lesson_order": 5,
+              "estimated_minutes": 44
+            }
+          ]
+        },
+        {
+          "slug": "movement-running-and-the-kinetic-chain",
+          "title": "Movement Running And The Kinetic Chain",
+          "description": "Unit: Movement Running And The Kinetic Chain. Part of Biological Mechanics Of Baseball.",
+          "estimated_minutes": 205,
+          "lessons": [
+            {
+              "slug": "sprinting-versus-stealing-baseball-acceleration-basics",
+              "title": "Sprinting Versus Stealing Baseball Acceleration Basics",
+              "route_path": "/learn/library/biological-mechanics-of-baseball/movement-running-and-the-kinetic-chain/sprinting-versus-stealing-baseball-acceleration-basics",
+              "lesson_order": 1,
+              "estimated_minutes": 28
+            },
+            {
+              "slug": "gait-asymmetry-and-bilateral-training-in-baseball",
+              "title": "Gait Asymmetry And Bilateral Training In Baseball",
+              "route_path": "/learn/library/biological-mechanics-of-baseball/movement-running-and-the-kinetic-chain/gait-asymmetry-and-bilateral-training-in-baseball",
+              "lesson_order": 2,
+              "estimated_minutes": 32
+            },
+            {
+              "slug": "hip-shoulder-separation-and-sequencing-fundamentals",
+              "title": "Hip Shoulder Separation And Sequencing Fundamentals",
+              "route_path": "/learn/library/biological-mechanics-of-baseball/movement-running-and-the-kinetic-chain/hip-shoulder-separation-and-sequencing-fundamentals",
+              "lesson_order": 3,
+              "estimated_minutes": 36
+            },
+            {
+              "slug": "interpreting-energy-transfer-language-critically",
+              "title": "Interpreting Energy Transfer Language Critically",
+              "route_path": "/learn/library/biological-mechanics-of-baseball/movement-running-and-the-kinetic-chain/interpreting-energy-transfer-language-critically",
+              "lesson_order": 4,
+              "estimated_minutes": 40
+            },
+            {
+              "slug": "kinetic-chain-synthesis-lab",
+              "title": "Kinetic Chain Synthesis Lab",
+              "route_path": "/learn/library/biological-mechanics-of-baseball/movement-running-and-the-kinetic-chain/kinetic-chain-synthesis-lab",
+              "lesson_order": 5,
+              "estimated_minutes": 44
+            }
+          ]
+        },
+        {
+          "slug": "sports-science-and-baseball-performance",
+          "title": "Sports Science And Baseball Performance",
+          "description": "Unit: Sports Science And Baseball Performance. Part of Biological Mechanics Of Baseball.",
+          "estimated_minutes": 205,
+          "lessons": [
+            {
+              "slug": "what-biomechanists-measure-in-pitching-labs",
+              "title": "What Biomechanists Measure In Pitching Labs",
+              "route_path": "/learn/library/biological-mechanics-of-baseball/sports-science-and-baseball-performance/what-biomechanists-measure-in-pitching-labs",
+              "lesson_order": 1,
+              "estimated_minutes": 28
+            },
+            {
+              "slug": "hitting-kinematics-and-bat-path-research-questions",
+              "title": "Hitting Kinematics And Bat Path Research Questions",
+              "route_path": "/learn/library/biological-mechanics-of-baseball/sports-science-and-baseball-performance/hitting-kinematics-and-bat-path-research-questions",
+              "lesson_order": 2,
+              "estimated_minutes": 32
+            },
+            {
+              "slug": "workload-proxies-innings-pitches-and-recovery",
+              "title": "Workload Proxies Innings Pitches And Recovery",
+              "route_path": "/learn/library/biological-mechanics-of-baseball/sports-science-and-baseball-performance/workload-proxies-innings-pitches-and-recovery",
+              "lesson_order": 3,
+              "estimated_minutes": 36
+            },
+            {
+              "slug": "ethics-and-limits-non-medical-communication",
+              "title": "Ethics And Limits Non Medical Communication",
+              "route_path": "/learn/library/biological-mechanics-of-baseball/sports-science-and-baseball-performance/ethics-and-limits-non-medical-communication",
+              "lesson_order": 4,
+              "estimated_minutes": 40
+            },
+            {
+              "slug": "biological-mechanics-capstone-brief",
+              "title": "Biological Mechanics Capstone Brief",
+              "route_path": "/learn/library/biological-mechanics-of-baseball/sports-science-and-baseball-performance/biological-mechanics-capstone-brief",
+              "lesson_order": 5,
+              "estimated_minutes": 44
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "communicating-sports-analytics-insights",
+      "title": "Communicating Sports Analytics Insights",
+      "description": "Open learning path: Communicating Sports Analytics Insights. Quantitative baseball analytics and decision-making.",
+      "is_premium": false,
+      "modules": [
+        {
+          "slug": "framing-questions-and-stakeholders",
+          "title": "Framing Questions And Stakeholders",
+          "description": "Unit: Framing Questions And Stakeholders. Part of Communicating Sports Analytics Insights.",
+          "estimated_minutes": 258,
+          "lessons": [
+            {
+              "slug": "audience-analysis-students-coaches-analysts-public",
+              "title": "Audience Analysis: Students, Coaches, Analysts, Public",
+              "route_path": "/learn/library/communicating-sports-analytics-insights/framing-questions-and-stakeholders/audience-analysis-students-coaches-analysts-public",
+              "lesson_order": 1,
+              "estimated_minutes": 28
+            },
+            {
+              "slug": "defining-decision-relevant-questions",
+              "title": "Defining Decision-Relevant Questions",
+              "route_path": "/learn/library/communicating-sports-analytics-insights/framing-questions-and-stakeholders/defining-decision-relevant-questions",
+              "lesson_order": 2,
+              "estimated_minutes": 32
+            },
+            {
+              "slug": "scoping-claims-to-available-evidence",
+              "title": "Scoping Claims To Available Evidence",
+              "route_path": "/learn/library/communicating-sports-analytics-insights/framing-questions-and-stakeholders/scoping-claims-to-available-evidence",
+              "lesson_order": 3,
+              "estimated_minutes": 36
+            },
+            {
+              "slug": "narrative-arcs-for-technical-findings",
+              "title": "Narrative Arcs For Technical Findings",
+              "route_path": "/learn/library/communicating-sports-analytics-insights/framing-questions-and-stakeholders/narrative-arcs-for-technical-findings",
+              "lesson_order": 4,
+              "estimated_minutes": 40
+            },
+            {
+              "slug": "risk-communication-for-high-variance-results",
+              "title": "Risk Communication For High-Variance Results",
+              "route_path": "/learn/library/communicating-sports-analytics-insights/framing-questions-and-stakeholders/risk-communication-for-high-variance-results",
+              "lesson_order": 5,
+              "estimated_minutes": 44
+            },
+            {
+              "slug": "framing-workshop-one-dataset-three-audiences",
+              "title": "Framing Workshop: One Dataset, Three Audiences",
+              "route_path": "/learn/library/communicating-sports-analytics-insights/framing-questions-and-stakeholders/framing-workshop-one-dataset-three-audiences",
+              "lesson_order": 6,
+              "estimated_minutes": 48
+            }
+          ]
+        },
+        {
+          "slug": "visual-rhetoric-and-chart-storytelling",
+          "title": "Visual Rhetoric And Chart Storytelling",
+          "description": "Unit: Visual Rhetoric And Chart Storytelling. Part of Communicating Sports Analytics Insights.",
+          "estimated_minutes": 315,
+          "lessons": [
+            {
+              "slug": "story-structure-through-sequential-visuals",
+              "title": "Story Structure Through Sequential Visuals",
+              "route_path": "/learn/library/communicating-sports-analytics-insights/visual-rhetoric-and-chart-storytelling/story-structure-through-sequential-visuals",
+              "lesson_order": 1,
+              "estimated_minutes": 28
+            },
+            {
+              "slug": "emphasis-without-distortion",
+              "title": "Emphasis Without Distortion",
+              "route_path": "/learn/library/communicating-sports-analytics-insights/visual-rhetoric-and-chart-storytelling/emphasis-without-distortion",
+              "lesson_order": 2,
+              "estimated_minutes": 32
+            },
+            {
+              "slug": "comparative-framing-and-baseline-selection",
+              "title": "Comparative Framing And Baseline Selection",
+              "route_path": "/learn/library/communicating-sports-analytics-insights/visual-rhetoric-and-chart-storytelling/comparative-framing-and-baseline-selection",
+              "lesson_order": 3,
+              "estimated_minutes": 36
+            },
+            {
+              "slug": "annotation-as-argument",
+              "title": "Annotation As Argument",
+              "route_path": "/learn/library/communicating-sports-analytics-insights/visual-rhetoric-and-chart-storytelling/annotation-as-argument",
+              "lesson_order": 4,
+              "estimated_minutes": 40
+            },
+            {
+              "slug": "multi-panel-narrative-construction",
+              "title": "Multi-Panel Narrative Construction",
+              "route_path": "/learn/library/communicating-sports-analytics-insights/visual-rhetoric-and-chart-storytelling/multi-panel-narrative-construction",
+              "lesson_order": 5,
+              "estimated_minutes": 44
+            },
+            {
+              "slug": "common-misleading-patterns-and-how-to-avoid-them",
+              "title": "Common Misleading Patterns And How To Avoid Them",
+              "route_path": "/learn/library/communicating-sports-analytics-insights/visual-rhetoric-and-chart-storytelling/common-misleading-patterns-and-how-to-avoid-them",
+              "lesson_order": 6,
+              "estimated_minutes": 48
+            },
+            {
+              "slug": "storytelling-critique-lab",
+              "title": "Storytelling Critique Lab",
+              "route_path": "/learn/library/communicating-sports-analytics-insights/visual-rhetoric-and-chart-storytelling/storytelling-critique-lab",
+              "lesson_order": 7,
+              "estimated_minutes": 52
+            }
+          ]
+        },
+        {
+          "slug": "writing-methodology-and-caveats",
+          "title": "Writing Methodology And Caveats",
+          "description": "Unit: Writing Methodology And Caveats. Part of Communicating Sports Analytics Insights.",
+          "estimated_minutes": 315,
+          "lessons": [
+            {
+              "slug": "methods-sections-readers-can-audit",
+              "title": "Methods Sections Readers Can Audit",
+              "route_path": "/learn/library/communicating-sports-analytics-insights/writing-methodology-and-caveats/methods-sections-readers-can-audit",
+              "lesson_order": 1,
+              "estimated_minutes": 28
+            },
+            {
+              "slug": "assumption-registers-and-limitation-statements",
+              "title": "Assumption Registers And Limitation Statements",
+              "route_path": "/learn/library/communicating-sports-analytics-insights/writing-methodology-and-caveats/assumption-registers-and-limitation-statements",
+              "lesson_order": 2,
+              "estimated_minutes": 32
+            },
+            {
+              "slug": "reporting-model-choices-transparently",
+              "title": "Reporting Model Choices Transparently",
+              "route_path": "/learn/library/communicating-sports-analytics-insights/writing-methodology-and-caveats/reporting-model-choices-transparently",
+              "lesson_order": 3,
+              "estimated_minutes": 36
+            },
+            {
+              "slug": "uncertainty-language-templates",
+              "title": "Uncertainty Language Templates",
+              "route_path": "/learn/library/communicating-sports-analytics-insights/writing-methodology-and-caveats/uncertainty-language-templates",
+              "lesson_order": 4,
+              "estimated_minutes": 40
+            },
+            {
+              "slug": "reproducibility-statements-and-artifact-links",
+              "title": "Reproducibility Statements And Artifact Links",
+              "route_path": "/learn/library/communicating-sports-analytics-insights/writing-methodology-and-caveats/reproducibility-statements-and-artifact-links",
+              "lesson_order": 5,
+              "estimated_minutes": 44
+            },
+            {
+              "slug": "writing-for-technical-vs-non-technical-readers",
+              "title": "Writing For Technical Vs Non-Technical Readers",
+              "route_path": "/learn/library/communicating-sports-analytics-insights/writing-methodology-and-caveats/writing-for-technical-vs-non-technical-readers",
+              "lesson_order": 6,
+              "estimated_minutes": 48
+            },
+            {
+              "slug": "methodology-rewrite-workshop",
+              "title": "Methodology Rewrite Workshop",
+              "route_path": "/learn/library/communicating-sports-analytics-insights/writing-methodology-and-caveats/methodology-rewrite-workshop",
+              "lesson_order": 7,
+              "estimated_minutes": 52
+            }
+          ]
+        },
+        {
+          "slug": "presentations-debates-and-peer-review",
+          "title": "Presentations, Debates, And Peer Review",
+          "description": "Unit: Presentations, Debates, And Peer Review. Part of Communicating Sports Analytics Insights.",
+          "estimated_minutes": 315,
+          "lessons": [
+            {
+              "slug": "slide-architecture-for-analytical-arguments",
+              "title": "Slide Architecture For Analytical Arguments",
+              "route_path": "/learn/library/communicating-sports-analytics-insights/presentations-debates-and-peer-review/slide-architecture-for-analytical-arguments",
+              "lesson_order": 1,
+              "estimated_minutes": 28
+            },
+            {
+              "slug": "oral-defense-of-modeling-choices",
+              "title": "Oral Defense Of Modeling Choices",
+              "route_path": "/learn/library/communicating-sports-analytics-insights/presentations-debates-and-peer-review/oral-defense-of-modeling-choices",
+              "lesson_order": 2,
+              "estimated_minutes": 32
+            },
+            {
+              "slug": "handling-cross-examination-and-objections",
+              "title": "Handling Cross-Examination And Objections",
+              "route_path": "/learn/library/communicating-sports-analytics-insights/presentations-debates-and-peer-review/handling-cross-examination-and-objections",
+              "lesson_order": 3,
+              "estimated_minutes": 36
+            },
+            {
+              "slug": "constructive-peer-review-rubrics",
+              "title": "Constructive Peer Review Rubrics",
+              "route_path": "/learn/library/communicating-sports-analytics-insights/presentations-debates-and-peer-review/constructive-peer-review-rubrics",
+              "lesson_order": 4,
+              "estimated_minutes": 40
+            },
+            {
+              "slug": "debate-formats-for-causal-claims",
+              "title": "Debate Formats For Causal Claims",
+              "route_path": "/learn/library/communicating-sports-analytics-insights/presentations-debates-and-peer-review/debate-formats-for-causal-claims",
+              "lesson_order": 5,
+              "estimated_minutes": 44
+            },
+            {
+              "slug": "revision-cycles-from-feedback",
+              "title": "Revision Cycles From Feedback",
+              "route_path": "/learn/library/communicating-sports-analytics-insights/presentations-debates-and-peer-review/revision-cycles-from-feedback",
+              "lesson_order": 6,
+              "estimated_minutes": 48
+            },
+            {
+              "slug": "live-seminar-simulation",
+              "title": "Live Seminar Simulation",
+              "route_path": "/learn/library/communicating-sports-analytics-insights/presentations-debates-and-peer-review/live-seminar-simulation",
+              "lesson_order": 7,
+              "estimated_minutes": 52
+            }
+          ]
+        },
+        {
+          "slug": "capstone-composition-and-defense",
+          "title": "Capstone Composition And Defense",
+          "description": "Unit: Capstone Composition And Defense. Part of Communicating Sports Analytics Insights.",
+          "estimated_minutes": 376,
+          "lessons": [
+            {
+              "slug": "capstone-topic-selection-and-proposal",
+              "title": "Capstone Topic Selection And Proposal",
+              "route_path": "/learn/library/communicating-sports-analytics-insights/capstone-composition-and-defense/capstone-topic-selection-and-proposal",
+              "lesson_order": 1,
+              "estimated_minutes": 28
+            },
+            {
+              "slug": "literature-positioning-and-prior-work-context",
+              "title": "Literature Positioning And Prior Work Context",
+              "route_path": "/learn/library/communicating-sports-analytics-insights/capstone-composition-and-defense/literature-positioning-and-prior-work-context",
+              "lesson_order": 2,
+              "estimated_minutes": 32
+            },
+            {
+              "slug": "data-model-narrative-integration",
+              "title": "Data + Model + Narrative Integration",
+              "route_path": "/learn/library/communicating-sports-analytics-insights/capstone-composition-and-defense/data-model-narrative-integration",
+              "lesson_order": 3,
+              "estimated_minutes": 36
+            },
+            {
+              "slug": "drafting-the-technical-report",
+              "title": "Drafting The Technical Report",
+              "route_path": "/learn/library/communicating-sports-analytics-insights/capstone-composition-and-defense/drafting-the-technical-report",
+              "lesson_order": 4,
+              "estimated_minutes": 40
+            },
+            {
+              "slug": "building-the-executive-summary",
+              "title": "Building The Executive Summary",
+              "route_path": "/learn/library/communicating-sports-analytics-insights/capstone-composition-and-defense/building-the-executive-summary",
+              "lesson_order": 5,
+              "estimated_minutes": 44
+            },
+            {
+              "slug": "visual-appendix-and-reproducibility-bundle",
+              "title": "Visual Appendix And Reproducibility Bundle",
+              "route_path": "/learn/library/communicating-sports-analytics-insights/capstone-composition-and-defense/visual-appendix-and-reproducibility-bundle",
+              "lesson_order": 6,
+              "estimated_minutes": 48
+            },
+            {
+              "slug": "mock-defense-and-rubric-scoring",
+              "title": "Mock Defense And Rubric Scoring",
+              "route_path": "/learn/library/communicating-sports-analytics-insights/capstone-composition-and-defense/mock-defense-and-rubric-scoring",
+              "lesson_order": 7,
+              "estimated_minutes": 52
+            },
+            {
+              "slug": "final-capstone-submission-and-reflection",
+              "title": "Final Capstone Submission And Reflection",
+              "route_path": "/learn/library/communicating-sports-analytics-insights/capstone-composition-and-defense/final-capstone-submission-and-reflection",
+              "lesson_order": 8,
+              "estimated_minutes": 56
+            }
+          ]
+        },
+        {
+          "slug": "scientific-paper-literacy-for-sports-analytics",
+          "title": "Scientific Paper Literacy For Sports Analytics",
+          "description": "Unit: Scientific Paper Literacy For Sports Analytics. Part of Communicating Sports Analytics Insights.",
+          "estimated_minutes": 258,
+          "lessons": [
+            {
+              "slug": "paper-structure-and-reading-strategy",
+              "title": "Paper Structure And Reading Strategy",
+              "route_path": "/learn/library/communicating-sports-analytics-insights/scientific-paper-literacy-for-sports-analytics/paper-structure-and-reading-strategy",
+              "lesson_order": 1,
+              "estimated_minutes": 28
+            },
+            {
+              "slug": "methods-section-deconstruction",
+              "title": "Methods Section Deconstruction",
+              "route_path": "/learn/library/communicating-sports-analytics-insights/scientific-paper-literacy-for-sports-analytics/methods-section-deconstruction",
+              "lesson_order": 2,
+              "estimated_minutes": 32
+            },
+            {
+              "slug": "statistical-claims-effect-sizes-and-uncertainty",
+              "title": "Statistical Claims Effect Sizes And Uncertainty",
+              "route_path": "/learn/library/communicating-sports-analytics-insights/scientific-paper-literacy-for-sports-analytics/statistical-claims-effect-sizes-and-uncertainty",
+              "lesson_order": 3,
+              "estimated_minutes": 36
+            },
+            {
+              "slug": "reproducibility-data-access-and-supplementary-materials",
+              "title": "Reproducibility Data Access And Supplementary Materials",
+              "route_path": "/learn/library/communicating-sports-analytics-insights/scientific-paper-literacy-for-sports-analytics/reproducibility-data-access-and-supplementary-materials",
+              "lesson_order": 4,
+              "estimated_minutes": 40
+            },
+            {
+              "slug": "legitimacy-and-credibility-evaluation-framework",
+              "title": "Legitimacy And Credibility Evaluation Framework",
+              "route_path": "/learn/library/communicating-sports-analytics-insights/scientific-paper-literacy-for-sports-analytics/legitimacy-and-credibility-evaluation-framework",
+              "lesson_order": 5,
+              "estimated_minutes": 44
+            },
+            {
+              "slug": "from-evidence-to-independent-judgment-decision-memo-workshop",
+              "title": "From Evidence To Independent Judgment Decision Memo Workshop",
+              "route_path": "/learn/library/communicating-sports-analytics-insights/scientific-paper-literacy-for-sports-analytics/from-evidence-to-independent-judgment-decision-memo-workshop",
+              "lesson_order": 6,
+              "estimated_minutes": 48
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

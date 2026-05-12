@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Deadball Tracker Frontend
 
 ## Getting Started
 
-First, run the development server:
+1. Install dependencies:
+```bash
+npm install
+```
+
+2. Copy env file:
+```bash
+cp .env.example .env
+```
+
+3. Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Main Routes
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `/` (home): learning hub—continue panel, curriculum shortcuts, and full **Learning paths** grid (`#learning-paths`). `/learn` redirects here.
+- `/learn/tracks`: structured learning paths (track overview); `/learn/curriculum` redirects here (legacy URL)
+- `/learn/syllabus`: grading + capstone requirements
+- `/login`: student authentication
+- `/dashboard`: progress tracking
+- `/pricing`: subscriptions and checkout
+- `/for-students` and `/for-instructors`: go-to-market pages
 
-## Learn More
+## Lesson agent audit
 
-To learn more about Next.js, take a look at the following resources:
+Running `npm run` scripts that execute `scripts/run-lesson-agent-audit.ts` writes generated memos and scorecards under `docs/agent-audit/`. Those artifacts are not ignored by git: treat new files as optional to commit or delete locally.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Quality Commands
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm run lint
+npm run test
+```
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The frontend expects backend APIs at `NEXT_PUBLIC_API_BASE_URL`.

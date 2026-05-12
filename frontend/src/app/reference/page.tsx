@@ -1,65 +1,8 @@
-import React from 'react';
-import { BlockMath } from 'react-katex';
-import 'katex/dist/katex.min.css';
-
-interface RelatedLesson {
-  label: string;
-  href: string;
-}
-
-interface EquationBlockProps {
-  title: string;
-  equation: string;
-  explanation: string;
-  variables: string[];
-  assumptions: string[];
-  usedIn?: string;
-  relatedLessons?: RelatedLesson[];
-}
-
-// Reusable component for displaying an equation, explanation, variables, and assumptions
-function EquationBlock({ title, equation, explanation, variables, assumptions, usedIn, relatedLessons }: EquationBlockProps) {
-  return (
-    <section className="mb-10 p-6 bg-white rounded-lg shadow">
-      <h2 className="text-2xl font-bold mb-2">{title}</h2>
-      <div className="mb-2">
-        <BlockMath math={equation} />
-      </div>
-      <p className="mb-2 text-gray-700">{explanation}</p>
-      <div className="mb-2">
-        <strong>Variables:</strong>
-        <ul className="list-disc list-inside ml-4">
-          {variables.map((v: string, i: number) => <li key={i}>{v}</li>)}
-        </ul>
-      </div>
-      <div className="mb-2">
-        <strong>Assumptions & Limitations:</strong>
-        <ul className="list-disc list-inside ml-4">
-          {assumptions.map((a: string, i: number) => <li key={i}>{a}</li>)}
-        </ul>
-      </div>
-      {usedIn && (
-        <div className="mb-2">
-          <strong>Used In:</strong> {usedIn}
-        </div>
-      )}
-      {relatedLessons && relatedLessons.length > 0 && (
-        <div>
-          <strong>Related Lessons:</strong>
-          <ul className="list-disc list-inside ml-4">
-            {relatedLessons.map((l: RelatedLesson, i: number) => (
-              <li key={i}><a href={l.href} className="text-blue-600 underline">{l.label}</a></li>
-            ))}
-          </ul>
-        </div>
-      )}
-    </section>
-  );
-}
+import { EquationBlock } from "../../components/EquationBlock";
 
 export default function ReferencePage() {
   return (
-    <main className="max-w-3xl mx-auto py-10 px-4">
+    <div className="ui-container max-w-3xl py-12">
       <h1 className="text-4xl font-extrabold mb-8">Equations & Assumptions Reference</h1>
       <EquationBlock
         title="Drag Coefficient (Physics-Based)"
@@ -83,8 +26,14 @@ export default function ReferencePage() {
         ]}
         usedIn="ETL drag coefficient calculation, Drag vs HR chart, Physics lesson: 'Air Resistance'"
         relatedLessons={[
-          { label: "Physics: Drag and Distance", href: "/learn/physics/drag" },
-          { label: "Practice: Drag Coefficient", href: "/learn/physics/practice/drag" }
+          {
+            label: "Library: Physical Meaning Of Drag Coefficient",
+            href: "/learn/library/baseball-physics-foundations/drag-lift-and-aerodynamics-of-the-baseball/physical-meaning-of-drag-coefficient-in-baseball",
+          },
+          {
+            label: "Library: Aerodynamics Practicum",
+            href: "/learn/library/baseball-physics-foundations/drag-lift-and-aerodynamics-of-the-baseball/aerodynamics-practicum-inference-and-validation",
+          }
         ]}
       />
       <EquationBlock
@@ -105,11 +54,17 @@ export default function ReferencePage() {
         ]}
         usedIn="Drag coefficient calculation, Physics lesson: 'Projectile Motion'"
         relatedLessons={[
-          { label: "Physics: Drag and Distance", href: "/learn/physics/drag" },
-          { label: "Practice: Drag Coefficient", href: "/learn/physics/practice/drag" }
+          {
+            label: "Library: No-Drag Projectile Derivation",
+            href: "/learn/library/baseball-physics-foundations/newtonian-mechanics-and-projectile-motion/no-drag-projectile-derivation-from-first-principles",
+          },
+          {
+            label: "Library: Time Of Flight, Apex, And Range",
+            href: "/learn/library/baseball-physics-foundations/newtonian-mechanics-and-projectile-motion/time-of-flight-apex-and-range-relationships",
+          }
         ]}
       />
       {/* Add more <EquationBlock />s here for other equations as needed */}
-    </main>
+    </div>
   );
 } 

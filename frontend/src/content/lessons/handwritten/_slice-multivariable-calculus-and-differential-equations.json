@@ -1,0 +1,92 @@
+[
+  {
+    "key": "multivariable-calculus-and-differential-equations::multivariable-function-geometry::functions-of-several-variables-in-baseball-systems",
+    "trackTitle": "Multivariable Calculus And Differential Equations",
+    "unitTitle": "Multivariable Function Geometry",
+    "lessonTitle": "Functions Of Several Variables In Baseball Systems"
+  },
+  {
+    "key": "multivariable-calculus-and-differential-equations::multivariable-function-geometry::partial-derivatives-and-marginal-effects",
+    "trackTitle": "Multivariable Calculus And Differential Equations",
+    "unitTitle": "Multivariable Function Geometry",
+    "lessonTitle": "Partial Derivatives And Marginal Effects"
+  },
+  {
+    "key": "multivariable-calculus-and-differential-equations::multivariable-function-geometry::gradient-directional-derivative-and-sensitivity",
+    "trackTitle": "Multivariable Calculus And Differential Equations",
+    "unitTitle": "Multivariable Function Geometry",
+    "lessonTitle": "Gradient, Directional Derivative, And Sensitivity"
+  },
+  {
+    "key": "multivariable-calculus-and-differential-equations::multivariable-function-geometry::tangent-planes-and-local-linear-models",
+    "trackTitle": "Multivariable Calculus And Differential Equations",
+    "unitTitle": "Multivariable Function Geometry",
+    "lessonTitle": "Tangent Planes And Local Linear Models"
+  },
+  {
+    "key": "multivariable-calculus-and-differential-equations::multivariable-function-geometry::multivariable-optimization-under-constraints",
+    "trackTitle": "Multivariable Calculus And Differential Equations",
+    "unitTitle": "Multivariable Function Geometry",
+    "lessonTitle": "Multivariable Optimization Under Constraints"
+  },
+  {
+    "key": "multivariable-calculus-and-differential-equations::multiple-integration-and-vector-fields::double-integrals-over-physical-regions",
+    "trackTitle": "Multivariable Calculus And Differential Equations",
+    "unitTitle": "Multiple Integration And Vector Fields",
+    "lessonTitle": "Double Integrals Over Physical Regions"
+  },
+  {
+    "key": "multivariable-calculus-and-differential-equations::multiple-integration-and-vector-fields::coordinate-changes-in-multivariable-integrals",
+    "trackTitle": "Multivariable Calculus And Differential Equations",
+    "unitTitle": "Multiple Integration And Vector Fields",
+    "lessonTitle": "Coordinate Changes In Multivariable Integrals"
+  },
+  {
+    "key": "multivariable-calculus-and-differential-equations::multiple-integration-and-vector-fields::vector-fields-and-flow-interpretation",
+    "trackTitle": "Multivariable Calculus And Differential Equations",
+    "unitTitle": "Multiple Integration And Vector Fields",
+    "lessonTitle": "Vector Fields And Flow Interpretation"
+  },
+  {
+    "key": "multivariable-calculus-and-differential-equations::multiple-integration-and-vector-fields::line-integrals-for-work-like-quantities",
+    "trackTitle": "Multivariable Calculus And Differential Equations",
+    "unitTitle": "Multiple Integration And Vector Fields",
+    "lessonTitle": "Line Integrals For Work-Like Quantities"
+  },
+  {
+    "key": "multivariable-calculus-and-differential-equations::multiple-integration-and-vector-fields::multivariable-integration-synthesis-workshop",
+    "trackTitle": "Multivariable Calculus And Differential Equations",
+    "unitTitle": "Multiple Integration And Vector Fields",
+    "lessonTitle": "Multivariable Integration Synthesis Workshop"
+  },
+  {
+    "key": "multivariable-calculus-and-differential-equations::differential-equations-for-dynamic-systems::first-order-odes-for-baseball-change-models",
+    "trackTitle": "Multivariable Calculus And Differential Equations",
+    "unitTitle": "Differential Equations For Dynamic Systems",
+    "lessonTitle": "First-Order ODEs For Baseball Change Models"
+  },
+  {
+    "key": "multivariable-calculus-and-differential-equations::differential-equations-for-dynamic-systems::second-order-odes-for-motion-dynamics",
+    "trackTitle": "Multivariable Calculus And Differential Equations",
+    "unitTitle": "Differential Equations For Dynamic Systems",
+    "lessonTitle": "Second-Order ODEs For Motion Dynamics"
+  },
+  {
+    "key": "multivariable-calculus-and-differential-equations::differential-equations-for-dynamic-systems::linear-systems-and-stability-intuition",
+    "trackTitle": "Multivariable Calculus And Differential Equations",
+    "unitTitle": "Differential Equations For Dynamic Systems",
+    "lessonTitle": "Linear Systems And Stability Intuition"
+  },
+  {
+    "key": "multivariable-calculus-and-differential-equations::differential-equations-for-dynamic-systems::numerical-ode-solvers-and-step-control",
+    "trackTitle": "Multivariable Calculus And Differential Equations",
+    "unitTitle": "Differential Equations For Dynamic Systems",
+    "lessonTitle": "Numerical ODE Solvers And Step Control"
+  },
+  {
+    "key": "multivariable-calculus-and-differential-equations::differential-equations-for-dynamic-systems::differential-equations-capstone-integration",
+    "trackTitle": "Multivariable Calculus And Differential Equations",
+    "unitTitle": "Differential Equations For Dynamic Systems",
+    "lessonTitle": "Differential Equations Capstone Integration"
+  }
+]

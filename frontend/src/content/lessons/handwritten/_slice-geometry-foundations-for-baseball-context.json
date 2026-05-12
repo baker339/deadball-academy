@@ -1,0 +1,92 @@
+[
+  {
+    "key": "geometry-foundations-for-baseball-context::coordinate-geometry-essentials::coordinate-systems-for-baseball-fields",
+    "trackTitle": "Geometry Foundations For Baseball Context",
+    "unitTitle": "Coordinate Geometry Essentials",
+    "lessonTitle": "Coordinate Systems For Baseball Fields"
+  },
+  {
+    "key": "geometry-foundations-for-baseball-context::coordinate-geometry-essentials::distance-formula-and-baseline-measurement",
+    "trackTitle": "Geometry Foundations For Baseball Context",
+    "unitTitle": "Coordinate Geometry Essentials",
+    "lessonTitle": "Distance Formula And Baseline Measurement"
+  },
+  {
+    "key": "geometry-foundations-for-baseball-context::coordinate-geometry-essentials::midpoints-segments-and-position-landmarks",
+    "trackTitle": "Geometry Foundations For Baseball Context",
+    "unitTitle": "Coordinate Geometry Essentials",
+    "lessonTitle": "Midpoints, Segments, And Position Landmarks"
+  },
+  {
+    "key": "geometry-foundations-for-baseball-context::coordinate-geometry-essentials::slope-as-directional-change-in-field-context",
+    "trackTitle": "Geometry Foundations For Baseball Context",
+    "unitTitle": "Coordinate Geometry Essentials",
+    "lessonTitle": "Slope As Directional Change In Field Context"
+  },
+  {
+    "key": "geometry-foundations-for-baseball-context::coordinate-geometry-essentials::line-equations-for-defensive-alignment-paths",
+    "trackTitle": "Geometry Foundations For Baseball Context",
+    "unitTitle": "Coordinate Geometry Essentials",
+    "lessonTitle": "Line Equations For Defensive Alignment Paths"
+  },
+  {
+    "key": "geometry-foundations-for-baseball-context::angles-triangles-and-measurement::angle-measure-conventions-for-motion-analysis",
+    "trackTitle": "Geometry Foundations For Baseball Context",
+    "unitTitle": "Angles, Triangles, And Measurement",
+    "lessonTitle": "Angle Measure Conventions For Motion Analysis"
+  },
+  {
+    "key": "geometry-foundations-for-baseball-context::angles-triangles-and-measurement::triangle-similarity-in-camera-and-field-scaling",
+    "trackTitle": "Geometry Foundations For Baseball Context",
+    "unitTitle": "Angles, Triangles, And Measurement",
+    "lessonTitle": "Triangle Similarity In Camera And Field Scaling"
+  },
+  {
+    "key": "geometry-foundations-for-baseball-context::angles-triangles-and-measurement::right-triangle-geometry-for-component-thinking",
+    "trackTitle": "Geometry Foundations For Baseball Context",
+    "unitTitle": "Angles, Triangles, And Measurement",
+    "lessonTitle": "Right Triangle Geometry For Component Thinking"
+  },
+  {
+    "key": "geometry-foundations-for-baseball-context::angles-triangles-and-measurement::law-of-sines-and-law-of-cosines-in-stadium-problems",
+    "trackTitle": "Geometry Foundations For Baseball Context",
+    "unitTitle": "Angles, Triangles, And Measurement",
+    "lessonTitle": "Law Of Sines And Law Of Cosines In Stadium Problems"
+  },
+  {
+    "key": "geometry-foundations-for-baseball-context::angles-triangles-and-measurement::geometric-proof-mindset-for-model-trust",
+    "trackTitle": "Geometry Foundations For Baseball Context",
+    "unitTitle": "Angles, Triangles, And Measurement",
+    "lessonTitle": "Geometric Proof Mindset For Model Trust"
+  },
+  {
+    "key": "geometry-foundations-for-baseball-context::circles-arcs-and-curvature::circle-equations-and-radial-interpretations",
+    "trackTitle": "Geometry Foundations For Baseball Context",
+    "unitTitle": "Circles, Arcs, And Curvature",
+    "lessonTitle": "Circle Equations And Radial Interpretations"
+  },
+  {
+    "key": "geometry-foundations-for-baseball-context::circles-arcs-and-curvature::arc-length-curvature-and-outfield-wall-geometry",
+    "trackTitle": "Geometry Foundations For Baseball Context",
+    "unitTitle": "Circles, Arcs, And Curvature",
+    "lessonTitle": "Arc Length, Curvature, And Outfield Wall Geometry"
+  },
+  {
+    "key": "geometry-foundations-for-baseball-context::circles-arcs-and-curvature::sector-area-and-angular-coverage",
+    "trackTitle": "Geometry Foundations For Baseball Context",
+    "unitTitle": "Circles, Arcs, And Curvature",
+    "lessonTitle": "Sector Area And Angular Coverage"
+  },
+  {
+    "key": "geometry-foundations-for-baseball-context::circles-arcs-and-curvature::chord-vs-arc-interpretation-pitfalls",
+    "trackTitle": "Geometry Foundations For Baseball Context",
+    "unitTitle": "Circles, Arcs, And Curvature",
+    "lessonTitle": "Chord Vs Arc Interpretation Pitfalls"
+  },
+  {
+    "key": "geometry-foundations-for-baseball-context::circles-arcs-and-curvature::geometry-foundations-synthesis-lab",
+    "trackTitle": "Geometry Foundations For Baseball Context",
+    "unitTitle": "Circles, Arcs, And Curvature",
+    "lessonTitle": "Geometry Foundations Synthesis Lab"
+  }
+]

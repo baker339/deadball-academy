@@ -1,0 +1,27 @@
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      ACADEMY_RUST_ADDR: "0.0.0.0:8000"
+      ACADEMY_RUST_DATABASE_URL: "sqlite://academy_rust.db"
+      JWT_SECRET_KEY: "${JWT_SECRET_KEY:-change-me-in-production}"
+      FIRST_ADMIN_EMAIL: "${FIRST_ADMIN_EMAIL:-}"
+      CMS_ENABLED: "${CMS_ENABLED:-true}"
+      CORS_ALLOW_ORIGINS: "${CORS_ALLOW_ORIGINS:-http://localhost:3000,http://127.0.0.1:3000}"
+    volumes:
+      - ./backend/academy_rust.db:/app/academy_rust.db
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      NEXT_PUBLIC_API_BASE_URL: "http://backend:8000"
+    depends_on:
+      - backend

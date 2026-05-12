@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" role="img">
+  <title>Defensive pursuit lane</title>
+  <rect width="320" height="200" fill="#f8fafc"/>
+  <path d="M40 160 L280 40" stroke="#2563eb" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <text x="12" y="24" font-family="system-ui,sans-serif" font-size="11" fill="#334155">Outfield schematic  pursuit lane</text>
+  <text x="200" y="32" font-family="system-ui,sans-serif" font-size="10" fill="#64748b">lane</text>
+</svg>

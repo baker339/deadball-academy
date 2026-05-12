@@ -1,0 +1,182 @@
+[
+  {
+    "key": "baseball-physics-foundations::geometry-of-the-field-and-ball-flight::coordinate-systems-for-baseball-fields",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Geometry Of The Field And Ball Flight",
+    "lessonTitle": "Coordinate Systems For Baseball Fields"
+  },
+  {
+    "key": "baseball-physics-foundations::geometry-of-the-field-and-ball-flight::field-dimensions-symmetry-and-constraint-boundaries",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Geometry Of The Field And Ball Flight",
+    "lessonTitle": "Field Dimensions, Symmetry, And Constraint Boundaries"
+  },
+  {
+    "key": "baseball-physics-foundations::geometry-of-the-field-and-ball-flight::arc-length-curvature-and-outfield-wall-geometry",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Geometry Of The Field And Ball Flight",
+    "lessonTitle": "Arc Length, Curvature, And Outfield Wall Geometry"
+  },
+  {
+    "key": "baseball-physics-foundations::geometry-of-the-field-and-ball-flight::launch-angle-as-a-geometric-object",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Geometry Of The Field And Ball Flight",
+    "lessonTitle": "Launch Angle As A Geometric Object"
+  },
+  {
+    "key": "baseball-physics-foundations::geometry-of-the-field-and-ball-flight::2d-to-3d-flight-geometry-transitions",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Geometry Of The Field And Ball Flight",
+    "lessonTitle": "2D To 3D Flight Geometry Transitions"
+  },
+  {
+    "key": "baseball-physics-foundations::geometry-of-the-field-and-ball-flight::ballpark-topology-and-home-run-boundary-surfaces",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Geometry Of The Field And Ball Flight",
+    "lessonTitle": "Ballpark Topology And Home Run Boundary Surfaces"
+  },
+  {
+    "key": "baseball-physics-foundations::geometry-of-the-field-and-ball-flight::geometric-sensitivity-small-angle-changes-large-outcome-swings",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Geometry Of The Field And Ball Flight",
+    "lessonTitle": "Geometric Sensitivity: Small Angle Changes, Large Outcome Swings"
+  },
+  {
+    "key": "baseball-physics-foundations::geometry-of-the-field-and-ball-flight::geometry-synthesis-lab-mapping-ball-flight-regions",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Geometry Of The Field And Ball Flight",
+    "lessonTitle": "Geometry Synthesis Lab: Mapping Ball Flight Regions"
+  },
+  {
+    "key": "baseball-physics-foundations::trigonometry-and-vector-decomposition::trigonometric-functions-refresher-for-modeling",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Trigonometry And Vector Decomposition",
+    "lessonTitle": "Trigonometric Functions Refresher For Modeling"
+  },
+  {
+    "key": "baseball-physics-foundations::trigonometry-and-vector-decomposition::unit-circle-radians-and-angular-velocity-in-context",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Trigonometry And Vector Decomposition",
+    "lessonTitle": "Unit Circle, Radians, And Angular Velocity In Context"
+  },
+  {
+    "key": "baseball-physics-foundations::trigonometry-and-vector-decomposition::sohcahtoa-to-vector-components-horizontal-vs-vertical-motion",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Trigonometry And Vector Decomposition",
+    "lessonTitle": "SOHCAHTOA To Vector Components: Horizontal Vs Vertical Motion"
+  },
+  {
+    "key": "baseball-physics-foundations::trigonometry-and-vector-decomposition::inverse-trig-for-reconstructing-launch-conditions",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Trigonometry And Vector Decomposition",
+    "lessonTitle": "Inverse Trig For Reconstructing Launch Conditions"
+  },
+  {
+    "key": "baseball-physics-foundations::trigonometry-and-vector-decomposition::dot-product-projection-and-directional-influence",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Trigonometry And Vector Decomposition",
+    "lessonTitle": "Dot Product, Projection, And Directional Influence"
+  },
+  {
+    "key": "baseball-physics-foundations::trigonometry-and-vector-decomposition::cross-product-intuition-for-spin-and-orientation",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Trigonometry And Vector Decomposition",
+    "lessonTitle": "Cross Product Intuition For Spin And Orientation"
+  },
+  {
+    "key": "baseball-physics-foundations::trigonometry-and-vector-decomposition::polar-cartesian-and-spherical-coordinate-conversions",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Trigonometry And Vector Decomposition",
+    "lessonTitle": "Polar, Cartesian, And Spherical Coordinate Conversions"
+  },
+  {
+    "key": "baseball-physics-foundations::trigonometry-and-vector-decomposition::phase-shift-and-periodicity-in-baseball-motion-signals",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Trigonometry And Vector Decomposition",
+    "lessonTitle": "Phase Shift And Periodicity In Baseball Motion Signals"
+  },
+  {
+    "key": "baseball-physics-foundations::trigonometry-and-vector-decomposition::trig-identities-for-simplifying-flight-equations",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Trigonometry And Vector Decomposition",
+    "lessonTitle": "Trig Identities For Simplifying Flight Equations"
+  },
+  {
+    "key": "baseball-physics-foundations::trigonometry-and-vector-decomposition::angle-optimization-under-physical-constraints",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Trigonometry And Vector Decomposition",
+    "lessonTitle": "Angle Optimization Under Physical Constraints"
+  },
+  {
+    "key": "baseball-physics-foundations::trigonometry-and-vector-decomposition::error-propagation-in-trig-based-calculations",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Trigonometry And Vector Decomposition",
+    "lessonTitle": "Error Propagation In Trig-Based Calculations"
+  },
+  {
+    "key": "baseball-physics-foundations::trigonometry-and-vector-decomposition::trigonometry-mastery-workshop-multi-step-applied-problems",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Trigonometry And Vector Decomposition",
+    "lessonTitle": "Trigonometry Mastery Workshop: Multi-Step Applied Problems"
+  },
+  {
+    "key": "baseball-physics-foundations::newtonian-mechanics-and-projectile-motion::newton-s-laws-revisited-for-ball-bat-and-ball-air-systems",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Newtonian Mechanics And Projectile Motion",
+    "lessonTitle": "Newton's Laws Revisited For Ball-Bat And Ball-Air Systems"
+  },
+  {
+    "key": "baseball-physics-foundations::newtonian-mechanics-and-projectile-motion::kinematics-in-one-and-two-dimensions",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Newtonian Mechanics And Projectile Motion",
+    "lessonTitle": "Kinematics In One And Two Dimensions"
+  },
+  {
+    "key": "baseball-physics-foundations::newtonian-mechanics-and-projectile-motion::free-body-diagrams-for-batted-ball-motion",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Newtonian Mechanics And Projectile Motion",
+    "lessonTitle": "Free-Body Diagrams For Batted Ball Motion"
+  },
+  {
+    "key": "baseball-physics-foundations::newtonian-mechanics-and-projectile-motion::initial-conditions-exit-velocity-launch-angle-spin-inputs",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Newtonian Mechanics And Projectile Motion",
+    "lessonTitle": "Initial Conditions: Exit Velocity, Launch Angle, Spin Inputs"
+  },
+  {
+    "key": "baseball-physics-foundations::newtonian-mechanics-and-projectile-motion::no-drag-projectile-derivation-from-first-principles",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Newtonian Mechanics And Projectile Motion",
+    "lessonTitle": "No-Drag Projectile Derivation From First Principles"
+  },
+  {
+    "key": "baseball-physics-foundations::newtonian-mechanics-and-projectile-motion::time-of-flight-apex-and-range-relationships",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Newtonian Mechanics And Projectile Motion",
+    "lessonTitle": "Time Of Flight, Apex, And Range Relationships"
+  },
+  {
+    "key": "baseball-physics-foundations::newtonian-mechanics-and-projectile-motion::energy-methods-vs-force-methods-in-ball-flight",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Newtonian Mechanics And Projectile Motion",
+    "lessonTitle": "Energy Methods Vs Force Methods In Ball Flight"
+  },
+  {
+    "key": "baseball-physics-foundations::newtonian-mechanics-and-projectile-motion::momentum-transfer-in-contact-events",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Newtonian Mechanics And Projectile Motion",
+    "lessonTitle": "Momentum Transfer In Contact Events"
+  },
+  {
+    "key": "baseball-physics-foundations::newtonian-mechanics-and-projectile-motion::introducing-drag-into-newton-s-second-law",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Newtonian Mechanics And Projectile Motion",
+    "lessonTitle": "Introducing Drag Into Newton's Second Law"
+  },
+  {
+    "key": "baseball-physics-foundations::newtonian-mechanics-and-projectile-motion::solving-drag-inclusive-odes-numerically",
+    "trackTitle": "Baseball Physics Foundations",
+    "unitTitle": "Newtonian Mechanics And Projectile Motion",
+    "lessonTitle": "Solving Drag-Inclusive ODEs Numerically"
+  }
+]

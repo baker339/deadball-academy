@@ -1,0 +1,128 @@
+[
+  {
+    "key": "statistical-modeling-for-baseball::regression-and-generalized-linear-models-for-hr-probability::model-comparison-aic-bic-and-cross-validation",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Regression And Generalized Linear Models For HR Probability",
+    "lessonTitle": "Model Comparison: AIC, BIC, And Cross-Validation"
+  },
+  {
+    "key": "statistical-modeling-for-baseball::regression-and-generalized-linear-models-for-hr-probability::calibration-curves-and-probability-reliability",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Regression And Generalized Linear Models For HR Probability",
+    "lessonTitle": "Calibration Curves And Probability Reliability"
+  },
+  {
+    "key": "statistical-modeling-for-baseball::regression-and-generalized-linear-models-for-hr-probability::thresholding-and-decision-utility",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Regression And Generalized Linear Models For HR Probability",
+    "lessonTitle": "Thresholding And Decision Utility"
+  },
+  {
+    "key": "statistical-modeling-for-baseball::regression-and-generalized-linear-models-for-hr-probability::regression-lab-build-compare-defend",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Regression And Generalized Linear Models For HR Probability",
+    "lessonTitle": "Regression Lab: Build, Compare, Defend"
+  },
+  {
+    "key": "statistical-modeling-for-baseball::uncertainty-confidence-intervals-and-model-validation::sampling-distributions-in-practice",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Uncertainty, Confidence Intervals, And Model Validation",
+    "lessonTitle": "Sampling Distributions In Practice"
+  },
+  {
+    "key": "statistical-modeling-for-baseball::uncertainty-confidence-intervals-and-model-validation::confidence-intervals-for-means-effects-and-probabilities",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Uncertainty, Confidence Intervals, And Model Validation",
+    "lessonTitle": "Confidence Intervals For Means, Effects, And Probabilities"
+  },
+  {
+    "key": "statistical-modeling-for-baseball::uncertainty-confidence-intervals-and-model-validation::bootstrap-methods-for-complex-metrics",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Uncertainty, Confidence Intervals, And Model Validation",
+    "lessonTitle": "Bootstrap Methods For Complex Metrics"
+  },
+  {
+    "key": "statistical-modeling-for-baseball::uncertainty-confidence-intervals-and-model-validation::hypothesis-testing-and-practical-significance",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Uncertainty, Confidence Intervals, And Model Validation",
+    "lessonTitle": "Hypothesis Testing And Practical Significance"
+  },
+  {
+    "key": "statistical-modeling-for-baseball::uncertainty-confidence-intervals-and-model-validation::validation-splits-cross-validation-and-drift",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Uncertainty, Confidence Intervals, And Model Validation",
+    "lessonTitle": "Validation Splits, Cross-Validation, And Drift"
+  },
+  {
+    "key": "statistical-modeling-for-baseball::uncertainty-confidence-intervals-and-model-validation::error-decomposition-bias-variance-noise",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Uncertainty, Confidence Intervals, And Model Validation",
+    "lessonTitle": "Error Decomposition: Bias, Variance, Noise"
+  },
+  {
+    "key": "statistical-modeling-for-baseball::uncertainty-confidence-intervals-and-model-validation::robustness-checks-and-sensitivity-analysis",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Uncertainty, Confidence Intervals, And Model Validation",
+    "lessonTitle": "Robustness Checks And Sensitivity Analysis"
+  },
+  {
+    "key": "statistical-modeling-for-baseball::uncertainty-confidence-intervals-and-model-validation::communicating-uncertainty-without-overclaiming",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Uncertainty, Confidence Intervals, And Model Validation",
+    "lessonTitle": "Communicating Uncertainty Without Overclaiming"
+  },
+  {
+    "key": "statistical-modeling-for-baseball::uncertainty-confidence-intervals-and-model-validation::validation-dossier-workshop",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Uncertainty, Confidence Intervals, And Model Validation",
+    "lessonTitle": "Validation Dossier Workshop"
+  },
+  {
+    "key": "statistical-modeling-for-baseball::causality-vs-correlation-in-baseball-narratives::association-is-not-causation-formal-definitions",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Causality Vs Correlation In Baseball Narratives",
+    "lessonTitle": "Association Is Not Causation: Formal Definitions"
+  },
+  {
+    "key": "statistical-modeling-for-baseball::causality-vs-correlation-in-baseball-narratives::dags-for-baseball-questions",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Causality Vs Correlation In Baseball Narratives",
+    "lessonTitle": "DAGs For Baseball Questions"
+  },
+  {
+    "key": "statistical-modeling-for-baseball::causality-vs-correlation-in-baseball-narratives::confounders-mediators-and-colliders",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Causality Vs Correlation In Baseball Narratives",
+    "lessonTitle": "Confounders, Mediators, And Colliders"
+  },
+  {
+    "key": "statistical-modeling-for-baseball::causality-vs-correlation-in-baseball-narratives::counterfactual-reasoning-for-policy-rule-changes",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Causality Vs Correlation In Baseball Narratives",
+    "lessonTitle": "Counterfactual Reasoning For Policy/Rule Changes"
+  },
+  {
+    "key": "statistical-modeling-for-baseball::causality-vs-correlation-in-baseball-narratives::natural-experiments-and-quasi-experimental-design",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Causality Vs Correlation In Baseball Narratives",
+    "lessonTitle": "Natural Experiments And Quasi-Experimental Design"
+  },
+  {
+    "key": "statistical-modeling-for-baseball::causality-vs-correlation-in-baseball-narratives::causal-claims-in-public-baseball-media-critical-audit",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Causality Vs Correlation In Baseball Narratives",
+    "lessonTitle": "Causal Claims In Public Baseball Media: Critical Audit"
+  },
+  {
+    "key": "statistical-modeling-for-baseball::causality-vs-correlation-in-baseball-narratives::translating-causal-limits-into-honest-language",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Causality Vs Correlation In Baseball Narratives",
+    "lessonTitle": "Translating Causal Limits Into Honest Language"
+  },
+  {
+    "key": "statistical-modeling-for-baseball::causality-vs-correlation-in-baseball-narratives::causality-debate-seminar-and-position-paper",
+    "trackTitle": "Statistical Modeling For Baseball",
+    "unitTitle": "Causality Vs Correlation In Baseball Narratives",
+    "lessonTitle": "Causality Debate Seminar And Position Paper"
+  }
+]
