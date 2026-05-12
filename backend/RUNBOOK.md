@@ -24,7 +24,7 @@ Copy `backend/.env.example` to `backend/.env` and set:
 
 Optional:
 
-- `ACADEMY_RUST_ADDR` (defaults to `127.0.0.1:8000`)
+- `ACADEMY_RUST_ADDR` (defaults to `127.0.0.1:8000`). If unset and **`PORT`** is set (for example on Render), the API binds to **`0.0.0.0:$PORT`** automatically.
 - `CMS_ENABLED=true`
 - `CORS_ALLOW_ORIGINS` — comma-separated browser origins (defaults to local Next.js URLs)
 
@@ -92,7 +92,7 @@ cargo test
 
 Also set:
 
-- `ACADEMY_RUST_ADDR=0.0.0.0:$PORT` when the host injects `PORT` (for example Render/Fly).
+- `ACADEMY_RUST_ADDR=0.0.0.0:$PORT` when the host injects `PORT` (for example Render/Fly), **or** rely on automatic binding to `0.0.0.0:$PORT` when `ACADEMY_RUST_ADDR` is unset and `PORT` is present.
 - No SQLite file or persistent disk is required for the API at runtime.
 
 ## 10) Migrating data from legacy SQLite → Postgres (lessons / CMS)

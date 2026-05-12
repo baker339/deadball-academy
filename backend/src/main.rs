@@ -493,10 +493,12 @@ async fn main() -> anyhow::Result<()> {
     let state = AppState { pool, cfg };
     let app = build_router(state);
 
-    let addr: SocketAddr = env::var("ACADEMY_RUST_ADDR")
-        .unwrap_or_else(|_| "127.0.0.1:8000".to_string())
+    let addr_str = env::var("ACADEMY_RUST_ADDR").or_else(|_| {
+        env::var("PORT").map(|port| format!("0.0.0.0:{port}"))
+    }).unwrap_or_else(|_| "127.0.0.1:8000".to_string());
+    let addr: SocketAddr = addr_str
         .parse()
-        .context("parse bind addr")?;
+        .context("parse bind addr (set ACADEMY_RUST_ADDR or PORT)")?;
 
     tracing::info!("academy-backend-rust listening on {}", addr);
     let listener = tokio::net::TcpListener::bind(addr).await?;
