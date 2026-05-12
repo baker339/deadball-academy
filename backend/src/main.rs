@@ -513,6 +513,7 @@ async fn main() -> anyhow::Result<()> {
 fn build_cors_layer() -> CorsLayer {
     let default_origins = "http://localhost:3000,http://127.0.0.1:3000";
     let raw = env::var("CORS_ALLOW_ORIGINS").unwrap_or_else(|_| default_origins.to_string());
+    tracing::info!("CORS_ALLOW_ORIGINS effective value: {}", raw);
     let mut origins: Vec<HeaderValue> = raw
         .split(',')
         .map(str::trim)

@@ -62,7 +62,17 @@ Set `NEXT_PUBLIC_API_BASE_URL` if the API is not on `http://localhost:8000`.
 
 ## 7) CORS in production
 
-Set `CORS_ALLOW_ORIGINS` to every browser origin that calls this API (for example your Vercel URL). Restart after changes.
+Set **`CORS_ALLOW_ORIGINS`** on the API host (for example Render) to **every HTTPS origin** that runs your frontend—comma-separated, **no spaces unless you trim** (the app trims each entry), **no trailing slash**.
+
+Example (Vercel production + local dev during testing):
+
+```text
+CORS_ALLOW_ORIGINS=https://deadball-academy-qiho.vercel.app,http://localhost:3000
+```
+
+If you use **Vercel preview** deployments (`*.vercel.app` with random names), add each preview origin you need, or temporarily add your latest preview URL after deploy.
+
+If this is wrong or unset in production, the browser shows a CORS error on `OPTIONS` / `POST` and the API logs the effective `CORS_ALLOW_ORIGINS` line at startup—fix the env and redeploy.
 
 ## 8) Tests
 
