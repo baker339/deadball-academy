@@ -11,7 +11,7 @@ Copy `backend/.env.example` to `backend/.env` and set:
 
 Optional:
 
-- `ACADEMY_RUST_DATABASE_URL` (defaults to `sqlite://academy_rust.db`)
+- `ACADEMY_RUST_DATABASE_URL` (defaults to `sqlite://academy_rust.db` in the process working directory). On hosts like **Render**, use an absolute URL on a **writable path**, e.g. `sqlite:///var/data/academy_rust.db`, and attach a **persistent disk** mounted at `/var/data` (or match whatever path you use). The process creates missing **parent** directories when possible; you still must mount or choose a writable location.
 - `ACADEMY_RUST_ADDR` (defaults to `127.0.0.1:8000`)
 - `CMS_ENABLED=true`
 - `CORS_ALLOW_ORIGINS` — comma-separated list of allowed browser origins (see below). If unset, defaults to local Next.js dev URLs.
@@ -68,6 +68,15 @@ After changing origins or deploying a new frontend hostname, update this variabl
 **Frontend (Vercel):** set project root to `frontend/`, build command `npm run build`, output Next defaults. Set `NEXT_PUBLIC_API_BASE_URL` to the public API origin (for example `https://api.example.com`).
 
 **API (Docker):** build `backend/Dockerfile` and run with a **persistent volume** mounted at the SQLite file path referenced by `ACADEMY_RUST_DATABASE_URL` (same single-file SQLite model as local). Expose port **8000** and set `JWT_SECRET_KEY`, `FIRST_ADMIN_EMAIL`, `CORS_ALLOW_ORIGINS`, and `CMS_ENABLED` as required.
+
+### Render (SQLite)
+
+1. In the Render dashboard, add a **persistent disk** to the web service and set the **mount path** (example: `/var/data`).
+2. Set **`ACADEMY_RUST_DATABASE_URL`** to a **three-slash** absolute file URL under that mount, for example:  
+   `sqlite:///var/data/academy_rust.db`  
+   (`sqlite://` + `/var/data/...` — the third slash starts the absolute path.)
+3. Set **`ACADEMY_RUST_ADDR`** to `0.0.0.0:$PORT` (Render injects **`PORT`**; the container must listen on it).
+4. If you still see SQLite **“unable to open database file” (code 14)**, check that the mount path in the URL matches the disk mount, the disk is attached to **this** service, and the path is writable.
 
 **Health checks:** use `GET /health` from your load balancer or platform probe.
 

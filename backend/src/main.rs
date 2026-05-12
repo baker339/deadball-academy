@@ -437,6 +437,42 @@ struct StepsQuery {
     module_id: Option<i64>,
 }
 
+/// Ensures parent directories exist for on-disk SQLite URLs so `SQLITE_CANTOPEN` (14) is not
+/// returned when the path is valid but intermediate dirs are missing (typical on new mounts).
+fn ensure_sqlite_file_parent(database_url: &str) -> anyhow::Result<()> {
+    let url = database_url.trim();
+    if url.contains(":memory:") {
+        return Ok(());
+    }
+    let path: PathBuf = if url.starts_with("sqlite://") {
+        let tail = &url["sqlite://".len()..];
+        if tail.starts_with('/') {
+            PathBuf::from(tail)
+        } else {
+            env::current_dir()
+                .context("resolve cwd for relative ACADEMY_RUST_DATABASE_URL")?
+                .join(tail)
+        }
+    } else if let Some(tail) = url.strip_prefix("sqlite:") {
+        env::current_dir()
+            .context("resolve cwd for relative ACADEMY_RUST_DATABASE_URL")?
+            .join(tail)
+    } else {
+        return Ok(());
+    };
+    if let Some(parent) = path.parent() {
+        if !parent.as_os_str().is_empty() {
+            fs::create_dir_all(parent).with_context(|| {
+                format!(
+                    "create SQLite parent directory {} (mount the disk here or fix ACADEMY_RUST_DATABASE_URL)",
+                    parent.display()
+                )
+            })?;
+        }
+    }
+    Ok(())
+}
+
 #[tokio::main]
 async fn main() -> anyhow::Result<()> {
     let cli_args: Vec<String> = env::args().collect();
@@ -461,11 +497,12 @@ async fn main() -> anyhow::Result<()> {
     };
     let database_url = env::var("ACADEMY_RUST_DATABASE_URL")
         .unwrap_or_else(|_| "sqlite://academy_rust.db".to_string());
+    ensure_sqlite_file_parent(&database_url).context("prepare sqlite filesystem")?;
     let pool = SqlitePoolOptions::new()
         .max_connections(5)
         .connect(&database_url)
         .await
-        .context("connect db")?;
+        .context("connect db (SQLite code 14 = cannot open file: wrong path, missing parent dir, read-only FS, or disk not mounted)")?;
 
     sqlx::migrate!("./migrations")
         .run(&pool)
