@@ -5,8 +5,8 @@ A full-stack baseball analytics learning platform with a college-level curriculu
 ## Tech Stack
 
 - **Frontend:** Next.js (TypeScript), Tailwind CSS, React
-- **Backend:** Rust (Axum), SQLx, SQLite (local dev)
-- **Data Storage:** SQLite (dev); Postgres is a future target when scaling beyond one node
+- **Backend:** Rust (Axum), SQLx, PostgreSQL
+- **Data Storage:** PostgreSQL (managed or Docker locally; see `backend/RUNBOOK.md`)
 
 ## Monorepo Structure
 
@@ -58,7 +58,7 @@ Operationally:
 
 ## Quality and CI
 
-- Backend tests: `cd backend && cargo test`
+- Backend tests: `cd backend && cargo test` (requires Postgres; see `backend/RUNBOOK.md`)
 - Frontend lint + tests: `cd frontend && npm run lint && npm run test`
 - GitHub Actions workflow: `.github/workflows/ci.yml`
 

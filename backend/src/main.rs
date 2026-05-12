@@ -12,18 +12,19 @@ use axum::{
     response::{IntoResponse, Response},
     routing::{get, patch, post},
 };
-use chrono::{Duration, Utc};
+use chrono::{DateTime, Duration, Utc};
 use jsonwebtoken::{DecodingKey, EncodingKey, Header, Validation, decode, encode};
 use rand_core::OsRng;
 use serde::{Deserialize, Serialize};
 use serde_json::{Value, json};
-use sqlx::{FromRow, SqlitePool, sqlite::SqlitePoolOptions};
+use sqlx::postgres::{PgPool, PgPoolOptions};
+use sqlx::FromRow;
 use tower_http::cors::{AllowOrigin, Any, CorsLayer};
 use tracing_subscriber::{EnvFilter, fmt};
 
 #[derive(Clone)]
 struct AppState {
-    pool: SqlitePool,
+    pool: PgPool,
     cfg: AppConfig,
 }
 
@@ -120,7 +121,7 @@ struct UserPublic {
     tier: String,
     role: String,
     is_active: i64,
-    created_at: Option<String>,
+    created_at: Option<DateTime<Utc>>,
 }
 
 #[derive(Serialize, Deserialize)]
@@ -142,7 +143,7 @@ struct ProgressEventPublic {
     status: String,
     score: Option<f64>,
     time_spent_seconds: Option<i64>,
-    created_at: String,
+    created_at: DateTime<Utc>,
 }
 
 #[derive(Serialize, Deserialize, FromRow)]
@@ -154,7 +155,7 @@ struct BadgePublic {
     description: String,
     course_slug: String,
     module_slug: Option<String>,
-    awarded_at: String,
+    awarded_at: DateTime<Utc>,
 }
 
 #[derive(Serialize, Deserialize)]
@@ -367,7 +368,7 @@ struct LessonRevisionPublic {
     revision_number: i64,
     payload_json: String,
     status: String,
-    created_at: String,
+    created_at: DateTime<Utc>,
 }
 
 #[derive(Serialize, Deserialize)]
@@ -384,7 +385,7 @@ struct ReviewNotePublic {
     category: String,
     note_text: String,
     status: String,
-    created_at: String,
+    created_at: DateTime<Utc>,
 }
 
 #[derive(Serialize, Deserialize)]
@@ -402,7 +403,7 @@ struct ReviewDecisionPublic {
     reviewer_user_id: i64,
     decision: String,
     notes: String,
-    created_at: String,
+    created_at: DateTime<Utc>,
 }
 
 #[derive(Serialize, Deserialize)]
@@ -437,41 +438,6 @@ struct StepsQuery {
     module_id: Option<i64>,
 }
 
-/// Ensures parent directories exist for on-disk SQLite URLs so `SQLITE_CANTOPEN` (14) is not
-/// returned when the path is valid but intermediate dirs are missing (typical on new mounts).
-fn ensure_sqlite_file_parent(database_url: &str) -> anyhow::Result<()> {
-    let url = database_url.trim();
-    if url.contains(":memory:") {
-        return Ok(());
-    }
-    let path: PathBuf = if url.starts_with("sqlite://") {
-        let tail = &url["sqlite://".len()..];
-        if tail.starts_with('/') {
-            PathBuf::from(tail)
-        } else {
-            env::current_dir()
-                .context("resolve cwd for relative ACADEMY_RUST_DATABASE_URL")?
-                .join(tail)
-        }
-    } else if let Some(tail) = url.strip_prefix("sqlite:") {
-        env::current_dir()
-            .context("resolve cwd for relative ACADEMY_RUST_DATABASE_URL")?
-            .join(tail)
-    } else {
-        return Ok(());
-    };
-    if let Some(parent) = path.parent() {
-        if !parent.as_os_str().is_empty() {
-            fs::create_dir_all(parent).with_context(|| {
-                format!(
-                    "create SQLite parent directory {} (mount the disk here or fix ACADEMY_RUST_DATABASE_URL)",
-                    parent.display()
-                )
-            })?;
-        }
-    }
-    Ok(())
-}
 
 #[tokio::main]
 async fn main() -> anyhow::Result<()> {
@@ -495,14 +461,14 @@ async fn main() -> anyhow::Result<()> {
             .map(|v| matches!(v.to_lowercase().as_str(), "1" | "true" | "yes" | "on"))
             .unwrap_or(true),
     };
-    let database_url = env::var("ACADEMY_RUST_DATABASE_URL")
-        .unwrap_or_else(|_| "sqlite://academy_rust.db".to_string());
-    ensure_sqlite_file_parent(&database_url).context("prepare sqlite filesystem")?;
-    let pool = SqlitePoolOptions::new()
+    let database_url = env::var("ACADEMY_RUST_DATABASE_URL").unwrap_or_else(|_| {
+        "postgres://postgres:postgres@127.0.0.1:5432/academy_rust".to_string()
+    });
+    let pool = PgPoolOptions::new()
         .max_connections(5)
         .connect(&database_url)
         .await
-        .context("connect db (SQLite code 14 = cannot open file: wrong path, missing parent dir, read-only FS, or disk not mounted)")?;
+        .context("connect db (check ACADEMY_RUST_DATABASE_URL and that Postgres is reachable)")?;
 
     sqlx::migrate!("./migrations")
         .run(&pool)
@@ -717,7 +683,7 @@ fn claims_from_headers(cfg: &AppConfig, headers: &HeaderMap) -> AppResult<Claims
 async fn current_user(headers: &HeaderMap, state: &AppState) -> AppResult<UserPublic> {
     let claims = claims_from_headers(&state.cfg, headers)?;
     let user = sqlx::query_as::<_, UserPublic>(
-        "SELECT id, email, full_name, tier, role, is_active, created_at FROM users WHERE email = ?",
+        "SELECT id, email, full_name, tier, role, is_active, created_at FROM users WHERE email = $1",
     )
     .bind(norm_email(&claims.sub))
     .fetch_optional(&state.pool)
@@ -757,7 +723,7 @@ fn extract_key_triplet(lesson_key: &str) -> Option<(String, String, String)> {
     Some((track.to_string(), unit.to_string(), lesson.to_string()))
 }
 
-async fn resolve_lesson_id_from_key(pool: &SqlitePool, lesson_key: &str) -> AppResult<Option<i64>> {
+async fn resolve_lesson_id_from_key(pool: &PgPool, lesson_key: &str) -> AppResult<Option<i64>> {
     let Some((track_slug, unit_slug, lesson_slug)) = extract_key_triplet(lesson_key) else {
         return Ok(None);
     };
@@ -766,7 +732,7 @@ async fn resolve_lesson_id_from_key(pool: &SqlitePool, lesson_key: &str) -> AppR
          FROM curriculum_lessons l
          JOIN curriculum_units u ON u.id = l.unit_id
          JOIN curriculum_tracks t ON t.id = u.track_id
-         WHERE t.slug = ? AND u.slug = ? AND l.slug = ?",
+         WHERE t.slug = $1 AND u.slug = $2 AND l.slug = $3",
     )
     .bind(track_slug)
     .bind(unit_slug)
@@ -777,7 +743,7 @@ async fn resolve_lesson_id_from_key(pool: &SqlitePool, lesson_key: &str) -> AppR
 }
 
 async fn backfill_professor_notes_into_review_notes(
-    pool: &SqlitePool,
+    pool: &PgPool,
     dry_run: bool,
 ) -> AppResult<ProfessorNotesBackfillReport> {
     let actor: Option<(i64,)> = sqlx::query_as(
@@ -817,7 +783,7 @@ async fn backfill_professor_notes_into_review_notes(
         }
         report.candidates += 1;
         let has_direct_lesson: Option<(i64,)> =
-            sqlx::query_as("SELECT id FROM curriculum_lessons WHERE id = ?")
+            sqlx::query_as("SELECT id FROM curriculum_lessons WHERE id = $1")
                 .bind(revision_lesson_id)
                 .fetch_optional(pool)
                 .await?;
@@ -840,7 +806,7 @@ async fn backfill_professor_notes_into_review_notes(
         };
         let existing: Option<(i64,)> = sqlx::query_as(
             "SELECT id FROM review_notes
-             WHERE lesson_id = ? AND category = 'review_notes' AND note_text = ?
+             WHERE lesson_id = $1 AND category = 'review_notes' AND note_text = $2
              LIMIT 1",
         )
         .bind(lesson_id)
@@ -854,7 +820,7 @@ async fn backfill_professor_notes_into_review_notes(
         if !dry_run {
             sqlx::query(
                 "INSERT INTO review_notes(lesson_id, author_user_id, severity, category, note_text, status)
-                 VALUES(?, ?, 'note', 'review_notes', ?, 'accepted')",
+                 VALUES($1, $2, 'note', 'review_notes', $3, 'accepted')",
             )
             .bind(lesson_id)
             .bind(actor_user_id)
@@ -1006,7 +972,7 @@ async fn maybe_promote_first_admin(state: &AppState, user_id: i64, email: &str) 
             .fetch_one(&state.pool)
             .await?;
     if admin_count.0 == 0 {
-        sqlx::query("UPDATE users SET role = 'admin' WHERE id = ?")
+        sqlx::query("UPDATE users SET role = 'admin' WHERE id = $1")
             .bind(user_id)
             .execute(&state.pool)
             .await?;
@@ -1019,7 +985,7 @@ async fn register(
     Json(payload): Json<UserCreate>,
 ) -> AppResult<impl IntoResponse> {
     let email = norm_email(&payload.email);
-    let exists: Option<(i64,)> = sqlx::query_as("SELECT id FROM users WHERE email = ?")
+    let exists: Option<(i64,)> = sqlx::query_as("SELECT id FROM users WHERE email = $1")
         .bind(&email)
         .fetch_optional(&state.pool)
         .await?;
@@ -1031,7 +997,7 @@ async fn register(
     }
     let hashed = hash_password(&payload.password)?;
     let row = sqlx::query_as::<_, UserPublic>(
-        "INSERT INTO users(email, full_name, hashed_password, tier, role, is_active) VALUES(?, ?, ?, 'free', 'student', 1)
+        "INSERT INTO users(email, full_name, hashed_password, tier, role, is_active) VALUES($1, $2, $3, 'free', 'student', 1)
          RETURNING id, email, full_name, tier, role, is_active, created_at",
     )
     .bind(email)
@@ -1041,7 +1007,7 @@ async fn register(
     .await?;
     maybe_promote_first_admin(&state, row.id, &row.email).await?;
     let user = sqlx::query_as::<_, UserPublic>(
-        "SELECT id, email, full_name, tier, role, is_active, created_at FROM users WHERE id = ?",
+        "SELECT id, email, full_name, tier, role, is_active, created_at FROM users WHERE id = $1",
     )
     .bind(row.id)
     .fetch_one(&state.pool)
@@ -1055,7 +1021,7 @@ async fn login(
 ) -> AppResult<Json<TokenResponse>> {
     let email = norm_email(&payload.email);
     let row: Option<(i64, String, String)> =
-        sqlx::query_as("SELECT id, email, hashed_password FROM users WHERE email = ?")
+        sqlx::query_as("SELECT id, email, hashed_password FROM users WHERE email = $1")
             .bind(&email)
             .fetch_optional(&state.pool)
             .await?;
@@ -1087,7 +1053,7 @@ async fn catalog(State(state): State<AppState>) -> AppResult<Json<Vec<CourseWith
     let mut output = Vec::new();
     for c in courses {
         let modules: Vec<CourseModule> = sqlx::query_as(
-            "SELECT slug, title, description, module_order, estimated_minutes FROM modules WHERE course_id = (SELECT id FROM courses WHERE slug = ?) ORDER BY module_order",
+            "SELECT slug, title, description, module_order, estimated_minutes FROM modules WHERE course_id = (SELECT id FROM courses WHERE slug = $1) ORDER BY module_order",
         )
         .bind(&c.slug)
         .fetch_all(&state.pool)
@@ -1096,7 +1062,7 @@ async fn catalog(State(state): State<AppState>) -> AppResult<Json<Vec<CourseWith
         for m in modules {
             let lessons: Vec<CourseLesson> = sqlx::query_as(
                 "SELECT slug, title, summary, lesson_order, estimated_minutes, track, route_path FROM lessons WHERE module_id = (
-                    SELECT id FROM modules WHERE slug = ? AND course_id = (SELECT id FROM courses WHERE slug = ?)
+                    SELECT id FROM modules WHERE slug = $1 AND course_id = (SELECT id FROM courses WHERE slug = $2)
                 ) ORDER BY lesson_order",
             )
             .bind(&m.slug)
@@ -1132,7 +1098,7 @@ async fn record_progress(
     let user = current_user(&headers, &state).await?;
     let row = sqlx::query_as::<_, ProgressEventPublic>(
         "INSERT INTO progress_events(user_id, course_slug, module_slug, lesson_slug, status, score, time_spent_seconds)
-         VALUES(?, ?, ?, ?, ?, ?, ?)
+         VALUES($1, $2, $3, $4, $5, $6, $7)
          RETURNING id, course_slug, module_slug, lesson_slug, status, score, time_spent_seconds, created_at",
     )
     .bind(user.id)
@@ -1153,7 +1119,7 @@ async fn completed_lesson_keys(
 ) -> AppResult<Json<CompletedLessonKeys>> {
     let user = current_user(&headers, &state).await?;
     let rows: Vec<(String, String, String)> =
-        sqlx::query_as("SELECT DISTINCT course_slug, module_slug, lesson_slug FROM progress_events WHERE user_id = ? AND status = 'completed'")
+        sqlx::query_as("SELECT DISTINCT course_slug, module_slug, lesson_slug FROM progress_events WHERE user_id = $1 AND status = 'completed'")
             .bind(user.id)
             .fetch_all(&state.pool)
             .await?;
@@ -1173,20 +1139,20 @@ async fn dashboard(
         .fetch_one(&state.pool)
         .await?;
     let completed_lessons: (i64,) =
-        sqlx::query_as("SELECT COUNT(DISTINCT course_slug || '::' || module_slug || '::' || lesson_slug) FROM progress_events WHERE user_id = ? AND status = 'completed'")
+        sqlx::query_as("SELECT COUNT(DISTINCT course_slug || '::' || module_slug || '::' || lesson_slug) FROM progress_events WHERE user_id = $1 AND status = 'completed'")
             .bind(user.id)
             .fetch_one(&state.pool)
             .await?;
     let recent_progress: Vec<ProgressEventPublic> = sqlx::query_as(
         "SELECT id, course_slug, module_slug, lesson_slug, status, score, time_spent_seconds, created_at
-         FROM progress_events WHERE user_id = ? ORDER BY created_at DESC LIMIT 10",
+         FROM progress_events WHERE user_id = $1 ORDER BY created_at DESC LIMIT 10",
     )
     .bind(user.id)
     .fetch_all(&state.pool)
     .await?;
     let badges: Vec<BadgePublic> = sqlx::query_as(
         "SELECT id, badge_key, badge_type, title, description, course_slug, module_slug, awarded_at
-         FROM badge_awards WHERE user_id = ? ORDER BY awarded_at DESC",
+         FROM badge_awards WHERE user_id = $1 ORDER BY awarded_at DESC",
     )
     .bind(user.id)
     .fetch_all(&state.pool)
@@ -1215,13 +1181,13 @@ async fn profile(
         .fetch_one(&state.pool)
         .await?;
     let completed_lessons: (i64,) =
-        sqlx::query_as("SELECT COUNT(DISTINCT course_slug || '::' || module_slug || '::' || lesson_slug) FROM progress_events WHERE user_id = ? AND status = 'completed'")
+        sqlx::query_as("SELECT COUNT(DISTINCT course_slug || '::' || module_slug || '::' || lesson_slug) FROM progress_events WHERE user_id = $1 AND status = 'completed'")
             .bind(user.id)
             .fetch_one(&state.pool)
             .await?;
     let badges: Vec<BadgePublic> = sqlx::query_as(
         "SELECT id, badge_key, badge_type, title, description, course_slug, module_slug, awarded_at
-         FROM badge_awards WHERE user_id = ? ORDER BY awarded_at DESC",
+         FROM badge_awards WHERE user_id = $1 ORDER BY awarded_at DESC",
     )
     .bind(user.id)
     .fetch_all(&state.pool)
@@ -1251,7 +1217,7 @@ async fn learning_lesson_payload(
          JOIN curriculum_units u ON u.id = l.unit_id
          JOIN curriculum_tracks t ON t.id = u.track_id
          JOIN lesson_revisions lr ON lr.id = l.published_revision_id
-         WHERE t.slug = ? AND u.slug = ? AND l.slug = ?",
+         WHERE t.slug = $1 AND u.slug = $2 AND l.slug = $3",
     )
     .bind(track_slug)
     .bind(unit_slug)
@@ -1295,7 +1261,7 @@ async fn update_user_role(
         return Err(AppError::new(StatusCode::BAD_REQUEST, "Invalid role"));
     }
     let changed =
-        sqlx::query("UPDATE users SET role = ?, updated_at = CURRENT_TIMESTAMP WHERE id = ?")
+        sqlx::query("UPDATE users SET role = $1, updated_at = CURRENT_TIMESTAMP WHERE id = $2")
             .bind(payload.role)
             .bind(user_id)
             .execute(&state.pool)
@@ -1304,7 +1270,7 @@ async fn update_user_role(
         return Err(AppError::new(StatusCode::NOT_FOUND, "User not found"));
     }
     let user = sqlx::query_as::<_, UserPublic>(
-        "SELECT id, email, full_name, tier, role, is_active, created_at FROM users WHERE id = ?",
+        "SELECT id, email, full_name, tier, role, is_active, created_at FROM users WHERE id = $1",
     )
     .bind(user_id)
     .fetch_one(&state.pool)
@@ -1381,7 +1347,7 @@ async fn cms_tree(
     let mut out_tracks = Vec::new();
     for track in tracks {
         let units: Vec<CurriculumUnitPublic> = sqlx::query_as(
-            "SELECT id, track_id, slug, title, description, unit_order, is_published FROM curriculum_units WHERE track_id = ? ORDER BY unit_order",
+            "SELECT id, track_id, slug, title, description, unit_order, is_published FROM curriculum_units WHERE track_id = $1 ORDER BY unit_order",
         )
         .bind(track.id)
         .fetch_all(&state.pool)
@@ -1389,7 +1355,7 @@ async fn cms_tree(
         let mut out_units = Vec::new();
         for unit in units {
             let rows: Vec<(i64, String, String, String)> = sqlx::query_as(
-                "SELECT l.id, l.slug, l.title, l.status FROM curriculum_lessons l WHERE l.unit_id = ? ORDER BY l.lesson_order",
+                "SELECT l.id, l.slug, l.title, l.status FROM curriculum_lessons l WHERE l.unit_id = $1 ORDER BY l.lesson_order",
             )
             .bind(unit.id)
             .fetch_all(&state.pool)
@@ -1397,7 +1363,7 @@ async fn cms_tree(
             let mut lessons = Vec::new();
             for (lesson_id, slug, title, status) in rows {
                 let sev: Option<(String,)> = sqlx::query_as(
-                    "SELECT severity FROM review_notes WHERE lesson_id = ? ORDER BY
+                    "SELECT severity FROM review_notes WHERE lesson_id = $1 ORDER BY
                       CASE severity WHEN 'blocker' THEN 4 WHEN 'major' THEN 3 WHEN 'minor' THEN 2 ELSE 1 END DESC,
                       created_at DESC LIMIT 1",
                 )
@@ -1458,7 +1424,7 @@ async fn cms_review_queue(
             ) as highest
          FROM curriculum_lessons l
          LEFT JOIN review_notes rn ON rn.lesson_id = l.id
-         GROUP BY l.id, l.title, l.status
+         GROUP BY l.id, l.title, l.status, l.updated_at
          ORDER BY note_count DESC, l.updated_at DESC",
     )
     .fetch_all(&state.pool)
@@ -1486,7 +1452,7 @@ async fn create_track(
     let _ = cms_user(&headers, &state).await?;
     let row = sqlx::query_as::<_, CurriculumTrackPublic>(
         "INSERT INTO curriculum_tracks(slug, title, description, track_order, is_published)
-         VALUES(?, ?, ?, ?, 0)
+         VALUES($1, $2, $3, $4, 0)
          RETURNING id, slug, title, description, track_order, is_published",
     )
     .bind(payload.slug)
@@ -1508,8 +1474,8 @@ async fn update_track(
     let _ = cms_user(&headers, &state).await?;
     let changed = sqlx::query(
         "UPDATE curriculum_tracks
-         SET slug = ?, title = ?, description = ?, track_order = COALESCE(?, track_order), updated_at = CURRENT_TIMESTAMP
-         WHERE id = ?",
+         SET slug = $1, title = $2, description = $3, track_order = COALESCE($4, track_order), updated_at = CURRENT_TIMESTAMP
+         WHERE id = $5",
     )
     .bind(payload.slug)
     .bind(payload.title)
@@ -1522,7 +1488,7 @@ async fn update_track(
         return Err(AppError::new(StatusCode::NOT_FOUND, "Track not found"));
     }
     let row: CurriculumTrackPublic = sqlx::query_as(
-        "SELECT id, slug, title, description, track_order, is_published FROM curriculum_tracks WHERE id = ?",
+        "SELECT id, slug, title, description, track_order, is_published FROM curriculum_tracks WHERE id = $1",
     )
     .bind(track_id)
     .fetch_one(&state.pool)
@@ -1536,7 +1502,7 @@ async fn delete_track(
     Path(track_id): Path<i64>,
 ) -> AppResult<StatusCode> {
     let _ = cms_user(&headers, &state).await?;
-    let changed = sqlx::query("DELETE FROM curriculum_tracks WHERE id = ?")
+    let changed = sqlx::query("DELETE FROM curriculum_tracks WHERE id = $1")
         .bind(track_id)
         .execute(&state.pool)
         .await?;
@@ -1553,7 +1519,7 @@ async fn reorder_tracks(
 ) -> AppResult<StatusCode> {
     let _ = cms_user(&headers, &state).await?;
     for (index, id) in payload.ordered_ids.iter().enumerate() {
-        sqlx::query("UPDATE curriculum_tracks SET track_order = ?, updated_at = CURRENT_TIMESTAMP WHERE id = ?")
+        sqlx::query("UPDATE curriculum_tracks SET track_order = $1, updated_at = CURRENT_TIMESTAMP WHERE id = $2")
             .bind((index as i64) + 1)
             .bind(id)
             .execute(&state.pool)
@@ -1570,7 +1536,7 @@ async fn list_units(
     let _ = cms_user(&headers, &state).await?;
     let rows = if let Some(track_id) = query.track_id {
         sqlx::query_as::<_, CurriculumUnitPublic>(
-            "SELECT id, track_id, slug, title, description, unit_order, is_published FROM curriculum_units WHERE track_id = ? ORDER BY unit_order",
+            "SELECT id, track_id, slug, title, description, unit_order, is_published FROM curriculum_units WHERE track_id = $1 ORDER BY unit_order",
         )
         .bind(track_id)
         .fetch_all(&state.pool)
@@ -1592,7 +1558,7 @@ async fn create_unit(
 ) -> AppResult<Json<CurriculumUnitPublic>> {
     let _ = cms_user(&headers, &state).await?;
     let track_exists: Option<(i64,)> =
-        sqlx::query_as("SELECT id FROM curriculum_tracks WHERE id = ?")
+        sqlx::query_as("SELECT id FROM curriculum_tracks WHERE id = $1")
             .bind(payload.track_id)
             .fetch_optional(&state.pool)
             .await?;
@@ -1604,7 +1570,7 @@ async fn create_unit(
     }
     let row = sqlx::query_as::<_, CurriculumUnitPublic>(
         "INSERT INTO curriculum_units(track_id, slug, title, description, unit_order, is_published)
-         VALUES(?, ?, ?, ?, ?, 0)
+         VALUES($1, $2, $3, $4, $5, 0)
          RETURNING id, track_id, slug, title, description, unit_order, is_published",
     )
     .bind(payload.track_id)
@@ -1627,8 +1593,8 @@ async fn update_unit(
     let _ = cms_user(&headers, &state).await?;
     let changed = sqlx::query(
         "UPDATE curriculum_units
-         SET track_id = ?, slug = ?, title = ?, description = ?, unit_order = COALESCE(?, unit_order), updated_at = CURRENT_TIMESTAMP
-         WHERE id = ?",
+         SET track_id = $1, slug = $2, title = $3, description = $4, unit_order = COALESCE($5, unit_order), updated_at = CURRENT_TIMESTAMP
+         WHERE id = $6",
     )
     .bind(payload.track_id)
     .bind(payload.slug)
@@ -1642,7 +1608,7 @@ async fn update_unit(
         return Err(AppError::new(StatusCode::NOT_FOUND, "Unit not found"));
     }
     let row: CurriculumUnitPublic = sqlx::query_as(
-        "SELECT id, track_id, slug, title, description, unit_order, is_published FROM curriculum_units WHERE id = ?",
+        "SELECT id, track_id, slug, title, description, unit_order, is_published FROM curriculum_units WHERE id = $1",
     )
     .bind(unit_id)
     .fetch_one(&state.pool)
@@ -1656,7 +1622,7 @@ async fn delete_unit(
     Path(unit_id): Path<i64>,
 ) -> AppResult<StatusCode> {
     let _ = cms_user(&headers, &state).await?;
-    let changed = sqlx::query("DELETE FROM curriculum_units WHERE id = ?")
+    let changed = sqlx::query("DELETE FROM curriculum_units WHERE id = $1")
         .bind(unit_id)
         .execute(&state.pool)
         .await?;
@@ -1673,7 +1639,7 @@ async fn reorder_units(
 ) -> AppResult<StatusCode> {
     let _ = cms_user(&headers, &state).await?;
     for (index, id) in payload.ordered_ids.iter().enumerate() {
-        sqlx::query("UPDATE curriculum_units SET unit_order = ?, updated_at = CURRENT_TIMESTAMP WHERE id = ?")
+        sqlx::query("UPDATE curriculum_units SET unit_order = $1, updated_at = CURRENT_TIMESTAMP WHERE id = $2")
             .bind((index as i64) + 1)
             .bind(id)
             .execute(&state.pool)
@@ -1691,7 +1657,7 @@ async fn list_lessons(
     let rows = if let Some(unit_id) = query.unit_id {
         sqlx::query_as::<_, CurriculumLessonPublic>(
             "SELECT id, unit_id, slug, title, lesson_order, status, latest_revision_id, published_revision_id
-             FROM curriculum_lessons WHERE unit_id = ? ORDER BY lesson_order",
+             FROM curriculum_lessons WHERE unit_id = $1 ORDER BY lesson_order",
         )
         .bind(unit_id)
         .fetch_all(&state.pool)
@@ -1714,7 +1680,7 @@ async fn create_lesson(
 ) -> AppResult<Json<CurriculumLessonPublic>> {
     let _ = cms_user(&headers, &state).await?;
     let unit_exists: Option<(i64,)> =
-        sqlx::query_as("SELECT id FROM curriculum_units WHERE id = ?")
+        sqlx::query_as("SELECT id FROM curriculum_units WHERE id = $1")
             .bind(payload.unit_id)
             .fetch_optional(&state.pool)
             .await?;
@@ -1726,7 +1692,7 @@ async fn create_lesson(
     }
     let row = sqlx::query_as::<_, CurriculumLessonPublic>(
         "INSERT INTO curriculum_lessons(unit_id, slug, title, lesson_order, status)
-         VALUES(?, ?, ?, ?, 'draft')
+         VALUES($1, $2, $3, $4, 'draft')
          RETURNING id, unit_id, slug, title, lesson_order, status, latest_revision_id, published_revision_id",
     )
     .bind(payload.unit_id)
@@ -1748,8 +1714,8 @@ async fn update_lesson(
     let _ = cms_user(&headers, &state).await?;
     let changed = sqlx::query(
         "UPDATE curriculum_lessons
-         SET unit_id = ?, slug = ?, title = ?, lesson_order = COALESCE(?, lesson_order), updated_at = CURRENT_TIMESTAMP
-         WHERE id = ?",
+         SET unit_id = $1, slug = $2, title = $3, lesson_order = COALESCE($4, lesson_order), updated_at = CURRENT_TIMESTAMP
+         WHERE id = $5",
     )
     .bind(payload.unit_id)
     .bind(payload.slug)
@@ -1763,7 +1729,7 @@ async fn update_lesson(
     }
     let row: CurriculumLessonPublic = sqlx::query_as(
         "SELECT id, unit_id, slug, title, lesson_order, status, latest_revision_id, published_revision_id
-         FROM curriculum_lessons WHERE id = ?",
+         FROM curriculum_lessons WHERE id = $1",
     )
     .bind(lesson_id)
     .fetch_one(&state.pool)
@@ -1777,7 +1743,7 @@ async fn delete_lesson(
     Path(lesson_id): Path<i64>,
 ) -> AppResult<StatusCode> {
     let _ = cms_user(&headers, &state).await?;
-    let changed = sqlx::query("DELETE FROM curriculum_lessons WHERE id = ?")
+    let changed = sqlx::query("DELETE FROM curriculum_lessons WHERE id = $1")
         .bind(lesson_id)
         .execute(&state.pool)
         .await?;
@@ -1794,7 +1760,7 @@ async fn reorder_lessons(
 ) -> AppResult<StatusCode> {
     let _ = cms_user(&headers, &state).await?;
     for (index, id) in payload.ordered_ids.iter().enumerate() {
-        sqlx::query("UPDATE curriculum_lessons SET lesson_order = ?, updated_at = CURRENT_TIMESTAMP WHERE id = ?")
+        sqlx::query("UPDATE curriculum_lessons SET lesson_order = $1, updated_at = CURRENT_TIMESTAMP WHERE id = $2")
             .bind((index as i64) + 1)
             .bind(id)
             .execute(&state.pool)
@@ -1812,7 +1778,7 @@ async fn list_modules(
     let rows = if let Some(lesson_id) = query.lesson_id {
         sqlx::query_as::<_, CurriculumModulePublic>(
             "SELECT id, lesson_id, slug, title, module_type, module_order, archived
-             FROM curriculum_modules WHERE lesson_id = ? ORDER BY module_order",
+             FROM curriculum_modules WHERE lesson_id = $1 ORDER BY module_order",
         )
         .bind(lesson_id)
         .fetch_all(&state.pool)
@@ -1836,7 +1802,7 @@ async fn create_module(
     let _ = cms_user(&headers, &state).await?;
     let row = sqlx::query_as::<_, CurriculumModulePublic>(
         "INSERT INTO curriculum_modules(lesson_id, slug, title, module_type, module_order, archived)
-         VALUES(?, ?, ?, ?, ?, 0)
+         VALUES($1, $2, $3, $4, $5, 0)
          RETURNING id, lesson_id, slug, title, module_type, module_order, archived",
     )
     .bind(payload.lesson_id)
@@ -1857,7 +1823,7 @@ async fn update_module(
 ) -> AppResult<Json<CurriculumModulePublic>> {
     let _ = cms_user(&headers, &state).await?;
     let existing: CurriculumModulePublic = sqlx::query_as(
-        "SELECT id, lesson_id, slug, title, module_type, module_order, archived FROM curriculum_modules WHERE id = ?",
+        "SELECT id, lesson_id, slug, title, module_type, module_order, archived FROM curriculum_modules WHERE id = $1",
     )
     .bind(module_id)
     .fetch_optional(&state.pool)
@@ -1865,8 +1831,8 @@ async fn update_module(
     .ok_or_else(|| AppError::new(StatusCode::NOT_FOUND, "Module not found"))?;
     sqlx::query(
         "UPDATE curriculum_modules
-         SET slug = ?, title = ?, module_type = ?, module_order = ?, archived = ?, updated_at = CURRENT_TIMESTAMP
-         WHERE id = ?",
+         SET slug = $1, title = $2, module_type = $3, module_order = $4, archived = $5, updated_at = CURRENT_TIMESTAMP
+         WHERE id = $6",
     )
     .bind(payload.slug.unwrap_or(existing.slug))
     .bind(payload.title.unwrap_or(existing.title))
@@ -1877,7 +1843,7 @@ async fn update_module(
     .execute(&state.pool)
     .await?;
     let row: CurriculumModulePublic = sqlx::query_as(
-        "SELECT id, lesson_id, slug, title, module_type, module_order, archived FROM curriculum_modules WHERE id = ?",
+        "SELECT id, lesson_id, slug, title, module_type, module_order, archived FROM curriculum_modules WHERE id = $1",
     )
     .bind(module_id)
     .fetch_one(&state.pool)
@@ -1891,7 +1857,7 @@ async fn delete_module(
     Path(module_id): Path<i64>,
 ) -> AppResult<StatusCode> {
     let _ = cms_user(&headers, &state).await?;
-    let changed = sqlx::query("DELETE FROM curriculum_modules WHERE id = ?")
+    let changed = sqlx::query("DELETE FROM curriculum_modules WHERE id = $1")
         .bind(module_id)
         .execute(&state.pool)
         .await?;
@@ -1908,7 +1874,7 @@ async fn reorder_modules(
 ) -> AppResult<StatusCode> {
     let _ = cms_user(&headers, &state).await?;
     for (index, id) in payload.ordered_ids.iter().enumerate() {
-        sqlx::query("UPDATE curriculum_modules SET module_order = ?, updated_at = CURRENT_TIMESTAMP WHERE id = ?")
+        sqlx::query("UPDATE curriculum_modules SET module_order = $1, updated_at = CURRENT_TIMESTAMP WHERE id = $2")
             .bind((index as i64) + 1)
             .bind(id)
             .execute(&state.pool)
@@ -1926,7 +1892,7 @@ async fn list_steps(
     let rows = if let Some(module_id) = query.module_id {
         sqlx::query_as::<_, CurriculumStepPublic>(
             "SELECT id, module_id, slug, title, step_type, step_order, content_json, archived
-             FROM curriculum_steps WHERE module_id = ? ORDER BY step_order",
+             FROM curriculum_steps WHERE module_id = $1 ORDER BY step_order",
         )
         .bind(module_id)
         .fetch_all(&state.pool)
@@ -1958,7 +1924,7 @@ async fn create_step(
     }
     let row = sqlx::query_as::<_, CurriculumStepPublic>(
         "INSERT INTO curriculum_steps(module_id, slug, title, step_type, step_order, content_json, archived)
-         VALUES(?, ?, ?, ?, ?, ?, 0)
+         VALUES($1, $2, $3, $4, $5, $6, 0)
          RETURNING id, module_id, slug, title, step_type, step_order, content_json, archived",
     )
     .bind(payload.module_id)
@@ -1981,7 +1947,7 @@ async fn update_step(
     let _ = cms_user(&headers, &state).await?;
     let existing: CurriculumStepPublic = sqlx::query_as(
         "SELECT id, module_id, slug, title, step_type, step_order, content_json, archived
-         FROM curriculum_steps WHERE id = ?",
+         FROM curriculum_steps WHERE id = $1",
     )
     .bind(step_id)
     .fetch_optional(&state.pool)
@@ -1997,8 +1963,8 @@ async fn update_step(
     }
     sqlx::query(
         "UPDATE curriculum_steps
-         SET slug = ?, title = ?, step_type = ?, step_order = ?, content_json = ?, archived = ?, updated_at = CURRENT_TIMESTAMP
-         WHERE id = ?",
+         SET slug = $1, title = $2, step_type = $3, step_order = $4, content_json = $5, archived = $6, updated_at = CURRENT_TIMESTAMP
+         WHERE id = $7",
     )
     .bind(payload.slug.unwrap_or(existing.slug))
     .bind(payload.title.unwrap_or(existing.title))
@@ -2011,7 +1977,7 @@ async fn update_step(
     .await?;
     let row: CurriculumStepPublic = sqlx::query_as(
         "SELECT id, module_id, slug, title, step_type, step_order, content_json, archived
-         FROM curriculum_steps WHERE id = ?",
+         FROM curriculum_steps WHERE id = $1",
     )
     .bind(step_id)
     .fetch_one(&state.pool)
@@ -2025,7 +1991,7 @@ async fn delete_step(
     Path(step_id): Path<i64>,
 ) -> AppResult<StatusCode> {
     let _ = cms_user(&headers, &state).await?;
-    let changed = sqlx::query("DELETE FROM curriculum_steps WHERE id = ?")
+    let changed = sqlx::query("DELETE FROM curriculum_steps WHERE id = $1")
         .bind(step_id)
         .execute(&state.pool)
         .await?;
@@ -2042,7 +2008,7 @@ async fn reorder_steps(
 ) -> AppResult<StatusCode> {
     let _ = cms_user(&headers, &state).await?;
     for (index, id) in payload.ordered_ids.iter().enumerate() {
-        sqlx::query("UPDATE curriculum_steps SET step_order = ?, updated_at = CURRENT_TIMESTAMP WHERE id = ?")
+        sqlx::query("UPDATE curriculum_steps SET step_order = $1, updated_at = CURRENT_TIMESTAMP WHERE id = $2")
             .bind((index as i64) + 1)
             .bind(id)
             .execute(&state.pool)
@@ -2059,7 +2025,7 @@ async fn list_revisions(
     let _ = cms_user(&headers, &state).await?;
     let rows: Vec<LessonRevisionPublic> = sqlx::query_as(
         "SELECT id, lesson_id, revision_number, payload_json, status, created_at
-         FROM lesson_revisions WHERE lesson_id = ? ORDER BY revision_number DESC",
+         FROM lesson_revisions WHERE lesson_id = $1 ORDER BY revision_number DESC",
     )
     .bind(lesson_id)
     .fetch_all(&state.pool)
@@ -2082,14 +2048,14 @@ async fn create_revision(
     })?;
     validate_canonical_lesson_payload(&parsed_payload)?;
     let next_num: (i64,) = sqlx::query_as(
-        "SELECT COALESCE(MAX(revision_number), 0) + 1 FROM lesson_revisions WHERE lesson_id = ?",
+        "SELECT COALESCE(MAX(revision_number), 0) + 1 FROM lesson_revisions WHERE lesson_id = $1",
     )
     .bind(lesson_id)
     .fetch_one(&state.pool)
     .await?;
     let row = sqlx::query_as::<_, LessonRevisionPublic>(
         "INSERT INTO lesson_revisions(lesson_id, revision_number, payload_json, status)
-         VALUES(?, ?, ?, 'draft')
+         VALUES($1, $2, $3, 'draft')
          RETURNING id, lesson_id, revision_number, payload_json, status, created_at",
     )
     .bind(lesson_id)
@@ -2097,7 +2063,7 @@ async fn create_revision(
     .bind(payload.payload_json)
     .fetch_one(&state.pool)
     .await?;
-    sqlx::query("UPDATE curriculum_lessons SET latest_revision_id = ?, status = 'draft', updated_at = CURRENT_TIMESTAMP WHERE id = ?")
+    sqlx::query("UPDATE curriculum_lessons SET latest_revision_id = $1, status = 'draft', updated_at = CURRENT_TIMESTAMP WHERE id = $2")
         .bind(row.id)
         .bind(lesson_id)
         .execute(&state.pool)
@@ -2112,7 +2078,7 @@ async fn publish_lesson(
 ) -> AppResult<Json<CurriculumLessonPublic>> {
     let _ = cms_user(&headers, &state).await?;
     let latest: Option<(Option<i64>,)> =
-        sqlx::query_as("SELECT latest_revision_id FROM curriculum_lessons WHERE id = ?")
+        sqlx::query_as("SELECT latest_revision_id FROM curriculum_lessons WHERE id = $1")
             .bind(lesson_id)
             .fetch_optional(&state.pool)
             .await?;
@@ -2121,7 +2087,7 @@ async fn publish_lesson(
         .0
         .ok_or_else(|| AppError::new(StatusCode::BAD_REQUEST, "No revision to publish"))?;
     let latest_payload: (String,) =
-        sqlx::query_as("SELECT payload_json FROM lesson_revisions WHERE id = ?")
+        sqlx::query_as("SELECT payload_json FROM lesson_revisions WHERE id = $1")
             .bind(latest_id)
             .fetch_one(&state.pool)
             .await?;
@@ -2142,7 +2108,7 @@ async fn publish_lesson(
         ));
     }
     sqlx::query(
-        "UPDATE curriculum_lessons SET published_revision_id = ?, status = 'published', updated_at = CURRENT_TIMESTAMP WHERE id = ?",
+        "UPDATE curriculum_lessons SET published_revision_id = $1, status = 'published', updated_at = CURRENT_TIMESTAMP WHERE id = $2",
     )
     .bind(latest_id)
     .bind(lesson_id)
@@ -2150,7 +2116,7 @@ async fn publish_lesson(
     .await?;
     let row: CurriculumLessonPublic = sqlx::query_as(
         "SELECT id, unit_id, slug, title, lesson_order, status, latest_revision_id, published_revision_id
-         FROM curriculum_lessons WHERE id = ?",
+         FROM curriculum_lessons WHERE id = $1",
     )
     .bind(lesson_id)
     .fetch_one(&state.pool)
@@ -2165,7 +2131,7 @@ async fn rollback_lesson(
 ) -> AppResult<Json<CurriculumLessonPublic>> {
     let _ = cms_user(&headers, &state).await?;
     let published: Option<(Option<i64>,)> =
-        sqlx::query_as("SELECT published_revision_id FROM curriculum_lessons WHERE id = ?")
+        sqlx::query_as("SELECT published_revision_id FROM curriculum_lessons WHERE id = $1")
             .bind(lesson_id)
             .fetch_optional(&state.pool)
             .await?;
@@ -2179,7 +2145,7 @@ async fn rollback_lesson(
             )
         })?;
     let prev: Option<(i64,)> = sqlx::query_as(
-        "SELECT id FROM lesson_revisions WHERE lesson_id = ? AND id < ? ORDER BY id DESC LIMIT 1",
+        "SELECT id FROM lesson_revisions WHERE lesson_id = $1 AND id < $2 ORDER BY id DESC LIMIT 1",
     )
     .bind(lesson_id)
     .bind(current_published)
@@ -2193,7 +2159,7 @@ async fn rollback_lesson(
             )
         })?
         .0;
-    sqlx::query("UPDATE curriculum_lessons SET published_revision_id = ?, latest_revision_id = ?, status = 'published', updated_at = CURRENT_TIMESTAMP WHERE id = ?")
+    sqlx::query("UPDATE curriculum_lessons SET published_revision_id = $1, latest_revision_id = $2, status = 'published', updated_at = CURRENT_TIMESTAMP WHERE id = $3")
         .bind(prev_id)
         .bind(prev_id)
         .bind(lesson_id)
@@ -2201,7 +2167,7 @@ async fn rollback_lesson(
         .await?;
     let row: CurriculumLessonPublic = sqlx::query_as(
         "SELECT id, unit_id, slug, title, lesson_order, status, latest_revision_id, published_revision_id
-         FROM curriculum_lessons WHERE id = ?",
+         FROM curriculum_lessons WHERE id = $1",
     )
     .bind(lesson_id)
     .fetch_one(&state.pool)
@@ -2223,7 +2189,7 @@ async fn lesson_completeness(
 ) -> AppResult<Json<CompletenessResult>> {
     let _ = cms_user(&headers, &state).await?;
     let latest: Option<(Option<i64>,)> =
-        sqlx::query_as("SELECT latest_revision_id FROM curriculum_lessons WHERE id = ?")
+        sqlx::query_as("SELECT latest_revision_id FROM curriculum_lessons WHERE id = $1")
             .bind(lesson_id)
             .fetch_optional(&state.pool)
             .await?;
@@ -2232,7 +2198,7 @@ async fn lesson_completeness(
         .0
         .ok_or_else(|| AppError::new(StatusCode::BAD_REQUEST, "No latest revision"))?;
     let payload: (String,) =
-        sqlx::query_as("SELECT payload_json FROM lesson_revisions WHERE id = ?")
+        sqlx::query_as("SELECT payload_json FROM lesson_revisions WHERE id = $1")
             .bind(latest_id)
             .fetch_one(&state.pool)
             .await?;
@@ -2265,7 +2231,7 @@ async fn lesson_diff(
 ) -> AppResult<Json<DiffResult>> {
     let _ = cms_user(&headers, &state).await?;
     let ids: Option<(Option<i64>, Option<i64>)> = sqlx::query_as(
-        "SELECT latest_revision_id, published_revision_id FROM curriculum_lessons WHERE id = ?",
+        "SELECT latest_revision_id, published_revision_id FROM curriculum_lessons WHERE id = $1",
     )
     .bind(lesson_id)
     .fetch_optional(&state.pool)
@@ -2288,7 +2254,7 @@ async fn lesson_diff(
     }
     if let Some(lat) = latest_id {
         let latest_status: Option<(String,)> =
-            sqlx::query_as("SELECT status FROM lesson_revisions WHERE id = ?")
+            sqlx::query_as("SELECT status FROM lesson_revisions WHERE id = $1")
                 .bind(lat)
                 .fetch_optional(&state.pool)
                 .await?;
@@ -2312,7 +2278,7 @@ async fn create_review_note(
     let user = cms_user(&headers, &state).await?;
     let row = sqlx::query_as::<_, ReviewNotePublic>(
         "INSERT INTO review_notes(lesson_id, author_user_id, severity, category, note_text, status)
-         VALUES(?, ?, ?, ?, ?, ?)
+         VALUES($1, $2, $3, $4, $5, $6)
          RETURNING id, lesson_id, author_user_id, severity, category, note_text, status, created_at",
     )
     .bind(lesson_id)
@@ -2334,7 +2300,7 @@ async fn list_review_notes(
     let _ = cms_user(&headers, &state).await?;
     let rows: Vec<ReviewNotePublic> = sqlx::query_as(
         "SELECT id, lesson_id, author_user_id, severity, category, note_text, status, created_at
-         FROM review_notes WHERE lesson_id = ? ORDER BY created_at DESC",
+         FROM review_notes WHERE lesson_id = $1 ORDER BY created_at DESC",
     )
     .bind(lesson_id)
     .fetch_all(&state.pool)
@@ -2351,7 +2317,7 @@ async fn create_review_decision(
     let user = cms_user(&headers, &state).await?;
     let row = sqlx::query_as::<_, ReviewDecisionPublic>(
         "INSERT INTO review_decisions(lesson_id, reviewer_user_id, decision, notes)
-         VALUES(?, ?, ?, ?)
+         VALUES($1, $2, $3, $4)
          RETURNING id, lesson_id, reviewer_user_id, decision, notes, created_at",
     )
     .bind(lesson_id)
@@ -2371,7 +2337,7 @@ async fn list_review_decisions(
     let _ = cms_user(&headers, &state).await?;
     let rows: Vec<ReviewDecisionPublic> = sqlx::query_as(
         "SELECT id, lesson_id, reviewer_user_id, decision, notes, created_at
-         FROM review_decisions WHERE lesson_id = ? ORDER BY created_at DESC",
+         FROM review_decisions WHERE lesson_id = $1 ORDER BY created_at DESC",
     )
     .bind(lesson_id)
     .fetch_all(&state.pool)
@@ -2536,7 +2502,7 @@ fn canonical_seeded_lesson_payload(
 }
 
 async fn seed_initial_published_revision(
-    pool: &SqlitePool,
+    pool: &PgPool,
     lesson_id: i64,
     payload: &Value,
 ) -> AppResult<i64> {
@@ -2548,7 +2514,7 @@ async fn seed_initial_published_revision(
     })?;
     let revision_id: i64 = sqlx::query_scalar(
         "INSERT INTO lesson_revisions(lesson_id, revision_number, payload_json, status)
-         VALUES(?, 1, ?, 'published')
+         VALUES($1, 1, $2, 'published')
          RETURNING id",
     )
     .bind(lesson_id)
@@ -2557,8 +2523,8 @@ async fn seed_initial_published_revision(
     .await?;
     sqlx::query(
         "UPDATE curriculum_lessons
-         SET latest_revision_id = ?, published_revision_id = ?, status = 'published', updated_at = CURRENT_TIMESTAMP
-         WHERE id = ?",
+         SET latest_revision_id = $1, published_revision_id = $2, status = 'published', updated_at = CURRENT_TIMESTAMP
+         WHERE id = $3",
     )
     .bind(revision_id)
     .bind(revision_id)
@@ -2568,7 +2534,7 @@ async fn seed_initial_published_revision(
     Ok(revision_id)
 }
 
-async fn repair_seeded_lesson_revisions(pool: &SqlitePool) -> AppResult<()> {
+async fn repair_seeded_lesson_revisions(pool: &PgPool) -> AppResult<()> {
     let candidates = [
         PathBuf::from("app/data/curriculum_catalog.json"),
         PathBuf::from("../backend/app/data/curriculum_catalog.json"),
@@ -2601,7 +2567,7 @@ async fn repair_seeded_lesson_revisions(pool: &SqlitePool) -> AppResult<()> {
                      FROM curriculum_lessons l
                      JOIN curriculum_units u ON u.id = l.unit_id
                      JOIN curriculum_tracks t ON t.id = u.track_id
-                     WHERE t.slug = ? AND u.slug = ? AND l.slug = ?",
+                     WHERE t.slug = $1 AND u.slug = $2 AND l.slug = $3",
                 )
                 .bind(&track.slug)
                 .bind(&module.slug)
@@ -2616,7 +2582,7 @@ async fn repair_seeded_lesson_revisions(pool: &SqlitePool) -> AppResult<()> {
                 let revisions: Vec<(i64, i64, String)> = sqlx::query_as(
                     "SELECT id, revision_number, status
                      FROM lesson_revisions
-                     WHERE lesson_id = ?
+                     WHERE lesson_id = $1
                      ORDER BY revision_number DESC, id DESC",
                 )
                 .bind(lesson_id)
@@ -2657,14 +2623,14 @@ async fn repair_seeded_lesson_revisions(pool: &SqlitePool) -> AppResult<()> {
                     continue;
                 };
 
-                sqlx::query("UPDATE lesson_revisions SET status = 'published', updated_at = CURRENT_TIMESTAMP WHERE id = ?")
+                sqlx::query("UPDATE lesson_revisions SET status = 'published', updated_at = CURRENT_TIMESTAMP WHERE id = $1")
                     .bind(next_published_id)
                     .execute(pool)
                     .await?;
                 sqlx::query(
                     "UPDATE curriculum_lessons
-                     SET latest_revision_id = ?, published_revision_id = ?, status = 'published', updated_at = CURRENT_TIMESTAMP
-                     WHERE id = ?",
+                     SET latest_revision_id = $1, published_revision_id = $2, status = 'published', updated_at = CURRENT_TIMESTAMP
+                     WHERE id = $3",
                 )
                 .bind(next_latest_id)
                 .bind(next_published_id)
@@ -2678,7 +2644,7 @@ async fn repair_seeded_lesson_revisions(pool: &SqlitePool) -> AppResult<()> {
     Ok(())
 }
 
-async fn seed_curriculum(pool: &SqlitePool) -> AppResult<()> {
+async fn seed_curriculum(pool: &PgPool) -> AppResult<()> {
     let count: (i64,) = sqlx::query_as("SELECT COUNT(*) FROM courses")
         .fetch_one(pool)
         .await?;
@@ -2710,7 +2676,7 @@ async fn seed_curriculum(pool: &SqlitePool) -> AppResult<()> {
     })?;
     for (track_idx, track) in parsed.tracks.iter().enumerate() {
         let course_id: i64 = sqlx::query_scalar(
-            "INSERT INTO courses(slug, title, description, level, is_premium) VALUES(?, ?, ?, 'college', ?) RETURNING id",
+            "INSERT INTO courses(slug, title, description, level, is_premium) VALUES($1, $2, $3, 'college', $4) RETURNING id",
         )
         .bind(&track.slug)
         .bind(&track.title)
@@ -2719,7 +2685,7 @@ async fn seed_curriculum(pool: &SqlitePool) -> AppResult<()> {
         .fetch_one(pool)
         .await?;
         sqlx::query(
-            "INSERT INTO curriculum_tracks(slug, title, description, track_order, is_published) VALUES(?, ?, ?, ?, 1)",
+            "INSERT INTO curriculum_tracks(slug, title, description, track_order, is_published) VALUES($1, $2, $3, $4, 1)",
         )
         .bind(&track.slug)
         .bind(&track.title)
@@ -2728,7 +2694,7 @@ async fn seed_curriculum(pool: &SqlitePool) -> AppResult<()> {
         .execute(pool)
         .await?;
         let cms_track_id: i64 =
-            sqlx::query_scalar("SELECT id FROM curriculum_tracks WHERE slug = ?")
+            sqlx::query_scalar("SELECT id FROM curriculum_tracks WHERE slug = $1")
                 .bind(&track.slug)
                 .fetch_one(pool)
                 .await?;
@@ -2736,7 +2702,7 @@ async fn seed_curriculum(pool: &SqlitePool) -> AppResult<()> {
         for (mod_idx, module) in track.modules.iter().enumerate() {
             let module_id: i64 = sqlx::query_scalar(
                 "INSERT INTO modules(course_id, slug, title, description, module_order, estimated_minutes)
-                 VALUES(?, ?, ?, ?, ?, ?) RETURNING id",
+                 VALUES($1, $2, $3, $4, $5, $6) RETURNING id",
             )
             .bind(course_id)
             .bind(&module.slug)
@@ -2748,7 +2714,7 @@ async fn seed_curriculum(pool: &SqlitePool) -> AppResult<()> {
             .await?;
             sqlx::query(
                 "INSERT INTO curriculum_units(track_id, slug, title, description, unit_order, is_published)
-                 VALUES(?, ?, ?, ?, ?, 1)",
+                 VALUES($1, $2, $3, $4, $5, 1)",
             )
             .bind(cms_track_id)
             .bind(&module.slug)
@@ -2758,7 +2724,7 @@ async fn seed_curriculum(pool: &SqlitePool) -> AppResult<()> {
             .execute(pool)
             .await?;
             let cms_unit_id: i64 = sqlx::query_scalar(
-                "SELECT id FROM curriculum_units WHERE track_id = ? AND slug = ?",
+                "SELECT id FROM curriculum_units WHERE track_id = $1 AND slug = $2",
             )
             .bind(cms_track_id)
             .bind(&module.slug)
@@ -2768,7 +2734,7 @@ async fn seed_curriculum(pool: &SqlitePool) -> AppResult<()> {
             for lesson in &module.lessons {
                 sqlx::query(
                     "INSERT INTO lessons(module_id, slug, title, summary, lesson_order, estimated_minutes, track, route_path)
-                     VALUES(?, ?, ?, ?, ?, ?, ?, ?)",
+                     VALUES($1, $2, $3, $4, $5, $6, $7, $8)",
                 )
                 .bind(module_id)
                 .bind(&lesson.slug)
@@ -2782,7 +2748,7 @@ async fn seed_curriculum(pool: &SqlitePool) -> AppResult<()> {
                 .await?;
                 let cms_lesson_id: i64 = sqlx::query_scalar(
                     "INSERT INTO curriculum_lessons(unit_id, slug, title, lesson_order, status)
-                     VALUES(?, ?, ?, ?, 'published')
+                     VALUES($1, $2, $3, $4, 'published')
                      RETURNING id",
                 )
                 .bind(cms_unit_id)
@@ -2808,13 +2774,27 @@ mod tests {
     use serde_json::Value;
     use tower::util::ServiceExt;
 
+    use sqlx::postgres::PgPoolOptions;
+
     async fn setup_state() -> AppState {
-        let pool = SqlitePoolOptions::new()
-            .max_connections(1)
-            .connect("sqlite::memory:")
+        let url = std::env::var("TEST_DATABASE_URL").unwrap_or_else(|_| {
+            "postgres://postgres:postgres@127.0.0.1:5432/academy_test".to_string()
+        });
+        let pool = PgPoolOptions::new()
+            .max_connections(2)
+            .connect(&url)
             .await
-            .unwrap();
+            .expect("Postgres required for tests (set TEST_DATABASE_URL or start Postgres; see backend/RUNBOOK.md)");
         sqlx::migrate!("./migrations").run(&pool).await.unwrap();
+        sqlx::query(
+            r#"TRUNCATE curriculum_steps, curriculum_modules, review_decisions, review_notes,
+               lesson_revisions, curriculum_lessons, curriculum_units, curriculum_tracks,
+               progress_events, assessment_attempts, badge_awards, lessons, modules, courses, users
+               RESTART IDENTITY CASCADE"#,
+        )
+        .execute(&pool)
+        .await
+        .unwrap();
         let cfg = AppConfig {
             jwt_secret_key: "test-secret".to_string(),
             access_token_expire_minutes: 120,
@@ -2965,12 +2945,12 @@ mod tests {
                 .fetch_one(&state.pool)
                 .await
                 .unwrap();
-        sqlx::query("DELETE FROM lesson_revisions WHERE lesson_id = ?")
+        sqlx::query("DELETE FROM lesson_revisions WHERE lesson_id = $1")
             .bind(lesson_id)
             .execute(&state.pool)
             .await
             .unwrap();
-        sqlx::query("UPDATE curriculum_lessons SET latest_revision_id = NULL, published_revision_id = NULL WHERE id = ?")
+        sqlx::query("UPDATE curriculum_lessons SET latest_revision_id = NULL, published_revision_id = NULL WHERE id = $1")
             .bind(lesson_id)
             .execute(&state.pool)
             .await
@@ -2979,7 +2959,7 @@ mod tests {
         repair_seeded_lesson_revisions(&state.pool).await.unwrap();
 
         let repaired: (Option<i64>, Option<i64>) = sqlx::query_as(
-            "SELECT latest_revision_id, published_revision_id FROM curriculum_lessons WHERE id = ?",
+            "SELECT latest_revision_id, published_revision_id FROM curriculum_lessons WHERE id = $1",
         )
         .bind(lesson_id)
         .fetch_one(&state.pool)
@@ -2988,7 +2968,7 @@ mod tests {
         assert!(repaired.0.is_some());
         assert!(repaired.1.is_some());
         let revision_count: (i64,) =
-            sqlx::query_as("SELECT COUNT(*) FROM lesson_revisions WHERE lesson_id = ?")
+            sqlx::query_as("SELECT COUNT(*) FROM lesson_revisions WHERE lesson_id = $1")
                 .bind(lesson_id)
                 .fetch_one(&state.pool)
                 .await
@@ -3061,7 +3041,7 @@ mod tests {
         let latest_payload: (String,) = sqlx::query_as(
             "SELECT payload_json
              FROM lesson_revisions
-             WHERE lesson_id = ?
+             WHERE lesson_id = $1
              ORDER BY revision_number DESC, id DESC
              LIMIT 1",
         )
@@ -3073,7 +3053,7 @@ mod tests {
         parsed["lessonOpener"] = Value::String("   ".to_string());
         let broken_json = serde_json::to_string(&parsed).unwrap();
         let next_revision_number: i64 = sqlx::query_scalar(
-            "SELECT COALESCE(MAX(revision_number), 0) + 1 FROM lesson_revisions WHERE lesson_id = ?",
+            "SELECT COALESCE(MAX(revision_number), 0) + 1 FROM lesson_revisions WHERE lesson_id = $1",
         )
         .bind(lesson_id)
         .fetch_one(&state.pool)
@@ -3081,7 +3061,7 @@ mod tests {
         .unwrap();
         let broken_revision_id: i64 = sqlx::query_scalar(
             "INSERT INTO lesson_revisions(lesson_id, revision_number, payload_json, status)
-             VALUES(?, ?, ?, 'draft')
+             VALUES($1, $2, $3, 'draft')
              RETURNING id",
         )
         .bind(lesson_id)
@@ -3091,7 +3071,7 @@ mod tests {
         .await
         .unwrap();
         sqlx::query(
-            "UPDATE curriculum_lessons SET latest_revision_id = ?, status = 'draft' WHERE id = ?",
+            "UPDATE curriculum_lessons SET latest_revision_id = $1, status = 'draft' WHERE id = $2",
         )
         .bind(broken_revision_id)
         .bind(lesson_id)
@@ -3126,7 +3106,7 @@ mod tests {
         let latest_payload: (String,) = sqlx::query_as(
             "SELECT payload_json
              FROM lesson_revisions
-             WHERE lesson_id = ?
+             WHERE lesson_id = $1
              ORDER BY revision_number DESC, id DESC
              LIMIT 1",
         )
@@ -3140,7 +3120,7 @@ mod tests {
         }
         let payload_json = serde_json::to_string(&parsed).unwrap();
         let next_revision_number: i64 = sqlx::query_scalar(
-            "SELECT COALESCE(MAX(revision_number), 0) + 1 FROM lesson_revisions WHERE lesson_id = ?",
+            "SELECT COALESCE(MAX(revision_number), 0) + 1 FROM lesson_revisions WHERE lesson_id = $1",
         )
         .bind(lesson_id)
         .fetch_one(&state.pool)
@@ -3148,7 +3128,7 @@ mod tests {
         .unwrap();
         let revision_id: i64 = sqlx::query_scalar(
             "INSERT INTO lesson_revisions(lesson_id, revision_number, payload_json, status)
-             VALUES(?, ?, ?, 'draft')
+             VALUES($1, $2, $3, 'draft')
              RETURNING id",
         )
         .bind(lesson_id)
@@ -3158,7 +3138,7 @@ mod tests {
         .await
         .unwrap();
         sqlx::query(
-            "UPDATE curriculum_lessons SET latest_revision_id = ?, status = 'draft' WHERE id = ?",
+            "UPDATE curriculum_lessons SET latest_revision_id = $1, status = 'draft' WHERE id = $2",
         )
         .bind(revision_id)
         .bind(lesson_id)
@@ -3196,7 +3176,7 @@ mod tests {
         let payload_json = payload.to_string();
         let revision_id: i64 = sqlx::query_scalar(
             "INSERT INTO lesson_revisions(lesson_id, revision_number, payload_json, status)
-             VALUES(?, 99, ?, 'draft')
+             VALUES($1, 99, $2, 'draft')
              RETURNING id",
         )
         .bind(lesson_id)
@@ -3207,7 +3187,7 @@ mod tests {
         assert!(revision_id > 0);
         sqlx::query(
             "INSERT INTO lesson_revisions(lesson_id, revision_number, payload_json, status)
-             VALUES(?, 100, 'not-json', 'draft')",
+             VALUES($1, 100, 'not-json', 'draft')",
         )
         .bind(lesson_id)
         .execute(&state.pool)
@@ -3220,7 +3200,7 @@ mod tests {
         assert!(first.inserted >= 1);
         assert!(!first.unmapped.is_empty());
         let note_count_after_first: (i64,) = sqlx::query_as(
-            "SELECT COUNT(*) FROM review_notes WHERE lesson_id = ? AND category = 'review_notes' AND note_text = 'Migrated notes payload'",
+            "SELECT COUNT(*) FROM review_notes WHERE lesson_id = $1 AND category = 'review_notes' AND note_text = 'Migrated notes payload'",
         )
         .bind(lesson_id)
         .fetch_one(&state.pool)

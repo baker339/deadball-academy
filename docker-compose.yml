@@ -1,4 +1,15 @@
 services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: academy_rust
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
   backend:
     build:
       context: ./backend
@@ -7,13 +18,13 @@ services:
       - "8000:8000"
     environment:
       ACADEMY_RUST_ADDR: "0.0.0.0:8000"
-      ACADEMY_RUST_DATABASE_URL: "sqlite://academy_rust.db"
+      ACADEMY_RUST_DATABASE_URL: "postgres://postgres:postgres@postgres:5432/academy_rust"
       JWT_SECRET_KEY: "${JWT_SECRET_KEY:-change-me-in-production}"
       FIRST_ADMIN_EMAIL: "${FIRST_ADMIN_EMAIL:-}"
       CMS_ENABLED: "${CMS_ENABLED:-true}"
       CORS_ALLOW_ORIGINS: "${CORS_ALLOW_ORIGINS:-http://localhost:3000,http://127.0.0.1:3000}"
-    volumes:
-      - ./backend/academy_rust.db:/app/academy_rust.db
+    depends_on:
+      - postgres
 
   frontend:
     build:
@@ -25,3 +36,6 @@ services:
       NEXT_PUBLIC_API_BASE_URL: "http://backend:8000"
     depends_on:
       - backend
+
+volumes:
+  pgdata:
