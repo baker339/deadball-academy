@@ -85,7 +85,7 @@ cargo test
 
 ## 9) Deployment (Render / etc.)
 
-- Use **Render Postgres** (or another managed Postgres). Set `ACADEMY_RUST_DATABASE_URL` to the **connection string** from the provider (often includes `sslmode=require`).
+- Use **Render Postgres** (or another managed Postgres). Set `ACADEMY_RUST_DATABASE_URL` to the **connection string** from the provider. Render often requires TLS; append **`?sslmode=require`** if connections fail without it.
 - Set `ACADEMY_RUST_ADDR=0.0.0.0:$PORT` when the host injects `PORT`.
 - No SQLite disk is required.
 
