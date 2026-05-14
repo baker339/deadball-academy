@@ -2,6 +2,7 @@
 name = "academy-backend-rust"
 version = "0.1.0"
 edition = "2024"
+default-run = "academy-backend-rust"
 
 [dependencies]
 anyhow = "1.0"

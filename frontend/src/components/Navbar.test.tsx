@@ -17,6 +17,7 @@ vi.mock("./AuthProvider", () => ({
     user: { id: 1, full_name: "Test User", role: "student" },
     logout: mockLogout,
     hasAnyRole: () => false,
+    loading: false,
   }),
 }));
 

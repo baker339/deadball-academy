@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, type ReactNode } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useAuth } from "./AuthProvider";
@@ -8,6 +8,7 @@ import {
   buildLibraryPath,
   getUnitLessonsOrdered,
 } from "../content/deepLessonLibrary";
+import { getUnitLessonsFromCatalog, learningCatalogFromBlueprint, loadLearningCatalog, type LearningCatalogCourse } from "../lib/learningCatalog";
 import { useLessonProgress } from "./LessonProgressContext";
 import { getActiveUnlockPolicy, getFirstBlockedLessonBeforeTarget, getNextEligibleLessonPath } from "../lib/progress";
 
@@ -22,25 +23,57 @@ export default function LessonOrderGate({ trackSlug, unitSlug, lessonSlug, child
   const router = useRouter();
   const { token, user, loading: authLoading, hasAnyRole } = useAuth();
   const { completedKeys, loading, error } = useLessonProgress();
+  const [catalog, setCatalog] = useState<LearningCatalogCourse[] | null>(null);
   const unlockPolicy = getActiveUnlockPolicy();
-  const blocker = getFirstBlockedLessonBeforeTarget(trackSlug, unitSlug, lessonSlug, completedKeys, unlockPolicy);
-  const redirectPath = getNextEligibleLessonPath(trackSlug, unitSlug, lessonSlug, completedKeys, unlockPolicy);
   const sequencingPending = authLoading && Boolean(token) && !user;
+
+  useEffect(() => {
+    let cancelled = false;
+    loadLearningCatalog()
+      .then((data) => {
+        if (!cancelled) setCatalog(data);
+      })
+      .catch(() => {
+        if (!cancelled) setCatalog(learningCatalogFromBlueprint());
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  const blocker =
+    catalog === null
+      ? null
+      : getFirstBlockedLessonBeforeTarget(catalog, trackSlug, unitSlug, lessonSlug, completedKeys, unlockPolicy);
+  const redirectPath =
+    catalog === null
+      ? null
+      : getNextEligibleLessonPath(catalog, trackSlug, unitSlug, lessonSlug, completedKeys, unlockPolicy);
 
   useEffect(() => {
     if (hasAnyRole("admin", "content_editor")) return;
     if (sequencingPending) return;
+    if (catalog === null) return;
     if (!loading && !error && redirectPath) {
       router.replace(redirectPath);
     }
-  }, [error, hasAnyRole, loading, redirectPath, router, sequencingPending]);
+  }, [error, hasAnyRole, loading, redirectPath, router, sequencingPending, catalog]);
 
   if (hasAnyRole("admin", "content_editor")) {
     return <>{children}</>;
   }
 
-  const lessons = getUnitLessonsOrdered(trackSlug, unitSlug);
+  const catalogLessons = catalog ? getUnitLessonsFromCatalog(catalog, trackSlug, unitSlug) : null;
+  const lessons = catalogLessons ?? getUnitLessonsOrdered(trackSlug, unitSlug);
   const lessonIndex = lessons ? lessons.findIndex((l) => l.slug === lessonSlug) : -1;
+
+  if (catalog === null && lessonIndex > 0 && !sequencingPending) {
+    return (
+      <div className="ui-container max-w-3xl py-16" role="status" aria-live="polite">
+        <p className="text-[color:var(--color-muted)]">Loading course catalog…</p>
+      </div>
+    );
+  }
 
   if (loading && lessonIndex > 0) {
     return (

@@ -26,14 +26,27 @@ shared/    # (optional) shared types, docs
 
 ## Setup Instructions
 
+### Database (Postgres)
+
+This app’s **data lives in PostgreSQL**, not in the repo files. For local development, the simplest path is Docker from the **repo root**:
+
+```bash
+docker compose up -d postgres
+```
+
+That starts Postgres with database **`academy_rust`** and publishes it on your machine at **`127.0.0.1:5433`** (port **5432** is left free for another Postgres, e.g. work). Copy `backend/.env.example` → `backend/.env` and keep the default URL unless you use a different host or port. Details: **`backend/RUNBOOK.md`**.
+
 ### Backend
+
 1. `cd backend`
-2. Set backend environment variables in `backend/.env` (at minimum: `JWT_SECRET_KEY`, `FIRST_ADMIN_EMAIL`).
+2. Set `JWT_SECRET_KEY`, `FIRST_ADMIN_EMAIL`, and `ACADEMY_RUST_DATABASE_URL` in `backend/.env` (start from `.env.example`).
 3. Run the Rust API:
 
 ```bash
 cargo run
 ```
+
+(`default-run` is set so this starts the API binary; migrations run on startup.)
 
 ### Frontend
 1. `cd frontend`

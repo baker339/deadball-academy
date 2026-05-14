@@ -1,6 +1,8 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import TrackLessonProgressPill from "../../../../components/TrackLessonProgressPill";
+import { siteBrand } from "../../../../config/siteBrand";
 import { deepCourseBlueprint } from "../../../../content/deepLessonLibrary";
 import { curriculumTracks } from "../../../../content/curriculum";
 
@@ -9,6 +11,75 @@ type PageProps = {
 };
 
 const breadcrumbLinkClass = "ui-link-muted";
+
+const siteOrigin = () => (process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000").replace(/\/$/, "");
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { trackSlug } = await params;
+  const track = deepCourseBlueprint.find((entry) => entry.slug === trackSlug);
+  if (!track) {
+    return { title: "Track" };
+  }
+
+  const curriculumTrack = curriculumTracks.find((entry) => entry.slug === trackSlug);
+  const canonicalPath = `/learn/library/${trackSlug}`;
+  const isBookTrack = trackSlug === "keeping-the-book-in-baseball";
+  const isFinanceTrack = trackSlug === "intro-to-economics-and-accounting-for-baseball-finance";
+
+  const description =
+    isBookTrack ?
+      "Study baseball scorebook symbols, pitch-by-pitch logging, defensive grid notation, substitutions and courtesy runners, and a printable in-game checklist—in unit order with lesson checkpoints."
+    : isFinanceTrack ?
+      "Introductory economics and accounting for MLB finance: opportunity cost and payroll buckets, competitive balance tax mechanics, AAV versus cash, deferrals, biweekly and semi-monthly payroll cadence, affiliate and staff liquidity, and international signing pools—illustrative exercises with explicit assumptions."
+    : (curriculumTrack?.outcomes[0] ??
+      `Progress through ${track.title} in the Deadball lesson library: sequenced units, practice prompts, and mastery checkpoints where provided.`);
+
+  const ogTitle =
+    isBookTrack ? `${track.title} · Baseball scorekeeping track`
+    : isFinanceTrack ? `${track.title} · MLB finance and accounting`
+    : `${track.title} · ${siteBrand.displayName} library`;
+
+  return {
+    title: track.title,
+    description,
+    alternates: {
+      canonical: canonicalPath,
+    },
+    openGraph: {
+      title: ogTitle,
+      description,
+      url: canonicalPath,
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: ogTitle,
+      description,
+    },
+    ...(isBookTrack ?
+      {
+        keywords: [
+          "baseball scorebook symbols",
+          "pitch-by-pitch logging",
+          "defensive position grid",
+          "courtesy runner",
+          "printable scorekeeping checklist",
+        ],
+      }
+    : isFinanceTrack ?
+      {
+        keywords: [
+          "MLB luxury tax",
+          "competitive balance tax",
+          "deferred salary baseball",
+          "international signing bonus pool",
+          "minor league payroll",
+          "biweekly payroll",
+        ],
+      }
+    : {}),
+  };
+}
 
 export default async function LibraryTrackPage({ params }: PageProps) {
   const { trackSlug } = await params;
@@ -27,8 +98,76 @@ export default async function LibraryTrackPage({ params }: PageProps) {
     "Apply ideas in baseball-focused analytic and communication contexts.",
   ];
 
+  const origin = siteOrigin();
+  const canonicalUrl = `${origin}/learn/library/${trackSlug}`;
+  const isBookTrack = trackSlug === "keeping-the-book-in-baseball";
+  const isFinanceTrack = trackSlug === "intro-to-economics-and-accounting-for-baseball-finance";
+
+  const jsonLd =
+    isBookTrack ?
+      {
+        "@context": "https://schema.org",
+        "@type": "Course",
+        name: track.title,
+        description:
+          "Scorekeeping essentials: scorebook symbols, pitch-by-pitch logging, defensive grid, substitutions and courtesy runners, printable checklist.",
+        url: canonicalUrl,
+        provider: {
+          "@type": "Organization",
+          name: siteBrand.displayName,
+          url: origin,
+        },
+        hasCourseInstance: {
+          "@type": "CourseInstance",
+          url: canonicalUrl,
+          courseMode: "online",
+        },
+        offers: {
+          "@type": "Offer",
+          category: "Educational",
+          url: canonicalUrl,
+        },
+      }
+    : isFinanceTrack ?
+      {
+        "@context": "https://schema.org",
+        "@type": "Course",
+        name: track.title,
+        description:
+          "Economics and accounting for baseball finance: luxury tax and CBT, AAV and deferrals, payroll cadence, affiliate and staff costs, international signing pools.",
+        url: canonicalUrl,
+        provider: {
+          "@type": "Organization",
+          name: siteBrand.displayName,
+          url: origin,
+        },
+        hasCourseInstance: {
+          "@type": "CourseInstance",
+          url: canonicalUrl,
+          courseMode: "online",
+        },
+        offers: {
+          "@type": "Offer",
+          category: "Educational",
+          url: canonicalUrl,
+        },
+      }
+    : {
+        "@context": "https://schema.org",
+        "@type": "LearningResource",
+        name: track.title,
+        description: outcomes[0] ?? track.title,
+        url: canonicalUrl,
+        isPartOf: {
+          "@type": "WebSite",
+          name: siteBrand.displayName,
+          url: origin,
+        },
+      };
+
   return (
     <div className="ui-container max-w-6xl py-16">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <nav aria-label="Breadcrumb" className="mb-8 text-sm text-[color:var(--color-muted)]">
         <ol className="flex flex-wrap items-center gap-x-2 gap-y-1">
           <li>
@@ -60,6 +199,15 @@ export default async function LibraryTrackPage({ params }: PageProps) {
           {curriculumTrack?.outcomes[0] ??
             "Progress unit-by-unit through this track, completing each lesson in sequence for full coverage."}
         </p>
+        {isBookTrack ?
+          <p className="mt-3 max-w-4xl text-sm text-[color:var(--color-muted)]">
+            Companion guide with the same five lesson titles:{" "}
+            <Link href="/learn/guides/keeping-the-book-in-baseball" className="ui-focus ui-link-muted">
+              Keeping the book — scorekeeping guide
+            </Link>
+            .
+          </p>
+        : null}
         <dl className="mt-6 grid gap-5 md:grid-cols-2">
           <div>
             <dt className="ui-meta-label tracking-[0.1em]">What to expect</dt>

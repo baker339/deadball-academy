@@ -1,8 +1,8 @@
 {
   "version": 1,
   "generated_by": "frontend/scripts/export-curriculum.ts",
-  "track_count": 11,
-  "lesson_count": 293,
+  "track_count": 13,
+  "lesson_count": 310,
   "tracks": [
     {
       "slug": "algebra-foundations-for-baseball-analytics",
@@ -2482,6 +2482,173 @@
               "route_path": "/learn/library/communicating-sports-analytics-insights/scientific-paper-literacy-for-sports-analytics/from-evidence-to-independent-judgment-decision-memo-workshop",
               "lesson_order": 6,
               "estimated_minutes": 48
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "keeping-the-book-in-baseball",
+      "title": "Keeping The Book In Baseball",
+      "description": "Open learning path: Keeping The Book In Baseball. Quantitative baseball analytics and decision-making.",
+      "is_premium": false,
+      "modules": [
+        {
+          "slug": "scorekeeping-essentials",
+          "title": "Scorekeeping Essentials",
+          "description": "Unit: Scorekeeping Essentials. Part of Keeping The Book In Baseball.",
+          "estimated_minutes": 205,
+          "lessons": [
+            {
+              "slug": "baseball-scorebook-symbols-and-shorthand-you-can-trust",
+              "title": "Baseball Scorebook Symbols And Shorthand You Can Trust",
+              "route_path": "/learn/library/keeping-the-book-in-baseball/scorekeeping-essentials/baseball-scorebook-symbols-and-shorthand-you-can-trust",
+              "lesson_order": 1,
+              "estimated_minutes": 28
+            },
+            {
+              "slug": "pitch-by-pitch-logging-that-survives-review",
+              "title": "Pitch By Pitch Logging That Survives Review",
+              "route_path": "/learn/library/keeping-the-book-in-baseball/scorekeeping-essentials/pitch-by-pitch-logging-that-survives-review",
+              "lesson_order": 2,
+              "estimated_minutes": 32
+            },
+            {
+              "slug": "defensive-positions-and-the-standard-grid",
+              "title": "Defensive Positions And The Standard Grid",
+              "route_path": "/learn/library/keeping-the-book-in-baseball/scorekeeping-essentials/defensive-positions-and-the-standard-grid",
+              "lesson_order": 3,
+              "estimated_minutes": 36
+            },
+            {
+              "slug": "substitutions-courtesy-runners-and-the-lineup-strip",
+              "title": "Substitutions Courtesy Runners And The Lineup Strip",
+              "route_path": "/learn/library/keeping-the-book-in-baseball/scorekeeping-essentials/substitutions-courtesy-runners-and-the-lineup-strip",
+              "lesson_order": 4,
+              "estimated_minutes": 40
+            },
+            {
+              "slug": "your-printable-in-game-checklist",
+              "title": "Your Printable In Game Checklist",
+              "route_path": "/learn/library/keeping-the-book-in-baseball/scorekeeping-essentials/your-printable-in-game-checklist",
+              "lesson_order": 5,
+              "estimated_minutes": 44
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "intro-to-economics-and-accounting-for-baseball-finance",
+      "title": "Intro To Economics And Accounting For Baseball Finance",
+      "description": "Open learning path: Intro To Economics And Accounting For Baseball Finance. Quantitative baseball analytics and decision-making.",
+      "is_premium": false,
+      "modules": [
+        {
+          "slug": "opportunity-cost-and-organizational-tradeoffs",
+          "title": "Opportunity Cost And Organizational Tradeoffs",
+          "description": "Unit: Opportunity Cost And Organizational Tradeoffs. Part of Intro To Economics And Accounting For Baseball Finance.",
+          "estimated_minutes": 156,
+          "lessons": [
+            {
+              "slug": "opportunity-cost-in-roster-construction-and-payroll-buckets",
+              "title": "Opportunity Cost In Roster Construction And Payroll Buckets",
+              "route_path": "/learn/library/intro-to-economics-and-accounting-for-baseball-finance/opportunity-cost-and-organizational-tradeoffs/opportunity-cost-in-roster-construction-and-payroll-buckets",
+              "lesson_order": 1,
+              "estimated_minutes": 28
+            },
+            {
+              "slug": "marginal-analysis-for-call-ups-and-option-years",
+              "title": "Marginal Analysis For Call Ups And Option Years",
+              "route_path": "/learn/library/intro-to-economics-and-accounting-for-baseball-finance/opportunity-cost-and-organizational-tradeoffs/marginal-analysis-for-call-ups-and-option-years",
+              "lesson_order": 2,
+              "estimated_minutes": 32
+            },
+            {
+              "slug": "supply-demand-intuition-for-baseball-labor-markets",
+              "title": "Supply Demand Intuition For Baseball Labor Markets",
+              "route_path": "/learn/library/intro-to-economics-and-accounting-for-baseball-finance/opportunity-cost-and-organizational-tradeoffs/supply-demand-intuition-for-baseball-labor-markets",
+              "lesson_order": 3,
+              "estimated_minutes": 36
+            },
+            {
+              "slug": "budget-constraints-across-mlb-and-affiliate-operations",
+              "title": "Budget Constraints Across MLB And Affiliate Operations",
+              "route_path": "/learn/library/intro-to-economics-and-accounting-for-baseball-finance/opportunity-cost-and-organizational-tradeoffs/budget-constraints-across-mlb-and-affiliate-operations",
+              "lesson_order": 4,
+              "estimated_minutes": 40
+            }
+          ]
+        },
+        {
+          "slug": "luxury-tax-revenue-sharing-and-cbt-accounting",
+          "title": "Luxury Tax Revenue Sharing And CBT Accounting",
+          "description": "Unit: Luxury Tax Revenue Sharing And CBT Accounting. Part of Intro To Economics And Accounting For Baseball Finance.",
+          "estimated_minutes": 156,
+          "lessons": [
+            {
+              "slug": "competitive-balance-tax-threshold-mechanics",
+              "title": "Competitive Balance Tax Threshold Mechanics",
+              "route_path": "/learn/library/intro-to-economics-and-accounting-for-baseball-finance/luxury-tax-revenue-sharing-and-cbt-accounting/competitive-balance-tax-threshold-mechanics",
+              "lesson_order": 1,
+              "estimated_minutes": 28
+            },
+            {
+              "slug": "aav-present-value-and-luxury-tax-treatment-simplified",
+              "title": "AAV Present Value And Luxury Tax Treatment Simplified",
+              "route_path": "/learn/library/intro-to-economics-and-accounting-for-baseball-finance/luxury-tax-revenue-sharing-and-cbt-accounting/aav-present-value-and-luxury-tax-treatment-simplified",
+              "lesson_order": 2,
+              "estimated_minutes": 32
+            },
+            {
+              "slug": "revenue-sharing-and-pool-transparency-for-staff-modeling",
+              "title": "Revenue Sharing And Pool Transparency For Staff Modeling",
+              "route_path": "/learn/library/intro-to-economics-and-accounting-for-baseball-finance/luxury-tax-revenue-sharing-and-cbt-accounting/revenue-sharing-and-pool-transparency-for-staff-modeling",
+              "lesson_order": 3,
+              "estimated_minutes": 36
+            },
+            {
+              "slug": "proration-trades-waivers-and-in-season-payroll-flex",
+              "title": "Proration Trades Waivers And In Season Payroll Flex",
+              "route_path": "/learn/library/intro-to-economics-and-accounting-for-baseball-finance/luxury-tax-revenue-sharing-and-cbt-accounting/proration-trades-waivers-and-in-season-payroll-flex",
+              "lesson_order": 4,
+              "estimated_minutes": 40
+            }
+          ]
+        },
+        {
+          "slug": "deferred-compensation-payroll-cadence-and-global-signing",
+          "title": "Deferred Compensation Payroll Cadence And Global Signing",
+          "description": "Unit: Deferred Compensation Payroll Cadence And Global Signing. Part of Intro To Economics And Accounting For Baseball Finance.",
+          "estimated_minutes": 156,
+          "lessons": [
+            {
+              "slug": "deferred-payments-for-baseball-contracts-and-cash-flow-timing",
+              "title": "Deferred Payments For Baseball Contracts And Cash Flow Timing",
+              "route_path": "/learn/library/intro-to-economics-and-accounting-for-baseball-finance/deferred-compensation-payroll-cadence-and-global-signing/deferred-payments-for-baseball-contracts-and-cash-flow-timing",
+              "lesson_order": 1,
+              "estimated_minutes": 28
+            },
+            {
+              "slug": "biweekly-versus-semi-monthly-payroll-cadence-for-club-payrolls",
+              "title": "Biweekly Versus Semi Monthly Payroll Cadence For Club Payrolls",
+              "route_path": "/learn/library/intro-to-economics-and-accounting-for-baseball-finance/deferred-compensation-payroll-cadence-and-global-signing/biweekly-versus-semi-monthly-payroll-cadence-for-club-payrolls",
+              "lesson_order": 2,
+              "estimated_minutes": 32
+            },
+            {
+              "slug": "minor-league-stipends-staff-systems-and-full-organization-liquidity",
+              "title": "Minor League Stipends Staff Systems And Full Organization Liquidity",
+              "route_path": "/learn/library/intro-to-economics-and-accounting-for-baseball-finance/deferred-compensation-payroll-cadence-and-global-signing/minor-league-stipends-staff-systems-and-full-organization-liquidity",
+              "lesson_order": 3,
+              "estimated_minutes": 36
+            },
+            {
+              "slug": "international-signing-bonuses-pools-and-periodization-basics",
+              "title": "International Signing Bonuses Pools And Periodization Basics",
+              "route_path": "/learn/library/intro-to-economics-and-accounting-for-baseball-finance/deferred-compensation-payroll-cadence-and-global-signing/international-signing-bonuses-pools-and-periodization-basics",
+              "lesson_order": 4,
+              "estimated_minutes": 40
             }
           ]
         }

@@ -183,25 +183,7 @@ struct LearningProfile {
     badges: Vec<BadgePublic>,
 }
 
-#[derive(Serialize, Deserialize, FromRow)]
-struct CoursePublic {
-    slug: String,
-    title: String,
-    description: String,
-    level: String,
-    is_premium: i64,
-}
-
-#[derive(Serialize, Deserialize, FromRow)]
-struct CourseModule {
-    slug: String,
-    title: String,
-    description: String,
-    module_order: i64,
-    estimated_minutes: i64,
-}
-
-#[derive(Serialize, Deserialize, FromRow)]
+#[derive(Serialize, Deserialize)]
 struct CourseLesson {
     slug: String,
     title: String,
@@ -462,7 +444,8 @@ async fn main() -> anyhow::Result<()> {
             .unwrap_or(true),
     };
     let database_url = env::var("ACADEMY_RUST_DATABASE_URL").unwrap_or_else(|_| {
-        "postgres://postgres:postgres@127.0.0.1:5432/academy_rust".to_string()
+        // Local Docker Compose maps host port 5433 → Postgres in the container (see docker-compose.yml).
+        "postgres://postgres:postgres@127.0.0.1:5433/academy_rust".to_string()
     });
     let pool = PgPoolOptions::new()
         .max_connections(5)
@@ -1051,46 +1034,99 @@ async fn me(State(state): State<AppState>, headers: HeaderMap) -> AppResult<Json
     Ok(Json(current_user(&headers, &state).await?))
 }
 
+#[derive(FromRow)]
+struct CatalogTrackRow {
+    id: i64,
+    slug: String,
+    title: String,
+    description: String,
+    level: Option<String>,
+    is_premium: Option<i64>,
+}
+
+#[derive(FromRow)]
+struct CatalogUnitRow {
+    id: i64,
+    slug: String,
+    title: String,
+    description: String,
+    unit_order: i64,
+}
+
+#[derive(FromRow)]
+struct CatalogLessonRow {
+    slug: String,
+    title: String,
+    lesson_order: i64,
+}
+
+/// Published curriculum tree from CMS tables (`slug` fields align with `course_slug` / `module_slug` in progress).
 async fn catalog(State(state): State<AppState>) -> AppResult<Json<Vec<CourseWithModules>>> {
-    let courses: Vec<CoursePublic> = sqlx::query_as(
-        "SELECT slug, title, description, level, is_premium FROM courses ORDER BY id",
+    let tracks: Vec<CatalogTrackRow> = sqlx::query_as(
+        r#"SELECT t.id, t.slug, t.title, t.description, c.level, c.is_premium
+           FROM curriculum_tracks t
+           LEFT JOIN courses c ON c.slug = t.slug
+           WHERE t.is_published = 1
+           ORDER BY t.track_order"#,
     )
     .fetch_all(&state.pool)
     .await?;
+
     let mut output = Vec::new();
-    for c in courses {
-        let modules: Vec<CourseModule> = sqlx::query_as(
-            "SELECT slug, title, description, module_order, estimated_minutes FROM modules WHERE course_id = (SELECT id FROM courses WHERE slug = $1) ORDER BY module_order",
+    for t in tracks {
+        let units: Vec<CatalogUnitRow> = sqlx::query_as(
+            "SELECT id, slug, title, description, unit_order FROM curriculum_units WHERE track_id = $1 AND is_published = 1 ORDER BY unit_order",
         )
-        .bind(&c.slug)
+        .bind(t.id)
         .fetch_all(&state.pool)
         .await?;
+
         let mut module_objs = Vec::new();
-        for m in modules {
-            let lessons: Vec<CourseLesson> = sqlx::query_as(
-                "SELECT slug, title, summary, lesson_order, estimated_minutes, track, route_path FROM lessons WHERE module_id = (
-                    SELECT id FROM modules WHERE slug = $1 AND course_id = (SELECT id FROM courses WHERE slug = $2)
-                ) ORDER BY lesson_order",
+        for u in units {
+            let lesson_rows: Vec<CatalogLessonRow> = sqlx::query_as(
+                r#"SELECT slug, title, lesson_order FROM curriculum_lessons
+                   WHERE unit_id = $1 AND status = 'published' AND published_revision_id IS NOT NULL
+                   ORDER BY lesson_order"#,
             )
-            .bind(&m.slug)
-            .bind(&c.slug)
+            .bind(u.id)
             .fetch_all(&state.pool)
             .await?;
+
+            let lessons: Vec<CourseLesson> = lesson_rows
+                .into_iter()
+                .map(|row| {
+                    let route_path =
+                        format!("/learn/library/{}/{}/{}", t.slug, u.slug, row.slug);
+                    CourseLesson {
+                        slug: row.slug,
+                        title: row.title,
+                        summary: String::new(),
+                        lesson_order: row.lesson_order,
+                        estimated_minutes: 0,
+                        track: t.slug.clone(),
+                        route_path,
+                    }
+                })
+                .collect();
+
             module_objs.push(ModuleWithLessons {
-                slug: m.slug,
-                title: m.title,
-                description: m.description,
-                module_order: m.module_order,
-                estimated_minutes: m.estimated_minutes,
+                slug: u.slug,
+                title: u.title,
+                description: u.description,
+                module_order: u.unit_order,
+                estimated_minutes: 0,
                 lessons,
             });
         }
+
+        let level = t.level.unwrap_or_else(|| "college".to_string());
+        let prem = t.is_premium.unwrap_or(0);
         output.push(CourseWithModules {
-            slug: c.slug,
-            title: c.title,
-            description: c.description,
-            level: c.level,
-            is_premium: c.is_premium == 1,
+            slug: t.slug,
+            title: t.title,
+            description: t.description,
+            level,
+            is_premium: prem == 1,
             modules: module_objs,
         });
     }
@@ -2785,7 +2821,7 @@ mod tests {
 
     async fn setup_state() -> AppState {
         let url = std::env::var("TEST_DATABASE_URL").unwrap_or_else(|_| {
-            "postgres://postgres:postgres@127.0.0.1:5432/academy_test".to_string()
+            "postgres://postgres:postgres@127.0.0.1:5433/academy_test".to_string()
         });
         let pool = PgPoolOptions::new()
             .max_connections(2)

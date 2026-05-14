@@ -74,6 +74,16 @@ const outcomesByTrack: Record<string, string[]> = {
     "Connect muscle physiology vocabulary to observable pitching and hitting actions.",
     "Interpret sports-science research questions relevant to workload, sequencing, and performance literacy.",
   ],
+  "keeping-the-book-in-baseball": [
+    "Read and write standard baseball scorebook symbols with consistent shorthand.",
+    "Log every pitch and every runner movement so the book survives disputes and postgame review.",
+    "Use the defensive grid and substitution strip so lineup changes stay auditable in one glance.",
+  ],
+  "intro-to-economics-and-accounting-for-baseball-finance": [
+    "Frame roster and payroll decisions with opportunity cost, marginal analysis, and organization-wide cash constraints.",
+    "Explain competitive balance tax mechanics, AAV versus cash timing, and midseason proration at a high level with explicit assumptions.",
+    "Model deferrals, payroll cadence, affiliate systems costs, and international signing pools as timed cash and governance problems—not headline trivia.",
+  ],
 };
 
 const prerequisitesByTrack: Record<string, string[]> = {
@@ -91,6 +101,16 @@ const prerequisitesByTrack: Record<string, string[]> = {
     "Intro biology vocabulary (cells, tissues, organs) or willingness to learn it in-lesson",
     "Baseball role literacy (pitcher, hitter, fielder workloads)",
     "Comfort discussing uncertainty and non-medical boundaries",
+  ],
+  "keeping-the-book-in-baseball": [
+    "Basic baseball rules literacy (balls, strikes, outs, innings)",
+    "Willingness to slow down and write before debating a call",
+    "A paper scorecard or printable grid (digital trackers can follow the same sequence)",
+  ],
+  "intro-to-economics-and-accounting-for-baseball-finance": [
+    "Comfort with percentages, piecewise thresholds, and spreadsheet or grid layouts",
+    "High-school algebra or equivalent quantitative literacy",
+    "Willingness to label illustrative numbers and verify real rules in the current collective bargaining materials",
   ],
 };
 
@@ -113,6 +133,16 @@ const assessmentsByTrack: Record<string, string[]> = {
     "Concept checkpoints in lessons",
     "Coach-facing language audit (non-medical boundary)",
     "Short reflection tying lab vocabulary to a baseball scenario",
+  ],
+  "keeping-the-book-in-baseball": [
+    "Symbol-and-notation drills from sample half-innings",
+    "Pitch-by-pitch reconstruction from a short video clip or chart string",
+    "Bring your completed checklist to the next game you chart (self-review)",
+  ],
+  "intro-to-economics-and-accounting-for-baseball-finance": [
+    "Threshold and proration worksheet using illustrative CBT-style numbers",
+    "Cash calendar exercise combining staff payroll cadence with stylized player installments",
+    "Short memo separating modeled estimates from facts you would verify with finance and legal",
   ],
 };
 

@@ -1,28 +1,29 @@
-import { buildLibraryPath, deepCourseBlueprint } from "../content/deepLessonLibrary";
+import { buildLibraryPath } from "../content/deepLessonLibrary";
 import { lessonKey } from "../content/lessonRegistry";
+import type { LearningCatalogCourse } from "./learningCatalog";
 
 export type UnlockPolicy = "unit-sequential" | "track-sequential";
 
-type LessonPointer = {
+export type LessonPointer = {
   trackSlug: string;
   unitSlug: string;
   lessonSlug: string;
   title: string;
 };
 
-function getTrack(trackSlug: string) {
-  return deepCourseBlueprint.find((track) => track.slug === trackSlug) ?? null;
+function getTrack(catalog: LearningCatalogCourse[], trackSlug: string) {
+  return catalog.find((track) => track.slug === trackSlug) ?? null;
 }
 
-function getUnit(trackSlug: string, unitSlug: string) {
-  const track = getTrack(trackSlug);
-  return track?.units.find((unit) => unit.slug === unitSlug) ?? null;
+function getUnit(catalog: LearningCatalogCourse[], trackSlug: string, unitSlug: string) {
+  const track = getTrack(catalog, trackSlug);
+  return track?.modules.find((unit) => unit.slug === unitSlug) ?? null;
 }
 
-function flattenTrackLessons(trackSlug: string): LessonPointer[] {
-  const track = getTrack(trackSlug);
+function flattenTrackLessons(catalog: LearningCatalogCourse[], trackSlug: string): LessonPointer[] {
+  const track = getTrack(catalog, trackSlug);
   if (!track) return [];
-  return track.units.flatMap((unit) =>
+  return track.modules.flatMap((unit) =>
     unit.lessons.map((lesson) => ({
       trackSlug,
       unitSlug: unit.slug,
@@ -41,6 +42,7 @@ function findFirstMissing(orderedLessons: LessonPointer[], completedKeys: Set<st
 }
 
 export function isLessonUnlocked(
+  catalog: LearningCatalogCourse[],
   trackSlug: string,
   unitSlug: string,
   lessonSlug: string,
@@ -48,13 +50,13 @@ export function isLessonUnlocked(
   policy: UnlockPolicy = "unit-sequential",
 ): boolean {
   if (policy === "track-sequential") {
-    const orderedTrackLessons = flattenTrackLessons(trackSlug);
+    const orderedTrackLessons = flattenTrackLessons(catalog, trackSlug);
     const idx = orderedTrackLessons.findIndex((lesson) => lesson.unitSlug === unitSlug && lesson.lessonSlug === lessonSlug);
     if (idx < 0) return false;
     return orderedTrackLessons.slice(0, idx).every((lesson) => completedKeys.has(lessonKey(trackSlug, lesson.unitSlug, lesson.lessonSlug)));
   }
 
-  const unit = getUnit(trackSlug, unitSlug);
+  const unit = getUnit(catalog, trackSlug, unitSlug);
   if (!unit) return false;
   const idx = unit.lessons.findIndex((lesson) => lesson.slug === lessonSlug);
   if (idx < 0) return false;
@@ -62,6 +64,7 @@ export function isLessonUnlocked(
 }
 
 export function getFirstBlockedLessonBeforeTarget(
+  catalog: LearningCatalogCourse[],
   trackSlug: string,
   unitSlug: string,
   lessonSlug: string,
@@ -69,13 +72,13 @@ export function getFirstBlockedLessonBeforeTarget(
   policy: UnlockPolicy = "unit-sequential",
 ): LessonPointer | null {
   if (policy === "track-sequential") {
-    const orderedTrackLessons = flattenTrackLessons(trackSlug);
+    const orderedTrackLessons = flattenTrackLessons(catalog, trackSlug);
     const targetIdx = orderedTrackLessons.findIndex((lesson) => lesson.unitSlug === unitSlug && lesson.lessonSlug === lessonSlug);
     if (targetIdx < 0) return null;
     return findFirstMissing(orderedTrackLessons.slice(0, targetIdx), completedKeys);
   }
 
-  const unit = getUnit(trackSlug, unitSlug);
+  const unit = getUnit(catalog, trackSlug, unitSlug);
   if (!unit) return null;
   const targetIdx = unit.lessons.findIndex((lesson) => lesson.slug === lessonSlug);
   if (targetIdx <= 0) return null;
@@ -89,30 +92,40 @@ export function getFirstBlockedLessonBeforeTarget(
 }
 
 export function getNextEligibleLessonPath(
+  catalog: LearningCatalogCourse[],
   trackSlug: string,
   unitSlug: string,
   lessonSlug: string,
   completedKeys: Set<string>,
   policy: UnlockPolicy = "unit-sequential",
 ): string | null {
-  const blocker = getFirstBlockedLessonBeforeTarget(trackSlug, unitSlug, lessonSlug, completedKeys, policy);
+  const blocker = getFirstBlockedLessonBeforeTarget(catalog, trackSlug, unitSlug, lessonSlug, completedKeys, policy);
   if (!blocker) return null;
   return buildLibraryPath(blocker.trackSlug, blocker.unitSlug, blocker.lessonSlug);
 }
 
 export function getActiveUnlockPolicy(): UnlockPolicy {
-  // Hybrid abstraction: currently unit-level sequencing is active.
   return "unit-sequential";
 }
 
-/** All lessons in blueprint order (tracks → units → lessons) for resume / progress UX. */
-export function flattenAllCurriculumLessons(): LessonPointer[] {
-  return deepCourseBlueprint.flatMap((track) => flattenTrackLessons(track.slug));
+export function flattenAllCurriculumLessons(catalog: LearningCatalogCourse[]): LessonPointer[] {
+  return catalog.flatMap((track) =>
+    track.modules.flatMap((unit) =>
+      unit.lessons.map((lesson) => ({
+        trackSlug: track.slug,
+        unitSlug: unit.slug,
+        lessonSlug: lesson.slug,
+        title: lesson.title,
+      })),
+    ),
+  );
 }
 
-/** First incomplete lesson in global curriculum order (next line of work in the published snapshot). */
-export function getFirstIncompleteLessonPointer(completedKeys: Set<string>): LessonPointer | null {
-  for (const lesson of flattenAllCurriculumLessons()) {
+export function getFirstIncompleteLessonPointer(
+  catalog: LearningCatalogCourse[],
+  completedKeys: Set<string>,
+): LessonPointer | null {
+  for (const lesson of flattenAllCurriculumLessons(catalog)) {
     const key = lessonKey(lesson.trackSlug, lesson.unitSlug, lesson.lessonSlug);
     if (!completedKeys.has(key)) return lesson;
   }

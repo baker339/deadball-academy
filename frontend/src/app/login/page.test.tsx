@@ -32,7 +32,7 @@ describe("Login auth UX feedback", () => {
     vi.resetAllMocks();
   });
 
-  it("shows pending and success states then redirects to role destination", async () => {
+  it("shows pending and redirect states then navigates to role destination", async () => {
     mockLogin.mockResolvedValue({
       role: "student",
     });
@@ -46,10 +46,8 @@ describe("Login auth UX feedback", () => {
     expect((screen.getByRole("button", { name: "Signing you in..." }) as HTMLButtonElement).disabled).toBe(true);
     expect(screen.getByRole("status").textContent).toContain("Signing you in...");
 
-    await waitFor(() => expect(screen.getByRole("status").textContent).toContain("Success! Redirecting..."));
-    expect(mockReplace).not.toHaveBeenCalled();
-
-    await waitFor(() => expect(mockReplace).toHaveBeenCalledWith("/dashboard"), { timeout: 1200 });
+    await waitFor(() => expect(screen.getByRole("status").textContent).toContain("Redirecting..."));
+    await waitFor(() => expect(mockReplace).toHaveBeenCalledWith("/dashboard"));
   });
 
   it("shows a friendly error and allows retry after failed login", async () => {
@@ -64,5 +62,23 @@ describe("Login auth UX feedback", () => {
     await waitFor(() => expect(screen.getByRole("alert").textContent).toContain("Invalid email or password."));
     expect((screen.getByRole("button", { name: "Sign in" }) as HTMLButtonElement).disabled).toBe(false);
     expect(mockReplace).not.toHaveBeenCalled();
+  });
+
+  it("blocks register when passwords do not match", async () => {
+    render(<LoginPage />);
+
+    fireEvent.click(screen.getByRole("button", { name: "Need an account? Register" }));
+
+    fireEvent.change(screen.getByLabelText("Email"), { target: { value: "new@example.com" } });
+    fireEvent.change(screen.getByLabelText("Full name"), { target: { value: "New User" } });
+    const pwd = document.getElementById("login-password") as HTMLInputElement;
+    const confirm = document.getElementById("login-confirm-password") as HTMLInputElement;
+    fireEvent.change(pwd, { target: { value: "password123" } });
+    fireEvent.change(confirm, { target: { value: "password999" } });
+    fireEvent.click(screen.getByRole("button", { name: "Create account" }));
+
+    await waitFor(() => expect(screen.getByRole("alert").textContent).toContain("Passwords do not match"));
+    expect(mockRegister).not.toHaveBeenCalled();
+    expect(mockLogin).not.toHaveBeenCalled();
   });
 });

@@ -38,6 +38,53 @@ vi.mock("../content/deepLessonLibrary", () => ({
   ],
 }));
 
+vi.mock("../lib/learningCatalog", () => ({
+  loadLearningCatalog: () =>
+    Promise.resolve([
+      {
+        slug: "test-track",
+        title: "Test Track",
+        description: "",
+        level: "college",
+        is_premium: false,
+        modules: [
+          {
+            slug: "test-unit",
+            title: "Test Unit",
+            description: "",
+            module_order: 1,
+            estimated_minutes: 0,
+            lessons: [
+              {
+                slug: "lesson-1",
+                title: "Lesson One",
+                summary: "",
+                lesson_order: 1,
+                estimated_minutes: 0,
+                track: "test-track",
+                route_path: "/learn/library/test-track/test-unit/lesson-1",
+              },
+              {
+                slug: "lesson-2",
+                title: "Lesson Two",
+                summary: "",
+                lesson_order: 2,
+                estimated_minutes: 0,
+                track: "test-track",
+                route_path: "/learn/library/test-track/test-unit/lesson-2",
+              },
+            ],
+          },
+        ],
+      },
+    ]),
+  learningCatalogFromBlueprint: () => [],
+  getUnitLessonsFromCatalog: () => [
+    { slug: "lesson-1", title: "Lesson One" },
+    { slug: "lesson-2", title: "Lesson Two" },
+  ],
+}));
+
 vi.mock("../lib/progress", () => ({
   getActiveUnlockPolicy: () => "unit-sequential",
   getFirstBlockedLessonBeforeTarget: () => ({
@@ -77,7 +124,7 @@ describe("LessonOrderGate", () => {
       </LessonOrderGate>,
     );
 
-    expect(screen.getByText("Lesson locked")).not.toBeNull();
+    await waitFor(() => expect(screen.getByText("Lesson locked")).not.toBeNull());
     await waitFor(() => expect(replaceMock).toHaveBeenCalledWith("/learn/library/test-track/test-unit/lesson-1"));
   });
 
@@ -100,7 +147,7 @@ describe("LessonOrderGate", () => {
       </LessonOrderGate>,
     );
 
-    expect(screen.getByText("Lesson locked")).not.toBeNull();
+    await waitFor(() => expect(screen.getByText("Lesson locked")).not.toBeNull());
     await waitFor(() => expect(replaceMock).toHaveBeenCalledWith("/learn/library/test-track/test-unit/lesson-1"));
   });
 

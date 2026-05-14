@@ -2,6 +2,12 @@
 
 This runbook runs the Rust Academy API against **PostgreSQL** (SQLx + Axum).
 
+## 0) What is the database?
+
+**PostgreSQL** is the only database this backend uses. It stores users, curriculum metadata, CMS content, progress, and related tables. On startup the API connects using **`ACADEMY_RUST_DATABASE_URL`** in `backend/.env` (copy from `backend/.env.example`).
+
+**This repo’s local Docker Postgres is published on host port `5433`**, not `5432`, so you can keep **5432** for another Postgres instance (for example work). Inside Docker, the service hostname `postgres` still uses container port **5432**; only the **host** mapping is `5433:5432`.
+
 ## 1) Run Postgres
 
 **Docker Compose (repo root):**
@@ -10,15 +16,15 @@ This runbook runs the Rust Academy API against **PostgreSQL** (SQLx + Axum).
 docker compose up -d postgres
 ```
 
-This creates database `academy_rust` with user/password `postgres`/`postgres`.
+This creates database **`academy_rust`** with user/password **`postgres`/`postgres`**, reachable from your machine at **`127.0.0.1:5433`**.
 
-**Or** use any local Postgres 16+ and create a database (for example `academy_rust`).
+**Or** use any Postgres 16+ you already run; set `ACADEMY_RUST_DATABASE_URL` with the correct **host, port, user, password, and database name**.
 
 ## 2) Configure environment
 
 Copy `backend/.env.example` to `backend/.env` and set:
 
-- `ACADEMY_RUST_DATABASE_URL` — `postgres://USER:PASSWORD@HOST:PORT/DATABASE`
+- `ACADEMY_RUST_DATABASE_URL` — with Docker as above: `postgres://postgres:postgres@127.0.0.1:5433/academy_rust`
 - `JWT_SECRET_KEY` — strong secret
 - `FIRST_ADMIN_EMAIL` — first user promoted to admin on register
 
@@ -78,15 +84,15 @@ If this is wrong or unset in production, the browser shows a CORS error on `OPTI
 
 Tests require Postgres. Default URL:
 
-`postgres://postgres:postgres@127.0.0.1:5432/academy_test`
+`postgres://postgres:postgres@127.0.0.1:5433/academy_test`
 
-Create the database once:
+Create the database once (example against this repo’s Docker Postgres on **5433**):
 
 ```bash
-docker exec -it "$(docker ps -qf name=postgres)" psql -U postgres -c "CREATE DATABASE academy_test;"
+docker exec -it "$(docker ps -qf name=deadball-academy-postgres)" psql -U postgres -c "CREATE DATABASE academy_test;"
 ```
 
-(or use your admin client). Override with `TEST_DATABASE_URL` if needed.
+(or connect with `psql -h 127.0.0.1 -p 5433 -U postgres …`). Override with `TEST_DATABASE_URL` if needed.
 
 ```bash
 cd backend
@@ -125,6 +131,32 @@ If you still have an old **`academy_rust.db`** from the SQLite-backed API, you c
 
 ## 11) Docker Compose full stack
 
-From the repo root: `docker compose up` starts Postgres, the API, and the Next.js frontend. The API waits on the `postgres` service and uses the internal hostname `postgres` in `ACADEMY_RUST_DATABASE_URL`.
+The Compose file sets **`name: deadball-academy`**, so containers and volumes show under that project name in Docker Desktop (instead of a folder-derived name).
+
+From the repo root: `docker compose up` starts Postgres, the API, and the Next.js frontend. The API uses the **internal** URL `postgres://postgres:postgres@postgres:5432/academy_rust` (hostname `postgres`, container port **5432**).
+
+When you run **only** `docker compose up -d postgres` and the API with `cargo run` on your Mac, use **`127.0.0.1:5433`** in `ACADEMY_RUST_DATABASE_URL` (see section 0).
 
 For browser access from your laptop, point `NEXT_PUBLIC_API_BASE_URL` at `http://localhost:8000`.
+
+## 12) Production curriculum rollout (empty database, Neon, CMS, backfill)
+
+When the `courses` table is **empty**, the API runs `seed_curriculum` on startup. That path reads `curriculum_catalog.json` from `app/data/curriculum_catalog.json` (or sibling fallbacks) and inserts parallel rows into both the **LMS-style** tables (`courses`, `modules`, `lessons`, …) and the **CMS curriculum** tables (`curriculum_tracks`, `curriculum_units`, `curriculum_lessons`, …). If the file is missing, startup fails with a message to run the frontend export.
+
+**Greenfield production (Neon or any empty Postgres):**
+
+1. **Generate the catalog in CI or locally** from the same commit you deploy:
+
+   ```bash
+   cd frontend && npm run export-curriculum
+   ```
+
+   Commit or artifact the updated `backend/app/data/curriculum_catalog.json` (and any generated companion files your pipeline expects) so the runtime image always carries a catalog that matches the shipped lesson keys.
+
+2. **Point `ACADEMY_RUST_DATABASE_URL` at Neon** (or your managed Postgres), run migrations once (`cargo run` or `sqlx migrate run`), then start the API with an **empty** `courses` table so `seed_curriculum` can populate both LMS and CMS skeletons in one pass.
+
+3. **CMS and editorial overrides:** After seeding, authors can publish lesson revisions through CMS flows; runtime may merge CMS-published JSON over hand-authored documents depending on frontend configuration. Treat seed data as the baseline spine, not the final word.
+
+4. **Backfill / replace:** If you already have partial data or an old snapshot, use the SQLite→Postgres migrator in section 10 when appropriate, or truncate application tables intentionally and re-seed—never assume `seed_curriculum` will rewrite non-empty `courses` (it exits early when rows exist).
+
+5. **Frontend alignment:** Set `NEXT_PUBLIC_SITE_URL` to the canonical HTTPS origin so metadata, Open Graph URLs, and JSON-LD in the Next.js app resolve consistently with the API’s `CORS_ALLOW_ORIGINS` (section 7).

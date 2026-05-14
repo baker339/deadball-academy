@@ -64,7 +64,7 @@ describe("deepCourseBlueprint", () => {
     const lessonCount = deepCourseBlueprint
       .flatMap((track) => track.units)
       .flatMap((unit) => unit.lessons).length;
-    expect(lessonCount).toBe(293);
+    expect(lessonCount).toBe(310);
   });
 
   it("builds authored lesson documents with pedagogy blocks", () => {

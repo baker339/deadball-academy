@@ -16,6 +16,8 @@ import { HAND_AUTHORED_STATCAST_B } from "./handwritten/handAuthoredStatcastB";
 import { HAND_AUTHORED_STATCAST_METRICS_INTEGRATED } from "./handwritten/handAuthoredStatcastMetricsIntegrated";
 import { HAND_AUTHORED_STATS_A } from "./handwritten/handAuthoredStatsA";
 import { HAND_AUTHORED_STATS_B } from "./handwritten/handAuthoredStatsB";
+import { HAND_AUTHORED_SCOREKEEPING } from "./handwritten/handAuthoredScorekeeping";
+import { HAND_AUTHORED_BASEBALL_FINANCE } from "./handwritten/handAuthoredBaseballFinance";
 import { HAND_AUTHORED_TRIG_PRECALC } from "./handwritten/handAuthoredTrigPrecalc";
 import CMS_PUBLISHED_LESSONS from "../generated/cmsPublishedLessons.json";
 import { ensureIntegrativeTitleSummatives, mergeUnitCloserSummatives } from "./unitCloserSummativeMerge";
@@ -38,6 +40,8 @@ const HAND_AUTHORED_MERGED: Record<string, LessonDocument> = {
   ...HAND_AUTHORED_COMMUNICATION_A,
   ...HAND_AUTHORED_COMMUNICATION_B,
   ...HAND_AUTHORED_COMMUNICATION_PAPER,
+  ...HAND_AUTHORED_SCOREKEEPING,
+  ...HAND_AUTHORED_BASEBALL_FINANCE,
 };
 
 const lessonRuntimeBase = ensureIntegrativeTitleSummatives(mergeUnitCloserSummatives(HAND_AUTHORED_MERGED, deepCourseBlueprint));

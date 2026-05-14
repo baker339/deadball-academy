@@ -9,7 +9,7 @@ export default function Navbar() {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [isLoggingOut, setIsLoggingOut] = useState(false);
   const [logoutStatus, setLogoutStatus] = useState("");
-  const { user, logout, hasAnyRole } = useAuth();
+  const { user, logout, hasAnyRole, loading: authLoading } = useAuth();
   const router = useRouter();
 
   useEffect(() => {
@@ -41,6 +41,11 @@ export default function Navbar() {
 
   return (
     <nav className="ui-app-nav">
+      {authLoading ? (
+        <div className="border-b border-[color:var(--color-border)] bg-[color:var(--color-surface-subtle)] px-4 py-1.5 text-center text-xs text-[color:var(--color-muted)]" role="status" aria-live="polite">
+          Restoring your session...
+        </div>
+      ) : null}
       <div className="ui-container max-w-5xl flex items-center justify-between gap-3 py-3">
         <Link
           href="/"

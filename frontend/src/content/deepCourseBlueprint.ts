@@ -464,9 +464,46 @@ export const deepCourseBlueprint: TrackBlueprint[] = [
       ]),
     ],
   },
+  {
+    title: "Keeping The Book In Baseball",
+    slug: "keeping-the-book-in-baseball",
+    units: [
+      makeUnit("Scorekeeping Essentials", [
+        "Baseball Scorebook Symbols And Shorthand You Can Trust",
+        "Pitch By Pitch Logging That Survives Review",
+        "Defensive Positions And The Standard Grid",
+        "Substitutions Courtesy Runners And The Lineup Strip",
+        "Your Printable In Game Checklist",
+      ]),
+    ],
+  },
+  {
+    title: "Intro To Economics And Accounting For Baseball Finance",
+    slug: "intro-to-economics-and-accounting-for-baseball-finance",
+    units: [
+      makeUnit("Opportunity Cost And Organizational Tradeoffs", [
+        "Opportunity Cost In Roster Construction And Payroll Buckets",
+        "Marginal Analysis For Call Ups And Option Years",
+        "Supply Demand Intuition For Baseball Labor Markets",
+        "Budget Constraints Across MLB And Affiliate Operations",
+      ]),
+      makeUnit("Luxury Tax Revenue Sharing And CBT Accounting", [
+        "Competitive Balance Tax Threshold Mechanics",
+        "AAV Present Value And Luxury Tax Treatment Simplified",
+        "Revenue Sharing And Pool Transparency For Staff Modeling",
+        "Proration Trades Waivers And In Season Payroll Flex",
+      ]),
+      makeUnit("Deferred Compensation Payroll Cadence And Global Signing", [
+        "Deferred Payments For Baseball Contracts And Cash Flow Timing",
+        "Biweekly Versus Semi Monthly Payroll Cadence For Club Payrolls",
+        "Minor League Stipends Staff Systems And Full Organization Liquidity",
+        "International Signing Bonuses Pools And Periodization Basics",
+      ]),
+    ],
+  },
 ];
 
-/** All canonical lesson keys in syllabus order (293 entries; keep in sync with collectAllLessonKeys). */
+/** All canonical lesson keys in syllabus order (310 entries; keep in sync with collectAllLessonKeys). */
 export function collectAllLessonKeys(blueprint: TrackBlueprint[]): string[] {
   const keys: string[] = [];
   for (const track of blueprint) {

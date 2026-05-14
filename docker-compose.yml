@@ -1,3 +1,6 @@
+# Compose project name (avoids Docker Desktop picking a folder-derived name like "deadballtracker").
+name: deadball-academy
+
 services:
   postgres:
     image: postgres:16-alpine
@@ -6,7 +9,8 @@ services:
       POSTGRES_PASSWORD: postgres
       POSTGRES_DB: academy_rust
     ports:
-      - "5432:5432"
+      # Host 5433 → container 5432 so your machine can keep 5432 for another Postgres (e.g. work).
+      - "5433:5432"
     volumes:
       - pgdata:/var/lib/postgresql/data
 

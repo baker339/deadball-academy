@@ -1,7 +1,7 @@
 import Link from "next/link";
 import LessonOrderGate from "../../../../../../components/LessonOrderGate";
 import InteractiveLessonExperience from "../../../../../../components/InteractiveLessonExperience";
-import { findLesson } from "../../../../../../content/deepLessonLibrary";
+import { findLesson, getAuthoredLessonDocument } from "../../../../../../content/deepLessonLibrary";
 import { lessonHeaderDisplayTitle } from "../../../../../../content/lessonTitleDisambiguation";
 import type { LessonDocument } from "../../../../../../content/lessonTypes";
 
@@ -10,6 +10,11 @@ type PageProps = {
 };
 
 const breadcrumbLinkClass = "ui-link-muted";
+
+/** Matches `canonical_seeded_lesson_payload` in `backend/src/main.rs` (DB seed for CMS), not real CMS prose. */
+function isSeededCanonicalStub(doc: LessonDocument): boolean {
+  return doc.professorNotes.includes("Seeded canonical payload for deterministic CMS hydration");
+}
 
 export default async function DeepLessonPage({ params }: PageProps) {
   const resolved = await params;
@@ -29,6 +34,7 @@ export default async function DeepLessonPage({ params }: PageProps) {
     );
   }
 
+  const authored = getAuthoredLessonDocument(resolved.trackSlug, resolved.unitSlug, resolved.lessonSlug);
   const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:8000";
   let document: LessonDocument | null = null;
   try {
@@ -37,17 +43,25 @@ export default async function DeepLessonPage({ params }: PageProps) {
       { cache: "no-store" }
     );
     if (response.ok) {
-      document = (await response.json()) as LessonDocument;
+      const apiDoc = (await response.json()) as LessonDocument;
+      if (isSeededCanonicalStub(apiDoc) && authored) {
+        document = authored;
+      } else {
+        document = apiDoc;
+      }
     }
   } catch {
     document = null;
   }
   if (!document) {
+    document = authored;
+  }
+  if (!document) {
     return (
       <div className="ui-container max-w-3xl py-16">
-        <h1 className="text-3xl font-bold text-[color:var(--color-fg)]">Published lesson unavailable</h1>
+        <h1 className="text-3xl font-bold text-[color:var(--color-fg)]">Lesson content unavailable</h1>
         <p className="mt-2 text-sm text-[color:var(--color-muted)]">
-          This lesson has no published DB payload yet. Ask an editor to publish the latest revision.
+          This lesson has no hand-authored bundle entry and the API did not return a published payload. Check the API is running and the lesson exists in the curriculum database.
         </p>
         <Link href="/learn/library" className="ui-focus ui-link mt-4 inline-block">
           Return to lesson library

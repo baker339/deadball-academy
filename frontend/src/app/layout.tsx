@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
+import { Analytics } from "@vercel/analytics/next";
 import Link from "next/link";
 import { Archivo_Narrow, Inter } from "next/font/google";
 import "./globals.css";
@@ -10,6 +11,8 @@ import { LessonProgressProvider } from "../components/LessonProgressContext";
 import { AppThemeProvider } from "../components/AppThemeProvider";
 import { siteBrand } from "../config/siteBrand";
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+
 const inter = Inter({ subsets: ["latin"], display: "swap", variable: "--font-inter" });
 const archivoNarrow = Archivo_Narrow({
   subsets: ["latin"],
@@ -18,6 +21,7 @@ const archivoNarrow = Archivo_Narrow({
   variable: "--font-display",
 });
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: {
     default: siteBrand.defaultTitle,
     template: `%s · ${siteBrand.displayName}`,
@@ -68,6 +72,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             </LessonProgressProvider>
           </AuthProvider>
         </AppThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
